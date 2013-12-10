@@ -3,9 +3,16 @@ from django.contrib import admin
 
 from mezzanine.core.views import direct_to_template
 import os
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
+
+
+def get_static_root():
+    global PROJECT_ROOT, STATIC_URL, STATIC_ROOT
+    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+    STATIC_URL = "/static/"
+    STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
+
+
+get_static_root()
 
 admin.autodiscover()
 

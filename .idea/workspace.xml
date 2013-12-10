@@ -37,19 +37,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vikalp/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="12" selection-start="4269" selection-end="4269" vertical-scroll-proportion="0.0261708" vertical-offset="1646" max-vertical-offset="5490">
+            <state line="337" column="0" selection-start="12305" selection-end="12305" vertical-scroll-proportion="0.0" vertical-offset="4764" max-vertical-offset="5490">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="local_settings.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="local_settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vikalp/local_settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+            <state line="2" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.041322313" vertical-offset="0" max-vertical-offset="726">
               <folding />
             </state>
           </provider>
@@ -67,7 +67,7 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vikalp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1545">
+            <state line="26" column="0" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1650">
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -115,10 +115,10 @@
         <option value="$PROJECT_DIR$/wsgi.py" />
         <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/manage.py" />
-        <option value="$PROJECT_DIR$/vikalp/urls.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/vikalp/local_settings.py" />
+        <option value="$PROJECT_DIR$/vikalp/urls.py" />
         <option value="$PROJECT_DIR$/vikalp/settings.py" />
+        <option value="$PROJECT_DIR$/vikalp/local_settings.py" />
       </list>
     </option>
   </component>
@@ -516,15 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1545">
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="11" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
@@ -532,16 +523,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/local_settings.py">
+    <entry file="file://$PROJECT_DIR$/vikalp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-          <folding />
+        <state line="26" column="0" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1650">
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vikalp/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="12" selection-start="4269" selection-end="4269" vertical-scroll-proportion="0.0261708" vertical-offset="1646" max-vertical-offset="5490">
+        <state line="337" column="0" selection-start="12305" selection-end="12305" vertical-scroll-proportion="0.0" vertical-offset="4764" max-vertical-offset="5490">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/local_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.041322313" vertical-offset="0" max-vertical-offset="726">
           <folding />
         </state>
       </provider>
