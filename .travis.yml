@@ -6,3 +6,9 @@ env:
   - DJANGO=1.5 DJANGO_SETTINGS_MODULE=vikalp.local_settings
 script:
   - python manage.py test
+deploy:
+  - provider: heroku
+  - api_key: 9f603cf4-a36d-4a05-94d7-60bb67b9e8a4
+  - app: vikalpstaging
+after_deploy:
+  - ./Heroku.sh
