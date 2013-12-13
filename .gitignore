@@ -9,3 +9,4 @@ locale/
 vikalp/locale/
 templates/
 gettext/
+.tx
