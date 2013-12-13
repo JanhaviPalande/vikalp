@@ -1,6 +1,10 @@
 ######################
 # MEZZANINE SETTINGS #
 ######################
+SITE_TITLE = "Vikalp"
+SITE_TAGLINE = "Alternatives website"
+
+
 
 # The following settings are already defined with default values in
 # the ``defaults.py`` module within each of Mezzanine's apps, but are
@@ -243,7 +247,7 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     "gunicorn",
     #"mezzanine.accounts",
-    #"mezzanine.mobile",
+    "mezzanine.mobile",
 )
 
 # List of processors used by RequestContext to populate the context.
@@ -358,3 +362,5 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
+
+
