@@ -154,7 +154,7 @@ FILE_UPLOAD_PERMISSIONS = 0644
 # DATABASES #
 #############
 import dj_database_url
-DATABASES = {'default': dj_database_url.config(default = "postgres://postgres:postgres@localhost:5432/pari")}
+DATABASES = {'default': dj_database_url.config(default = "postgres://postgres:postgres@localhost:5432/vikalp")}
 # DATABASES = {
 #     "default": {
 #         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
