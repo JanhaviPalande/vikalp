@@ -4,7 +4,7 @@
 SITE_TITLE = "Vikalp"
 SITE_TAGLINE = "Alternatives website"
 
-ALLOWED_HOSTS=''
+ALLOWED_HOSTS = ["localhost"]
 
 # The following settings are already defined with default values in
 # the ``defaults.py`` module within each of Mezzanine's apps, but are
@@ -90,7 +90,7 @@ USE_SOUTH = True
 # In the format (('Full Name', 'email@example.com'),
 #                ('Full Name', 'anotheremail@example.com'))
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+# ('Your Name', 'your_email@domain.com'),
 )
 MANAGERS = ADMINS
 
@@ -131,7 +131,7 @@ NEVERCACHE_KEY = "bc70087d-f493-4b12-b32d-a0a826b4f7357a9db270-ac61-4886-aeb9-31
 # Tuple of IP addresses, as strings, that:
 #   * See debug comments, when DEBUG is true
 #   * Receive x-headers
-INTERNAL_IPS = ("127.0.0.1",)
+INTERNAL_IPS = ("127.0.0.1","vikalpstaging.herokuapp.com",)
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -147,7 +147,7 @@ STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
     "compressor.finders.CompressorFinder",
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # The numeric mode to set newly-uploaded files to. The value should be
@@ -159,7 +159,8 @@ FILE_UPLOAD_PERMISSIONS = 0644
 # DATABASES #
 #############
 import dj_database_url
-DATABASES = {'default': dj_database_url.config(default = "postgres://postgres:postgres@localhost:5432/vikalp")}
+
+DATABASES = {'default': dj_database_url.config(default="postgres://postgres:postgres@localhost:5432/vikalp")}
 # DATABASES = {
 #     "default": {
 #         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
@@ -237,6 +238,7 @@ INSTALLED_APPS = (
     "django.contrib.sites",
     "django.contrib.sitemaps",
     "django.contrib.staticfiles",
+    "django_extensions",
     "mezzanine.boot",
     "mezzanine.conf",
     "mezzanine.core",
@@ -301,7 +303,6 @@ PACKAGE_NAME_GRAPPELLI = "grappelli_safe"
 # These will be added to ``INSTALLED_APPS``, only if available.
 OPTIONAL_APPS = (
     "debug_toolbar",
-    "django_extensions",
     "compressor",
     PACKAGE_NAME_FILEBROWSER,
     PACKAGE_NAME_GRAPPELLI,
