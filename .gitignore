@@ -10,3 +10,4 @@ vikalp/locale/
 templates/
 gettext/
 .tx
+node_modules/
