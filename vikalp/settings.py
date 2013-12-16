@@ -342,7 +342,6 @@ COMPRESS_PRECOMPILERS = (
 
 COMPRESS_ENABLED = True
 COMPRESS_PARSER = 'compressor.parser.HtmlParser'
-COMPRESS_OFFLINE = True
 
 
 ##################
