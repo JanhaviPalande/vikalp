@@ -18,13 +18,21 @@
   margin-left: -10px;
 }
 /* Take from Bootstrap */
+* {
+  margin: 0;
+}
 html {
   height: 100%;
 }
 body {
   padding-top: 0;
+  min-height: 100%;
   height: 100%;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  margin: 0 auto -60px;
+}
+#wrap {
+  min-height: 100%;
 }
 .browsehappy {
   margin: 0.2em 0;
@@ -262,17 +270,17 @@ a.pari-link {
 #push {
   height: 60px;
 }
-#footer {
+.footer {
   height: 60px;
   background-color: #333333;
 }
-#footer .footer-row {
+.footer .footer-row {
   text-align: center;
 }
-#footer ul.footer-nav {
+.footer ul.footer-nav {
   display: inline-block;
 }
-#footer ul.footer-nav li {
+.footer ul.footer-nav li {
   float: left;
   list-style: none;
   margin: 0 0.3em 0 0;
@@ -280,7 +288,7 @@ a.pari-link {
   font-size: 1.1em;
   color: #ee4303;
 }
-#footer ul.footer-nav li a {
+.footer ul.footer-nav li a {
   color: #ee4303;
 }
 .horizontal-line {
