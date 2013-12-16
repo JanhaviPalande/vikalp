@@ -3,11 +3,9 @@
 *.db
 .DS_Store
 .coverage
-/static
 vikalpvenv/
 locale/
 vikalp/locale/
-templates/
 gettext/
 .tx
 node_modules/
