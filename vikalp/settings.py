@@ -4,7 +4,7 @@
 SITE_TITLE = "Vikalp"
 SITE_TAGLINE = "Alternatives website"
 
-
+ALLOWED_HOSTS=''
 
 # The following settings are already defined with default values in
 # the ``defaults.py`` module within each of Mezzanine's apps, but are
@@ -342,6 +342,7 @@ COMPRESS_PRECOMPILERS = (
 
 COMPRESS_ENABLED = True
 COMPRESS_PARSER = 'compressor.parser.HtmlParser'
+COMPRESS_OFFLINE = True
 
 
 ##################
