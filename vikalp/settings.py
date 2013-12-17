@@ -3,6 +3,14 @@
 ######################
 SITE_TITLE = "Vikalp"
 SITE_TAGLINE = "Alternatives website"
+ugettext = lambda s: s
+USE_I18N = True
+LOCALE_PATH = "locale"
+
+LANGUAGES = (
+    ('ta', ugettext('Tamil')),
+    ('en', ugettext('English')),
+)
 
 ALLOWED_HOSTS = ["localhost"]
 
@@ -122,7 +130,6 @@ SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
-USE_I18N = False
 
 # Make these unique, and don't share it with anybody.
 SECRET_KEY = "7341988f-8d2e-4d01-9f91-f87b624b067770b1c594-3e58-4329-82e2-a4b80ff53af751725a1d-aad3-4999-816c-dd6ac934df55"
@@ -228,8 +235,8 @@ TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 ################
 # APPLICATIONS #
 ################
-
 INSTALLED_APPS = (
+    #DJANGO
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -239,6 +246,8 @@ INSTALLED_APPS = (
     "django.contrib.sitemaps",
     "django.contrib.staticfiles",
     "django_extensions",
+
+    #MEZZANINE
     "mezzanine.boot",
     "mezzanine.conf",
     "mezzanine.core",
@@ -248,11 +257,14 @@ INSTALLED_APPS = (
     "mezzanine.pages",
     "mezzanine.galleries",
     "mezzanine.twitter",
+    "mezzanine.accounts",
+
+    #MISC
     "gunicorn",
     "compressor",
-    #"mezzanine.accounts",
     # "mezzanine.mobile",
 )
+
 
 # List of processors used by RequestContext to populate the context.
 # Each one should be a callable that takes the request object as its

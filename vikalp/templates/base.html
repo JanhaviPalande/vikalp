@@ -2,6 +2,9 @@
 <html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
 {% load pages_tags mezzanine_tags i18n future compress staticfiles %}
 <head>
+    {% get_current_language as LANGUAGE_CODE %}
+    {% get_available_languages as LANGUAGES %}
+    {% get_current_language_bidi as LANGUAGE_BIDI %}
 
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width">
@@ -62,8 +65,10 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </a>
-                        {% if settings.SITE_TITLE %}<a class="brand" href="/">{{ settings.SITE_TITLE }}</a>{% endif %}
-                        {% if settings.SITE_TAGLINE %}<p class="navbar-text">{{ settings.SITE_TAGLINE }}</p>{% endif %}
+                        {% if settings.SITE_TITLE %}<a class="brand" href="/">{{ settings.SITE_TITLE }}
+                            </a>{% endif %}
+                        {% if settings.SITE_TAGLINE %}<p class="navbar-text">{{ settings.SITE_TAGLINE }}
+                            </p>{% endif %}
                         <div class="nav-collapse collapse">
                             {% search_form "" %}
                             {% page_menu "pages/menus/dropdown.html" %}
@@ -74,6 +79,7 @@
         </div>
     </div>
 
+    <div id="insertBlank"></div>
 
     <div class="container">
 
@@ -128,11 +134,13 @@
         {#    </div>#}
     </div>
 </div>
+<div id="insertBlank"></div>
 
 
 <div class="footer">
     <div class="container">
         <div class="footer-row">
+            <a href="http://www.kalpavriksh.org/">KalpaVriksh</a>
         </div>
     </div>
 </div>

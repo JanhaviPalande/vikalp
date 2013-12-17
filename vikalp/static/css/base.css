@@ -267,6 +267,9 @@ a.pari-link {
   padding: 11px 0 11px 0;
   margin: 0 12px 0 12px;
 }
+#insertBlank {
+  margin-top: 140px;
+}
 #push {
   height: 60px;
 }
@@ -276,6 +279,9 @@ a.pari-link {
 }
 .footer .footer-row {
   text-align: center;
+}
+.footer .footer-row a {
+  color: #ee4303;
 }
 .footer ul.footer-nav {
   display: inline-block;
