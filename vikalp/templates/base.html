@@ -82,32 +82,6 @@
     <div id="insertBlank"></div>
 
     <div class="container">
-
-        {% nevercache %}
-            {% for message in messages %}
-                <div class="alert alert-{{ message.tags }}" data-alert="alert">
-                    <a class="close" href="#"
-                       onclick="$(this).parent().fadeOut('fast'); return false;">×</a>{{ message }}
-                </div>
-            {% endfor %}
-        {% endnevercache %}
-
-
-        <h1>{% block title %}{% endblock %}</h1>
-
-        <ul class="breadcrumb">
-            {% spaceless %}
-                {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
-            {% endspaceless %}
-        </ul>
-
-        <div class="span7 middle">
-            {% block main %}{% endblock %}
-        </div>
-
-    </div>
-    {##}
-    <div class="container">
         {#    <div class="row">#}
         {##}
         {#        <div class="span2 left">#}
@@ -132,6 +106,35 @@
         {#        </div>#}
         {##}
         {#    </div>#}
+    </div>
+    {##}
+    <div class="container">
+
+        {% nevercache %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}" data-alert="alert">
+                    <a class="close" href="#"
+                       onclick="$(this).parent().fadeOut('fast'); return false;">×</a>{{ message }}
+                </div>
+            {% endfor %}
+        {% endnevercache %}
+
+
+        {% if not on_home %}
+            <h1>{% block title %}{% trans page_branch.title %}{% endblock %}</h1>
+            <ul class="breadcrumb">
+                {% spaceless %}
+                    {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
+                {% endspaceless %}
+            </ul>
+        {% endif %}
+
+
+
+        <div class="span7 middle">
+            {% block main %}{% endblock %}
+        </div>
+
     </div>
 </div>
 <div id="insertBlank"></div>

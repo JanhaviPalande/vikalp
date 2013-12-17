@@ -1,3 +1,3 @@
-from django.db import models
+from mezzanine.blog.models import BlogPost
 
 # Create your models here.
