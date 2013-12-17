@@ -9,3 +9,4 @@ vikalp/locale/
 gettext/
 .tx
 node_modules/
+.css/
