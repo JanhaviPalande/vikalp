@@ -1,4 +1,32 @@
 {% extends "base.html" %}
-{% load i18n staticfiles %}
+{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags %}
 
 {% block meta_title %}{% trans "Home" %}{% endblock %}
+
+{% block main %}
+
+    {% for article in promoted_articles %}
+        {% block blog_post_list_post_title %}
+            {% editable blog_post.title %}
+                <h2>
+                    <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+                </h2>
+            {% endeditable %}
+        {% endblock %}
+
+        {% block article_list_post_content_image %}
+            {% editable article.content %}
+                {{ article.description_from_content|safe }}
+            {% endeditable %}
+        {% endblock %}
+
+
+        {% block article_list_post_content_description %}
+            {% editable article.content %}
+                {{ article.description|safe }}
+            {% endeditable %}
+        {% endblock %}
+
+    {% endfor %}
+{% endblock %}
+

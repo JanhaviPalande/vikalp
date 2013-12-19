@@ -262,6 +262,7 @@ INSTALLED_APPS = (
     #MISC
     "gunicorn",
     "compressor",
+    "vikalp",
     # "mezzanine.mobile",
 )
 
