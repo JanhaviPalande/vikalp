@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/vikalp/tests.py" line="17" mnemonic="0" />
+    <bookmark url="file://$PROJECT_DIR$/vikalp/tests.py" line="16" mnemonic="0" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce42c44c-fb8b-4f55-a3a6-612ccf4586e2" name="Default" comment="" />
@@ -69,7 +69,7 @@
       <file leaf-file-name="tests.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vikalp/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="14" selection-start="146" selection-end="146" vertical-scroll-proportion="0.12903225" vertical-offset="0" max-vertical-offset="570">
+            <state line="4" column="0" selection-start="132" selection-end="132" vertical-scroll-proportion="0.12903225" vertical-offset="0" max-vertical-offset="555">
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -927,7 +927,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vikalp/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="14" selection-start="146" selection-end="146" vertical-scroll-proportion="0.12903225" vertical-offset="0" max-vertical-offset="570">
+        <state line="4" column="0" selection-start="132" selection-end="132" vertical-scroll-proportion="0.12903225" vertical-offset="0" max-vertical-offset="555">
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>

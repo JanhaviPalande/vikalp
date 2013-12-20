@@ -2,7 +2,6 @@ from django.test import TestCase
 from django.core.urlresolvers import reverse
 from models import Article
 from random import randint
-from selenium 
 
 class ArticleTest(TestCase):
     def create_article(self,title = "Test Title",content="Test Content",promoted = "t",user_id = randint(1,100), description = "Test Description"):
