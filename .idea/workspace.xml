@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/vikalp/tests.py" line="17" mnemonic="0" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ce42c44c-fb8b-4f55-a3a6-612ccf4586e2" name="Default" comment="" />
     <ignored path="vikalp.iws" />
@@ -12,10 +15,19 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/vikalp$Unittest_ViewTest_test_article_views.coverage" NAME="Unittest ViewTest.test_article_views Coverage Results" MODIFIED="1387449295953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vikalp" />
     <SUITE FILE_PATH="coverage/vikalp$Unittest_SimpleTest_test_basic_addition.coverage" NAME="Unittest SimpleTest.test_basic_addition Coverage Results" MODIFIED="1387430450735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vikalp" />
+    <SUITE FILE_PATH="coverage/vikalp$Test__vikalp_ArticleTest.coverage" NAME="Test: vikalp.ArticleTest Coverage Results" MODIFIED="1387511835295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/vikalp$views.coverage" NAME="views Coverage Results" MODIFIED="1387358116832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog" />
+    <SUITE FILE_PATH="coverage/vikalp$Test__vikalp_ArticleTest_test_promoted_article_view_title.coverage" NAME="Test: vikalp.ArticleTest.test_promoted_article_view_title Coverage Results" MODIFIED="1387511817880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/vikalp$Unittest_ViewTest_test_article_views.coverage" NAME="Unittest ViewTest.test_article_views Coverage Results" MODIFIED="1387449295953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vikalp" />
+    <SUITE FILE_PATH="coverage/vikalp$Test__vikalp_ArticleTest_test_article_model_creation.coverage" NAME="Test: vikalp.ArticleTest.test_article_model_creation Coverage Results" MODIFIED="1387509542542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/vikalp$Unittests_in_tests.coverage" NAME="Unittests in tests Coverage Results" MODIFIED="1387511825466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vikalp" />
+    <SUITE FILE_PATH="coverage/vikalp$Test__vikalp_ArticleTest_test_article_returned_url.coverage" NAME="Test: vikalp.ArticleTest.test_article_returned_url Coverage Results" MODIFIED="1387509744553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/vikalp$Test__vikalp_ArticleTest_test_promoted_article_view.coverage" NAME="Test: vikalp.ArticleTest.test_promoted_article_view Coverage Results" MODIFIED="1387511692846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/vikalp$Unittest_BlogTests_test_blog_views.coverage" NAME="Unittest BlogTests.test_blog_views Coverage Results" MODIFIED="1387346804505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog" />
+    <SUITE FILE_PATH="coverage/vikalp$Test__vikalp_ArticleTest_check_e.coverage" NAME="Test: vikalp.ArticleTest.check_e Coverage Results" MODIFIED="1387509039006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/vikalp$Unittest_ArticleTest_test_article_creation.coverage" NAME="Unittest ArticleTest.test_article_creation Coverage Results" MODIFIED="1387509088723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vikalp" />
+    <SUITE FILE_PATH="coverage/vikalp$Test__vikalp_ArticleTest_test_article_reation.coverage" NAME="Test: vikalp.ArticleTest.test_article_reation Coverage Results" MODIFIED="1387509054653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -37,7 +49,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="932" selection-end="932" vertical-scroll-proportion="-19.375" vertical-offset="0" max-vertical-offset="570">
+            <state line="31" column="0" selection-start="932" selection-end="932" vertical-scroll-proportion="-16.791666" vertical-offset="62" max-vertical-offset="570">
               <folding />
             </state>
           </provider>
@@ -46,7 +58,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vikalp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+            <state line="9" column="31" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -54,32 +66,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vikalp/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="57" selection-start="301" selection-end="322" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vikalp/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="39" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="tests.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vikalp/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+            <state line="4" column="14" selection-start="146" selection-end="146" vertical-scroll-proportion="0.12903225" vertical-offset="0" max-vertical-offset="570">
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -87,22 +77,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/core/tests.py">
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vikalp/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="42" selection-start="2001" selection-end="2001" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="3210">
+            <state line="14" column="18" selection-start="273" selection-end="305" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5970">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog/models.py">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vikalp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="367" selection-end="367" vertical-scroll-proportion="0.18595041" vertical-offset="0" max-vertical-offset="1575">
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state line="4" column="32" selection-start="104" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,17 +110,17 @@
         <option value="$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog/views.py" />
         <option value="$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog/admin.py" />
         <option value="$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog/forms.py" />
-        <option value="$PROJECT_DIR$/vikalp/settings.py" />
         <option value="$PROJECT_DIR$/vikalp/urls.py" />
         <option value="$PROJECT_DIR$/vikalp/views.py" />
         <option value="$PROJECT_DIR$/vikalp/templates/blog/blog_post_list.html" />
-        <option value="$PROJECT_DIR$/vikalp/models.py" />
         <option value="$PROJECT_DIR$/vikalp/static/css/homepage.less" />
         <option value="$PROJECT_DIR$/vikalp/static/css/homepage.css" />
         <option value="$PROJECT_DIR$/vikalp/templates/pages/index.html" />
-        <option value="$PROJECT_DIR$/vikalp/tests.py" />
         <option value="$PROJECT_DIR$/vikalp/admin.py" />
         <option value="$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog/models.py" />
+        <option value="$PROJECT_DIR$/vikalp/models.py" />
+        <option value="$PROJECT_DIR$/vikalp/settings.py" />
+        <option value="$PROJECT_DIR$/vikalp/tests.py" />
       </list>
     </option>
   </component>
@@ -417,101 +405,122 @@
       <console-settings />
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittest ViewTest.test_article_views">
-    <configuration default="false" name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Django tests.Test: vikalp.ArticleTest">
+    <configuration default="false" name="Unittests in tests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="DJANGO_SETTINGS_MODULE" value="vikalp.local_settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vikalp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="vikalp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vikalp/tests.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test: vikalp.ArticleTest.test_article_returned_url" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="vikalp.local_settings" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="vikalp" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog/views.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest BlogTests.test_blog_views" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="vikalp" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog/tests.py" />
-      <option name="CLASS_NAME" value="BlogTests" />
-      <option name="METHOD_NAME" value="test_blog_views" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="TARGET" value="vikalp.ArticleTest.test_article_returned_url" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittest ViewTest.test_basic_addition" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Test: vikalp.ArticleTest.test_promoted_article_view" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="vikalp.local_settings" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vikalp" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="vikalp" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vikalp/tests.py" />
-      <option name="CLASS_NAME" value="ViewTest" />
-      <option name="METHOD_NAME" value="test_basic_addition" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="TARGET" value="vikalp.ArticleTest.test_promoted_article_view" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittest ViewTest.test_article_views" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Test: vikalp.ArticleTest.test_promoted_article_view_title" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="vikalp.local_settings" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vikalp" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="vikalp" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vikalp/tests.py" />
-      <option name="CLASS_NAME" value="ViewTest" />
-      <option name="METHOD_NAME" value="test_article_views" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="TARGET" value="vikalp.ArticleTest.test_promoted_article_view_title" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test: vikalp.ArticleTest" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="vikalp.local_settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="vikalp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="vikalp.ArticleTest" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
@@ -720,19 +729,21 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Django server.vikalp" />
-      <item index="1" class="java.lang.String" itemvalue="Python.views" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest BlogTests.test_blog_views" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest ViewTest.test_basic_addition" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest ViewTest.test_article_views" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in tests" />
+      <item index="2" class="java.lang.String" itemvalue="Django tests.Test: vikalp.ArticleTest.test_article_returned_url" />
+      <item index="3" class="java.lang.String" itemvalue="Django tests.Test: vikalp.ArticleTest.test_promoted_article_view" />
+      <item index="4" class="java.lang.String" itemvalue="Django tests.Test: vikalp.ArticleTest.test_promoted_article_view_title" />
+      <item index="5" class="java.lang.String" itemvalue="Django tests.Test: vikalp.ArticleTest" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest ViewTest.test_article_views" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest ViewTest.test_basic_addition" />
-        <item index="2" class="java.lang.String" itemvalue="Python.views" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest BlogTests.test_blog_views" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Django tests.Test: vikalp.ArticleTest" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in tests" />
+        <item index="2" class="java.lang.String" itemvalue="Django tests.Test: vikalp.ArticleTest.test_promoted_article_view_title" />
+        <item index="3" class="java.lang.String" itemvalue="Django tests.Test: vikalp.ArticleTest.test_promoted_article_view" />
+        <item index="4" class="java.lang.String" itemvalue="Django tests.Test: vikalp.ArticleTest.test_article_returned_url" />
       </list>
     </recent_temporary>
   </component>
@@ -779,7 +790,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39920425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -803,27 +814,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vikalp/static/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="4" selection-start="1357" selection-end="1359" vertical-scroll-proportion="-8.5" vertical-offset="1324" max-vertical-offset="92460">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/static/css/base.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="7" selection-start="3723" selection-end="3727" vertical-scroll-proportion="4.4333844" vertical-offset="0" max-vertical-offset="10020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/static/css/bootstrap-responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="11" selection-start="268" selection-end="268" vertical-scroll-proportion="0.22727273" vertical-offset="0" max-vertical-offset="16725">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vikalp/static/css/common.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="6" selection-start="285" selection-end="287" vertical-scroll-proportion="0.31508875" vertical-offset="27" max-vertical-offset="2475">
@@ -866,32 +856,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/index.html">
+    <entry file="file://$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="932" selection-end="932" vertical-scroll-proportion="-19.375" vertical-offset="0" max-vertical-offset="570">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+        <state line="9" column="0" selection-start="367" selection-end="367" vertical-scroll-proportion="0.19203414" vertical-offset="0" max-vertical-offset="1575">
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/core/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="42" selection-start="2001" selection-end="2001" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="3210">
+        <state line="51" column="42" selection-start="2001" selection-end="2001" vertical-scroll-proportion="0.7894737" vertical-offset="15" max-vertical-offset="3210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="39" selection-start="775" selection-end="775" vertical-scroll-proportion="0.42674252" vertical-offset="0" max-vertical-offset="703">
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="703">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/blog/blog_post_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="25" selection-start="4124" selection-end="4124" vertical-scroll-proportion="2.198839" vertical-offset="0" max-vertical-offset="2040">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vikalp/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+        <state line="9" column="31" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -900,27 +906,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vikalp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="57" selection-start="301" selection-end="322" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state line="4" column="32" selection-start="104" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/admin.py">
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="39" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+        <state line="31" column="0" selection-start="932" selection-end="932" vertical-scroll-proportion="-16.791666" vertical-offset="62" max-vertical-offset="570">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog/models.py">
+    <entry file="file://$PROJECT_DIR$/vikalp/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="367" selection-end="367" vertical-scroll-proportion="0.18595041" vertical-offset="0" max-vertical-offset="1575">
+        <state line="14" column="18" selection-start="273" selection-end="305" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5970">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="14" selection-start="146" selection-end="146" vertical-scroll-proportion="0.12903225" vertical-offset="0" max-vertical-offset="570">
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>

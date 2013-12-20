@@ -10,3 +10,4 @@ gettext/
 .tx
 node_modules/
 .css/
+htmlcov/

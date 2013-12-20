@@ -12,7 +12,7 @@ LANGUAGES = (
     ('en', ugettext('English')),
 )
 
-ALLOWED_HOSTS = ["localhost"]
+# ALLOWED_HOSTS = ["localhost"]
 
 # The following settings are already defined with default values in
 # the ``defaults.py`` module within each of Mezzanine's apps, but are
@@ -263,6 +263,7 @@ INSTALLED_APPS = (
     "gunicorn",
     "compressor",
     "vikalp",
+    "coverage"
     # "mezzanine.mobile",
 )
 
