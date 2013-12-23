@@ -1,0 +1,10 @@
+{
+	"postgresql": {
+	},
+	"run_list": [
+		"ntp",
+		"python",
+		"postgres",
+		"vikalp"
+	]	
+}
