@@ -12,8 +12,6 @@ execute "sudo ln -s /usr/lib64/libjpeg.so /usr/lib" do
 	not_if do ::File.exists?('/usr/lib/libjpeg.so') end
 end
 
-execute "pip install -r requirements.txt" do
-  cwd "/vagrant"
-end
+execute "pip install -r requirements.txt"
 
 package "nginx"	
