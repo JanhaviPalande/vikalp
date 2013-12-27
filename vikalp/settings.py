@@ -12,7 +12,7 @@ LANGUAGES = (
     ('en', ugettext('English')),
 )
 
-# ALLOWED_HOSTS = ["localhost"]
+ALLOWED_HOSTS = ['*']
 
 # The following settings are already defined with default values in
 # the ``defaults.py`` module within each of Mezzanine's apps, but are
@@ -121,7 +121,7 @@ LANGUAGE_CODE = "en"
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
 # production. Best set to ``True`` in local_settings.py
-DEBUG = True
+DEBUG = False
 
 # Whether a user's session cookie expires when the Web browser is closed.
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
@@ -138,7 +138,7 @@ NEVERCACHE_KEY = "bc70087d-f493-4b12-b32d-a0a826b4f7357a9db270-ac61-4886-aeb9-31
 # Tuple of IP addresses, as strings, that:
 #   * See debug comments, when DEBUG is true
 #   * Receive x-headers
-INTERNAL_IPS = ("127.0.0.1","vikalpstaging.herokuapp.com",)
+# INTERNAL_IPS = ("127.0.0.1","0.0.0.0",)
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -154,7 +154,7 @@ STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
     "compressor.finders.CompressorFinder",
-    #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # The numeric mode to set newly-uploaded files to. The value should be
@@ -167,7 +167,7 @@ FILE_UPLOAD_PERMISSIONS = 0644
 #############
 import dj_database_url
 
-DATABASES = {'default': dj_database_url.config(default="postgres://postgres:postgres@localhost:5432/vikalp")}
+DATABASES = {'default': dj_database_url.config(default="postgres://postgres@localhost:5432/vikalp")}
 # DATABASES = {
 #     "default": {
 #         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".

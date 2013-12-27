@@ -55,7 +55,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # View the documentation for the provider you're using for more
   # information on available options.
   # config.vm.forward_port 8000, 8080
-  config.vm.network "forwarded_port", guest: 8000, host: 8080
+  config.vm.network "forwarded_port", guest: 80, host: 8080
 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.

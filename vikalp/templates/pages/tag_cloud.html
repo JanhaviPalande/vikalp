@@ -1,0 +1,11 @@
+{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags %}
+{% block tag_cloud %}
+            {% keywords_for vikalp.article as tags %}
+                {% if tags %}
+                    <h3>{% trans "Tag Cloud" %}</h3>
+                    
+                    {% for tag in tags %}
+                        <a href="{% url "blog_post_list_tag" tag.slug %}" class="tag-weight-{{ tag.weight }}">{{ tag }}</a>
+                    {% endfor %}
+                {% endif %}        
+{% endblock %}

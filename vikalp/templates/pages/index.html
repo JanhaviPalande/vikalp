@@ -4,7 +4,6 @@
 {% block meta_title %}{% trans "Home" %}{% endblock %}
 
 {% block main %}
-
     {% for article in promoted_articles %}
         {% block blog_post_list_post_title %}
             {% editable blog_post.title %}
@@ -27,6 +26,10 @@
             {% endeditable %}
         {% endblock %}
 
+        
+
     {% endfor %}
+
+    {% include "pages/tag_cloud.html" %}
 {% endblock %}
 
