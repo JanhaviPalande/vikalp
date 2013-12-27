@@ -1,0 +1,1 @@
+$(document).ready(function(){console.log($("#footer-lower"));});$("footer").click(function(){$("#footer-lower").toggle();});

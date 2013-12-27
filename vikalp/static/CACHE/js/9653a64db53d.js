@@ -1,0 +1,1 @@
+$(document).ready(function(){console.log('dskbsjkvbnj');$("#footer-lower").hide();});$("footer").click(function(){$("#footer-lower").toggle();});

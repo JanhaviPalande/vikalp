@@ -15,18 +15,18 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/vikalp$Unittest_SimpleTest_test_basic_addition.coverage" NAME="Unittest SimpleTest.test_basic_addition Coverage Results" MODIFIED="1387430450735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vikalp" />
-    <SUITE FILE_PATH="coverage/vikalp$Test__vikalp_ArticleTest.coverage" NAME="Test: vikalp.ArticleTest Coverage Results" MODIFIED="1387511835295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/vikalp$views.coverage" NAME="views Coverage Results" MODIFIED="1387358116832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog" />
-    <SUITE FILE_PATH="coverage/vikalp$Test__vikalp_ArticleTest_test_promoted_article_view_title.coverage" NAME="Test: vikalp.ArticleTest.test_promoted_article_view_title Coverage Results" MODIFIED="1387511817880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/vikalp$Unittest_ViewTest_test_article_views.coverage" NAME="Unittest ViewTest.test_article_views Coverage Results" MODIFIED="1387449295953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vikalp" />
-    <SUITE FILE_PATH="coverage/vikalp$Test__vikalp_ArticleTest_test_article_model_creation.coverage" NAME="Test: vikalp.ArticleTest.test_article_model_creation Coverage Results" MODIFIED="1387509542542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/vikalp$Unittests_in_tests.coverage" NAME="Unittests in tests Coverage Results" MODIFIED="1387511825466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vikalp" />
-    <SUITE FILE_PATH="coverage/vikalp$Test__vikalp_ArticleTest_test_article_returned_url.coverage" NAME="Test: vikalp.ArticleTest.test_article_returned_url Coverage Results" MODIFIED="1387509744553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/vikalp$Unittest_SimpleTest_test_basic_addition.coverage" NAME="Unittest SimpleTest.test_basic_addition Coverage Results" MODIFIED="1387430450735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vikalp" />
+    <SUITE FILE_PATH="coverage/vikalp$Test__vikalp_ArticleTest_test_promoted_article_view_title.coverage" NAME="Test: vikalp.ArticleTest.test_promoted_article_view_title Coverage Results" MODIFIED="1387511817880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/vikalp$Test__vikalp_ArticleTest_test_promoted_article_view.coverage" NAME="Test: vikalp.ArticleTest.test_promoted_article_view Coverage Results" MODIFIED="1387511692846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/vikalp$Unittest_ArticleTest_test_article_creation.coverage" NAME="Unittest ArticleTest.test_article_creation Coverage Results" MODIFIED="1387509088723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vikalp" />
+    <SUITE FILE_PATH="coverage/vikalp$Unittests_in_tests.coverage" NAME="Unittests in tests Coverage Results" MODIFIED="1387511825466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vikalp" />
     <SUITE FILE_PATH="coverage/vikalp$Unittest_BlogTests_test_blog_views.coverage" NAME="Unittest BlogTests.test_blog_views Coverage Results" MODIFIED="1387346804505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog" />
     <SUITE FILE_PATH="coverage/vikalp$Test__vikalp_ArticleTest_check_e.coverage" NAME="Test: vikalp.ArticleTest.check_e Coverage Results" MODIFIED="1387509039006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/vikalp$Unittest_ArticleTest_test_article_creation.coverage" NAME="Unittest ArticleTest.test_article_creation Coverage Results" MODIFIED="1387509088723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vikalp" />
+    <SUITE FILE_PATH="coverage/vikalp$views.coverage" NAME="views Coverage Results" MODIFIED="1387358116832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog" />
+    <SUITE FILE_PATH="coverage/vikalp$Test__vikalp_ArticleTest_test_article_returned_url.coverage" NAME="Test: vikalp.ArticleTest.test_article_returned_url Coverage Results" MODIFIED="1387509744553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/vikalp$Test__vikalp_ArticleTest_test_article_model_creation.coverage" NAME="Test: vikalp.ArticleTest.test_article_model_creation Coverage Results" MODIFIED="1387509542542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/vikalp$Test__vikalp_ArticleTest.coverage" NAME="Test: vikalp.ArticleTest Coverage Results" MODIFIED="1387511835295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/vikalp$Test__vikalp_ArticleTest_test_article_reation.coverage" NAME="Test: vikalp.ArticleTest.test_article_reation Coverage Results" MODIFIED="1387509054653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -45,57 +45,132 @@
     <favorites_list name="vikalp" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="932" selection-end="932" vertical-scroll-proportion="-16.791666" vertical-offset="62" max-vertical-offset="570">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vikalp/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="31" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tests.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vikalp/tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="132" selection-end="132" vertical-scroll-proportion="0.12903225" vertical-offset="0" max-vertical-offset="555">
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vikalp/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="18" selection-start="273" selection-end="305" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5970">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vikalp/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="32" selection-start="104" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/vikalp/templates/base.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="73" column="39" selection-start="3588" selection-end="3588" vertical-scroll-proportion="0.45586106" vertical-offset="780" max-vertical-offset="2370">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="demo.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/vikalp/static/css/demo.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="168" column="22" selection-start="2369" selection-end="2369" vertical-scroll-proportion="0.0" vertical-offset="2220" max-vertical-offset="4935">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="dropdown.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/menus/dropdown.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="15" column="32" selection-start="762" selection-end="762" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="720">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="page.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/page.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="richtextpage.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/richtextpage.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="5" column="0" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="255">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="gallery.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/gallery.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="23" column="18" selection-start="740" selection-end="740" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="645">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="form.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/form.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="585">
+                  <folding>
+                    <marker date="1387786083000" expanded="true" signature="106:184" placeholder="..." />
+                    <marker date="1387786083000" expanded="true" signature="629:836" placeholder="..." />
+                    <marker date="1387786083000" expanded="true" signature="705:824" placeholder="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="base_alternate.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/vikalp/templates/base_alternate.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="48" column="40" selection-start="2397" selection-end="2397" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="2925">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="1" column="26" selection-start="42" selection-end="56" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="630">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="base_alternate.html" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/vikalp/templates/base_alternate.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="49" column="80" selection-start="2468" selection-end="2518" vertical-scroll-proportion="0.4347826" vertical-offset="435" max-vertical-offset="2925">
+                  <folding>
+                    <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="pagemenu.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/menus/pagemenu.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="10" column="67" selection-start="495" selection-end="495" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="375">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="base.less" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/vikalp/static/css/base.less">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="148" column="19" selection-start="2673" selection-end="2681" vertical-scroll-proportion="-4.52" vertical-offset="1994" max-vertical-offset="10020">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -105,22 +180,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/vikalp/templates/index.html" />
-        <option value="$PROJECT_DIR$/vikalp/templates/blog/blog_post_detail.html" />
-        <option value="$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog/views.py" />
-        <option value="$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog/admin.py" />
-        <option value="$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog/forms.py" />
-        <option value="$PROJECT_DIR$/vikalp/urls.py" />
-        <option value="$PROJECT_DIR$/vikalp/views.py" />
-        <option value="$PROJECT_DIR$/vikalp/templates/blog/blog_post_list.html" />
-        <option value="$PROJECT_DIR$/vikalp/static/css/homepage.less" />
         <option value="$PROJECT_DIR$/vikalp/static/css/homepage.css" />
-        <option value="$PROJECT_DIR$/vikalp/templates/pages/index.html" />
         <option value="$PROJECT_DIR$/vikalp/admin.py" />
         <option value="$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog/models.py" />
         <option value="$PROJECT_DIR$/vikalp/models.py" />
         <option value="$PROJECT_DIR$/vikalp/settings.py" />
         <option value="$PROJECT_DIR$/vikalp/tests.py" />
+        <option value="$PROJECT_DIR$/vikalp/templates/pages/index_alternate.html" />
+        <option value="$PROJECT_DIR$/vikalp/templates/pages/this.html" />
+        <option value="$PROJECT_DIR$/vikalp/templates/pages/richtextpage.html" />
+        <option value="$PROJECT_DIR$/vikalp/templates/base.html" />
+        <option value="$PROJECT_DIR$/vikalp/static/css/demo.css" />
+        <option value="$PROJECT_DIR$/vikalp/templates/pages/menus/dropdown.html" />
+        <option value="$PROJECT_DIR$/vikalp/templates/pages/index.html" />
+        <option value="$PROJECT_DIR$/vikalp/templates/base_alternate.html" />
+        <option value="$PROJECT_DIR$/vikalp/static/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/vikalp/templates/pages/menus/pagemenu.html" />
       </list>
     </option>
   </component>
@@ -183,166 +258,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="vikalpvenv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python2.7" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalpvenv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python2.7" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalpvenv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python2.7" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mezzanine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalpvenv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python2.7" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mezzanine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalpvenv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python2.7" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site-packages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mezzanine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalpvenv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="vikalp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -387,6 +302,152 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cookbooks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cookbooks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="postgres" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chef" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cookbooks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="postgres" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -394,16 +455,26 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings />
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/vikalp/static/css" />
+    </key>
   </component>
   <component name="RunManager" selected="Django tests.Test: vikalp.ArticleTest">
     <configuration default="false" name="Unittests in tests" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -783,18 +854,18 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24605452" sideWeight="0.6710875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15625" sideWeight="0.6710875" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39920425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -814,110 +885,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vikalp/static/css/common.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="6" selection-start="285" selection-end="287" vertical-scroll-proportion="0.31508875" vertical-offset="27" max-vertical-offset="2475">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/static/css/esab.css.bak">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="21" selection-start="334" selection-end="334" vertical-scroll-proportion="0.18595041" vertical-offset="0" max-vertical-offset="11370">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/static/css/elements.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="24" selection-start="2262" selection-end="2262" vertical-scroll-proportion="0.44822484" vertical-offset="372" max-vertical-offset="2415">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/static/css/mezzanine.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="28" selection-end="30" vertical-scroll-proportion="0.042857144" vertical-offset="0" max-vertical-offset="1995">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/static/css/homepage.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="8" selection-start="38" selection-end="43" vertical-scroll-proportion="0.08547009" vertical-offset="0" max-vertical-offset="2835">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/static/css/homepage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="0" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.4903581" vertical-offset="514" max-vertical-offset="3765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="367" selection-end="367" vertical-scroll-proportion="0.19203414" vertical-offset="0" max-vertical-offset="1575">
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/core/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="42" selection-start="2001" selection-end="2001" vertical-scroll-proportion="0.7894737" vertical-offset="15" max-vertical-offset="3210">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="39" selection-start="775" selection-end="775" vertical-scroll-proportion="0.42674252" vertical-offset="0" max-vertical-offset="703">
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalpvenv/lib/python2.7/site-packages/mezzanine/blog/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="703">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/templates/blog/blog_post_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="25" selection-start="4124" selection-end="4124" vertical-scroll-proportion="2.198839" vertical-offset="0" max-vertical-offset="2040">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="31" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="32" selection-start="104" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="932" selection-end="932" vertical-scroll-proportion="-16.791666" vertical-offset="62" max-vertical-offset="570">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vikalp/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="18" selection-start="273" selection-end="305" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5970">
@@ -925,11 +892,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/tests.py">
+    <entry file="file://$PROJECT_DIR$/vikalp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="132" selection-end="132" vertical-scroll-proportion="0.12903225" vertical-offset="0" max-vertical-offset="555">
+        <state line="4" column="32" selection-start="104" selection-end="132" vertical-scroll-proportion="0.03994674" vertical-offset="0" max-vertical-offset="195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chef/cookbooks/postgres/recipes/default.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="3" selection-start="392" selection-end="392" vertical-scroll-proportion="0.30487806" vertical-offset="0" max-vertical-offset="738" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="751">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/richtextpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/gallery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="18" selection-start="740" selection-end="740" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="715">
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1387786083000" expanded="true" signature="106:184" placeholder="..." />
+            <marker date="1387786083000" expanded="true" signature="629:836" placeholder="..." />
+            <marker date="1387786083000" expanded="true" signature="705:824" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/static/css/demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="168" column="22" selection-start="2369" selection-end="2369" vertical-scroll-proportion="0.0" vertical-offset="2220" max-vertical-offset="4935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/menus/dropdown.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="32" selection-start="762" selection-end="762" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="26" selection-start="42" selection-end="56" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="39" selection-start="3588" selection-end="3588" vertical-scroll-proportion="0.45586106" vertical-offset="780" max-vertical-offset="2370">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/static/css/base.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="148" column="19" selection-start="2673" selection-end="2681" vertical-scroll-proportion="-4.52" vertical-offset="1994" max-vertical-offset="10020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/static/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4691" column="21" selection-start="90602" selection-end="90602" vertical-scroll-proportion="0.35664335" vertical-offset="70110" max-vertical-offset="92460">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/static/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="34" selection-start="2421" selection-end="2429" vertical-scroll-proportion="0.34397677" vertical-offset="1698" max-vertical-offset="11460">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/menus/pagemenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="67" selection-start="495" selection-end="495" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/base_alternate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="80" selection-start="2468" selection-end="2518" vertical-scroll-proportion="0.4347826" vertical-offset="435" max-vertical-offset="2925">
+          <folding>
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

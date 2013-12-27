@@ -1,0 +1,54 @@
+{% load pages_tags mezzanine_tags i18n future compress staticfiles %}
+
+{% compress js %}
+{#    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>#}
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#footer-lower").hide();
+
+            $(".footer").click(function () {
+
+                $("#footer-lower").toggle();
+            });
+        });
+
+    </script>
+{% endcompress %}
+
+{% compress css %}
+    <link rel="stylesheet" href="{% static "css/footer.css" %}">
+{% endcompress %}
+<div class="footer">
+    <div class="footer-inner">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">three</a></li>
+        </ul>
+    </div>
+    <div id="footer-lower" class="footer-inner footer-lower">
+        <div class="footer-col">
+            <ul>
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <ul>
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <ul>
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
