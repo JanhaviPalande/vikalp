@@ -70,7 +70,7 @@ p {
 	clear: both;
 }
 .wrap {
-		/*background:url(../images/bg.png) top left repeat-x;*/
+		/*background:url('/static/images/bg.png') top left repeat-x;*/
 		//width: 100%;
 		//max-width: 1400px;
 		//min-width: 1280px;
@@ -198,7 +198,7 @@ p {
 
 .banner a{
     text-decoration: none;
-    color: #ffffff;
+    /*color: ;*/
 }
 
 .banner .dots li {

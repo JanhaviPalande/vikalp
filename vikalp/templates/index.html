@@ -1,18 +1,30 @@
-{% extends "base.html" %}
-{% load i18n staticfiles %}
 
-{% block meta_title %}{% trans "Home" %}{% endblock %}
+{% block main %}
+    {% for article in promoted_articles %}
+        {% block blog_post_list_post_title %}
+            {% editable blog_post.title %}
+                <h2>
+                    <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+                </h2>
+            {% endeditable %}
+        {% endblock %}
 
-{#{% block title %}{% trans "Home" %}{% endblock %}#}
+        {% block article_list_post_content_image %}
+            {% editable article.content %}
+                {{ article.description_from_content|safe }}
+            {% endeditable %}
+        {% endblock %}
 
-{#{% block breadcrumb_menu %}#}
-{#    <li class="active">{% trans "Home" %}</li>#}
-{#{% endblock %}#}
-{##}
-{#{% block extra_css %}#}
-{#{% endblock %}#}
-{##}
-{#{% block main %}#}
-{#    {% blocktrans %}#}
-{#    {% endblocktrans %}#}
-{#{% endblock %}#}
+
+        {% block article_list_post_content_description %}
+            {% editable article.content %}
+                {{ article.description|safe }}
+            {% endeditable %}
+        {% endblock %}
+
+        
+
+    {% endfor %}
+
+    {% include "pages/tag_cloud.html" %}
+{% endblock %}

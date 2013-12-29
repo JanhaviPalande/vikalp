@@ -5,4 +5,4 @@ install: "pip install -r requirements.txt"
 env:
   - DJANGO=1.5 DJANGO_SETTINGS_MODULE=vikalp.local_settings
 script:
-  - python manage.py test
+  - python manage.py test vikalp
