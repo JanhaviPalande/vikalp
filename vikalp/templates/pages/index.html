@@ -1,70 +1,70 @@
-{#{% extends "base.html" %}#}
-{% extends "base_alternate.html" %}
+{% extends "base.html" %}
+{#{% extends "base_alternate.html" %}#}
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags %}
 
 {% block meta_title %}{% trans "Home" %}{% endblock %}
-{##}
-{#{% block main %}#}
-{#    {% for article in promoted_articles %}#}
-{#        {% block blog_post_list_post_title %}#}
-{#            {% editable blog_post.title %}#}
-{#                <h2>#}
-{#                    <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>#}
-{#                </h2>#}
-{#            {% endeditable %}#}
-{#        {% endblock %}#}
-{##}
-{#        {% block article_list_post_content_image %}#}
-{#            {% editable article.content %}#}
-{#                {{ article.description_from_content|safe }}#}
-{#            {% endeditable %}#}
-{#        {% endblock %}#}
-{##}
-{##}
-{#        {% block article_list_post_content_description %}#}
-{#            {% editable article.content %}#}
-{#                {{ article.description|safe }}#}
-{#            {% endeditable %}#}
-{#        {% endblock %}#}
-{##}
-{##}
-{##}
-{#    {% endfor %}#}
-{##}
-{#    {% include "pages/tag_cloud.html" %}#}
-{#{% endblock %}#}
-
 
 {% block main %}
-    <div class="banner">
-        <ul>
-            {% for article in promoted_articles %}
-                {#                <li style="background-image: url({% static "media/notfound.jpg" %});">#}
-                <li>
-                    <h1>
-                        <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
-                    </h1>
+    {% for article in promoted_articles %}
+        {% block blog_post_list_post_title %}
+            {% editable blog_post.title %}
+                <h2>
+                    <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+                </h2>
+            {% endeditable %}
+        {% endblock %}
 
-                    <p>
-                        {{ article.description|safe }}
-                    </p>
-                </li>
-            {% endfor %}
-        </ul>
-        <ol class="dots">
+        {% block article_list_post_content_image %}
+            {% editable article.content %}
+                {{ article.description_from_content|safe }}
+            {% endeditable %}
+        {% endblock %}
 
-        </ol>
-    </div>
-    </div> {#   Ends Section sTop#}
-    {% for page in page_branch %}
-        {% if page.in_menu %}
-            <div class="section s{{ forloop.counter }}">
-                <div class="inner">
-                    <h1>{{ page.title }}</h1>
-                </div>
-            </div>
-        {% endif %}
+
+        {% block article_list_post_content_description %}
+            {% editable article.content %}
+                {{ article.description|safe }}
+            {% endeditable %}
+        {% endblock %}
+
+
+
     {% endfor %}
 
-
+    {% include "pages/tag_cloud.html" %}
 {% endblock %}
+
+
+{#{% block main %}#}
+{#    <div class="banner">#}
+{#        <ul>#}
+{#            {% for article in promoted_articles %}#}
+                {#                <li style="background-image: url({% static "media/notfound.jpg" %});">#}
+{#                <li>#}
+{#                    <h1>#}
+{#                        <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>#}
+{#                    </h1>#}
+{##}
+{#                    <p>#}
+{#                        {{ article.description|safe }}#}
+{#                    </p>#}
+{#                </li>#}
+{#            {% endfor %}#}
+{#        </ul>#}
+{#        <ol class="dots">#}
+{##}
+{#        </ol>#}
+{#    </div>#}
+{#    </div> {#   Ends Section sTop#}
+{#    {% for page in page_branch %}#}
+{#        {% if page.in_menu %}#}
+{#            <div class="section s{{ forloop.counter }}">#}
+{#                <div class="inner">#}
+{#                    <h1>{{ page.title }}</h1>#}
+{#                </div>#}
+{#            </div>#}
+{#        {% endif %}#}
+{#    {% endfor %}#}
+{##}
+{##}
+{#{% endblock %}#}
