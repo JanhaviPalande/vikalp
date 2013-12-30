@@ -16,4 +16,4 @@ execute "pip install -r requirements.txt" do
 	cwd "/home/user/vikalp"
 end
 
-package "nginx"	
+package "nginx"

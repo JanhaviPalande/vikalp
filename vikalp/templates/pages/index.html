@@ -6,7 +6,8 @@
 
 {% block main %}
     {% for article in promoted_articles %}
-        {% block blog_post_list_post_title %}
+
+        {% block article_list_post_title %}
             {% editable blog_post.title %}
                 <h2>
                     <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
@@ -14,11 +15,20 @@
             {% endeditable %}
         {% endblock %}
 
-        {% block article_list_post_content_image %}
-            {% editable article.content %}
-                {{ article.description_from_content|safe }}
-            {% endeditable %}
+
+        {% block article_detail_featured_image %}
+            {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}
+                <p><img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 300 0 %}"></p>
+            {% endif %}
         {% endblock %}
+
+
+        {##}
+        {#        {% block article_list_post_content_image %}#}
+        {#            {% editable article.content %}#}
+        {#                {{ article.description_from_content|safe }}#}
+        {#            {% endeditable %}#}
+        {#        {% endblock %}#}
 
 
         {% block article_list_post_content_description %}
@@ -26,6 +36,10 @@
                 {{ article.description|safe }}
             {% endeditable %}
         {% endblock %}
+
+
+
+        <br><br><br>
 
 
 
