@@ -49,7 +49,7 @@
       <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vikalp/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="6" selection-start="5793" selection-end="5793" vertical-scroll-proportion="-24.041666" vertical-offset="1643" max-vertical-offset="2370">
+            <state line="139" column="0" selection-start="5582" selection-end="5582" vertical-scroll-proportion="-20.916666" vertical-offset="1583" max-vertical-offset="2310">
               <folding />
             </state>
           </provider>
@@ -67,7 +67,7 @@
       <file leaf-file-name="base.less" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vikalp/static/css/base.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="254" column="0" selection-start="4552" selection-end="4552" vertical-scroll-proportion="0.38789546" vertical-offset="3528" max-vertical-offset="10170">
+            <state line="431" column="44" selection-start="7283" selection-end="7283" vertical-scroll-proportion="0.33562586" vertical-offset="6221" max-vertical-offset="10260">
               <folding />
             </state>
           </provider>
@@ -129,11 +129,11 @@
         <option value="$PROJECT_DIR$/vikalp/templates/pages/menus/pagemenu.html" />
         <option value="$PROJECT_DIR$/vikalp/static/css/demo.css" />
         <option value="$PROJECT_DIR$/vikalp/templates/base_alternate.html" />
-        <option value="$PROJECT_DIR$/vikalp/templates/base.html" />
         <option value="$PROJECT_DIR$/vikalp/templates/pages/tag_cloud.html" />
         <option value="$PROJECT_DIR$/chef/cookbooks/vikalp/recipes/default.rb" />
         <option value="$PROJECT_DIR$/vikalp/templates/pages/index.html" />
         <option value="$PROJECT_DIR$/vikalp/settings.py" />
+        <option value="$PROJECT_DIR$/vikalp/templates/base.html" />
         <option value="$PROJECT_DIR$/vikalp/static/css/base.less" />
       </list>
     </option>
@@ -836,14 +836,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vikalp/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="6" selection-start="5793" selection-end="5793" vertical-scroll-proportion="-24.041666" vertical-offset="1643" max-vertical-offset="2370">
+        <state line="139" column="0" selection-start="5582" selection-end="5582" vertical-scroll-proportion="-20.916666" vertical-offset="1583" max-vertical-offset="2310">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vikalp/static/css/base.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="254" column="0" selection-start="4552" selection-end="4552" vertical-scroll-proportion="0.38789546" vertical-offset="3528" max-vertical-offset="10170">
+        <state line="431" column="44" selection-start="7283" selection-end="7283" vertical-scroll-proportion="0.33562586" vertical-offset="6221" max-vertical-offset="10260">
           <folding />
         </state>
       </provider>

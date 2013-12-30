@@ -20,6 +20,9 @@ body {
 
 #wrap {
   min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -@footerHeight;
 }
 
 .browsehappy {
@@ -252,6 +255,8 @@ a.pari-link {
   height: @footerHeight;
   background-color: @navColor;
   position: fixed;
+  width: 100%;
+  bottom: 0;
   .footer-row {
     text-align: center;
 
@@ -424,6 +429,7 @@ a.pari-link {
 
 .tag_cloud{
   width:300px;
+  margin-bottom: @footerHeight+@footerHeight;
 }
 .tag_cloud a:nth-child(odd){
      color:black;
