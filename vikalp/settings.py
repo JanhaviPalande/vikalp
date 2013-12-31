@@ -21,15 +21,13 @@ ALLOWED_HOSTS = ['*']
 # of settings Mezzanine implements:
 # http://mezzanine.jupo.org/docs/configuration.html#default-settings
 
-# Controls the ordering and grouping of the admin menu.
+# Controls the ordering and grouping of the admin menu.fb_browse
 #
-# ADMIN_MENU_ORDER = (
-#     ("Content", ("pages.Page", "blog.BlogPost",
-#        "generic.ThreadedComment", ("Media Library", "fb_browse"),)),
-#     ("Site", ("sites.Site", "redirects.Redirect", "conf.Setting")),
-#     ("Users", ("auth.User", "auth.Group",)),
-# )
-
+ADMIN_MENU_ORDER = (
+    ("Content", ("pages.Page", "vikalp.Article", "blog.BlogCategory", ("Article Categories", "blog.BlogCategory"), ("Media Library", "fb_browse"),)),
+    ("Site", ("sites.Site", "redirects.Redirect", "conf.Setting")),
+    ("Users", ("auth.User", "auth.Group",)),
+)
 # A three item sequence, each containing a sequence of template tags
 # used to render the admin dashboard.
 #
@@ -302,6 +300,7 @@ MIDDLEWARE_CLASSES = (
     "mezzanine.core.middleware.SitePermissionMiddleware",
     # Uncomment the following if using any of the SSL settings:
     # "mezzanine.core.middleware.SSLRedirectMiddleware",
+    "mezzanine.pages.middleware.PageMiddleware",
     "mezzanine.pages.middleware.PageMiddleware",
     "mezzanine.core.middleware.FetchFromCacheMiddleware",
 )

@@ -140,7 +140,7 @@
         {% endblock %}
     {% endfor %}
 
-{#    {% pagination_for blog_posts %}#}
+    {% pagination_for blog_posts %}
 
     {% if settings.COMMENTS_DISQUS_SHORTNAME %}
         {% include "generic/includes/disqus_counts.html" %}

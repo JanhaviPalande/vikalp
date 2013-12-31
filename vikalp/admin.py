@@ -1,9 +1,10 @@
 from copy import deepcopy
 from django.contrib import admin
-from mezzanine.blog.admin import BlogPostAdmin
-from mezzanine.blog.models import BlogPost
+from mezzanine.blog.admin import BlogPostAdmin, BlogCategoryAdmin
+from mezzanine.blog.models import BlogPost, BlogCategory
 from mezzanine.core.admin import OwnableAdmin, DisplayableAdmin
 from models import Article
+
 
 
 class ArticleAdmin(BlogPostAdmin):
