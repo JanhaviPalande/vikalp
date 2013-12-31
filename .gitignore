@@ -11,3 +11,4 @@ gettext/
 node_modules/
 .css/
 htmlcov/
+media/
