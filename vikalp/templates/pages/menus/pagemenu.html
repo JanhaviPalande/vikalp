@@ -3,12 +3,8 @@
 
 
 <div class="innerLeft">
-    {#    <ul>#}
     {% for page in page_branch %}
         {% if page.in_menu %}
-            {#                <li class="dropdown{% if page.is_current_or_ascendant %} active{% endif %}"#}
-            {#                    id="dropdown-menu-{{ page.html_id }}">#}
-            {#                    <a href="#" id="s1" class="subNavBtn">Featured</a>#}
             {% ifequal forloop.counter0 0 %}
                 <a href="{{ page.get_absolute_url }}" class="subNavBtn" id="sTop">
                     {{ page.title }}
@@ -17,17 +13,11 @@
             {% ifnotequal forloop.counter0 0 %}
                 <a href="{{ page.get_absolute_url }}" class="subNavBtn" id="s{{ forloop.counter0 }}">
                     {{ page.title }}
-                    {#                        {% if page.has_children_in_menu %}<span class="caret"></span>{% endif %}#}
                 </a>
             {% endifnotequal %}
-            {#                    {% if page.has_children_in_menu %}{% page_menu page %}{% endif %}#}
-            {#                </li>#}
         {% endif %}
     {% endfor %}
-    {#    </ul>#}
 </div>
 <div class="innerRight">
-{#    <div id="tw-form">#}
         {% search_form "" %}
-{#    </div>#}
 </div>

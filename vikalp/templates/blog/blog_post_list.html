@@ -25,36 +25,28 @@
 {% endblock %}
 
 {% block main %}
-    <div class="mainSection">
-        <div class="article-wrapper">
-            <div class="inner">
-                <div class="title">
-                    {#                                        <img src="images/society.png">#}
-                    <h1>{{ category }}</h1>
-                </div>
-                <div class="content-wrapper">
+        <div class="title">
+            <h1>{{ category }}</h1>
+        </div>
+        <div class="content-wrapper">
 
-                    <div class="article-list">
-                        <ul>                        {% for blog_post in blog_posts.object_list %}
-                            {% block blog_post_list_post_title %}
-                                {% editable blog_post.title %}
-                                    <li><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.title }}</a></li>
-                                {% endeditable %}
-                            {% endblock %}
-                        {% endfor %}
-                        </ul>
-                    </div>
-                    <div class="sidebar">
-                        <div class="tagCloud">
-                            {% include "pages/tag_cloud.html" %}
-                        </div>
-                    </div>
+            <div class="article-List">
+                <ul>
+                    {% for blog_post in blog_posts.object_list %}
+                        {% block blog_post_list_post_title %}
+                            {% editable blog_post.title %}
+                                <li><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.title }}</a></li>
+                            {% endeditable %}
+                        {% endblock %}
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="sidebar">
+                <div class="tagCloud">
+                    {% include "pages/tag_cloud.html" %}
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-
 {% endblock %}
 {##}
 {#{% block breadcrumb_menu %}#}
