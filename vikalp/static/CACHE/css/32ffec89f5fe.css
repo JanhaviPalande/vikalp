@@ -146,7 +146,7 @@ p {
     width: 250px;
     float: left;
     border: 0;
-    background: #ffffff url('../media/search-zoom-icon.png') no-repeat 5px;
+    background: #ffffff url('/static/media/search-zoom-icon.png?a57630682d46') no-repeat 5px;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C4C4C4', endColorstr='#D3D3D3', GradientType=0); /* ie */
     color: #777;
     line-height: 100%;
@@ -162,7 +162,7 @@ p {
 }
 
 #tw-form #tw-input-submit {
-    background: url(../media/search-zoom-icon.png) no-repeat 8px 5px;
+    background: url('/static/media/search-zoom-icon.png?a57630682d46') no-repeat 8px 5px;
     border: 0;
     float: left;
     width: 22px;
@@ -505,7 +505,7 @@ p {
     float: left;
     border: 0;
 
-    background: #ffffff url('../media/search-zoom-icon.png') no-repeat 5px;
+    background: #ffffff url('/static/media/search-zoom-icon.png?a57630682d46') no-repeat 5px;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C4C4C4', endColorstr='#D3D3D3', GradientType=0); /* ie */
     color: #777;
     line-height: 100%;
@@ -521,7 +521,7 @@ p {
 }
 
 #tw-form #tw-input-submit {
-    background: url(../media/search-zoom-icon.png) no-repeat 8px 5px;
+    background: url('/static/media/search-zoom-icon.png?a57630682d46') no-repeat 8px 5px;
     border: 0;
     float: left;
     width: 22px;
@@ -756,8 +756,10 @@ p {
     cursor: pointer;
     float: left;
     margin-left: 25px;
+}
+
+.container {
     position: relative;
-    background-color: #ffffff;
 }
 
 .front {
@@ -779,12 +781,11 @@ p {
 
 .container .front h3 {
     line-height: 1.5em;
-    height: 90px;
-    width: 230px;
+    height: 100px;
+    width: 250px;
     overflow: hidden;
-    padding: 5px 10px;
+/ / padding : 5 px 10 px;
     background-color: #ffffff;
-    color: #2e2e2e;
 }
 
 .container .back {

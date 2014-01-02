@@ -1,8 +1,8 @@
 $(document).ready(function() {
-		$('.content').hide()
+		$('.back').hide();
 		$('.container').hover(function(){     
-    		$(this).find('.content').fadeIn();
+    		$(this).find('.back').fadeIn();
   		},function(){
-   			$(this).find('.content').fadeOut();
+   			$(this).find('.back').fadeOut();
  		});
 });
