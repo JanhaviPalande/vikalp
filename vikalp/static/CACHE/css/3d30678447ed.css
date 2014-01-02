@@ -483,7 +483,7 @@ p {
  	overflow: auto;
  	margin-top: 20px;
  }
- .article-List{
+ .article-list {
  	width:70%;
  	float:left;
  }
@@ -499,14 +499,14 @@ p {
  .tagCloud a{
  	margin:12px;
  }
-  .article-List ul li a{
+  .article-list ul li a{
   	display: block;
   	padding:10px;
   	margin-bottom: 15px;
   	color:#2e2e2e;
   }
 
-  .article-List ul li a:hover{
+  .article-list ul li a:hover{
 
   	background-color: #ddd;
   	text-decoration: none;

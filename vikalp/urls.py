@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from views import promoted_article_on_homepage
+from views import promoted_article_on_homepage, category_list
 
 import os
 
@@ -28,6 +28,7 @@ urlpatterns += patterns("",
 
                         # Change the admin prefix here to use an alternate URL for the
                         # admin interface, which would be marginally more secure.
+
                         ("^admin/", include(admin.site.urls)),
 
                         # We don't want to presume how your homepage works, so here are a
@@ -57,6 +58,8 @@ urlpatterns += patterns("",
 
                         # url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
                         url("^$", promoted_article_on_homepage, name="home"),
+                        (r"^categories/$", category_list),
+
 
                         # HOMEPAGE FOR A BLOG-ONLY SITE
                         # -----------------------------

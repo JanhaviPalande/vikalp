@@ -1,4 +1,4 @@
-{% extends "base_alternate.html" %}
+{% extends "base.html" %}
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags %}
 
 {% block meta_title %}{% if page %}{{ page.richtextpage.meta_title }}{% else %}{% trans "Blog" %}
@@ -24,9 +24,6 @@
     {% endif %}
 {% endblock %}
 
-{% block page_name %}
-    active
-{% endblock %}
 {% block main %}
     <div class="mainSection">
         <div class="article-wrapper">
@@ -37,7 +34,7 @@
                 </div>
                 <div class="content-wrapper">
 
-                    <div class="article-List">
+                    <div class="article-list">
                         <ul>                        {% for blog_post in blog_posts.object_list %}
                             {% block blog_post_list_post_title %}
                                 {% editable blog_post.title %}
@@ -49,7 +46,7 @@
                     </div>
                     <div class="sidebar">
                         <div class="tagCloud">
-                        {% include "pages/tag_cloud.html" %}
+                            {% include "pages/tag_cloud.html" %}
                         </div>
                     </div>
                 </div>

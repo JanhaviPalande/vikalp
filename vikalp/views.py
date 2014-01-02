@@ -9,3 +9,8 @@ def promoted_article_on_homepage(request, template="pages/index.html"):
     context = {"promoted_articles": article_promoted_list}
     return render(request, template, context)
 
+def category_list(request, template="pages/categories_page.html"):
+    settings.use_editable()
+    articles = Article.objects.all()
+    context = {"articles": articles}
+    return render(request, template, context)
