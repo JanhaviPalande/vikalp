@@ -49,7 +49,7 @@
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vikalp/static/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="17" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="11355">
+            <state line="598" column="0" selection-start="9546" selection-end="9546" vertical-scroll-proportion="0.0" vertical-offset="8658" max-vertical-offset="11100">
               <folding />
             </state>
           </provider>
@@ -87,7 +87,7 @@
       <file leaf-file-name="categories_page.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/categories_page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="8" selection-start="825" selection-end="825" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="780">
+            <state line="40" column="16" selection-start="1288" selection-end="1288" vertical-scroll-proportion="-25.0" vertical-offset="0" max-vertical-offset="780">
               <folding />
             </state>
           </provider>
@@ -105,8 +105,10 @@
       <file leaf-file-name="blog_post_list.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vikalp/templates/blog/blog_post_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="61" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.5292172" vertical-offset="135" max-vertical-offset="2835">
-              <folding />
+            <state line="28" column="30" selection-start="833" selection-end="833" vertical-scroll-proportion="0.42998898" vertical-offset="30" max-vertical-offset="2835">
+              <folding>
+                <element signature="n#style#0;n#span#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,7 +136,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="89" selection-start="2265" selection-end="2330" vertical-scroll-proportion="-28.791666" vertical-offset="299" max-vertical-offset="1230">
+            <state line="66" column="89" selection-start="2265" selection-end="2330" vertical-scroll-proportion="-41.25" vertical-offset="0" max-vertical-offset="1230">
               <folding />
             </state>
           </provider>
@@ -163,8 +165,8 @@
         <option value="$PROJECT_DIR$/vikalp/urls.py" />
         <option value="$PROJECT_DIR$/vikalp/views.py" />
         <option value="$PROJECT_DIR$/vikalp/templates/pages/menus/pagemenu.html" />
-        <option value="$PROJECT_DIR$/vikalp/templates/pages/categories_page.html" />
         <option value="$PROJECT_DIR$/vikalp/static/css/main.css" />
+        <option value="$PROJECT_DIR$/vikalp/templates/pages/categories_page.html" />
         <option value="$PROJECT_DIR$/vikalp/templates/blog/blog_post_list.html" />
       </list>
     </option>
@@ -1115,6 +1117,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="598" column="0" selection-start="9546" selection-end="9546" vertical-scroll-proportion="0.0" vertical-offset="8658" max-vertical-offset="11100">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="49" selection-start="600" selection-end="600" vertical-scroll-proportion="-8.4" vertical-offset="0" max-vertical-offset="315">
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="35" selection-start="2514" selection-end="2521" vertical-scroll-proportion="-10.0" vertical-offset="750" max-vertical-offset="1725">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vikalp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="36" selection-start="2933" selection-end="2933" vertical-scroll-proportion="-36.0" vertical-offset="0" max-vertical-offset="1710">
@@ -1133,17 +1158,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="89" selection-start="2265" selection-end="2330" vertical-scroll-proportion="-28.791666" vertical-offset="299" max-vertical-offset="1230">
+        <state line="66" column="89" selection-start="2265" selection-end="2330" vertical-scroll-proportion="-41.25" vertical-offset="0" max-vertical-offset="1230">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/views.py">
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/categories_page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="49" selection-start="600" selection-end="600" vertical-scroll-proportion="-8.4" vertical-offset="0" max-vertical-offset="315">
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state line="40" column="16" selection-start="1288" selection-end="1288" vertical-scroll-proportion="-25.0" vertical-offset="0" max-vertical-offset="780">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1161,31 +1184,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="35" selection-start="2514" selection-end="2521" vertical-scroll-proportion="-10.0" vertical-offset="750" max-vertical-offset="1725">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="17" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="11355">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/categories_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="8" selection-start="825" selection-end="825" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vikalp/templates/blog/blog_post_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="61" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.5292172" vertical-offset="135" max-vertical-offset="2835">
-          <folding />
+        <state line="28" column="30" selection-start="833" selection-end="833" vertical-scroll-proportion="0.42998898" vertical-offset="30" max-vertical-offset="2835">
+          <folding>
+            <element signature="n#style#0;n#span#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
