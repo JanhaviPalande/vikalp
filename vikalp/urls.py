@@ -58,7 +58,7 @@ urlpatterns += patterns("",
 
                         # url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
                         url("^$", promoted_article_on_homepage, name="home"),
-                        (r"^categories/$", category_list),
+                        (r"^category/$", category_list),
 
 
                         # HOMEPAGE FOR A BLOG-ONLY SITE

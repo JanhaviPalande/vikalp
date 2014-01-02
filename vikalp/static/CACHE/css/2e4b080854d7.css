@@ -8,6 +8,7 @@ html, body {
     height: 100%;
 }
 
+
 body {
     font-family: Helvetica, Arial, Verdana, sans-serif;
     color: #999;
@@ -15,7 +16,6 @@ body {
     background: #bfbfbf;
 
 }
-
 a {
     text-decoration: none;
     color: #999999;
@@ -41,7 +41,7 @@ h1.title {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 24px;
 }
 
 p {
@@ -143,7 +143,7 @@ p {
     float: left;
     border: 0;
 
-    background: #ffffff url('../media/search-zoom-icon.png') no-repeat 5px;
+    background: #ffffff url('/static/media/search-zoom-icon.png?a57630682d46') no-repeat 5px;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C4C4C4', endColorstr='#D3D3D3', GradientType=0); /* ie */
     color: #777;
     line-height: 100%;
@@ -159,7 +159,7 @@ p {
 }
 
 #tw-form #tw-input-submit {
-    background: url(../media/search-zoom-icon.png) no-repeat 8px 5px;
+    background: url('/static/media/search-zoom-icon.png?a57630682d46') no-repeat 8px 5px;
     border: 0;
     float: left;
     width: 22px;
@@ -268,7 +268,7 @@ p {
 }
 
 .banner p {
-    color: #9E8F6C;
+    color: #fd4326;
     font-size: 26px;
     margin-top: 20px;
     letter-spacing: 1px;
@@ -723,16 +723,12 @@ footer .footer-col {
 
 }
 
-.tag_cloud a:nth-child(2n+1) {
-    color: #2e2e2e;
+.tag_cloud a:nth-child(odd) {
+    color: black;
 }
 
-.tag_cloud a:nth-child(2n) {
-    color: #9E8F6C;
-}
-
-.tag_cloud a:nth-child(3n) {
-    color: #3B6E8F;
+.tag_cloud a:nth-child(even) {
+    color: slategray;
 }
 
 .tag-weight-1 {

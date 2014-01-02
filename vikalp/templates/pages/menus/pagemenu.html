@@ -1,23 +1,25 @@
 {% load i18n future pages_tags mezzanine_tags compress staticfiles %}
 
 
-
 <div class="innerLeft">
     {% for page in page_branch %}
         {% if page.in_menu %}
             {% ifequal forloop.counter0 0 %}
-                <a href="{{ page.get_absolute_url }}" class="subNavBtn" id="sTop">
+                <a href="{{ page.get_absolute_url }}" class="subNavBtn {% if on_home %}active{% endif %}" id="sTop">
                     {{ page.title }}
                 </a>
             {% endifequal %}
+            {{ request.title }}
             {% ifnotequal forloop.counter0 0 %}
-                <a href="{{ page.get_absolute_url }}" class="subNavBtn" id="s{{ forloop.counter0 }}">
-                    {{ page.title }}
+                <a href="{{ page.get_absolute_url }}"
+                   class="subNavBtn {% if page.title|lower in request.path %}active{% endif %}{% if "categor" in page.title|lower and "categor" in request.path %}active{% endif %} id="
+                   s{{ forloop.counter0 }}">
+                {{ page.title }}
                 </a>
             {% endifnotequal %}
         {% endif %}
     {% endfor %}
 </div>
 <div class="innerRight">
-        {% search_form "" %}
+    {% search_form "" %}
 </div>

@@ -12,5 +12,5 @@ def promoted_article_on_homepage(request, template="pages/index.html"):
 def category_list(request, template="pages/categories_page.html"):
     settings.use_editable()
     articles = Article.objects.all()
-    context = {"articles": articles}
+    context = {"articles": articles, "ctitle": "Category"}
     return render(request, template, context)

@@ -41,7 +41,7 @@ h1.title {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 24px;
 }
 
 p {
@@ -143,7 +143,7 @@ p {
     float: left;
     border: 0;
 
-    background: #ffffff url('../media/search-zoom-icon.png') no-repeat 5px;
+    background: #ffffff url('/static/media/search-zoom-icon.png?a57630682d46') no-repeat 5px;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#C4C4C4', endColorstr='#D3D3D3', GradientType=0); /* ie */
     color: #777;
     line-height: 100%;
@@ -159,7 +159,7 @@ p {
 }
 
 #tw-form #tw-input-submit {
-    background: url(../media/search-zoom-icon.png) no-repeat 8px 5px;
+    background: url('/static/media/search-zoom-icon.png?a57630682d46') no-repeat 8px 5px;
     border: 0;
     float: left;
     width: 22px;
@@ -321,7 +321,7 @@ p {
 
 .s2 {
     min-height: 500px;
-    background: #ffffff;
+    background: #3B6E8F;
 }
 
 .s2 h1 {
