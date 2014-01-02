@@ -1,0 +1,9 @@
+{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags %}
+{% blog_categories vikalp.article as categories %}
+
+<h1>{% trans "Categories" %}</h1>
+<ul class="categories-list">
+    {% for category in categories %}
+        <li><a href="{% url "blog_post_list_category" category.slug %}">{{ category }}</a></li>
+    {% endfor %}
+</ul>

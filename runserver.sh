@@ -1,2 +1,1 @@
-sudo service nginx start
-sudo gunicorn vikalp.wsgi -b 0.0.0.0:8000
+sudo gunicorn vikalp.wsgi -b 0.0.0.0:8080

@@ -26,187 +26,82 @@
         <link rel="stylesheet" href="{% static "css/demo.css" %}">
     {% endcompress %}
 
-    {#    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>#}
-    {#    <script src="https://code.jquery.com/jquery-latest.min.js"></script>#}
     {% compress js %}
         <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
-        <script type="text/javascript" src="{% static "js/jquery.smint.js" %}"></script>
-        <script type="text/javascript" src="{% static "js/unslider.min.js" %}"></script>
-        <script type="text/javascript" src="{% static "js/app.js" %}"></script>
+        <script type="text/javascript" src="{% static "js/footer.js" %}"></script>
     {% endcompress %}
     <script src="{% static "js/html5shiv.js" %}"></script>
 
 
 </head>
 
-<body id="{% block body_id %}body{% endblock %}" onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
+<body id="{% block body_id %}body{% endblock %}">
 
 <div class="wrap">
     <div class="subMenu">
-        {#        <div class="inner">#}
-        {#            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">#}
         {% page_menu "pages/menus/pagemenu.html" %}
-        {#            <a href="#" id="sTop" class="subNavBtn">Home</a>#}
-        {#            <a href="#" id="s1" class="subNavBtn">Featured</a>#}
-        {#            <a href="#" id="s2" class="subNavBtn">Categories</a>#}
-        {#            <a href="#" id="s3" class="subNavBtn">Events</a>#}
-        {#            <a href="#" id="s4" class="subNavBtn">About</a>#}
-        {#            <a href="#" id="s5" class="subNavBtn end">Contact</a>#}
-        {#                <span class="icon-bar"></span>#}
-        {#                <span class="icon-bar"></span>#}
-        {#                <span class="icon-bar"></span>#}
-        {#            </a>#}
-        {#        </div>#}
+
     </div>
 
 
-    <div class="section sTop">
-        <div class="inner">
-            <h1>{% if settings.SITE_TITLE %}<a href="/">{{ settings.SITE_TITLE }}
-            {% endif %} -
-            {% if settings.SITE_TAGLINE %}{{ settings.SITE_TAGLINE }}
-            {% endif %}
-            </a>
-            </h1>
+    {% if on_home %}
+        {% compress js %}
+            <script type="text/javascript" src="{% static "js/jquery.smint.js" %}"></script>
+            <script type="text/javascript" src="{% static "js/unslider.min.js" %}"></script>
+            <script type="text/javascript" src="{% static "js/app.js" %}"></script>
+            <script type="text/javascript" src="{% static "js/feature.js" %}"></script>
+        {% endcompress %}
+        <div class="section sTop">
+            {% include "pages/menus/site_title.html" %}
+            {% include "pages/menus/carousel.html" %}
+
         </div>
-        {#        <div class="banner">#}
-        {#            <ul>#}
-        {#                <li style="background-image: url(images/shop.jpg);">#}
-        {#                    <h1>Heading 1</h1>#}
-        {##}
-        {#                    <p>Description goes here...</p>#}
-        {#                </li>#}
-        {#                <li style="background-image: url(images/subway.jpg);">#}
-        {#                    <h1>Heading 1</h1>#}
-        {##}
-        {#                    <p>Description goes here...</p>#}
-        {#                </li>#}
-        {#                <li style="background-image: url(images/sunset.jpg);">#}
-        {#                    <h1>Heading 1</h1>#}
-        {##}
-        {#                    <p>Description goes here...</p>#}
-        {#                </li>#}
-        {#            </ul>#}
-        {#            <ol class="dots">#}
-        {##}
-        {#            </ol>#}
-        {#        </div>#}
-        {#    </div>#}
-
-
-        {#    <div class="section s1">#}
-        {##}
-        {#        <div class="inner">#}
-        {##}
-        {#            <h1>Section 1</h1>#}
-        {##}
-        {#        </div>#}
-        {##}
-        {#    </div>#}
-        {##}
-        {#    <div class="section s2">#}
-        {#        <div class="inner">#}
-        {#            <ul class="categories-list">#}
-        {#                <li><a href="#">Learning & Education</a></li>#}
-        {#                <li><a href="#">Energy</a></li>#}
-        {#                <li><a href="#">Governance & Ideologies</a></li>#}
-        {#                <li><a href="#">Alternatives to money</a></li>#}
-        {#                <li><a href="">Art, crafts & culture</a></li>#}
-        {#                <li><a href="#">Ecoproducts</a></li>#}
-        {#                <li><a href="#">Transport</a></li>#}
-        {#                <li><a href="#">Health & hygiene</a></li>#}
-        {#                <li><a href="#">Knowledge, science, technology</a></li>#}
-        {#                <li><a href="#">Media & communication</a></li>#}
-        {#                <li><a href="#">Settlements & architecture</a></li>#}
-        {#                <li><a href="#">Water and sanitation</a></li>#}
-        {#            </ul>#}
-        {##}
-        {#        </div>#}
-        {##}
-        {#    </div>#}
-        {##}
-        {#    <div class="section s3">#}
-        {#        <div class="inner">#}
-        {##}
-        {#            <h1>Section 3</h1>#}
-        {##}
-        {#        </div>#}
-        {##}
-        {#    </div>#}
-        {##}
-        {#    <div class="section s4">#}
-        {#        <div class="inner">#}
-        {##}
-        {#            <h1>Section 4</h1>#}
-        {##}
-        {#        </div>#}
-        {##}
-        {#    </div>#}
-        {##}
-        {#    <div class="section s5">#}
-        {#        <div class="inner">#}
-        {##}
-        {#            <h1>Section 5</h1>#}
-        {##}
-        {#        </div>#}
-        {##}
-        {#    </div>#}
-        {#        {% nevercache %}#}
-        {#            {% for message in messages %}#}
-        {#                <div class="alert alert-{{ message.tags }}" data-alert="alert">#}
-        {#                    <a class="close" href="#"#}
-        {#                       onclick="$(this).parent().fadeOut('fast'); return false;">×</a>{{ message }}#}
-        {#                </div>#}
-        {#            {% endfor %}#}
-        {#        {% endnevercache %}#}
-        {##}
-        {##}
-        {#        {% if not on_home %}#}
-        {#            <h1>{% block title %}{% trans page_branch.title %}{% endblock %}</h1>#}
-        {#            <ul class="breadcrumb">#}
-        {#                {% spaceless %}#}
-        {#                    {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}#}
-        {#                {% endspaceless %}#}
-        {#            </ul>#}
-        {#        {% endif %}#}
-
-
-        {#        <div class="span7 middle">#}
-        {% block main %}
+        {% block home_page %}
 
         {% endblock %}
-        {#        </div>#}
-    <footer>
-        <div class="footer-inner">
+
+    {% endif %}
+    {% if not on_home %}
+        <div class="mainSection">
+            {% include "pages/menus/site_title.html" %}
+            {% block main %}
+            {% endblock %}
+        </div>
+    {% endif %}
+</div>
+
+
+<footer>
+    <div class="footer-inner">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Three</a></li>
+        </ul>
+    </div>
+    <div id="footer-lower" class="footer-inner footer-lower">
+        <div class="footer-col">
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
                 <li><a href="#">Three</a></li>
             </ul>
         </div>
-        <div id="footer-lower" class="footer-inner footer-lower">
-            <div class="footer-col">
-                <ul>
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <ul>
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <ul>
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
-                </ul>
-            </div>
+        <div class="footer-col">
+            <ul>
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+            </ul>
         </div>
-    </footer>
+        <div class="footer-col">
+            <ul>
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

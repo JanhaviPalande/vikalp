@@ -71,7 +71,7 @@ p {
 	clear: both;
 }
 .wrap {
-		/*background:url(../images/bg.png) top left repeat-x;*/
+		/*background:url('/static/images/bg.png') top left repeat-x;*/
 		/*//width: 100%;*/
 		/*//max-width: 1400px;*/
 		/*//min-width: 1280px;*/
@@ -148,7 +148,7 @@ p {
 	width: 250px;
 	float: left;
 	border: 0;
-	background: #ffffff url('../media/search-zoom-icon.png') no-repeat 5px;
+	background: #ffffff url('/static/media/search-zoom-icon.png?a57630682d46') no-repeat 5px;
 
 	/*//background: -moz-linear-gradient(top, #C4C4C4 0%, #EAEAEA 0%, #D3D3D3 100%); *//* firefox */
 	/*//background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#C4C4C4), color-stop(0%,#EAEAEA), color-stop(100%,#D3D3D3)); *//* webkit */
@@ -159,7 +159,7 @@ p {
 	font-family: Tahoma, Geneva, sans-serif;
 	/*//margin-top:3px;*/
 	/*//margin-bottom:3px;*/
-	/*//background-image: url(../images/search-zoom-icon.png);*/
+	/*//background-image: url('/static/images/search-zoom-icon.png');*/
 	height:38px;
 	padding-left: 25px;
 	}
@@ -407,7 +407,7 @@ p {
 .container {
   width: 250px;
   height: 300px;
-  background: url(http://dribbble.s3.amazonaws.com/users/23569/screenshots/1239017/crowned_traders_logo_1x.png);
+  background: url('http://dribbble.s3.amazonaws.com/users/23569/screenshots/1239017/crowned_traders_logo_1x.png');
   background-repeat: no-repeat;
   background-position: center center;
  /*// margin: 50px auto;*/
@@ -497,7 +497,8 @@ p {
  	margin-left: 30px;
  }
  .tagCloud{
-    height: 350px;
+ 	height: 300px;
+
  }
  .tagCloud a{
  	margin:12px;
@@ -614,8 +615,3 @@ footer .footer-col{
 .tag_cloud a:nth-child(even){
      color:slategray;
 }
-
-.tag-weight-1 {font-size:90%;}
-.tag-weight-2 {font-size:120%;}
-.tag-weight-3 {font-size:150%;}
-.tag-weight-4 {font-size:180%;}

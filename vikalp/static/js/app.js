@@ -1,6 +1,7 @@
 $(document).ready( function() {
+
     $('.subMenu').smint({
-    	'scrollSpeed' : 1000
+    	'scrollSpeed' : 500
     });
 
 
@@ -12,9 +13,7 @@ $(document).ready( function() {
 		fluid: false              //  Support responsive design. May break non-responsive designs
 	});
 
-	$("#footer-lower").hide();
+	
 
-	$("footer").click(function(){
-		$("#footer-lower").toggle();
-	});
+	
 });

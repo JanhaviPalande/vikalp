@@ -1,0 +1,20 @@
+{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags %}
+
+
+<h1>{% trans "Featured" %}</h1>
+
+<div class="item-container">
+    {% for article in promoted_articles %}
+        {% if forloop.counter <= 4 %}
+            <div class="container">
+                <div class="content">
+                    <h3>{{ article.title }}</h3>
+
+                    <p>{{ article.description }}</p>
+                    <a class="read-article" href="{{ article.get_absolute_url }}">Read Article</a>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
