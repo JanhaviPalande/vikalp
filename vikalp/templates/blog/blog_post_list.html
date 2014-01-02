@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags %}
 
-{% block meta_title %}{% if page %}{{ page.richtextpage.meta_title }}{% else %}{% trans "Blog" %}
+{% block meta_title %}{% if page %}{{ page.richtextpage.meta_title }}{% else %}{{ category }}
 {% endif %}{% endblock %}
 
 {% block meta_keywords %}{% metablock %}
