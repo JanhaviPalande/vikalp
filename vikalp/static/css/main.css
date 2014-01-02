@@ -834,7 +834,7 @@ p {
 }
 
 .article-wrapper {
-/ / margin : 140 px 0;
+    margin-top: 60px;
 }
 
 .title {

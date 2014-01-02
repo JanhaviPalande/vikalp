@@ -82,19 +82,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vikalp/static/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="775" column="17" selection-start="12843" selection-end="12843" vertical-scroll-proportion="0.0" vertical-offset="11358" max-vertical-offset="16725">
+            <state line="836" column="21" selection-start="13903" selection-end="13903" vertical-scroll-proportion="0.69723755" vertical-offset="11909" max-vertical-offset="16725">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Featured.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Featured.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/section/Featured.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="45" selection-start="682" selection-end="682" vertical-scroll-proportion="0.2646086" vertical-offset="0" max-vertical-offset="907">
+            <state line="16" column="45" selection-start="682" selection-end="682" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="450">
               <folding />
             </state>
           </provider>
@@ -160,8 +160,8 @@
         <option value="$PROJECT_DIR$/vikalp/templates/blog/blog_post_list.html" />
         <option value="$PROJECT_DIR$/vikalp/templates/blog/blog_post_detail.html" />
         <option value="$PROJECT_DIR$/vikalp/static/js/feature.js" />
-        <option value="$PROJECT_DIR$/vikalp/static/css/main.css" />
         <option value="$PROJECT_DIR$/vikalp/templates/pages/section/Featured.html" />
+        <option value="$PROJECT_DIR$/vikalp/static/css/main.css" />
       </list>
     </option>
   </component>
@@ -1063,16 +1063,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/static/css/main.css">
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/section/Featured.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="775" column="17" selection-start="12843" selection-end="12843" vertical-scroll-proportion="0.0" vertical-offset="11358" max-vertical-offset="16725">
+        <state line="16" column="45" selection-start="682" selection-end="682" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="450">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/section/Featured.html">
+    <entry file="file://$PROJECT_DIR$/vikalp/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="45" selection-start="682" selection-end="682" vertical-scroll-proportion="0.2646086" vertical-offset="0" max-vertical-offset="907">
+        <state line="836" column="21" selection-start="13903" selection-end="13903" vertical-scroll-proportion="0.69723755" vertical-offset="11909" max-vertical-offset="16725">
           <folding />
         </state>
       </provider>
