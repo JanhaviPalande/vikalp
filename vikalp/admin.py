@@ -20,3 +20,4 @@ class ArticleAdmin(BlogPostAdmin):
         return DisplayableAdmin.save_form(self, request, form, change)
 
 admin.site.register(Article, ArticleAdmin)
+admin.site.unregister(BlogPost)

@@ -46,29 +46,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vikalp/static/css/main.css">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vikalp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="708" column="18" selection-start="11192" selection-end="11192" vertical-scroll-proportion="0.0" vertical-offset="10417" max-vertical-offset="11145">
+            <state line="13" column="0" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/menus/admin.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="795">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Featured.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/section/Featured.html">
+      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vikalp/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="78" selection-start="768" selection-end="768" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="450">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blog_post_detail.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vikalp/templates/blog/blog_post_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="40" selection-start="1197" selection-end="1197" vertical-scroll-proportion="-20.625" vertical-offset="0" max-vertical-offset="2310">
-              <folding />
+            <state line="22" column="30" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,27 +80,29 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vikalp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="54" selection-start="551" selection-end="610" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+            <state line="49" column="30" selection-start="2122" selection-end="2122" vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="840">
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#46#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tag_cloud.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/tag_cloud.html">
+      <file leaf-file-name="article_list.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vikalp/templates/article/article_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="37" selection-start="196" selection-end="196" vertical-scroll-proportion="0.13363029" vertical-offset="0" max-vertical-offset="449">
-              <folding />
+            <state line="38" column="33" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.3810179" vertical-offset="293" max-vertical-offset="1020">
+              <folding>
+                <element signature="e#1588#1613#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pagemenu.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/menus/pagemenu.html">
+      <file leaf-file-name="tag_cloud.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/tag_cloud.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="168" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="450">
+            <state line="2" column="26" selection-start="115" selection-end="121" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="270">
               <folding />
             </state>
           </provider>
@@ -105,8 +111,19 @@
       <file leaf-file-name="categories_page.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/categories_page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="16" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="780">
+            <state line="6" column="40" selection-start="292" selection-end="292" vertical-scroll-proportion="-1.5416666" vertical-offset="53" max-vertical-offset="780">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vikalp/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="54" selection-start="3022" selection-end="3022" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1725">
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,27 +131,7 @@
       <file leaf-file-name="blog_post_list.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vikalp/templates/blog/blog_post_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="30" selection-start="833" selection-end="833" vertical-scroll-proportion="-16.25" vertical-offset="30" max-vertical-offset="2835">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Categories.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/section/Categories.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="22" selection-start="95" selection-end="95" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="225">
-              <folding>
-                <marker date="1388491319000" expanded="true" signature="186:342" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="category_list.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/menus/category_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="180">
+            <state line="13" column="0" selection-start="0" selection-end="1962" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="2955">
               <folding />
             </state>
           </provider>
@@ -150,22 +147,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/vikalp/templates/pages/richtextpage.html" />
-        <option value="$PROJECT_DIR$/vikalp/static/css/demo.css" />
-        <option value="$PROJECT_DIR$/vikalp/templates/pages/menus/site_title.html" />
-        <option value="$PROJECT_DIR$/vikalp/templates/base_alternate.html" />
         <option value="$PROJECT_DIR$/vikalp/templates/pages/category_list.html" />
         <option value="$PROJECT_DIR$/vikalp/templates/pages/index.html" />
         <option value="$PROJECT_DIR$/vikalp/templates/blog/blog_post_detail.html" />
         <option value="$PROJECT_DIR$/vikalp/static/js/feature.js" />
         <option value="$PROJECT_DIR$/vikalp/templates/pages/section/Featured.html" />
-        <option value="$PROJECT_DIR$/vikalp/urls.py" />
-        <option value="$PROJECT_DIR$/vikalp/views.py" />
         <option value="$PROJECT_DIR$/vikalp/templates/pages/menus/pagemenu.html" />
         <option value="$PROJECT_DIR$/vikalp/templates/pages/categories_page.html" />
-        <option value="$PROJECT_DIR$/vikalp/templates/blog/blog_post_list.html" />
         <option value="$PROJECT_DIR$/vikalp/static/css/main.css" />
         <option value="$PROJECT_DIR$/vikalp/templates/pages/tag_cloud.html" />
+        <option value="$PROJECT_DIR$/vikalp/models.py" />
+        <option value="$PROJECT_DIR$/vikalp/settings.py" />
+        <option value="$PROJECT_DIR$/vikalp/admin.py" />
+        <option value="$PROJECT_DIR$/vikalp/templates/blog/blog_post_list.html" />
+        <option value="$PROJECT_DIR$/vikalp/views.py" />
+        <option value="$PROJECT_DIR$/vikalp/urls.py" />
+        <option value="$PROJECT_DIR$/vikalp/templates/article/article_list.html" />
       </list>
     </option>
   </component>
@@ -216,6 +213,24 @@
               <option name="myItemId" value="&lt; Python 2.7.5 (/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python) &gt;" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="596071422" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 2.7.5 (/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -478,32 +493,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vikalp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="section" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -552,6 +541,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vikalp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="article" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1036,7 +1047,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32734275" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32734275" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12291667" sideWeight="0.67265725" order="0" side_tool="false" content_ui="combo" />
@@ -1052,6 +1063,26 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32734275" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39920425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12291667" sideWeight="0.67265725" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1067,102 +1098,24 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Library/Python/2.7/site-packages/mezzanine/pages/templatetags/pages_tags.py">
+    <entry file="file://$PROJECT_DIR$/vikalp/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3045">
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/django/templatetags/future.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/mezzanine/core/templatetags/mezzanine_tags.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="219" column="4" selection-start="7115" selection-end="7115" vertical-scroll-proportion="0.35123524" vertical-offset="2958" max-vertical-offset="9300">
-          <folding>
-            <element signature="e#0#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="35" selection-start="2514" selection-end="2521" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1725">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="36" selection-start="2933" selection-end="2933" vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="1710">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="89" selection-start="2265" selection-end="2330" vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="1230">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/categories_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="16" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="780">
+        <state line="708" column="18" selection-start="11192" selection-end="11192" vertical-scroll-proportion="0.4092742" vertical-offset="10417" max-vertical-offset="11145">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/menus/pagemenu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="168" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/templates/blog/blog_post_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="30" selection-start="833" selection-end="833" vertical-scroll-proportion="-16.25" vertical-offset="30" max-vertical-offset="2835">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/section/Featured.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="78" selection-start="768" selection-end="768" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/templates/blog/blog_post_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="40" selection-start="1197" selection-end="1197" vertical-scroll-proportion="-20.625" vertical-offset="0" max-vertical-offset="2310">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="708" column="18" selection-start="11192" selection-end="11192" vertical-scroll-proportion="0.0" vertical-offset="10417" max-vertical-offset="11145">
+        <state line="14" column="168" selection-start="711" selection-end="711" vertical-scroll-proportion="0.45751634" vertical-offset="0" max-vertical-offset="459">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/section/Categories.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="22" selection-start="95" selection-end="95" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="225">
-          <folding>
-            <marker date="1388491319000" expanded="true" signature="186:342" placeholder="..." />
-          </folding>
+        <state line="1" column="22" selection-start="95" selection-end="95" vertical-scroll-proportion="0.03177966" vertical-offset="0" max-vertical-offset="472">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1173,19 +1126,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/views.py">
+    <entry file="file://$PROJECT_DIR$/vikalp/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="54" selection-start="551" selection-end="610" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+        <state line="36" column="31" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="5970">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="30" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/tag_cloud.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="37" selection-start="196" selection-end="196" vertical-scroll-proportion="0.13363029" vertical-offset="0" max-vertical-offset="449">
+        <state line="2" column="26" selection-start="115" selection-end="121" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="270">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm30/python_stubs/596071422/__builtin__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2068" column="8" selection-start="71545" selection-end="71545" vertical-scroll-proportion="0.33288947" vertical-offset="30770" max-vertical-offset="76485">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="30" selection-start="2122" selection-end="2122" vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="840">
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="54" selection-start="3022" selection-end="3022" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1725">
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/menus/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/categories_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="40" selection-start="292" selection-end="292" vertical-scroll-proportion="-1.5416666" vertical-offset="53" max-vertical-offset="780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/static/robots.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="751">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/blog/blog_post_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="0" selection-end="1962" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="2955">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/article/article_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="33" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.3810179" vertical-offset="293" max-vertical-offset="1020">
+          <folding>
+            <element signature="e#1588#1613#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
