@@ -2,7 +2,7 @@
 {% block tag_cloud %}
     {% keywords_for vikalp.article as tags %}
     {% if tags %}
-        <h3>{% trans "Explore" %}</h3>
+        <h3>{% trans "Explore Articles" %}</h3>
         <div class="tag_cloud">
             {% for tag in tags %}
                 <a href="{% url "blog_post_list_tag" tag.slug %}" class="tag-weight-{{ tag.weight }}">{{ tag }}</a>
