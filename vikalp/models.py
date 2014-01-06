@@ -11,4 +11,3 @@ class Article(BlogPost):
         url_name = "blog_post_detail"
         kwargs = {"slug": self.slug}
         return (url_name, (), kwargs)
-

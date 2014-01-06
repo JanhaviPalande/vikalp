@@ -13,3 +13,5 @@ node_modules/
 htmlcov/
 media/
 Vagrantfile
+articles_bak
+Vagrantfile.bak

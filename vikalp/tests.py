@@ -16,7 +16,7 @@ class ArticleTest(TestCase):
         self.assertTrue(isinstance(self.article, Article))
 
     def test_article_returned_url(self):
-        self.assertEqual("/blog/" + (self.article.title.lower()).replace(" ","-") + "/",self.article.get_absolute_url())
+        self.assertEqual("/article/" + (self.article.title.lower()).replace(" ","-") + "/",self.article.get_absolute_url())
 
     def test_promoted_article_response(self):
         self.assertEqual(self.response.status_code, 200)

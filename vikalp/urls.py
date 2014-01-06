@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from views import promoted_article_on_homepage, category_list
+from views import promoted_article_on_homepage, category_list, article_list
 
 import os
 
@@ -59,6 +59,7 @@ urlpatterns += patterns("",
                         # url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
                         url("^$", promoted_article_on_homepage, name="home"),
                         (r"^category/$", category_list),
+                        (r"^article/$", article_list),
 
 
                         # HOMEPAGE FOR A BLOG-ONLY SITE
