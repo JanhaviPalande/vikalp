@@ -62,7 +62,7 @@
     {% for page in page_branch %}
         {% if page.in_menu %}
             {% ifnotequal page.title "Home" %}
-                {% if forloop.counter0 < 4 %}
+                {% if forloop.counter0 < 3 %}
                 <div class="section s{{ forloop.counter0 }}"> {# In the second iteration the value is 1 #}
                     <div class="inner">
                         {% with "pages/section/"|add:page.title|add:".html" as section %}
