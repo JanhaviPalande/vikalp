@@ -46,15 +46,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vikalp/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1725">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="node.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chef/node.json">
           <provider selected="true" editor-type-id="text-editor">
@@ -130,7 +121,16 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="26" selection-start="2479" selection-end="2479" vertical-scroll-proportion="0.7684675" vertical-offset="458" max-vertical-offset="1365">
+            <state line="79" column="39" selection-start="2549" selection-end="2549" vertical-scroll-proportion="0.80154353" vertical-offset="458" max-vertical-offset="1365">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Featured.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/section/Featured.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="450">
               <folding />
             </state>
           </provider>
@@ -157,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/vikalp/templates/pages/menus/pagemenu.html" />
         <option value="$PROJECT_DIR$/vikalp/templates/pages/categories_page.html" />
         <option value="$PROJECT_DIR$/vikalp/templates/pages/tag_cloud.html" />
         <option value="$PROJECT_DIR$/vikalp/models.py" />
@@ -172,6 +171,7 @@
         <option value="$PROJECT_DIR$/vikalp/fixture/initial_pages.json" />
         <option value="$PROJECT_DIR$/vikalp/tests.py" />
         <option value="$PROJECT_DIR$/chef/cookbooks/vikalp/recipes/default.rb" />
+        <option value="$PROJECT_DIR$/vikalp/templates/pages/section/Categories.html" />
         <option value="$PROJECT_DIR$/vikalp/templates/pages/index.html" />
       </list>
     </option>
@@ -923,18 +923,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vikalp/static/robots.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="751" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vikalp/templates/article/article_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="19" selection-start="987" selection-end="987" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vikalp/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1725">
@@ -1040,9 +1028,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/section/Categories.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="344" selection-end="344" vertical-scroll-proportion="0.14884233" vertical-offset="0" max-vertical-offset="907">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/section/Featured.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="931">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vikalp/templates/pages/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="26" selection-start="2479" selection-end="2479" vertical-scroll-proportion="0.7684675" vertical-offset="458" max-vertical-offset="1365">
+        <state line="79" column="39" selection-start="2549" selection-end="2549" vertical-scroll-proportion="0.80154353" vertical-offset="458" max-vertical-offset="1365">
           <folding />
         </state>
       </provider>
