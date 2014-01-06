@@ -54,26 +54,33 @@
 {#    {% include "pages/menus/categories_page.html" %}#}
 {#    {% include "pages/tag_cloud.html" %}#}
 {#{% endblock %}#}
+{#                            {% with "pages/section/"|add:page.title|add:".html" as section %}#}
 
 
 
 {% block home_page %}
-    {#  Ends Section sTop#}
-    {% for page in page_branch %}
-        {% if page.in_menu %}
-            {% ifnotequal page.title "Home" %}
-                {% if forloop.counter0 < 3 %}
-                <div class="section s{{ forloop.counter0 }}"> {# In the second iteration the value is 1 #}
-                    <div class="inner">
-                        {% with "pages/section/"|add:page.title|add:".html" as section %}
-                            {% include section %}
-                        {% endwith %}
-                    </div>
-                </div>
-                {% endif %}
-            {% endifnotequal %}
-        {% endif %}
-    {% endfor %}
+
+    <div class="section s1">
+        <div class="inner">
+            {% include "pages/section/featured.html" %}
+        </div>
+    </div>
+    <div class="section s2">
+        <div class="inner">
+            {% include  "pages/section/categories.html"%}
+        </div>
+    </div>
+    <div class="section s3">
+        <div class="inner">
+            {% include "pages/section/about.html"%}
+        </div>
+    </div>
+    <div class="section s4">
+        <div class="inner">
+            {% include "pages/section/contact.html"%}
+        </div>
+    </div>
+
 
 
 {% endblock %}
