@@ -1,25 +1,62 @@
 {% load i18n future pages_tags mezzanine_tags compress staticfiles %}
 
 
-<div class="innerLeft">
-    {% for page in page_branch %}
-        {% if page.in_menu %}
-            {% ifequal forloop.counter0 0 %}
-                <a href="{{ page.get_absolute_url }}" class="subNavBtn {% if on_home %}active{% endif %}" id="sTop">
-                    {{ page.title }}
-                </a>
-            {% endifequal %}
-            {{ request.title }}
-            {% ifnotequal forloop.counter0 0 %}
-                <a href="{{ page.get_absolute_url }}"
-                   class="subNavBtn {% if page.title|lower in request.path %}active{% endif %}{% if "categor" in page.title|lower and "categor" in request.path %}active{% endif %} id="
-                   s{{ forloop.counter0 }}">
-                {{ page.title }}
-                </a>
-            {% endifnotequal %}
-        {% endif %}
-    {% endfor %}
-</div>
-<div class="innerRight">
-    {% search_form "" %}
-</div>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+            <a class="navbar-brand" href="index.html">Vikalp</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <form class="navbar-form navbar-right" role="search">
+                <div class="right-inner-addon">
+                    <i class="fa fa-search"></i>
+                    <input type="search"
+                           class="form-control"
+                           placeholder="Search"/>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Stories</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Contribute a story</a></li>
+            </ul>
+
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+
+
+
+
+{#<div class="innerLeft">#}
+{#    {% for page in page_branch %}#}
+{#        {% if page.in_menu %}#}
+{#            {% ifequal forloop.counter0 0 %}#}
+{#                <a href="{{ page.get_absolute_url }}" class="subNavBtn {% if on_home %}active{% endif %}" id="sTop">#}
+{#                    {{ page.title }}#}
+{#                </a>#}
+{#            {% endifequal %}#}
+{#            {{ request.title }}#}
+{#            {% ifnotequal forloop.counter0 0 %}#}
+{#                <a href="{{ page.get_absolute_url }}"#}
+{#                   class="subNavBtn {% if page.title|lower in request.path %}active{% endif %}{% if "categor" in page.title|lower and "categor" in request.path %}active{% endif %} id="#}
+{#                   s{{ forloop.counter0 }}">#}
+{#                {{ page.title }}#}
+{#                </a>#}
+{#            {% endifnotequal %}#}
+{#        {% endif %}#}
+{#    {% endfor %}#}
+{#</div>#}
+{#<div class="innerRight">#}
+{#    {% search_form "" %}#}
+{#</div>#}

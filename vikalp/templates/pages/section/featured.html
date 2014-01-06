@@ -1,24 +1,69 @@
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags %}
 
+<div class="section">
 
-<h1>{% trans "Featured" %}</h1>
 
-<div class="item-container">
-    {% for article in promoted_articles %}
-        {% if forloop.counter <= 3 %}
-            <div class="container">
-                <div class="front">
-                    {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}
-                        <img src="{{ MEDIA_URL }}{% thumbnail article.featured_image  250 0%}">
-                    {% endif %}
-                    <h3>{{ article.title }}</h3>
-                </div>
-                <div class="back">
-                    <p>{{ article.description }}</p>
-                    <a class="read-article" href="{{ article.get_absolute_url }}">Read Article</a>
-                </div>
-            </div>
-        {% endif %}
-    {% endfor %}
+    <div class="container">
+        <div class="col-lg-12 text-center">
+            <h2>{% trans "Featured Stories" %}</h2>
+
+            <hr>
+        </div>
+        <div class="row">
+
+
+            {% for article in promoted_articles %}
+                {% if forloop.counter <= 3 %}
+
+
+                    <div class="col-lg-4 col-md-4">
+                        <a id="feature-article" href="{{ article.get_absolute_url }}">
+                            <div class="thumbnail">
+
+                                {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}
+                                    <img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 250 0 %}">
+                                {% endif %}
+
+
+                                <div class="caption">
+                                    <h3>{{ article.title }}</h3>
+
+                                    <p id="feature-article-desc">{{ article.description }}
+
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
 </div>
+
+
+{#<div class="item-container">#}
+{#    {% for article in promoted_articles %}#}
+{#        {% if forloop.counter <= 3 %}#}
+{#            <div class="container">#}
+{#                <div class="front">#}
+{#                    {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}#}
+{#                        <img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 250 0 %}">#}
+{#                    {% endif %}#}
+{#                    <h3>{{ article.title }}</h3>#}
+{#                </div>#}
+{#                <div class="back">#}
+{#                    <p>{{ article.description }}</p>#}
+{#                    <a class="read-article" href="{{ article.get_absolute_url }}">Read Article</a>#}
+{#                </div>#}
+{#            </div>#}
+{#        {% endif %}#}
+{#    {% endfor %}#}
+{#</div>#}
 

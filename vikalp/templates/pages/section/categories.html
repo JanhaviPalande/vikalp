@@ -1,9 +1,44 @@
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags %}
 {% blog_categories vikalp.article as categories %}
 
-<h1>{% trans "Categories" %}</h1>
-<ul class="categories-list">
-    {% for category in categories %}
-        <li><a href="{% url "blog_post_list_category" category.slug %}">{{ category }}</a></li>
-    {% endfor %}
-</ul>
+<div class="section">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>{% trans "Categories" %}</h2>
+                <hr>
+            </div>
+            {% for category in categories %}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+
+
+
+                <a href="{% url "blog_post_list_category" category.slug %}">{{ category }}
+                    <img class="img-responsive img-home-portfolio"
+                         src="http://placehold.it/700x450"></a>
+
+
+            </div>
+            {% endfor %}
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+</div>
+
+
+
+
+
+
+
+{#<h1>{% trans "Categories" %}</h1>#}
+{#<ul class="categories-list">#}
+{#    {% for category in categories %}#}
+{#        <li><a href="{% url "blog_post_list_category" category.slug %}">{{ category }}</a></li>#}
+{#    {% endfor %}#}
+{#</ul>#}

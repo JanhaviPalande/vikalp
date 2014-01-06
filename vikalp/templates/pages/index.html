@@ -1,171 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="utf-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+{#    <meta name="description" content="">#}
+{#    <meta name="author" content="">#}
+{##}
+{##}
+{#    <title>Vikalp</title>#}
+{##}
+{##}
+{#    <!-- Bootstrap core CSS -->#}
+{#    <link href="static/css/bootstrap.css" rel="stylesheet">#}
+{##}
+{#    <!-- Add custom CSS here -->#}
+{#    <link rel="stylesheet" href="static/css/modern-business.css">#}
+{#    <link href="static/font/font-awesome.css" rel="stylesheet">#}
+{##}
+{#    <!-- JavaScript -->#}
+{#    <script src="static/js/jquery-1.10.2.js"></script>#}
+{#    <script src="static/js/bootstrap.js"></script>#}
+{#    <script src="static/js/modern-business.js"></script>#}
+{#    <script src="static/js/app.js"></script>#}
+{##}
+{#</head>#}
+{##}
+{#<body>#}
+{#<div id="main-title">#}
+{#    <div class="container">#}
+{#        <h1>Welcome to alternatives forum !!!</h1>#}
+{#    </div>#}
+{#</div>#}
+{#<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">#}
+{#    <div class="container">#}
+{#        <div class="navbar-header">#}
+{#            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">#}
+{#                <span class="sr-only">Toggle navigation</span>#}
+{#                <span class="icon-bar"></span>#}
+{#                <span class="icon-bar"></span>#}
+{#                <span class="icon-bar"></span>#}
+{#            </button>#}
+{#            <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->#}
+{#            <a class="navbar-brand" href="index.html">Vikalp</a>#}
+{#        </div>#}
+{##}
+{#        <!-- Collect the nav links, forms, and other content for toggling -->#}
+{#        <div class="collapse navbar-collapse navbar-ex1-collapse">#}
+{#            <form class="navbar-form navbar-right" role="search">#}
+{#                <div class="right-inner-addon">#}
+{#                    <i class="fa fa-search"></i>#}
+{#                    <input type="search"#}
+{#                           class="form-control"#}
+{#                           placeholder="Search"/>#}
+{#                </div>#}
+{#            </form>#}
+{#            <ul class="nav navbar-nav navbar-right">#}
+{#                <li><a href="#">Stories</a></li>#}
+{#                <li><a href="#">About</a></li>#}
+{#                <li><a href="#">Contact</a></li>#}
+{#                <li><a href="#">Contribute a story</a></li>#}
+{#            </ul>#}
+{##}
+{#        </div>#}
+{#        <!-- /.navbar-collapse -->#}
+{#    </div>#}
+{#    <!-- /.container -->#}
+{#</nav>#}
 
 
-    <title>Vikalp</title>
+{% extends "base.html"%}
+{% block home_page %}
 
-
-    <!-- Bootstrap core CSS -->
-    <link href="static/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Add custom CSS here -->
-    <link rel="stylesheet" href="static/css/modern-business.css">
-    <link href="static/font/font-awesome.css" rel="stylesheet">
-
-</head>
-
-<body>
-<div id="main-title">
-    <div class="container">
-        <h1>Welcome to alternatives forum !!!</h1>
-    </div>
-</div>
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
-            <a class="navbar-brand" href="index.html">Vikalp</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <form class="navbar-form navbar-right" role="search">
-                <div class="right-inner-addon">
-                    <i class="fa fa-search"></i>
-                    <input type="search"
-                           class="form-control"
-                           placeholder="Search"/>
-                </div>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Stories</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Contribute a story</a></li>
-            </ul>
-
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-
-<div id="myCarousel" class="carousel slide">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-        <div class="item active">
-            <div class="fill"
-                 style="background-image:url('http://natgeotraveller.in/var/natgeo/storage/images/media2/images/dhritiman-raw-dmk5927/5025-1-eng-GB/dhritiman-raw-dmk5927_article_590.jpg');"></div>
-            <div class="carousel-caption">
-                <h1>Modern Business - A Bootstrap 3 Template</h1>
-            </div>
-        </div>
-        <div class="item">
-            <div class="fill"
-                 style="background-image:url('http://0.tqn.com/d/kidstvmovies/1/0/d/T/shorts016.jpg');"></div>
-            <div class="carousel-caption">
-                <h1>Ready to Style &amp; Add Content</h1>
-            </div>
-        </div>
-        <div class="item">
-            <div class="fill"
-                 style="background-image:url('http://upload.wikimedia.org/wikipedia/commons/8/8b/GreenMountainWindFarm_Fluvanna_2004.jpg');"></div>
-            <div class="carousel-caption">
-                <h1>Additional Layout Options at</h1>
-            </div>
-        </div>
-    </div>
-
-    <!-- Controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="icon-prev"></span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="icon-next"></span>
-    </a>
-</div>
-
-<div class="section">
-
-
-    <div class="container">
-        <div class="col-lg-12 text-center">
-            <h2>Featured Stories</h2>
-            <hr>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-4">
-                <a id="feature-article" href="#">
-                    <div class="thumbnail">
-                        <img src="http://natgeotraveller.in/var/natgeo/storage/images/media2/images/dhritiman-raw-dmk5927/5025-1-eng-GB/dhritiman-raw-dmk5927_article_590.jpg"
-                             alt="">
-
-                        <div class="caption">
-                            <h3>Feature Label</h3>
-
-                            <p id="feature-article-desc">This would be a great spot to feature some brand new products!
-
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-lg-4 col-md-4">
-                <a id="feature-article" href="#">
-                    <div class="thumbnail">
-                        <img src="http://natgeotraveller.in/var/natgeo/storage/images/media2/images/dhritiman-raw-dmk5927/5025-1-eng-GB/dhritiman-raw-dmk5927_article_590.jpg"
-                             alt="">
-
-                        <div class="caption">
-                            <h3>Feature Label</h3>
-
-                            <p id="feature-article-desc">This would be a great spot to feature some brand new
-                                products!</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <a id="feature-article" href="#">
-                    <div class="thumbnail">
-                        <img src="http://natgeotraveller.in/var/natgeo/storage/images/media2/images/dhritiman-raw-dmk5927/5025-1-eng-GB/dhritiman-raw-dmk5927_article_590.jpg"
-                             alt="">
-
-                        <div class="caption">
-                            <h3>Feature Label</h3>
-
-                            <p id="feature-article-desc">This would be a great spot to feature some brand new
-                                products!</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
-
-</div>
+    {% include "pages/section/featured.html" %}
+{#<div class="section">#}
+{##}
+{##}
+{#    <div class="container">#}
+{#        <div class="col-lg-12 text-center">#}
+{#            <h2>Featured Stories</h2>#}
+{#            <hr>#}
+{#        </div>#}
+{#        <div class="row">#}
+{#            <div class="col-lg-4 col-md-4">#}
+{#                <a id="feature-article" href="#">#}
+{#                    <div class="thumbnail">#}
+{#                        <img src="http://natgeotraveller.in/var/natgeo/storage/images/media2/images/dhritiman-raw-dmk5927/5025-1-eng-GB/dhritiman-raw-dmk5927_article_590.jpg"#}
+{#                             alt="">#}
+{##}
+{#                        <div class="caption">#}
+{#                            <h3>Feature Label</h3>#}
+{##}
+{#                            <p id="feature-article-desc">This would be a great spot to feature some brand new products!#}
+{##}
+{#                            </p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </a>#}
+{#            </div>#}
+{##}
+{#            <div class="col-lg-4 col-md-4">#}
+{#                <a id="feature-article" href="#">#}
+{#                    <div class="thumbnail">#}
+{#                        <img src="http://natgeotraveller.in/var/natgeo/storage/images/media2/images/dhritiman-raw-dmk5927/5025-1-eng-GB/dhritiman-raw-dmk5927_article_590.jpg"#}
+{#                             alt="">#}
+{##}
+{#                        <div class="caption">#}
+{#                            <h3>Feature Label</h3>#}
+{##}
+{#                            <p id="feature-article-desc">This would be a great spot to feature some brand new#}
+{#                                products!</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </a>#}
+{#            </div>#}
+{#            <div class="col-lg-4 col-md-4">#}
+{#                <a id="feature-article" href="#">#}
+{#                    <div class="thumbnail">#}
+{#                        <img src="http://natgeotraveller.in/var/natgeo/storage/images/media2/images/dhritiman-raw-dmk5927/5025-1-eng-GB/dhritiman-raw-dmk5927_article_590.jpg"#}
+{#                             alt="">#}
+{##}
+{#                        <div class="caption">#}
+{#                            <h3>Feature Label</h3>#}
+{##}
+{#                            <p id="feature-article-desc">This would be a great spot to feature some brand new#}
+{#                                products!</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </a>#}
+{#            </div>#}
+{#        </div>#}
+{#        <!-- /.row -->#}
+{##}
+{#    </div>#}
+{#    <!-- /.container -->#}
+{##}
+{#</div>#}
 <!-- /.section -->
 {##}
 {#<div class="section-colored text-center">#}
@@ -190,68 +159,7 @@
 {#</div>#}
 <!-- /.section-colored -->
 
-<div class="section">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>Story Categories</h2>
-                <hr>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-home-portfolio"
-                         src="http://placehold.it/700x450"></a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-home-portfolio"
-                                                   src="http://placehold.it/700x450"></a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio"
-                                                   src="http://placehold.it/700x450"></a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio"
-                                                   src="http://placehold.it/700x450"></a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio"
-                                                   src="http://placehold.it/700x450"></a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio"
-                                                   src="http://placehold.it/700x450"></a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio"
-                                                   src="http://placehold.it/700x450"></a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio"
-                                                   src="http://placehold.it/700x450"></a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio"
-                                                   src="http://placehold.it/700x450"></a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio"
-                                                   src="http://placehold.it/700x450"></a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio"
-                                                   src="http://placehold.it/700x450"></a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
-
-</div>
+{% include "pages/section/categories.html" %}
 <!-- /.section -->
 
 <div class="section-colored">
@@ -350,89 +258,11 @@
 </div>
 <!-- /.container -->
 
-
-
-<div id="footer" class="navbar navbar-default navbar-fixed-bottom">
-    {#    <div class="container">#}
-    {#        <ul class="nav navbar-nav navbar-left">#}
-    {#            <li><a href="#">About</a></li>#}
-    {#            <li><a href="#">Contact</a></li>#}
-    {#        </ul>#}
-    {#    </div>#}
-    <div class="container">
-        <div class="row">
-            <div class="col-md-1">
-                <div class="list-group">
-                    <a class="list-group-item-heading" href="#">one</a>
-                    <a class="list-group-item" href="#">one</a>
-                    <a class="list-group-item" href="#">one</a>
-                    <a class="list-group-item" href="#">one</a>
-                    <a class="list-group-item" href="#">one</a>
-                </div>
-
-            </div>
-            <div class="col-md-1">
-                <div class="list-group">
-                    <a class="list-group-item-heading" href="#">one</a>
-                    <a class="list-group-item" href="#">one</a>
-                    <a class="list-group-item" href="#">one</a>
-                    <a class="list-group-item" href="#">one</a>
-                    <a class="list-group-item" href="#">one</a>
-                </div>
-
-            </div>
-            <div class="col-md-1">
-                <div class="list-group">
-                    <a class="list-group-item-heading" href="#">one</a>
-                    <a class="list-group-item" href="#">one</a>
-                    <a class="list-group-item" href="#">one</a>
-                    <a class="list-group-item" href="#">one</a>
-                    <a class="list-group-item" href="#">one</a>
-                </div>
-{#    {% endfor %}#}
-{#    {% include "pages/menus/categories_page.html" %}#}
-{#    {% include "pages/tag_cloud.html" %}#}
-{#{% endblock %}#}
-{#                            {% with "pages/section/"|add:page.title|add:".html" as section %}#}
+{% endblock %}
 
 
 
-{#{% block home_page %}#}
+
 {##}
-{#    <div class="section s1">#}
-{#        <div class="inner">#}
-{#            {% include "pages/section/featured.html" %}#}
-{#        </div>#}
-{#    </div>#}
-{#    <div class="section s2">#}
-{#        <div class="inner">#}
-{#            {% include  "pages/section/categories.html"%}#}
-{#        </div>#}
-{#    </div>#}
-{#    <div class="section s3">#}
-{#        <div class="inner">#}
-{#            {% include "pages/section/about.html"%}#}
-{#        </div>#}
-{#    </div>#}
-{#    <div class="section s4">#}
-{#        <div class="inner">#}
-{#            {% include "pages/section/contact.html"%}#}
-{#        </div>#}
-{#    </div>#}
-
-
-
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-
-<!-- JavaScript -->
-<script src="static/js/jquery-1.10.2.js"></script>
-<script src="static/js/bootstrap.js"></script>
-<script src="static/js/modern-business.js"></script>
-<script src="static/js/app.js"></script>
-</body>
-</html>
+{#</body>#}
+{#</html>#}
