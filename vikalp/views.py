@@ -22,12 +22,6 @@ def category_list(request, template="pages/categories_page.html"):
 
 
 def article_list(request, tag=None, category=None, template="article/article_list.html"):
-    """
-    Display a list of blog posts that are filtered by tag, year, month,
-    author or category. Custom templates are checked for using the name
-    ``blog/blog_post_list_XXX.html`` where ``XXX`` is either the
-    category slug or author's username if given.
-    """
     settings.use_editable()
     templates = []
     articles = Article.objects.published(for_user=request.user)
@@ -43,8 +37,8 @@ def article_list(request, tag=None, category=None, template="article/article_lis
     prefetch = ("categories", "keywords__keyword")
     articles = articles.select_related("user").prefetch_related(*prefetch)
     articles = paginate(articles, request.GET.get("page", 1),
-                          settings.BLOG_POST_PER_PAGE,
-                          settings.MAX_PAGING_LINKS)
+                        settings.BLOG_POST_PER_PAGE,
+                        settings.MAX_PAGING_LINKS)
     context = {"articles": articles,
                "tag": tag, "category": category, "author": author}
     templates.append(template)

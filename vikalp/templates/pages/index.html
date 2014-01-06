@@ -3,10 +3,10 @@
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags %}
 
 {% compress js %}
-        <script type="text/javascript" src="{% static "js/jquery.smint.js" %}"></script>
-        <script type="text/javascript" src="{% static "js/unslider.min.js" %}"></script>
-        <script type="text/javascript" src="{% static "js/app.js" %}"></script>
-        <script type="text/javascript" src="{% static "js/feature.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jquery.smint.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/unslider.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/app.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/feature.js" %}"></script>
 {% endcompress %}
 
 {% block meta_title %}{% trans "Home" %}{% endblock %}
@@ -62,6 +62,7 @@
     {% for page in page_branch %}
         {% if page.in_menu %}
             {% ifnotequal page.title "Home" %}
+                {% if forloop.counter0 < 4 %}
                 <div class="section s{{ forloop.counter0 }}"> {# In the second iteration the value is 1 #}
                     <div class="inner">
                         {% with "pages/section/"|add:page.title|add:".html" as section %}
@@ -69,6 +70,7 @@
                         {% endwith %}
                     </div>
                 </div>
+                {% endif %}
             {% endifnotequal %}
         {% endif %}
     {% endfor %}
