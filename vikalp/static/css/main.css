@@ -51,26 +51,13 @@ p {
     word-spacing: 5px;
 }
 
-.menuBtn {
-
-    background: center center no-repeat transparent;
-    background: #000;
-    display: block;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 0;
-    left: 10px;
-
-}
-
 .hactive {
     background-color: #9E8F6C !important;
     color: #ffffff !important;
 }
 
 .active {
-    background-color: #9E8F6C !important;
+    background-color: #ab3333 !important;
     color: #ffffff !important;
 }
 
@@ -176,12 +163,28 @@ p {
     z-index: 1000;
     width: 100%;
     background: #eaeaea;
+    -moz-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
 
 }
 
 .subMenu .inner {
     padding: 0;
     font-weight: 400;
+}
+
+.menuBtn {
+
+    background: center center no-repeat transparent;
+    background: #000;
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+
 }
 
 .subNavBtn {
@@ -316,7 +319,8 @@ p {
 
 .s1 {
     min-height: 500px;
-    background: #2e2e2e;
+    background: #EAEAEA;
+    color: #331919;
 }
 
 .s2 {
@@ -341,8 +345,8 @@ p {
 
 .s5 {
     min-height: 500px;
-    background-color: #9E8F6C;
-    color: #2e2e2e;
+    background-color: #2e2e2e;
+    color: #ffffff;
 }
 
 /* Categories list */
@@ -387,6 +391,31 @@ p {
     margin-top: 60px;
 }
 
+
+
+.effect6
+{
+  	position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect6:before, .effect6:after
+{
+	content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+
 .container {
     width: 250px;
     height: 300px;
@@ -409,6 +438,8 @@ p {
     top: 0;
     left: 0;
 }
+
+
 
 .container .front img {
     width: 250px;
@@ -659,7 +690,7 @@ p {
 
 footer {
     position: fixed;
-    background-color: #000000;
+    background-color: #ab3333;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -683,7 +714,7 @@ footer ul li {
 }
 
 footer ul li a {
-    color: white;
+    color: #331919;
     text-decoration: none;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;

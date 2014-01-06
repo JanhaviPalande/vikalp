@@ -1,77 +1,403 @@
-{#{% extends "base.html" %}#}
-{% extends "base.html" %}
-{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-{% compress js %}
-        <script type="text/javascript" src="{% static "js/jquery.smint.js" %}"></script>
-        <script type="text/javascript" src="{% static "js/unslider.min.js" %}"></script>
-        <script type="text/javascript" src="{% static "js/app.js" %}"></script>
-        <script type="text/javascript" src="{% static "js/feature.js" %}"></script>
-{% endcompress %}
+    <title>Vikalp</title>
 
-{% block meta_title %}{% trans "Home" %}{% endblock %}
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.css" rel="stylesheet">
 
-{#{% block main %}#}
-{#    {% for article in promoted_articles %}#}
-{##}
-{#        {% block article_list_post_title %}#}
-{#            {% editable blog_post.title %}#}
-{#                <h2>#}
-{#                    <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>#}
-{#                </h2>#}
-{#            {% endeditable %}#}
-{#        {% endblock %}#}
-{##}
-{##}
-{#        {% block article_detail_featured_image %}#}
-{#            {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}#}
-{#                <p><img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 300 0 %}"></p>#}
-{#            {% endif %}#}
-{#        {% endblock %}#}
-{##}
-{##}
-{##}
-{#        {% block article_list_post_content_image %}#}
-{#            {% editable article.content %}#}
-{#                {{ article.description_from_content|safe }}#}
-{#            {% endeditable %}#}
-{#        {% endblock %}#}
-{##}
-{##}
-{#        {% block article_list_post_content_description %}#}
-{#            {% editable article.content %}#}
-{#                    {{ article.description }}#}
-{#            {% endeditable %}#}
-{#        {% endblock %}#}
-{##}
-{##}
-{##}
-{#        <br><br><br>#}
-{##}
-{##}
-{##}
-{#    {% endfor %}#}
-{#    {% include "pages/menus/categories_page.html" %}#}
-{#    {% include "pages/tag_cloud.html" %}#}
-{#{% endblock %}#}
+    <!-- Add custom CSS here -->
+    <link rel="stylesheet" href="static/css/modern-business.css">
+    <link href="static/font/font-awesome.css" rel="stylesheet">
 
+</head>
 
+<body>
+<div id="main-title">
+    <div class="container">
+        <h1>Welcome to alternatives forum !!!</h1>
+    </div>
+</div>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+            <a class="navbar-brand" href="index.html">Vikalp</a>
+        </div>
 
-{% block home_page %}
-    {#  Ends Section sTop#}
-    {% for page in page_branch %}
-        {% if page.in_menu %}
-            {% ifnotequal page.title "Home" %}
-                <div class="section s{{ forloop.counter0 }}"> {# In the second iteration the value is 1 #}
-                    <div class="inner">
-                        {% with "pages/section/"|add:page.title|add:".html" as section %}
-                            {% include section %}
-                        {% endwith %}
-                    </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <form class="navbar-form navbar-right" role="search">
+                <div class="right-inner-addon">
+                    <i class="fa fa-search"></i>
+                    <input type="search"
+                           class="form-control"
+                           placeholder="Search"/>
                 </div>
-            {% endifnotequal %}
-        {% endif %}
-    {% endfor %}
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Stories</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Contribute a story</a></li>
+            </ul>
+
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<div id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="fill"
+                 style="background-image:url('http://natgeotraveller.in/var/natgeo/storage/images/media2/images/dhritiman-raw-dmk5927/5025-1-eng-GB/dhritiman-raw-dmk5927_article_590.jpg');"></div>
+            <div class="carousel-caption">
+                <h1>Modern Business - A Bootstrap 3 Template</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill"
+                 style="background-image:url('http://0.tqn.com/d/kidstvmovies/1/0/d/T/shorts016.jpg');"></div>
+            <div class="carousel-caption">
+                <h1>Ready to Style &amp; Add Content</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill"
+                 style="background-image:url('http://upload.wikimedia.org/wikipedia/commons/8/8b/GreenMountainWindFarm_Fluvanna_2004.jpg');"></div>
+            <div class="carousel-caption">
+                <h1>Additional Layout Options at</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+</div>
+
+<div class="section">
 
 
-{% endblock %}
+    <div class="container">
+        <div class="col-lg-12 text-center">
+            <h2>Featured Stories</h2>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4">
+                <a id="feature-article" href="#">
+                    <div class="thumbnail">
+                        <img src="http://natgeotraveller.in/var/natgeo/storage/images/media2/images/dhritiman-raw-dmk5927/5025-1-eng-GB/dhritiman-raw-dmk5927_article_590.jpg"
+                             alt="">
+
+                        <div class="caption">
+                            <h3>Feature Label</h3>
+
+                            <p id="feature-article-desc">This would be a great spot to feature some brand new products!
+
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-4">
+                <a id="feature-article" href="#">
+                    <div class="thumbnail">
+                        <img src="http://natgeotraveller.in/var/natgeo/storage/images/media2/images/dhritiman-raw-dmk5927/5025-1-eng-GB/dhritiman-raw-dmk5927_article_590.jpg"
+                             alt="">
+
+                        <div class="caption">
+                            <h3>Feature Label</h3>
+
+                            <p id="feature-article-desc">This would be a great spot to feature some brand new
+                                products!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <a id="feature-article" href="#">
+                    <div class="thumbnail">
+                        <img src="http://natgeotraveller.in/var/natgeo/storage/images/media2/images/dhritiman-raw-dmk5927/5025-1-eng-GB/dhritiman-raw-dmk5927_article_590.jpg"
+                             alt="">
+
+                        <div class="caption">
+                            <h3>Feature Label</h3>
+
+                            <p id="feature-article-desc">This would be a great spot to feature some brand new
+                                products!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.section -->
+{##}
+{#<div class="section-colored text-center">#}
+{##}
+{#    <div class="container">#}
+{##}
+{#        <div class="row">#}
+{#            <div class="col-lg-12">#}
+{#                <h2>Modern Business: A Clean &amp; Simple Full Website Template by Start Bootstrap</h2>#}
+{##}
+{#                <p>A complete website design featuring various single page templates from Start Bootstraps library of#}
+{#                    free HTML starter templates.</p>#}
+{#                <hr>#}
+{#            </div>#}
+{#        </div>#}
+{#        <!-- /.row -->#}
+{##}
+{#    </div>#}
+{#    <!-- /.container -->#}
+{##}
+{#</div>#}
+<!-- /.section-colored -->
+
+<div class="section">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Story Categories</h2>
+                <hr>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-home-portfolio"
+                         src="http://placehold.it/700x450"></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-home-portfolio"
+                                                   src="http://placehold.it/700x450"></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio"
+                                                   src="http://placehold.it/700x450"></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio"
+                                                   src="http://placehold.it/700x450"></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio"
+                                                   src="http://placehold.it/700x450"></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio"
+                                                   src="http://placehold.it/700x450"></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio"
+                                                   src="http://placehold.it/700x450"></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio"
+                                                   src="http://placehold.it/700x450"></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio"
+                                                   src="http://placehold.it/700x450"></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio"
+                                                   src="http://placehold.it/700x450"></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio"
+                                                   src="http://placehold.it/700x450"></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.section -->
+
+<div class="section-colored">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <h2>About Us</h2>
+
+                <p><b>KALPAVRIKSH</b> is a non profit organisation working on environmental and social issues. The group
+                    began in 1979 with a campaign led by students to save Delhi's Ridge Forest. We work on local,
+                    national and global levels, are registered under the Societies Registration Act (S-17439) and are
+                    based in Delhi and Pune.</p>
+
+                <p>
+                    Kalpavriksh believes that a country can develop meaningfully only when ecological sustainability and
+                    social equity are guaranteed, and a sense of respect for, and oneness with nature, and fellow humans
+                    is achieved.
+                    Kalpavriksh is a name taken from Indian mythology and denotes a mythical tree which could grant all
+                    your wishes. 'Kalpa' in Sanskrit means imagination and 'vriksh' is a tree. Thus, the name stands for
+                    'a tree of imagination'.</p>
+
+                <p>
+                    There are a few Indian trees like Peepul (Sacred Fig) and Bargad (Banyan) which are supposed to emb
+                    ody the giving nature of Kalpavriksh. But, as with all mythologies the name was more a symbol of the
+                    nurturing qualities of nature itself. Philosophically, the wish granting aspect of 'Kalpavriksh' is
+                    supposed to be accompanied by the power to make that wish come true. Thus, Kalpavriksh is symbolic
+                    of a more proactive process than just asking for a wish: you could actually make it happen if you so
+                    desired.</p>
+
+                <p>Thus, it was an important reason to select the name for the environmental group- Kalpavriksh. The
+                    group, Kalpavriksh, thus, is not a mere figment of imagination. Instead, it's a wish the members
+                    granted for themselves, a wish for a saner environment for our country and the world, and work
+                    towards attaining it.
+                </p>
+
+                <p><a href="#" class="btn btn-primary btn-large">Read More</a></p>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.section-colored -->
+
+<div class="section">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <img class="img-responsive" src="http://placehold.it/700x450">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <h2>Modern Business Features Include:</h2>
+                <ul>
+                    <li>Bootstrap 3 Framework</li>
+                    <li>Mobile Responsive Design</li>
+                    <li>Predefined File Paths</li>
+                    <li>Working PHP Contact Page</li>
+                    <li>Minimal Custom CSS Styles</li>
+                    <li>Unstyled: Add Your Own Style and Content!</li>
+                    <li>Font-Awesome fonts come pre-installed!</li>
+                    <li>100% <strong>Free</strong> to Use</li>
+                    <li>Open Source: Use for any project, private or commercial!</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.section -->
+
+<div class="container">
+
+    <div class="row well">
+        <div class="col-lg-8 col-md-8">
+            <h4>'Modern Business' is a ready-to-use, Bootstrap 3 updated, multi-purpose HTML theme!</h4>
+
+            <p>For more templates and more page options that you can integrate into this website template, visit Start
+                Bootstrap!</p>
+        </div>
+        <div class="col-lg-4 col-md-4">
+            <a class="btn btn-lg btn-primary pull-right" href="http://startbootstrap.com">See More Templates!</a>
+        </div>
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+
+
+<div id="footer" class="navbar navbar-default navbar-fixed-bottom">
+    {#    <div class="container">#}
+    {#        <ul class="nav navbar-nav navbar-left">#}
+    {#            <li><a href="#">About</a></li>#}
+    {#            <li><a href="#">Contact</a></li>#}
+    {#        </ul>#}
+    {#    </div>#}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1">
+                <div class="list-group">
+                    <a class="list-group-item-heading" href="#">one</a>
+                    <a class="list-group-item" href="#">one</a>
+                    <a class="list-group-item" href="#">one</a>
+                    <a class="list-group-item" href="#">one</a>
+                    <a class="list-group-item" href="#">one</a>
+                </div>
+
+            </div>
+            <div class="col-md-1">
+                <div class="list-group">
+                    <a class="list-group-item-heading" href="#">one</a>
+                    <a class="list-group-item" href="#">one</a>
+                    <a class="list-group-item" href="#">one</a>
+                    <a class="list-group-item" href="#">one</a>
+                    <a class="list-group-item" href="#">one</a>
+                </div>
+
+            </div>
+            <div class="col-md-1">
+                <div class="list-group">
+                    <a class="list-group-item-heading" href="#">one</a>
+                    <a class="list-group-item" href="#">one</a>
+                    <a class="list-group-item" href="#">one</a>
+                    <a class="list-group-item" href="#">one</a>
+                    <a class="list-group-item" href="#">one</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<!-- JavaScript -->
+<script src="static/js/jquery-1.10.2.js"></script>
+<script src="static/js/bootstrap.js"></script>
+<script src="static/js/modern-business.js"></script>
+<script src="static/js/app.js"></script>
+</body>
+</html>
