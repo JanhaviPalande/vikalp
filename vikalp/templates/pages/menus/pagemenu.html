@@ -1,41 +1,53 @@
 {% load i18n future pages_tags mezzanine_tags compress staticfiles %}
 
 
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
-            <a class="navbar-brand" href="index.html">Vikalp</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <form class="navbar-form navbar-right" role="search">
-                <div class="right-inner-addon">
-                    <i class="fa fa-search"></i>
-                    <input type="search"
-                           class="form-control"
-                           placeholder="Search"/>
-                </div>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Stories</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Contribute a story</a></li>
-            </ul>
-
-        </div>
-        <!-- /.navbar-collapse -->
+<div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+        <a class="navbar-brand" href="index.html">Vikalp</a>
     </div>
-    <!-- /.container -->
 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <form class="navbar-form navbar-right" role="search">
+            <div class="right-inner-addon">
+                <i class="fa fa-search"></i>
+                <input type="search" class="form-control" placeholder="Search"/>
 
+            </div>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Stories <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Society and culture</a></li>
+                    <li><a href="#">Alternative economies</a></li>
+                    <li><a href="#">Livelihoods</a></li>
+                    <li><a href="#">Settlements</a></li>
+                    <li><a href="#">Energy</a></li>
+                    <li><a href="#">Environment and ecology</a></li>
+                    <li><a href="#">Knowledge and media</a></li>
+                    <li><a href="#">Alternative politics</a></li>
+                    <li><a href="#">Health and hygiene</a></li>
+                    <li><a href="#">Learning & education</a></li>
+                    <li><a href="#">Transportation</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Contribute a story</a></li>
+        </ul>
+
+    </div>
+    <!-- /.navbar-collapse -->
+</div>
+<!-- /.container -->
 
 
 {#<div class="innerLeft">#}
