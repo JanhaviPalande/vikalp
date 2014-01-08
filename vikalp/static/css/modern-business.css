@@ -13,7 +13,11 @@ html, body {
 }
 
 body {
-/ / padding-top : 30 px; /* body padding for fixed top nav */
+    font-family: "Antenna", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Antenna", Arial, sans-serif;
 }
 
 .img-home-portfolio,
@@ -30,6 +34,7 @@ body {
     color: #ab3333;
 }
 
+
 .navbar-default {
     border: none;
 }
@@ -41,12 +46,17 @@ body {
 .navbar-inverse {
     background-color: #EAEAEA;
     border: none;
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);
 }
 
 .navbar-inverse .navbar-nav > li > a {
     color: #331919;
 }
-
+.navbar-form{
+    margin-left: 10px;
+}
 .navbar-inverse .navbar-brand {
     color: #ab3333;
 }
@@ -69,6 +79,7 @@ body {
     color: #ab3333;
     background-color: transparent;
 }
+
 
 /*Search icon */
 
@@ -115,6 +126,7 @@ a#feature-article {
 
 .thumbnail {
     border: none;
+    border-radius:0px;
     padding: 0;
 }
 
@@ -222,6 +234,12 @@ a#feature-article {
 #footer {
     background-color: #000000;
     color: #ffffff;
+    min-height: 40px;
+
+}
+#footer .list-group{
+    padding-top: 10px;
+    margin-bottom: 10px;
 }
 
 footer {
