@@ -8,8 +8,7 @@ from models import Article
 from django.shortcuts import render, get_object_or_404
 from mezzanine.conf import settings
 from mezzanine.utils.urls import path_to_slug
-
-from mezzanine.blog.views import blog_post_list
+from django.contrib.contenttypes.models import ContentType
 
 
 def promoted_article_on_homepage(request, template="pages/index.html"):
@@ -42,8 +41,10 @@ def article_list(request, tag=None, category=None, template="article/article_lis
     if tag is not None:
         tag = get_object_or_404(Keyword, slug=tag)
         # articles = articles.filter(keywords__in=tag.assignments.all())
-        # articles = Article.objects.filter(keywords__in=tag.assignments.all())
-        articles = Article.objects.raw("SELECT blog_blogpost.id, blog_blogpost.comments_count, blog_blogpost.keywords_string, blog_blogpost.rating_count, blog_blogpost.rating_sum, blog_blogpost.rating_average, blog_blogpost.site_id, blog_blogpost.title, blog_blogpost.slug, blog_blogpost._meta_title, blog_blogpost.description, blog_blogpost.gen_description, blog_blogpost.created, blog_blogpost.updated, blog_blogpost.status, blog_blogpost.publish_date, blog_blogpost.expiry_date, blog_blogpost.short_url, blog_blogpost.in_sitemap, blog_blogpost.content, blog_blogpost.user_id, blog_blogpost.allow_comments, blog_blogpost.featured_image, vikalp_article.blogpost_ptr_id, vikalp_article.promoted FROM vikalp_article INNER JOIN blog_blogpost ON (vikalp_article.blogpost_ptr_id = blog_blogpost.id) INNER JOIN generic_assignedkeyword ON (blog_blogpost.id = generic_assignedkeyword.object_pk) WHERE (blog_blogpost.site_id = 1  AND (generic_assignedkeyword.id IN (SELECT U0.id FROM generic_assignedkeyword U0 WHERE U0.keyword_id = %s ) AND generic_assignedkeyword.content_type_id = 31 )) ORDER BY blog_blogpost.publish_date DESC" % str(tag.id))
+        content_type = ContentType.objects.get(app_label="vikalp", model="article")
+        # articles = articles.filter(keywords__in=tag.assignments.all(), keywords__content_type__id=content_type.id)
+        # print articles.query
+        articles = Article.objects.raw("SELECT blog_blogpost.id, blog_blogpost.comments_count, blog_blogpost.keywords_string, blog_blogpost.rating_count, blog_blogpost.rating_sum, blog_blogpost.rating_average, blog_blogpost.site_id, blog_blogpost.title, blog_blogpost.slug, blog_blogpost._meta_title, blog_blogpost.description, blog_blogpost.gen_description, blog_blogpost.created, blog_blogpost.updated, blog_blogpost.status, blog_blogpost.publish_date, blog_blogpost.expiry_date, blog_blogpost.short_url, blog_blogpost.in_sitemap, blog_blogpost.content, blog_blogpost.user_id, blog_blogpost.allow_comments, blog_blogpost.featured_image, vikalp_article.blogpost_ptr_id, vikalp_article.promoted FROM vikalp_article INNER JOIN blog_blogpost ON (vikalp_article.blogpost_ptr_id = blog_blogpost.id) INNER JOIN generic_assignedkeyword ON (blog_blogpost.id = generic_assignedkeyword.object_pk) WHERE (blog_blogpost.site_id = 1  AND (generic_assignedkeyword.id IN (SELECT U0.id FROM generic_assignedkeyword U0 WHERE U0.keyword_id = %s ) AND generic_assignedkeyword.content_type_id = %s )) ORDER BY blog_blogpost.publish_date DESC" % (str(tag.id), str(content_type.pk)))
     if category is not None:
         category = get_object_or_404(BlogCategory, slug=category)
         articles = articles.filter(categories=category)
