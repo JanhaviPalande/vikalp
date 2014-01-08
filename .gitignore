@@ -18,3 +18,4 @@ Vagrantfile.bak
 .idea/workspace.xml
 *.swp
 .vagrant
+.idea
