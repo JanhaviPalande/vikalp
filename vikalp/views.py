@@ -9,7 +9,7 @@ from django.shortcuts import render, get_object_or_404
 from mezzanine.conf import settings
 from mezzanine.utils.urls import path_to_slug
 from django.contrib.contenttypes.models import ContentType
-
+from vikalp.helpers.article_helper import get_promoted_articles
 
 def get_context_for_promoted_articles(article_promoted_list):
     return {"promoted_articles": article_promoted_list}
@@ -17,8 +17,7 @@ def get_context_for_promoted_articles(article_promoted_list):
 
 def promoted_article_on_homepage(request, template="pages/index.html"):
     settings.use_editable()
-    article_promoted_list = Article.objects.filter(promoted='t')[:3]
-    return render(request, template, get_context_for_promoted_articles(article_promoted_list))
+    return render(request, template, get_context_for_promoted_articles(get_promoted_articles()))
 
 
 def get_page(request):

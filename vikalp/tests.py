@@ -1,13 +1,12 @@
 from django.test import TestCase
 from django.core.urlresolvers import reverse
 from mezzanine.blog.views import User
-from mezzanine.utils.urls import slugify
 from models import Article
 from views import promoted_article_on_homepage, get_context_for_promoted_articles
 from random import randint
 from vikalp.local_settings import BLOG_SLUG, DEBUG, STATIC_URL, MEDIA_URL, TEMPLATE_DIRS, STATIC_ROOT, JQUERY_FILENAME, SITE_TITLE, SITE_TAGLINE
-from django.http.request import HttpRequest
 from django.test import RequestFactory
+from vikalp.helpers.article_helper import get_promoted_articles
 
 
 class ArticleTest(TestCase):
@@ -91,17 +90,33 @@ class PromotedArticleViewTest(TestCase):
     def test_article_view_site_tagline(self):
         self.assertIn(SITE_TAGLINE, self.response.content)
 
-    def test_only_four_articles_displayed_on_homepage(self):
+    def test_only_3_articles_displayed_on_homepage(self):
         self.assertNotIn(self.article1.title, self.response.content)
+        self.assertIn(self.article2.title, self.response.content)
+        self.assertIn(self.article3.title, self.response.content)
+        self.assertIn(self.article4.title, self.response.content)
 
     def test_for_context_creation(self):
         self.context = get_context_for_promoted_articles([self.article1, self.article2])
-        self.assertEquals(self.context['promoted_articles'],[self.article1, self.article2])
+        self.assertEquals(self.context['promoted_articles'], [self.article1, self.article2])
 
 
+class ArticleHelperTest(TestCase):
+    def create_article(self, title="Test Title", content="Test Content", promoted="t", user_id=randint(1, 100),
+                       description="Test Description"):
+        return Article.objects.create(title=title, content=content, promoted=promoted, user_id=user_id,
+                                      description=description)
 
-# class category_list(TestCase):
+    def setUp(self):
+        self.article1 = self.create_article(title="Title1")
+        self.article2 = self.create_article(title="Title2")
+        self.article3 = self.create_article(title="Title3")
+        self.article4 = self.create_article(title="Title4")
+        self.promoted_article_list = get_promoted_articles()
 
+    def test_promoted_articles_fetched_only(self):
+        for article in self.promoted_article_list:
+            self.assertTrue(article.promoted)
 
-
-
+    def test_promoted_articles_count_is_3(self):
+        self.assertEquals(self.promoted_article_list.__len__(),3)

@@ -19,3 +19,4 @@ Vagrantfile.bak
 *.swp
 .vagrant
 .idea
+CACHE
