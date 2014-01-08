@@ -17,3 +17,4 @@ articles_bak
 Vagrantfile.bak
 .idea/workspace.xml
 *.swp
+.vagrant

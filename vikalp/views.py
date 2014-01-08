@@ -41,7 +41,6 @@ def article_list(request, tag=None, category=None, template="article/article_lis
     tag = tag.strip("/")
     if tag is not None:
         tag = get_object_or_404(Keyword, slug=tag)
-        print tag.id
         # articles = articles.filter(keywords__in=tag.assignments.all())
         # articles = Article.objects.filter(keywords__in=tag.assignments.all())
         articles = Article.objects.raw("SELECT blog_blogpost.id, blog_blogpost.comments_count, blog_blogpost.keywords_string, blog_blogpost.rating_count, blog_blogpost.rating_sum, blog_blogpost.rating_average, blog_blogpost.site_id, blog_blogpost.title, blog_blogpost.slug, blog_blogpost._meta_title, blog_blogpost.description, blog_blogpost.gen_description, blog_blogpost.created, blog_blogpost.updated, blog_blogpost.status, blog_blogpost.publish_date, blog_blogpost.expiry_date, blog_blogpost.short_url, blog_blogpost.in_sitemap, blog_blogpost.content, blog_blogpost.user_id, blog_blogpost.allow_comments, blog_blogpost.featured_image, vikalp_article.blogpost_ptr_id, vikalp_article.promoted FROM vikalp_article INNER JOIN blog_blogpost ON (vikalp_article.blogpost_ptr_id = blog_blogpost.id) INNER JOIN generic_assignedkeyword ON (blog_blogpost.id = generic_assignedkeyword.object_pk) WHERE (blog_blogpost.site_id = 1  AND (generic_assignedkeyword.id IN (SELECT U0.id FROM generic_assignedkeyword U0 WHERE U0.keyword_id = %s ) AND generic_assignedkeyword.content_type_id = 31 )) ORDER BY blog_blogpost.publish_date DESC" % str(tag.id))
