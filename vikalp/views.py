@@ -11,11 +11,14 @@ from mezzanine.utils.urls import path_to_slug
 from django.contrib.contenttypes.models import ContentType
 
 
+def get_context_for_promoted_articles(article_promoted_list):
+    return {"promoted_articles": article_promoted_list}
+
+
 def promoted_article_on_homepage(request, template="pages/index.html"):
     settings.use_editable()
-    article_promoted_list = Article.objects.filter(promoted='t')
-    context = {"promoted_articles": article_promoted_list}
-    return render(request, template, context)
+    article_promoted_list = Article.objects.filter(promoted='t')[:3]
+    return render(request, template, get_context_for_promoted_articles(article_promoted_list))
 
 
 def get_page(request):

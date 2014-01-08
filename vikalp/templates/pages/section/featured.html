@@ -10,7 +10,6 @@
 
 {% block section_content %}
     {% for article in promoted_articles %}
-        {% if forloop.counter <= 3 %}
             <div class="col-lg-4 col-md-4">
                 <a id="feature-article" href="{{ article.get_absolute_url }}">
                     <div class="thumbnail">
@@ -29,6 +28,5 @@
                     </div>
                 </a>
             </div>
-        {% endif %}
     {% endfor %}
 {% endblock %}
