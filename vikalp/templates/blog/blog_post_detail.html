@@ -22,20 +22,16 @@
 {% endblock %}
 
 {% block main %}
-    <div class="content-wrapper">
-        <div class="article-container">
             {% block title %}
-                <h1>{% editable blog_post.title %}{{ blog_post.title }}{% endeditable %}</h1>
+                <h1>{{ blog_post.title }}</h1>
             {% endblock %}
             {{ blog_post.content|richtext_filters|safe }}
-        </div>
-        <div class="sidebar">
-            <div class="tagCloud">
-                {% include "pages/tag_cloud.html" %}
 
-            </div>
-        </div>
-    </div>
+{% endblock %}
+
+{% block side_bar %}
+    {% include "pages/menus/category_list.html" %}
+    {% include "pages/tag_cloud.html" %}
 {% endblock %}
 
 

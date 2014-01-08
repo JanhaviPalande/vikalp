@@ -30,8 +30,12 @@ body {
     color: #ab3333;
 }
 
+.navbar-default {
+    border: none;
+}
+
 .navbar-fixed-top {
-    top: 100px;
+    /*top: 100px;*/
 }
 
 .navbar-inverse {
@@ -261,6 +265,10 @@ footer {
     font-size: 180%;
 }
 
-.push50 {
-    height: 50px;
+.push60 {
+    height: 60px;
+}
+
+.generic_section {
+    padding: 60px 0px;
 }

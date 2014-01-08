@@ -1,20 +1,21 @@
 {% extends "base.html" %}
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags %}
 
-{% block meta_title %}{{ tag }}{% endblock %}
+{% block meta_title %}{% if category %}{{ category }}{% else %}{{ tag }}{% endif %}{% endblock %}
 
 {% block main %}
     {% block title %}
+        <h1>
         {% if category %}
-            <h1 class="page-header">{{ category }}</h1>
+            {{ category }}
         {% else %}
             {% if tag %}
-                <h1 class="page-header">{{ tag }}</h1>
+                {{ tag }}
             {% else %}
-                <h1 class="page-header">Articles</h1>
+                Articles
             {% endif %}
         {% endif %}
-
+        </h1>
     {% endblock %}
 
 

@@ -10,69 +10,28 @@
             <span class="icon-bar"></span>
         </button>
         <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
-        <a class="navbar-brand" href="/">Vikalp</a>
+        <a class="navbar-brand" href="/">
+            {% if settings.SITE_TITLE %}{{ settings.SITE_TITLE }}{% endif %} - {% if settings.SITE_TAGLINE %}
+                {{ settings.SITE_TAGLINE }}{% endif %}</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         {% search_form %}
         <ul class="nav navbar-nav navbar-right">
-            {#            <li class="dropdown">#}
-            {#                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Stories <b class="caret"></b></a>#}
-
-            {#                <ul class="dropdown-menu">#}
-            {#                    <li><a href="#">Society and culture</a></li>#}
-            {#                    <li><a href="#">Alternative economies</a></li>#}
-            {#                    <li><a href="#">Livelihoods</a></li>#}
-            {#                    <li><a href="#">Settlements</a></li>#}
-            {#                    <li><a href="#">Energy</a></li>#}
-            {#                    <li><a href="#">Environment and ecology</a></li>#}
-            {#                    <li><a href="#">Knowledge and media</a></li>#}
-            {#                    <li><a href="#">Alternative politics</a></li>#}
-            {#                    <li><a href="#">Health and hygiene</a></li>#}
-            {#                    <li><a href="#">Learning & education</a></li>#}
-            {#                    <li><a href="#">Transportation</a></li>#}
-            {#                </ul>#}
-            {#            </li>#}
             {% for page in page_branch %}
                 {% for in_menu in page.in_menus %}
                     {% ifequal in_menu '1' %}
                         {% ifnotequal page.title  "Home" %}
-                            <li {% if page.is_current_or_ascendant %}class="active"{% endif %}><a href="{{ page.get_absolute_url }}">{{ page.title }}</a></li>
+                            <li {% if page.is_current_or_ascendant %}class="active"{% endif %}><a
+                                    href="{{ page.get_absolute_url }}">{{ page.title }}</a></li>
                         {% endifnotequal %}
                     {% endifequal %}
                 {% endfor %}
             {% endfor %}
-            {#            <li><a href="#">About</a></li>#}
-            {#            <li><a href="#">Contact</a></li>#}
-            {#            <li><a href="#">Contribute a story</a></li>#}
         </ul>
 
     </div>
     <!-- /.navbar-collapse -->
 </div>
 <!-- /.container -->
-
-
-{#<div class="innerLeft">#}
-{#    {% for page in page_branch %}#}
-{#        {% if page.in_menu %}#}
-{#            {% ifequal forloop.counter0 0 %}#}
-{#                <a href="{{ page.get_absolute_url }}" class="subNavBtn {% if on_home %}active{% endif %}" id="sTop">#}
-{#                    {{ page.title }}#}
-{#                </a>#}
-{#            {% endifequal %}#}
-{#            {{ request.title }}#}
-{#            {% ifnotequal forloop.counter0 0 %}#}
-{#                <a href="{{ page.get_absolute_url }}"#}
-{#                   class="subNavBtn {% if page.title|lower in request.path %}active{% endif %}{% if "categor" in page.title|lower and "categor" in request.path %}active{% endif %} id="#}
-{#                   s{{ forloop.counter0 }}">#}
-{#                {{ page.title }}#}
-{#                </a>#}
-{#            {% endifnotequal %}#}
-{#        {% endif %}#}
-{#    {% endfor %}#}
-{#</div>#}
-{#<div class="innerRight">#}
-{#    {% search_form "" %}#}
-{#</div>#}

@@ -63,6 +63,7 @@ urlpatterns += patterns("",
                         (r"^stories/$", category_list),
                         (r"^article/$", article_list),
                         url("^article/tag/(?P<tag>.*)$", "vikalp.views.article_list", name="article_list_tag"),
+                        url("^article/category/(?P<category>.*)$", "vikalp.views.article_list", name="article_list_category"),
 
 
                         # HOMEPAGE FOR A BLOG-ONLY SITE

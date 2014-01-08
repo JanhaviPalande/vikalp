@@ -39,14 +39,13 @@
 
 <body id="{% block body_id %}body{% endblock %}">
 
-<div id="main-title">
-    <div class="container">
-        {% include "pages/menus/site_title.html" %}
-    </div>
-</div>
+{#<div id="main-title">#}
+{#    <div class="container">#}
+{#        {% include "pages/menus/site_title.html" %}#}
+{#    </div>#}
+{#</div>#}
 
 <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-
     {% page_menu "pages/menus/pagemenu.html" %}
 </nav>
 
@@ -57,7 +56,7 @@
 {% endif %}
 
 {% if not on_home %}
-    <div class="section">
+    <div class="section generic_section">
 
         <div class="container">
 
@@ -66,74 +65,12 @@
                 <div class="col-lg-8">
 
                     {% block main %}{% endblock %}
-                    {#                    <h1 class="page-header">Blog Home 1#}
-                    {#                        <small>Blog Homepage</small>#}
-                    {#                    </h1>#}
-
-                    {#                    <h1><a href="blog-post.html">A Blog Home Template for Bootstrap 3</a></h1>#}
-                    {##}
-                    {#                    <p class="lead">by <a href="#">Start Bootstrap</a></p>#}
-                    {#                    <hr>#}
-                    {#                    <p><i class="fa fa-clock-o"></i> Posted on August 28, 2013 at 10:00 PM</p>#}
-                    {#                    <hr>#}
-                    {#                    <a href="blog-post.html"><img src="http://placehold.it/900x300" class="img-responsive"></a>#}
-                    {##}
-                    {#                    <hr>#}
-                    {##}
-                    {#                    <p>This is a very basic starter template for a blog homepage. It makes use of Font Awesome icons#}
-                    {#                        that are built into the 'Modern Business' template, and it makes use of the Bootstrap 3 pager at#}
-                    {#                        the bottom of the page.</p>#}
-                    {#                    <a class="btn btn-primary" href="blog-post.html">Read More <i class="fa fa-angle-right"></i></a>#}
-                    {##}
-                    {#                    <h1><a href="blog-post.html">A Blog Home Template for Bootstrap 3</a></h1>#}
-                    {##}
-                    {#                    <p class="lead">by <a href="#">Start Bootstrap</a></p>#}
-                    {#                    <hr>#}
-                    {#                    <p><i class="fa fa-clock-o"></i> Posted on August 28, 2013 at 10:00 PM</p>#}
-                    {#                    <hr>#}
-                    {#                    <a href="blog-post.html"><img src="http://placehold.it/900x300" class="img-responsive"></a>#}
-                    {#                    <hr>#}
-                    {#                    <p>This is a very basic starter template for a blog homepage. It makes use of Font Awesome icons#}
-                    {#                        that are built into the 'Modern Business' template, and it makes use of the Bootstrap 3 pager at#}
-                    {#                        the bottom of the page.</p>#}
-                    {#                    <a class="btn btn-primary" href="blog-post.html">Read More <i class="fa fa-angle-right"></i></a>#}
-
 
                 </div>
 
                 <div class="col-lg-4">
-
+                    <div class="push60"></div>
                     {% block side_bar %}{% endblock %}
-                    <!-- /well -->
-                    {#                    <div class="well">#}
-                    {#                        <h4>Popular Blog Categories</h4>#}
-                    {##}
-                    {#                        <div class="row">#}
-                    {#a#}
-                    {#                                <ul class="list-unstyled">#}
-                    {#                                    <li><a href="#dinosaurs">Dinosaurs</a></li>#}
-                    {#                                    <li><a href="#spaceships">Spaceships</a></li>#}
-                    {#                                    <li><a href="#fried-foods">Fried Foods</a></li>#}
-                    {#                                    <li><a href="#wild-animals">Wild Animals</a></li>#}
-                    {#                                </ul>#}
-                    {#                            </div>#}
-                    {#                            <div class="col-lg-6">#}
-                    {#                                <ul class="list-unstyled">#}
-                    {#                                    <li><a href="#alien-abductions">Alien Abductions</a></li>#}
-                    {#                                    <li><a href="#business-casual">Business Casual</a></li>#}
-                    {#                                    <li><a href="#robots">Robots</a></li>#}
-                    {#                                    <li><a href="#fireworks">Fireworks</a></li>#}
-                    {#                                </ul>#}
-                    {#                            </div>#}
-                    {#                        </div>#}
-                    {#                    </div>#}
-                    {#                    <!-- /well -->#}
-                    {#                    <div class="well">#}
-                    {#                        <h4>Side Widget Well</h4>#}
-                    {##}
-                    {#                        <p>Bootstrap's default well's work great for side widgets! What is a widget anyways...?</p>#}
-                    {#                    </div>#}
-                    <!-- /well -->
                 </div>
             </div>
 
@@ -143,113 +80,37 @@
     </div>
 {% endif %}
 
-
-
-
-
-{#<div class="wrap">#}
-{#    <div class="inner">#}
-{#        {% include "pages/menus/site_title.html" %}#}
-{#    </div>#}
-{#    <div class="subMenu">#}
-{#        {% page_menu "pages/menus/pagemenu.html" %}#}
-{##}
-{#    </div>#}
-{##}
-{##}
-{#    {% if on_home %}#}
-{#        {% compress js %}#}
-{#            <script type="text/javascript" src="{% static "js/unslider.min.js" %}"></script>#}
-{#            <script type="text/javascript" src="{% static "js/feature.js" %}"></script>#}
-{#            <script type="text/javascript" src="{% static "js/carousel.js" %}"></script>#}
-{#        {% endcompress %}#}
-{#        <div class="section sTop">#}
-{#            {% include "pages/menus/carousel.html" %}#}
-{#        </div>#}
-{#        {% block home_page %}#}
-{##}
-{#        {% endblock %}#}
-{##}
-{#    {% endif %}#}
-{#    {% if not on_home %}#}
-{#        <div class="mainSection">#}
-{#            <div class="inner">#}
-{#                <div class="article-wrapper">#}
-{#                    {% block main %}#}
-{#                    {% endblock %}#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    {% endif %}#}
-{#</div>#}
-
 <div id="footer" class="navbar navbar-default navbar-fixed-bottom">
-    {#    <div class="container">#}
-    {#        <ul class="nav navbar-nav navbar-left">#}
-    {#            <li><a href="#">About</a></li>#}
-    {#            <li><a href="#">Contact</a></li>#}
-    {#        </ul>#}
-    {#    </div>#}
     <div class="container">
         <div class="row">
             <div class="col-md-1">
                 <div class="list-group">
                     <a class="list-group-item-heading" href="#">one</a>
-{#                    <a class="list-group-item" href="#">one</a>#}
-{#                    <a class="list-group-item" href="#">one</a>#}
-{#                    <a class="list-group-item" href="#">one</a>#}
-{#                    <a class="list-group-item" href="#">one</a>#}
+                    {#                    <a class="list-group-item" href="#">one</a>#}
+                    {#                    <a class="list-group-item" href="#">one</a>#}
+                    {#                    <a class="list-group-item" href="#">one</a>#}
+                    {#                    <a class="list-group-item" href="#">one</a>#}
                 </div>
 
             </div>
             <div class="col-md-1">
                 <div class="list-group">
                     <a class="list-group-item-heading" href="#">one</a>
-{#                    <a class="list-group-item" href="#">one</a>#}
-{#                    <a class="list-group-item" href="#">one</a>#}
-{#                    <a class="list-group-item" href="#">one</a>#}
-{#                    <a class="list-group-item" href="#">one</a>#}
+                    {#                    <a class="list-group-item" href="#">one</a>#}
+                    {#                    <a class="list-group-item" href="#">one</a>#}
+                    {#                    <a class="list-group-item" href="#">one</a>#}
+                    {#                    <a class="list-group-item" href="#">one</a>#}
                 </div>
 
             </div>
             <div class="col-md-1">
                 <div class="list-group">
                     <a class="list-group-item-heading" href="#">one</a>
-{#                    <a class="list-group-item" href="#">one</a>#}
-{#                    <a class="list-group-item" href="#">one</a>#}
-{#                    <a class="list-group-item" href="#">one</a>#}
-{#                    <a class="list-group-item" href="#">one</a>#}
+                    {#                    <a class="list-group-item" href="#">one</a>#}
+                    {#                    <a class="list-group-item" href="#">one</a>#}
+                    {#                    <a class="list-group-item" href="#">one</a>#}
+                    {#                    <a class="list-group-item" href="#">one</a>#}
                 </div>
-                {#    {% endfor %}#}
-                {#    {% include "pages/menus/categories_page.html" %}#}
-                {#    {% include "pages/tag_cloud.html" %}#}
-                {#{% endblock %}#}
-                {#                            {% with "pages/section/"|add:page.title|add:".html" as section %}#}
-
-
-                {#{% block home_page %}#}
-                {##}
-                {#    <div class="section s1">#}
-                {#        <div class="inner">#}
-                {#            {% include "pages/section/featured.html" %}#}
-                {#        </div>#}
-                {#    </div>#}
-                {#    <div class="section s2">#}
-                {#        <div class="inner">#}
-                {#            {% include  "pages/section/categories.html"%}#}
-                {#        </div>#}
-                {#    </div>#}
-                {#    <div class="section s3">#}
-                {#        <div class="inner">#}
-                {#            {% include "pages/section/about.html"%}#}
-                {#        </div>#}
-                {#    </div>#}
-                {#    <div class="section s4">#}
-                {#        <div class="inner">#}
-                {#            {% include "pages/section/contact.html"%}#}
-                {#        </div>#}
-                {#    </div>#}
-
 
             </div>
         </div>

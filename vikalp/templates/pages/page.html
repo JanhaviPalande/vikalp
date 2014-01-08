@@ -15,9 +15,14 @@
 {{ page.description }}
 {% endmetablock %}{% endblock %}
 
-{% block title %}
-{% editable page.title %}{{ page.title }}{% endeditable %}
-{% endblock %}
+{#{% block title %}#}
+{#{% editable page.title %}{{ page.title }}{% endeditable %}#}
+{#{% endblock %}#}
 
 {% block main %}
+{% endblock %}
+
+{% block side_bar %}
+    {% include "pages/menus/category_list.html" %}
+    {% include "pages/tag_cloud.html" %}
 {% endblock %}
