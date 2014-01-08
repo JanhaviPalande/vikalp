@@ -51,22 +51,6 @@ p {
     word-spacing: 5px;
 }
 
-<<<<<<< HEAD
-=======
-.menuBtn {
-
-    background: center center no-repeat transparent;
-    background: #000000;
-    display: block;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 0;
-    left: 10px;
-
-}
-
->>>>>>> 376a76007e20d64746ffe46c974837011a104ce5
 .hactive {
     background-color: #9E8F6C !important;
     color: #ffffff !important;

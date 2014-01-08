@@ -303,7 +303,6 @@ MIDDLEWARE_CLASSES = (
     # Uncomment the following if using any of the SSL settings:
     # "mezzanine.core.middleware.SSLRedirectMiddleware",
     "mezzanine.pages.middleware.PageMiddleware",
-    "mezzanine.pages.middleware.PageMiddleware",
     "mezzanine.core.middleware.FetchFromCacheMiddleware",
 )
 
@@ -370,7 +369,7 @@ COMPRESS_PARSER = 'compressor.parser.HtmlParser'
 #     from local_settings import *
 # except ImportError:
 #     pass
-
+JQUERY_FILENAME = "jquery-1.10.2.js"
 
 ####################
 # DYNAMIC SETTINGS #

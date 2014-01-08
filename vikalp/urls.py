@@ -24,6 +24,8 @@ urlpatterns = patterns('',
                         'django.views.static.serve',
                         {'document_root': STATIC_ROOT}), )
 
+
+# Adds ``STATIC_URL`` to the context of error pages, so that error
 urlpatterns += patterns("",
 
                         # Change the admin prefix here to use an alternate URL for the
@@ -58,8 +60,9 @@ urlpatterns += patterns("",
 
                         # url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
                         url("^$", promoted_article_on_homepage, name="home"),
-                        (r"^category/$", category_list),
+                        (r"^stories/$", category_list),
                         (r"^article/$", article_list),
+                        url("^article/tag/(?P<tag>.*)$", "vikalp.views.article_list", name="article_list_tag"),
 
 
                         # HOMEPAGE FOR A BLOG-ONLY SITE
@@ -102,8 +105,6 @@ urlpatterns += patterns("",
                         # ("^%s/" % settings.SITE_PREFIX, include("mezzanine.urls"))
 
 )
-
-# Adds ``STATIC_URL`` to the context of error pages, so that error
 # pages can use JS, CSS and images.
 handler404 = "mezzanine.core.views.page_not_found"
 handler500 = "mezzanine.core.views.server_error"

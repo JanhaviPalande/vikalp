@@ -105,7 +105,7 @@ a#feature-article {
     display: none;
 }
 
-.thumbnail .caption{
+.thumbnail .caption {
     color: #ffffff;
 }
 
@@ -231,4 +231,36 @@ footer {
         height: 70%; /* increases the carousel height so it looks good on phones */
     }
 
+}
+
+.tag_cloud a:nth-child(2n+1) {
+    color: #2e2e2e;
+}
+
+.tag_cloud a:nth-child(2n) {
+    color: #9E8F6C;
+}
+
+.tag_cloud a:nth-child(3n) {
+    color: #3B6E8F;
+}
+
+.tag-weight-1 {
+    font-size: 90%;
+}
+
+.tag-weight-2 {
+    font-size: 120%;
+}
+
+.tag-weight-3 {
+    font-size: 150%;
+}
+
+.tag-weight-4 {
+    font-size: 180%;
+}
+
+.push50 {
+    height: 50px;
 }

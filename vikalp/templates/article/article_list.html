@@ -1,63 +1,41 @@
 {% extends "base.html" %}
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags %}
 
-{% block meta_title %}{% if page %}{{ page.richtextpage.meta_title }}{% else %}{{ category }}
-{% endif %}{% endblock %}
-
-{% block meta_keywords %}{% metablock %}
-    {% keywords_for page as keywords %}
-    {% for keyword in keywords %}
-        {% if not forloop.first %}, {% endif %}
-        {{ keyword }}
-    {% endfor %}
-{% endmetablock %}{% endblock %}
-
-{% block meta_description %}{% metablock %}
-    {{ page.description }}
-{% endmetablock %}{% endblock %}
-
-{% block title %}
-    {% if page %}
-        {% editable page.title %}{{ page.title }}{% endeditable %}
-    {% else %}
-        {% trans "Blog" %}
-    {% endif %}
-{% endblock %}
+{% block meta_title %}{{ tag }}{% endblock %}
 
 {% block main %}
-    <div class="title">
+    {% block title %}
         {% if category %}
-            <h2>{{ category }}</h2>
+            <h1 class="page-header">{{ category }}</h1>
         {% else %}
             {% if tag %}
-                <h2>{{ tag }}</h2>
+                <h1 class="page-header">{{ tag }}</h1>
+            {% else %}
+                <h1 class="page-header">Articles</h1>
             {% endif %}
         {% endif %}
 
+    {% endblock %}
 
-    </div>
-    <div class="content-wrapper">
 
-        <div class="article-List">
-            <ul>
+        <div class="list-group">
                 {% for article in articles %}
                     {% editable article.title %}
-                        <li><a href="{{ article.get_absolute_url }}">
+                        <a class="list-group-item" href="{{ article.get_absolute_url }}">
                             {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}
                                 <img class="featured-thumb"
                                      src="{{ MEDIA_URL }}{% thumbnail article.featured_image 90 90 %}">
                             {% endif %}
                             <span style="font-weight: 900;">{{ article.title }}</span>
 
-                        </a></li>
+                        </a>
                     {% endeditable %}
                 {% endfor %}
-            </ul>
         </div>
-        <div class="sidebar">
-            <div>
-                {% include "pages/tag_cloud.html" %}
-            </div>
-        </div>
-    </div>
+
+{% endblock %}
+
+{% block side_bar %}
+    {% include "pages/menus/category_list.html" %}
+    {% include "pages/tag_cloud.html" %}
 {% endblock %}
