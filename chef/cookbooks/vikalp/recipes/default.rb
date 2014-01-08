@@ -13,7 +13,7 @@ execute "sudo ln -s /usr/lib64/libjpeg.so /usr/lib" do
 end
 
 execute "pip install -r requirements.txt" do
-	cwd "/vagrant"
+	cwd "/home/user/vikalp"
 end
 
 package "nginx"
