@@ -198,6 +198,17 @@ a#feature-article {
 #categories-icons .img-responsive{
     margin:auto;
 }
+
+#story-categories .list-group-item{
+    padding-bottom: 20px;
+
+}
+#story-categories .list-group-item-heading{
+    color:#ab3333;
+}
+#story-categories img{
+    margin-right:10px;
+}
 /* Social Icons Styles */
 .list-social-icons {
     margin-bottom: 45px;
