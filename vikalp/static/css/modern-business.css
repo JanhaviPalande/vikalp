@@ -34,7 +34,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #ab3333;
 }
 
-
 .navbar-default {
     border: none;
 }
@@ -54,9 +53,11 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-inverse .navbar-nav > li > a {
     color: #331919;
 }
-.navbar-form{
+
+.navbar-form {
     margin-left: 10px;
 }
+
 .navbar-inverse .navbar-brand {
     color: #ab3333;
 }
@@ -79,7 +80,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #ab3333;
     background-color: transparent;
 }
-
 
 /*Search icon */
 
@@ -126,7 +126,7 @@ a#feature-article {
 
 .thumbnail {
     border: none;
-    border-radius:0px;
+    border-radius: 0px;
     padding: 0;
 }
 
@@ -178,37 +178,39 @@ a#feature-article {
     background-size: cover;
 }
 
-
-#categories-icons{
+#categories-icons {
     display: inline-block;
     /*border: 1px solid #ab3333;*/
     text-align: center;
-    padding:10px;
-    margin:10px;
+    padding: 10px;
+    margin: 10px;
     background-color: #bcbcbc;
-    color:#ffffff;
+    color: #ffffff;
     text-decoration: none;
 }
 
-#categories-icons:hover{
+#categories-icons:hover {
     background-color: #ab3333;
 
 }
 
-#categories-icons .img-responsive{
-    margin:auto;
+#categories-icons .img-responsive {
+    margin: auto;
 }
 
-#story-categories .list-group-item{
+#story-categories .list-group-item {
     padding-bottom: 20px;
 
 }
-#story-categories .list-group-item-heading{
-    color:#ab3333;
+
+#story-categories .list-group-item-heading {
+    color: #ab3333;
 }
-#story-categories img{
-    margin-right:10px;
+
+#story-categories img {
+    margin-right: 10px;
 }
+
 /* Social Icons Styles */
 .list-social-icons {
     margin-bottom: 45px;
@@ -268,7 +270,8 @@ a#feature-article {
     min-height: 40px;
 
 }
-#footer .list-group{
+
+#footer .list-group {
     padding-top: 10px;
     margin-bottom: 10px;
 }
@@ -320,6 +323,17 @@ footer {
 
 .generic_section {
     padding: 60px 0px;
-    /**/
-    min-height:850px;
+    min-height: 96.5%;
+}
+
+#article-list-link {
+    overflow: auto;
+}
+
+#article-list-link img {
+    margin-right: 10px;
+}
+
+#article-list-link .list-group-item-heading {
+    color: #ab3333;
 }
