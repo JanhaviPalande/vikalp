@@ -178,6 +178,26 @@ a#feature-article {
     background-size: cover;
 }
 
+
+#categories-icons{
+    display: inline-block;
+    /*border: 1px solid #ab3333;*/
+    text-align: center;
+    padding:10px;
+    margin:10px;
+    background-color: #bcbcbc;
+    color:#ffffff;
+    text-decoration: none;
+}
+
+#categories-icons:hover{
+    background-color: #ab3333;
+
+}
+
+#categories-icons .img-responsive{
+    margin:auto;
+}
 /* Social Icons Styles */
 .list-social-icons {
     margin-bottom: 45px;
