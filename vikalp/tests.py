@@ -2,14 +2,14 @@ from django.test import TestCase
 from django.core.urlresolvers import reverse
 from mezzanine.blog.views import User
 from models import Article
-from vikalp.views import promoted_article_on_homepage, get_context_for_promoted_articles, get_page, category_list
+from vikalp.views import promoted_article_on_homepage, get_context_for_promoted_articles, get_model_content_type
 from random import randint
 from vikalp.local_settings import BLOG_SLUG, DEBUG, STATIC_URL, MEDIA_URL, TEMPLATE_DIRS, STATIC_ROOT, JQUERY_FILENAME, SITE_TITLE, SITE_TAGLINE
 from django.test import RequestFactory
 from vikalp.service.article_service import ArticleService
 from django.utils.functional import SimpleLazyObject
 from mezzanine.blog.models import BlogCategory
-
+from mezzanine.generic.models import Keyword
 
 class ArticleTest(TestCase):
     def create_article(self, title="Test Title", content="Test Content", promoted="t", user_id=randint(1, 100),
@@ -147,14 +147,23 @@ class CategoryServiceTest(TestCase):
     def create_article(self, title="Test Title", content="Test Content", promoted="t", user_id=randint(1, 100),
                        description="Test Description"):
         return Article.objects.create(title=title, content=content, promoted=promoted, user_id=user_id,
-                                      description=description)
+                                  description=description)
+
+    def create_categories(self, title="category1"):
+        return BlogCategory.objects.create(title=title)
+
     def setUp(self):
         for i in range(1,5):
             self.create_article(title="Title%s" % i , promoted='f')
+            self.create_categories(title="category%s" % i)
+
         self.articleService = ArticleService()
         self.article_list = self.articleService.get_all_articles()
+        self.categories = self.articleService.get_all_article_categories()
 
     def test_all_articles_fetch(self):
         filter(self.assertTrue, self.article_list)
         self.assertEquals(4, len(self.article_list))
 
+    def test_get_all_categories(self):
+        self.assertEquals(4,len(self.categories))

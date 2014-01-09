@@ -28,7 +28,3 @@ class ArticleService():
 
     def get_all_article_categories(self):
         return BlogCategory.objects.all()
-
-
-
-
