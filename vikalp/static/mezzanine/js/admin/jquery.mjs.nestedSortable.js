@@ -76,7 +76,7 @@
 		_mouseDrag: function(event) {
 			var o = this.options;
 
-			//Compute the helpers position
+			//Compute the service position
 			this.position = this._generatePosition(event);
 			this.positionAbs = this._convertPositionTo("absolute");
 

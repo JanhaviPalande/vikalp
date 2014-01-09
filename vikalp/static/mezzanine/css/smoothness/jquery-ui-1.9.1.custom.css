@@ -4,7 +4,7 @@
 * To view and modify this theme, visit http://jqueryui.com/themeroller/
 * Copyright (c) 2012 jQuery Foundation and other contributors Licensed MIT */
 
-/* Layout helpers
+/* Layout service
 ----------------------------------*/
 .ui-helper-hidden { display: none; }
 .ui-helper-hidden-accessible { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); }
