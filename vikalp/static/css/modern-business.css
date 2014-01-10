@@ -164,14 +164,15 @@ a#feature-article {
 /* Page Sections */
 .section,
 .section-colored {
-    color:#d57500;
+    color:#612812;
     padding: 20px 0;
+
 }
 
 .section-colored {
     /*back-color: #504f4f;*/
     background-image: url('/static/img/bg.jpg');
-    color: #d57500; /* change this to change the background color of a colored section */
+    color: #1D240F; /* change this to change the background color of a colored section */
 }
 /*.section-colored h2{*/
     /*color:#8f3b1b;*/
