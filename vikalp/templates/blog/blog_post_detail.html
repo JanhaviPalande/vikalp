@@ -1,6 +1,7 @@
 {% extends "blog/blog_post_list.html" %}
 {% load mezzanine_tags comment_tags keyword_tags rating_tags i18n future disqus_tags %}
 
+
 {% block meta_title %}{{ blog_post.meta_title }}{% endblock %}
 
 {% block meta_keywords %}{% metablock %}
@@ -11,7 +12,6 @@
 {% block meta_description %}{% metablock %}
     {{ blog_post.description }}
 {% endmetablock %}{% endblock %}
-
 
 {% block breadcrumb_menu %}
     {{ block.super }}
@@ -26,12 +26,13 @@
 {% endblock %}
 
 {% block side_bar %}
-    {% include "pages/menus/category_list.html" %}
 
+    {% include "pages/menus/category_list.html" %}
     {% include "pages/menus/related_posts.html" %}
     {% include "pages/tag_cloud.html" %}
 
 {% endblock %}
+
 
 
 
