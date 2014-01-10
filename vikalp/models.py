@@ -6,6 +6,7 @@ from mezzanine.conf import settings
 
 class Article(BlogPost):
     promoted = models.BooleanField(verbose_name="Promote Article to HomePage", default=False)
+    add_to_carousel = models.BooleanField(verbose_name="Add this article to carousel", default=False)
     @models.permalink
     def get_absolute_url(self):
         url_name = "blog_post_detail"

@@ -12,13 +12,13 @@ from vikalp.service.article_service import ArticleService
 articleService = ArticleService()
 
 
-def get_context_for_promoted_articles(article_promoted_list):
-    return {"promoted_articles": article_promoted_list}
+def get_context_for_promoted_articles(article_promoted_list, carousel_content):
+    return {"promoted_articles": article_promoted_list, "articles": carousel_content}
 
 
 def promoted_article_on_homepage(request, template="pages/index.html"):
     settings.use_editable()
-    return render(request, template, get_context_for_promoted_articles(articleService.get_promoted_articles()))
+    return render(request, template, get_context_for_promoted_articles(articleService.get_promoted_articles(), articleService.get_carousel_content()))
 
 
 def get_page(request):
@@ -31,6 +31,8 @@ def get_page(request):
     else:
         page = "Stories"
     return page
+
+
 
 
 

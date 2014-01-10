@@ -9,7 +9,7 @@ from models import Article
 
 class ArticleAdmin(BlogPostAdmin):
     fieldsets = deepcopy(BlogPostAdmin.fieldsets)
-    fieldsets[0][1]["fields"].extend(["promoted"])
+    fieldsets[0][1]["fields"].extend(["promoted","add_to_carousel"])
 
     # BlogPostAdmin.fieldsets.extend([('Extra', {'fields': ['promoted']}),])
     def save_form(self, request, form, change):

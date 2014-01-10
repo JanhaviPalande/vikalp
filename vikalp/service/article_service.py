@@ -2,6 +2,7 @@ from mezzanine.blog.models import BlogCategory
 from vikalp.models import Article
 from vikalp.service.raw_queries import raw_query_to_get_all_articles_assigned_to_tag_id
 
+NUMBER_OF_CAROUSEL_ARTICLES = 3
 NUMBER_OF_PROMOTED_ARTICLES_TO_BE_FETECHED = 3
 
 
@@ -28,3 +29,6 @@ class ArticleService():
 
     def get_all_article_categories(self):
         return BlogCategory.objects.all()
+
+    def get_carousel_content(self):
+        return Article.objects.filter(add_to_carousel='t')[:NUMBER_OF_CAROUSEL_ARTICLES]
