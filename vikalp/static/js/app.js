@@ -108,10 +108,10 @@ $(document).ready( function() {
 
     /*Footer*/
 
-    $("#footer .list-group-item").hide();
+//    $("#footer .list-group-item").hide();
 
-	$("#footer").on('click',function(){
-		$("#footer .list-group-item").toggle();
-	});
+//	$("#footer").on('click',function(){
+//		$("#footer .list-group-item").toggle();
+//	});
 //
 });

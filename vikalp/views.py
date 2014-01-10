@@ -3,7 +3,6 @@ from mezzanine.blog.models import BlogCategory
 from mezzanine.generic.models import Keyword
 from mezzanine.pages.models import Page
 from mezzanine.utils.views import paginate
-from models import Article
 from django.shortcuts import render, get_object_or_404
 from mezzanine.conf import settings
 from mezzanine.utils.urls import path_to_slug

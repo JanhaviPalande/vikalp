@@ -1,47 +1,39 @@
-{% load i18n future pages_tags %}
+{% load i18n future pages_tags extra_tags %}
 
-{% spaceless %}
-    {% if page_branch_in_menu %}
+<div id="footer">
+    <div class="container">
+        <div class="row">
 
-        {% for page in page_branch %}
-            {% if page.is_primary %}
-                {% if forloop.first %}
-                    <ul class="clearfix">
-                {% endif %}
-                {% if page.in_menu %}
-                    <li>
-                    <ul>
-                {% endif %}
-            {% endif %}
+            {% for page in page_branch %}
+                {% for in_menu in page.in_menus %}
+                    {% ifequal in_menu '3' %}
+                        {% ifequal page.parent None %}
+                            {% if page.has_children_in_menu %}
+                                {% with menu_pages|get:page.id as child_pages %}
+                                    {% for child_page in child_pages %}
+                                        <div class="col-md-1">
+                                            <div class="list-group">
+                                                <a class="list-group-item-heading"
+                                                   href="{{ child_page.get_absolute_url }}">{{ child_page.title }}</a>
+                                                    {% with menu_pages|get:child_page.id as child_child_pages %}
+                                                        {% for child_child_page in child_child_pages %}
+                                                            <a class="" href="{{ child__child_page.get_absolute_url }}">{{ child_child_page.title }}</a>
+                                                        {% endfor %}
+                                                    {% endwith %}
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                {% endwith %}
+                            {% endif %}
 
-        {% if page.in_menu %}
-            {% if forloop.first and not page.parent.in_menu and not page.is_primary %}
-                <li>
-                <ul>
-            {% endif %}
-            <li {% if page.is_current_or_ascendant %}class="active"{% endif %}
-                id="footer-menu-{{ page.html_id }}">
-                <a href="{{ page.get_absolute_url }}">{{ page.title }}</a></li>
-        {% endif %}
+                        {% endifequal %}
 
-        {% if page.in_menu and page.has_children_in_menu %}{% page_menu page %}{% endif %}
+                    {% endifequal %}
+                {% endfor %}
 
-        {% if page.in_menu %}
-            {% if forloop.first and not page.parent.in_menu and not page.is_primary %}
-                </li></ul>
-            {% endif %}
-        {% endif %}
+            {% endfor %}
 
-        {% if page.is_primary %}
-            {% if page.in_menu %}
-                </ul></li>
-            {% endif %}
-            {% if forloop.last %}
-                </ul>
-            {% endif %}
-        {% endif %}
+        </div>
 
-        {% endfor %}
-
-    {% endif %}
-{% endspaceless %}
+    </div>
+</div>
