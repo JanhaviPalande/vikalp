@@ -28,19 +28,7 @@
 {% block side_bar %}
     {% include "pages/menus/category_list.html" %}
 
-    {% block blog_post_detail_related_posts %}
-        {% if blog_post.related_posts.all %}
-            <div class="well" id="related-posts">
-                <h4>{% trans 'Related Stories' %}</h4>
-                <ul class="list-unstyled">
-                    {% for post in blog_post.related_posts.all %}
-                        <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            </div>
-        {% endif %}
-    {% endblock %}
-
+    {% include "pages/menus/related_posts.html" %}
     {% include "pages/tag_cloud.html" %}
 
 {% endblock %}

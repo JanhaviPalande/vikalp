@@ -1,0 +1,29 @@
+{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags %}
+{% if blog_post.related_posts.all %}
+    <div class="well">
+
+        <h4>Related Posts</h4>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <ul class="list-unstyled">
+                    {% for post in blog_post.related_posts.all %}
+
+                        {% if not forloop.counter|divisibleby:2 %}
+                            <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <ul class="list-unstyled">
+                    {% for post in blog_post.related_posts.all %}
+                        {% if forloop.counter|divisibleby:2 %}
+                            <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endif %}
