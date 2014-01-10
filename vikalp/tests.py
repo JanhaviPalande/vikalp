@@ -7,9 +7,10 @@ from random import randint
 from vikalp.local_settings import BLOG_SLUG, DEBUG, STATIC_URL, MEDIA_URL, TEMPLATE_DIRS, STATIC_ROOT, JQUERY_FILENAME, SITE_TITLE, SITE_TAGLINE
 from django.test import RequestFactory
 from vikalp.service.article_service import ArticleService
-from django.utils.functional import SimpleLazyObject
 from mezzanine.blog.models import BlogCategory
-from mezzanine.generic.models import Keyword
+import unittest
+from settings import SITE_TITLE
+from selenium import webdriver
 
 class ArticleTest(TestCase):
     def create_article(self, title="Test Title", content="Test Content", promoted="t", user_id=randint(1, 100),
