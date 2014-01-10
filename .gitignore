@@ -20,3 +20,4 @@ Vagrantfile.bak
 .vagrant
 .idea
 CACHE
+media/uploads/
