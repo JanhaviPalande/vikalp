@@ -15,11 +15,9 @@ django-less==0.7.2
 django-redis-sessions==0.4.0
 django-rosetta==0.7.2
 django-toolbelt==0.0.1
-ethtool==0.6
 filebrowser-safe==0.2.31
 grappelli-safe==0.2.23
 gunicorn==18.0
-gyp==0.1
 html5lib==0.95
 iniparse==0.3.1
 iwlib==1.0
