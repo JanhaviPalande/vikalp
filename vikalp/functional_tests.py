@@ -1,6 +1,8 @@
 from django.utils import unittest
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 from settings import SITE_TITLE
+
 
 class FunctionalTest(unittest.TestCase):
     def setUp(self):
@@ -8,11 +10,11 @@ class FunctionalTest(unittest.TestCase):
 
     def test_(self):
         #On Home
-        self.driver.get("http://localhost:8080/")
+        self.driver.get("http://localhost:8000/")
 
         #Click on logo, would lead to same page
         self.driver.find_element_by_class_name("navbar-brand").click()
-        self.assertIn("http://localhost:8080/", self.driver.current_url)
+        self.assertIn("http://localhost:8000/", self.driver.current_url)
 
         #Check site title
         self.assertIn(SITE_TITLE, self.driver.title)
@@ -46,6 +48,30 @@ class FunctionalTest(unittest.TestCase):
         self.assertIn("article", self.driver.current_url)
 
         #Article Title is displayed
+        self.assertTrue(self.driver.find_element_by_tag_name("h1").is_displayed())
+
+
+    def test_search_for_an_article_display_search_results_and_click_on_article_to_view_it(self):
+        # On Home
+        self.driver.get("http:localhost:8000/")
+        self.assertIn(SITE_TITLE, self.driver.title)
+
+        # Find the search form
+        element = self.driver.find_element_by_name("q")
+
+        # Enter text to search for an article and press enter
+        element.send_keys('homestay' + Keys.RETURN)
+
+        # Check that the page displayed is the search results page
+        self.assertIn("search/?q=homestay", self.driver.current_url)
+        self.assertTrue(self.driver.find_element_by_class_name("list-group-item-heading").is_displayed())
+
+        # Click on the link of the article displayed on the search results page
+        self.driver.find_element_by_class_name("list-group-item-heading").click()
+
+        # Check that the article page is opened
+        self.assertIn("article/homestay-with-a-difference/", self.driver.current_url)
+        self.assertIn("Homestay With a Difference!", self.driver.title)
         self.assertTrue(self.driver.find_element_by_tag_name("h1").is_displayed())
 
     def tearDown(self):
