@@ -12,9 +12,6 @@
     {{ blog_post.description }}
 {% endmetablock %}{% endblock %}
 
-{#{% block title %}#}
-{#    {% editable blog_post.title %}{{ blog_post.title }}{% endeditable %}#}
-{#{% endblock %}#}
 
 {% block breadcrumb_menu %}
     {{ block.super }}
@@ -22,17 +19,32 @@
 {% endblock %}
 
 {% block main %}
-            {% block title %}
-                <h1>{{ blog_post.title }}</h1>
-            {% endblock %}
-            {{ blog_post.content|richtext_filters|safe }}
-
+    {% block title %}
+        <h1>{{ blog_post.title }}</h1>
+    {% endblock %}
+    {{ blog_post.content|richtext_filters|safe }}
 {% endblock %}
 
 {% block side_bar %}
     {% include "pages/menus/category_list.html" %}
+
+    {% block blog_post_detail_related_posts %}
+        {% if blog_post.related_posts.all %}
+            <div class="well" id="related-posts">
+                <h4>{% trans 'Related Stories' %}</h4>
+                <ul class="list-unstyled">
+                    {% for post in blog_post.related_posts.all %}
+                        <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    {% endblock %}
+
     {% include "pages/tag_cloud.html" %}
+
 {% endblock %}
+
 
 
 {#{% block main %}#}
