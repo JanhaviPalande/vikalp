@@ -16,7 +16,7 @@
     <div id="story-categories" class="list-group">
         {% for category in categories %}
             <a class="list-group-item" href="{% url "article_list_category" category.slug %}">
-                <img class="img-responsive list-inline pull-left" src="/static/media/uploads/livelihood.png" width="50" height="50">
+                <img class="img-responsive list-inline pull-left" src="/static/img/livelihood.png" width="50" height="50">
                 <h4 class="list-group-item-heading">{{ category }}</h4>
                 <p class="list-group-item-text">Description Goes here</p></a>
         {% endfor %}
