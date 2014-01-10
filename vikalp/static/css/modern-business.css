@@ -18,6 +18,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Antenna", Arial, sans-serif;
+    color:#8f3b1b;
 }
 
 .img-home-portfolio,
@@ -31,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #main-title h1 a {
-    color: #ab3333;
+    color: #8f3b1b;
 }
 
 .navbar-default {
@@ -43,41 +44,48 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-inverse {
+    background-image: url("/static/media/uploads/bg.jpg");
     background-color: #EAEAEA;
     border: none;
-    -webkit-box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);
-    box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);
+    /*-webkit-box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);*/
+    /*-moz-box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);*/
+    /*box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);*/
 }
 
 .navbar-inverse .navbar-nav > li > a {
-    color: #331919;
+    color: #d57500;
 }
 
 .navbar-form {
     margin-left: 10px;
 }
-
+.form-control{
+    border-radius: 0px;
+-webkit-box-shadow: none;
+box-shadow: none;
+-webkit-transition: none;
+transition:none;
+}
 .navbar-inverse .navbar-brand {
-    color: #ab3333;
+    color: #8f3b1b;
 }
 
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-    color: #331919;
+    color: #d57500;
     background-color: transparent;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-    background-color: #ab3333;
-    -webkit-box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);
-    box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);
+    background-color: #8f3b1b;
+    /*-webkit-box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);*/
+    /*-moz-box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);*/
+    /*box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);*/
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-    color: #ab3333;
+    color: #8f3b1b;
     background-color: transparent;
 }
 
@@ -100,6 +108,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .carousel-caption {
     color: #000000;
+}
+
+.btn-primary{
+    background-color: #8f3b1b;
+    border:none;
+    color:#ffffff;
+}
+.btn-primary:hover{
+    background-color: #d57500;
+    border:none;
+    color:#ffffff;
+}
+.btn{
+    border-radius: 0px;
 }
 
 a#feature-article {
@@ -142,13 +164,18 @@ a#feature-article {
 /* Page Sections */
 .section,
 .section-colored {
+    color:#d57500;
     padding: 20px 0;
 }
 
 .section-colored {
-    background-color: #504f4f;
-    color: #ffffff; /* change this to change the background color of a colored section */
+    /*back-color: #504f4f;*/
+    background-image: url('/static/media/uploads/bg.jpg');
+    color: #d57500; /* change this to change the background color of a colored section */
 }
+/*.section-colored h2{*/
+    /*color:#8f3b1b;*/
+/*}*/
 
 .sidebar {
     margin-top: 40px;
@@ -185,12 +212,13 @@ a#feature-article {
     padding: 10px;
     margin: 10px;
     background-color: #bcbcbc;
+    background-image: url('/static/media/uploads/bg.jpg');
     color: #ffffff;
     text-decoration: none;
 }
 
 #categories-icons:hover {
-    background-color: #ab3333;
+    background-color: #bcbcbc;
 
 }
 
@@ -204,71 +232,26 @@ a#feature-article {
 }
 
 #story-categories .list-group-item-heading {
-    color: #ab3333;
+    color: #8f3b1b;
 }
 
 #story-categories img {
     margin-right: 10px;
 }
 
-/* Social Icons Styles */
-.list-social-icons {
-    margin-bottom: 45px;
-}
-
-.tooltip-social a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.facebook-link a:hover {
-    color: #3b5998;
-}
-
-.linkedin-link a:hover {
-    color: #007fb1;
-}
-
-.twitter-link a:hover {
-    color: #39a9e0;
-}
-
-.google-plus-link a:hover {
-    color: #d14836;
-}
-
-/* Service Page Styles */
-.service-icon {
-    font-size: 50px;
-}
-
-/* 404 Page Styles */
-.error-404 {
-    font-size: 8em;
-}
-
-/* Pricing Page Styles */
-.price {
-    font-size: 4em;
-}
-
-.price-cents {
-    vertical-align: super;
-    font-size: 50%;
-}
-
-.price-month {
-    font-size: 35%;
-    font-style: italic;
-}
 
 /* Footer Styles */
 
 #footer {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #8f3b1b;
+     background-image: url('/static/media/uploads/footerbg.png');
+    color: #d57500;
     min-height: 40px;
 
+}
+
+#footer .list-group-item-heading{
+    color:#d57500;
 }
 
 #footer .list-group {
@@ -335,5 +318,5 @@ footer {
 }
 
 #article-list-link .list-group-item-heading {
-    color: #ab3333;
+    color: #8f3b1b;
 }
