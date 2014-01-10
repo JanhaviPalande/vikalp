@@ -2,7 +2,7 @@
 # MEZZANINE SETTINGS #
 ######################
 SITE_TITLE = "Vikalp"
-SITE_TAGLINE = "Alternatives' Forum!"
+SITE_TAGLINE = "Alternatives website"
 ugettext = lambda s: s
 USE_I18N = True
 LOCALE_PATH = "locale"

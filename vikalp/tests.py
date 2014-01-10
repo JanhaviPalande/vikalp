@@ -64,7 +64,7 @@ class SettingsTest(TestCase):
 
     def test_check_site_title_tagline(self):
         self.assertEquals("Vikalp", SITE_TITLE)
-        self.assertEquals("Alternatives' Forum!", SITE_TAGLINE)
+        self.assertEquals("Alternatives website", SITE_TAGLINE)
 
 
 class PromotedArticleViewTest(TestCase):
