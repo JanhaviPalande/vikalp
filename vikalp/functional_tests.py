@@ -64,16 +64,50 @@ class FunctionalTest(unittest.TestCase):
         element.send_keys(SEARCHTEXT + Keys.RETURN)
 
         # Check that the page displayed is the search results page
-        self.assertIn("search/?q="+SEARCHTEXT, self.driver.current_url)
+        self.assertIn("/search/?q="+SEARCHTEXT, self.driver.current_url)
+        self.assertIn("Search Results", self.driver.title)
         self.assertTrue(self.driver.find_element_by_class_name("list-group-item-heading").is_displayed())
 
         # Click on the link of the article displayed on the search results page
         self.driver.find_element_by_class_name("list-group-item-heading").click()
 
-        # Check that the article page is opened
+        # Check that the article page is displayed
         self.assertIn("article/homestay-with-a-difference/", self.driver.current_url)
         self.assertIn("Homestay With a Difference!", self.driver.title)
         self.assertTrue(self.driver.find_element_by_tag_name("h1").is_displayed())
+
+    def test_main_categories_link_individual_category_link_on_categories_page_and_article_page(self):
+        # Visit Home Page
+        self.driver.get(HOMEPAGE)
+
+        # Find categories link (The link is displayed as Stories on our website)
+        element = self.driver.find_element_by_link_text("Stories")
+
+        # Click on the categories link
+        element.click()
+
+        # Check that the categories page is displayed
+        self.assertIn("/stories/", self.driver.current_url)
+        self.assertIn("Stories", self.driver.title)
+        self.assertTrue(self.driver.find_element_by_tag_name("h1").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("story-categories").is_displayed())
+
+        # Click on the first category in the list
+        self.driver.find_element_by_class_name("list-group-item").click()
+
+        # # Check that the articles page is displayed
+        self.assertIn("/article/category/", self.driver.current_url)
+        self.assertTrue(self.driver.find_element_by_tag_name("h1").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("articles-list").is_displayed())
+
+        # Click on the first article in the list
+        self.driver.find_element_by_id("article-list-link").click()
+
+        # Check that the article is displayed
+        self.assertIn("article/homestay-with-a-difference/", self.driver.current_url)
+        self.assertIn("Homestay With a Difference!", self.driver.title)
+        self.assertTrue(self.driver.find_element_by_tag_name("h1").is_displayed())
+
 
     def tearDown(self):
         self.driver.quit()

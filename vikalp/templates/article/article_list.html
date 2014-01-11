@@ -6,33 +6,36 @@
 {% block main %}
     {% block title %}
         <h1>
-        {% if category %}
-            {{ category }}
-        {% else %}
-            {% if tag %}
-                {{ tag }}
+            {% if category %}
+                {{ category }}
             {% else %}
-                Articles
+                {% if tag %}
+                    {{ tag }}
+                {% else %}
+                    Articles
+                {% endif %}
             {% endif %}
-        {% endif %}
         </h1>
     {% endblock %}
 
 
-        <div class="list-group">
-                {% for article in articles %}
-                    {% editable article.title %}
-                        <a id="article-list-link" class="list-group-item" href="{{ article.get_absolute_url }}">
-                            {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}
-                                <img class="pull-left featured-thumb"
-                                     src="{{ MEDIA_URL }}{% thumbnail article.featured_image 90 90 %}">
-                            {% endif %}
-                            <h4 class="list-group-item-heading">{{ article.title }}</h4>
-                            <p class="list-group-item-text">{{ article.description|truncatechars:256|safe }}</p>
-                        </a>
-                    {% endeditable %}
-                {% endfor %}
-        </div>
+    <div id="articles-list" class="list-group">
+
+        {% for article in articles %}
+            {% editable article.title %}
+                <a id="article-list-link" class="list-group-item" href="{{ article.get_absolute_url }}">
+                    {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}
+                        <img class="pull-left featured-thumb"
+                             src="{{ MEDIA_URL }}{% thumbnail article.featured_image 90 90 %}">
+                    {% endif %}
+                    <h4 class="list-group-item-heading">{{ article.title }}</h4>
+
+                    <p class="list-group-item-text">{{ article.description|truncatechars:256|safe }}</p>
+                </a>
+            {% endeditable %}
+        {% endfor %}
+
+    </div>
 
 {% endblock %}
 
