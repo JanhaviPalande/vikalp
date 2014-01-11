@@ -2,15 +2,14 @@ from django.test import TestCase
 from django.core.urlresolvers import reverse
 from mezzanine.blog.views import User
 from models import Article
-from vikalp.views import promoted_article_on_homepage, get_context_for_promoted_articles, get_model_content_type
+from vikalp.views import promoted_article_on_homepage, get_context_for_promoted_articles
 from random import randint
-from vikalp.local_settings import BLOG_SLUG, DEBUG, STATIC_URL, MEDIA_URL, TEMPLATE_DIRS, STATIC_ROOT, JQUERY_FILENAME, SITE_TITLE, SITE_TAGLINE
+from vikalp.local_settings import BLOG_SLUG, DEBUG, STATIC_URL, MEDIA_URL, TEMPLATE_DIRS, STATIC_ROOT, JQUERY_FILENAME, SITE_TAGLINE
 from django.test import RequestFactory
 from vikalp.service.article_service import ArticleService
 from mezzanine.blog.models import BlogCategory
-import unittest
 from settings import SITE_TITLE
-from selenium import webdriver
+
 
 class ArticleTest(TestCase):
     def create_article(self, title="Test Title", content="Test Content", promoted="t", user_id=randint(1, 100),

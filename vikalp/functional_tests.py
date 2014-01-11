@@ -2,19 +2,20 @@ from django.utils import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from settings import SITE_TITLE
+from test_constants import *
 
 
 class FunctionalTest(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
 
-    def test_(self):
+    def test_logo_title_featured_articles_link_and_tag_cloud(self):
         #On Home
-        self.driver.get("http://localhost:8000/")
+        self.driver.get(HOMEPAGE)
 
         #Click on logo, would lead to same page
         self.driver.find_element_by_class_name("navbar-brand").click()
-        self.assertIn("http://localhost:8000/", self.driver.current_url)
+        self.assertIn(HOMEPAGE, self.driver.current_url)
 
         #Check site title
         self.assertIn(SITE_TITLE, self.driver.title)
@@ -52,18 +53,18 @@ class FunctionalTest(unittest.TestCase):
 
 
     def test_search_for_an_article_display_search_results_and_click_on_article_to_view_it(self):
-        # On Home
-        self.driver.get("http:localhost:8000/")
+        # Visit Home Page
+        self.driver.get(HOMEPAGE)
         self.assertIn(SITE_TITLE, self.driver.title)
 
         # Find the search form
         element = self.driver.find_element_by_name("q")
 
         # Enter text to search for an article and press enter
-        element.send_keys('homestay' + Keys.RETURN)
+        element.send_keys(SEARCHTEXT + Keys.RETURN)
 
         # Check that the page displayed is the search results page
-        self.assertIn("search/?q=homestay", self.driver.current_url)
+        self.assertIn("search/?q="+SEARCHTEXT, self.driver.current_url)
         self.assertTrue(self.driver.find_element_by_class_name("list-group-item-heading").is_displayed())
 
         # Click on the link of the article displayed on the search results page
