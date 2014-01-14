@@ -86,7 +86,7 @@ def article_list(request, tag=None, category=None, template="article/article_lis
 
 
 @staff_member_required
-def someview(request):
+def static_proxy(request):
     """
     Serves TinyMCE plugins inside the inline popups and the uploadify
     SWF, as these are normally static files, and will break with
@@ -100,7 +100,7 @@ def someview(request):
     # first otherwise the replacement loop below won't work.
     url = url.split('/static/')
     host = url[0]
-    url = url[1]
+    url = ''.join(url[1:])
     response = ""
     mimetype = ""
     path = finders.find(url)
