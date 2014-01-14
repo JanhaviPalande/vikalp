@@ -329,3 +329,8 @@ footer {
 #article-list-link {
    overflow: auto;
 }
+
+.share-btn {
+    padding-left: 15px;
+    display: inline;
+}

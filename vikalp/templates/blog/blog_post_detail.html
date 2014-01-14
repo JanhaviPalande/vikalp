@@ -23,13 +23,16 @@
         <h1>{{ blog_post.title }}</h1>
     {% endblock %}
     {{ blog_post.content|richtext_filters|safe }}
+
 {% endblock %}
 
 {% block side_bar %}
 
-    {% include "pages/menus/category_list.html" %}
-    {% include "pages/menus/related_posts.html" %}
-    {% include "pages/tag_cloud.html" %}
+    {% include "includes/sidebar/category_list.html" %}
+    {% include "includes/sidebar/related_posts.html" %}
+    {% include "includes/sidebar/tag_cloud.html" %}
+    {% include "includes/sidebar/social_media.html" %}
+
 
 {% endblock %}
 
