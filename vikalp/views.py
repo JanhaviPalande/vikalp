@@ -1,4 +1,9 @@
+import os
+from urlparse import urlparse, urljoin
+from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.staticfiles import finders
 from django.core.exceptions import MiddlewareNotUsed
+from django.http import HttpResponse
 from mezzanine.blog.models import BlogCategory
 from mezzanine.generic.models import Keyword
 from mezzanine.pages.models import Page
@@ -78,3 +83,57 @@ def article_list(request, tag=None, category=None, template="article/article_lis
                "tag": tag, "category": category, "author": author}
     templates.append(template)
     return render(request, templates, context)
+
+
+@staff_member_required
+def someview(request):
+    """
+    Serves TinyMCE plugins inside the inline popups and the uploadify
+    SWF, as these are normally static files, and will break with
+    cross-domain JavaScript errors if ``STATIC_URL`` is an external
+    host. URL for the file is passed in via querystring in the inline
+    popup plugin template.
+    """
+    # Get the relative URL after STATIC_URL.
+    url = request.GET["u"]
+    protocol = "http" if not request.is_secure() else "https"
+    print "Protocol - %s" % protocol
+    host = protocol + "://" + request.get_host()
+    print "Host - %s" % host
+    if (host.__contains__("http://127.0.0.1")):
+        host = host.replace("http://127.0.0.1","http://localhost")
+    generic_host = "//" + request.get_host()
+    print "Generic_Host - %s" % generic_host
+    # STATIC_URL often contains host or generic_host, so remove it
+    # first otherwise the replacement loop below won't work.
+    # url = url.replace(host,"")
+    print "Url - %s" % url
+    static_url = settings.STATIC_URL.replace(host, "", 1)
+    static_url = static_url.replace(generic_host, "", 1)
+    for prefix in (host, generic_host, static_url, "/"):
+        if url.startswith(prefix):
+            url = url.replace(prefix, "", 1)
+    print "Url after prefix removal - %s " % url
+    response = ""
+    mimetype = ""
+    path = finders.find(url)
+    if path:
+        if isinstance(path, (list, tuple)):
+            path = path[0]
+        if url.endswith(".htm"):
+            print "!!!!!!!!!!!Here!!!!!!!!!!!"
+            # Inject <base href="{{ STATIC_URL }}"> into TinyMCE
+            # plugins, since the path static files in these won't be
+            # on the same domain.
+            static_url = settings.STATIC_URL + os.path.split(url)[0] + "/"
+            if not urlparse(static_url).scheme:
+                static_url = urljoin(host, static_url)
+            base_tag = "<base href='%s'>" % static_url
+            mimetype = "text/html"
+            with open(path, "r") as f:
+                response = f.read().replace("<head>", "<head>" + base_tag)
+        else:
+            mimetype = "application/octet-stream"
+            with open(path, "rb") as f:
+                response = f.read()
+    return HttpResponse(response, mimetype=mimetype)

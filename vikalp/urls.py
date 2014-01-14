@@ -64,6 +64,8 @@ urlpatterns += patterns("",
                         (r"^article/$", article_list),
                         url("^article/tag/(?P<tag>.*)$", "vikalp.views.article_list", name="article_list_tag"),
                         url("^article/category/(?P<category>.*)$", "vikalp.views.article_list", name="article_list_category"),
+                        url("^asset_proxy/$", "vikalp.views.someview", name="static_proxy"),
+
 
 
                         # HOMEPAGE FOR A BLOG-ONLY SITE
