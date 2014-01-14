@@ -1,5 +1,4 @@
-from mezzanine.blog.models import BlogCategory
-from vikalp.models import Article
+from vikalp.models import Article, ArticleCategory
 from vikalp.service.raw_queries import raw_query_to_get_all_articles_assigned_to_tag_id
 
 NUMBER_OF_CAROUSEL_ARTICLES = 3
@@ -25,10 +24,10 @@ class ArticleService():
         return Article.objects.raw(self.rendered_query_to_fetch_all_articles_under_tag(content_type, tag))
 
     def get_all_articles_in_category(self, articles, category):
-        return articles.filter(categories=category)
+        return articles.filter(article_categories=category)
 
     def get_all_article_categories(self):
-        return BlogCategory.objects.all()
+        return ArticleCategory.objects.all()
 
     def get_carousel_content(self):
         return Article.objects.filter(add_to_carousel='t')[:NUMBER_OF_CAROUSEL_ARTICLES]

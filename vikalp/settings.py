@@ -24,7 +24,7 @@ ALLOWED_HOSTS = ['*']
 # Controls the ordering and grouping of the admin menu.fb_browse
 #
 ADMIN_MENU_ORDER = (
-    ("Content", ("pages.Page", "vikalp.Article", "blog.BlogCategory", ("Article Categories", "blog.BlogCategory"), ("Media Library", "fb_browse"),)),
+    ("Content", ("pages.Page", "vikalp.Article", "vikalp.ArticleCategory", ("Article Categories", "vikalp.ArticleCategory"), ("Media Library", "fb_browse"),)),
     ("Site", ("sites.Site", "redirects.Redirect", "conf.Setting")),
     ("Users", ("auth.User", "auth.Group",)),
 )
@@ -356,7 +356,7 @@ COMPRESS_PRECOMPILERS = (
 COMPRESS_ENABLED = True
 COMPRESS_PARSER = 'compressor.parser.HtmlParser'
 
-COMMENTS_USE_RATINGS = False
+
 ##################
 # LOCAL SETTINGS #
 ##################
@@ -369,6 +369,7 @@ COMMENTS_USE_RATINGS = False
 # except ImportError:
 #     pass
 JQUERY_FILENAME = "jquery-1.10.2.js"
+COMMENTS_USE_RATINGS = False
 
 ####################
 # DYNAMIC SETTINGS #

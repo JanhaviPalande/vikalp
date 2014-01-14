@@ -1,5 +1,5 @@
 {% extends "pages/section/section_base.html" %}
-{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags %}
+{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags extra_tags %}
 
 
 {% block section_content %}
@@ -8,14 +8,14 @@
         <br>
     </div>
 
-    {% blog_categories vikalp.article as categories %}
+    {% article_categories vikalp.article as categories %}
 
     {% for category in categories %}
         {#        <div class="col-lg-3 col-md-4 col-sm-6">#}
         <a id="categories-icons" class="col-lg-2 col-md-3 col-sm-4"
            href="{% url "blog_post_list_category" category.slug %}">
             <img class="img-responsive"
-                 src="/static/img/livelihood.png" width="100" height="100">
+                 src="{{ category.category_image }}" width="100" height="100">
             <h5>{{ category }}</h5></a>
         {#        </div>#}
     {% endfor %}

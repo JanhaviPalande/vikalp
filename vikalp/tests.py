@@ -1,13 +1,12 @@
 from django.test import TestCase
 from django.core.urlresolvers import reverse
 from mezzanine.blog.views import User
-from models import Article
+from models import Article, ArticleCategory
 from vikalp.views import promoted_article_on_homepage, get_context_for_promoted_articles
 from random import randint
 from vikalp.local_settings import BLOG_SLUG, DEBUG, STATIC_URL, MEDIA_URL, TEMPLATE_DIRS, STATIC_ROOT, JQUERY_FILENAME, SITE_TAGLINE
 from django.test import RequestFactory
 from vikalp.service.article_service import ArticleService
-from mezzanine.blog.models import BlogCategory
 from settings import SITE_TITLE
 
 
@@ -150,7 +149,7 @@ class CategoryServiceTest(TestCase):
                                   description=description)
 
     def create_categories(self, title="category1"):
-        return BlogCategory.objects.create(title=title)
+        return ArticleCategory.objects.create(title=title)
 
     def setUp(self):
         for i in range(1,5):
