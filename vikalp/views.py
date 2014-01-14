@@ -110,7 +110,10 @@ def someview(request):
     print "Url - %s" % url
     static_url = settings.STATIC_URL.replace(host, "", 1)
     static_url = static_url.replace(generic_host, "", 1)
-    url = url.split('/static/')[1]
+    url = url.split('/static/')
+    host = url[0]
+    print "Host - %s" % host
+    url = url[1]
     # for prefix in (host, generic_host, static_url, "/"):
     #     if url.startswith(prefix):
     #         url = url.replace(prefix, "", 1)
@@ -118,6 +121,7 @@ def someview(request):
     response = ""
     mimetype = ""
     path = finders.find(url)
+    print "path - %s" % path
     if path:
         if isinstance(path, (list, tuple)):
             path = path[0]
@@ -127,8 +131,10 @@ def someview(request):
             # plugins, since the path static files in these won't be
             # on the same domain.
             static_url = settings.STATIC_URL + os.path.split(url)[0] + "/"
+            print static_url
             if not urlparse(static_url).scheme:
                 static_url = urljoin(host, static_url)
+            print static_url
             base_tag = "<base href='%s'>" % static_url
             mimetype = "text/html"
             with open(path, "r") as f:
