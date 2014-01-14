@@ -54,13 +54,15 @@
                 {% endfor %}
             </ul>
         </div>
-        <div class="sidebar">
-            <div>
-                {% include "pages/../includes/sidebar/tag_cloud.html" %}
-            </div>
-        </div>
-    </div>
+ {% endblock %}
+{% block side_bar %}
+
+    {% include "includes/sidebar/tag_cloud.html" %}
+
+
 {% endblock %}
+
+
 {##}
 {#{% block breadcrumb_menu %}#}
 {#    {{ block.super }}#}

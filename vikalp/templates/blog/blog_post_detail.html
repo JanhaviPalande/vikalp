@@ -13,16 +13,15 @@
     {{ blog_post.description }}
 {% endmetablock %}{% endblock %}
 
-{% block breadcrumb_menu %}
-    {{ block.super }}
-    <li class="active" xmlns="http://www.w3.org/1999/html">{{ blog_post.title }}</li>
-{% endblock %}
-
 {% block main %}
     {% block title %}
         <h1>{{ blog_post.title }}</h1>
     {% endblock %}
     {{ blog_post.content|richtext_filters|safe }}
+
+    {% block article_comments %}
+        {% if blog_post.allow_comments %}{% comments_for blog_post %}{% endif %}
+    {% endblock %}
 
 {% endblock %}
 
@@ -141,8 +140,5 @@
 {#        {% endif %}#}
 {#    {% endblock %}#}
 {##}
-{#    {% block blog_post_detail_comments %}#}
-{#        {% if blog_post.allow_comments %}{% comments_for blog_post %}{% endif %}#}
-{#    {% endblock %}#}
 {##}
 {#{% endblock %}#}

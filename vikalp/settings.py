@@ -356,7 +356,7 @@ COMPRESS_PRECOMPILERS = (
 COMPRESS_ENABLED = True
 COMPRESS_PARSER = 'compressor.parser.HtmlParser'
 
-
+COMMENTS_USE_RATINGS = False
 ##################
 # LOCAL SETTINGS #
 ##################
