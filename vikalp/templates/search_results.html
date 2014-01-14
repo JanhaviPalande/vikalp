@@ -22,8 +22,8 @@
             {% endblocktrans %}
         {% else %}
             {% blocktrans with start=results.start_index end=results.end_index total=results.paginator.count %}
-                Showing {{ start }} to {{ end }} of {{ total }} results in {{ search_type }} matching your query:
-                {{ query }}
+                <h3>Showing {{ total }} results matching your query:
+                {{ query }}</h3>
             {% endblocktrans %}
         {% endif %}
     </p>
@@ -31,7 +31,7 @@
     <div id="search-results" class="list-group">
         {% for result in results.object_list %}
             <a class="list-group-item" href="{{ result.get_absolute_url }}">
-                <span class="list-group-item-heading">{{ result }}</span>
+                <h4><span class="list-group-item-heading">{{ result }}</span></h4>
 
 
                 <p class="list-group-item-text">{{ result.description|truncatewords_html:20|safe }}</p>
