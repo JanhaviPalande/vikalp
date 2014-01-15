@@ -1,17 +1,14 @@
-import os
 from django.db import models
 from mezzanine.blog.models import BlogPost, BlogCategory
+from vikalp.settings import STATIC_URL, DEFAULT_CATEGORY_IMAGE
 
 
-def get_static_root():
-    global PROJECT_ROOT, STATIC_URL, STATIC_ROOT
-    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-    STATIC_URL = "/static/"
-    STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
 
-get_static_root()
 
-default_category_image = STATIC_URL + 'img/livelihood.png'
+def get_default_category_image_location():
+    return STATIC_URL + DEFAULT_CATEGORY_IMAGE
+
+
 
 
 class Article(BlogPost):
@@ -28,5 +25,5 @@ class Article(BlogPost):
 
 
 class ArticleCategory(BlogCategory):
-    category_image = models.ImageField(verbose_name="Category Symbol", upload_to="uploads/", default=default_category_image)
+    category_image = models.ImageField(verbose_name="Category Symbol", upload_to="uploads/", default=get_default_category_image_location())
     category_description = models.TextField(verbose_name="Category Description")

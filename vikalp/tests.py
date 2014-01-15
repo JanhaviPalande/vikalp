@@ -2,40 +2,18 @@ from django.test import TestCase
 from django.core.urlresolvers import reverse
 from mezzanine.blog.views import User
 from models import Article, ArticleCategory
-from vikalp.views import promoted_article_on_homepage, get_context_for_promoted_articles
+from vikalp.views.article_list_view import ArticleList
+from vikalp.views.category_page_view import CategoryPage
+from vikalp.views.home_page_view import HomePage
 from random import randint
 from vikalp.local_settings import BLOG_SLUG, DEBUG, STATIC_URL, MEDIA_URL, TEMPLATE_DIRS, STATIC_ROOT, JQUERY_FILENAME, SITE_TAGLINE
 from django.test import RequestFactory
 from vikalp.service.article_service import ArticleService
 from settings import SITE_TITLE
 
-
-class ArticleTest(TestCase):
-    def create_article(self, title="Test Title", content="Test Content", promoted="t", user_id=randint(1, 100),
-                       description="Test Description"):
-        return Article.objects.create(title=title, content=content, promoted=promoted, user_id=user_id,
-                                      description=description)
-
-    def setUp(self):
-        self.article = self.create_article()
-        url = reverse("vikalp.views.promoted_article_on_homepage")
-        self.response = self.client.get(url)
-
-    def test_article_model_creation(self):
-        self.assertTrue(isinstance(self.article, Article))
-
-    def test_article_returned_url(self):
-        self.assertEqual("/article/" + (self.article.title.lower()).replace(" ", "-") + "/",
-                         self.article.get_absolute_url())
-
-    def test_promoted_article_response(self):
-        self.assertEqual(200, self.response.status_code)
-
-    def test_promoted_article_view_title(self):
-        self.assertIn(self.article.title, self.response.content)
-
-    def test_promoted_article_view_description(self):
-        self.assertIn(self.article.description, self.response.content)
+homePage = HomePage()
+categoryPage = CategoryPage()
+articleList = ArticleList()
 
 
 class SettingsTest(TestCase):
@@ -79,7 +57,7 @@ class PromotedArticleViewTest(TestCase):
         self.factory = RequestFactory()
         self.request = self.factory.get('/')
         self.request.user = User.objects.create_user(username='jacob', email='jacob', password='top_secret')
-        self.response = promoted_article_on_homepage(self.request)
+        self.response = homePage.promoted_article_on_homepage(self.request)
 
 
     def test_article_view_title(self):
@@ -98,7 +76,7 @@ class PromotedArticleViewTest(TestCase):
         self.assertIn(self.article4.title, self.response.content)
 
     def test_for_context_creation(self):
-        self.context = get_context_for_promoted_articles([self.article1, self.article2])
+        self.context = homePage.get_context_for_promoted_articles([self.article1, self.article2])
         self.assertEquals(self.context['promoted_articles'], [self.article1, self.article2])
 
 
@@ -109,8 +87,8 @@ class ArticleServiceTest(TestCase):
                                       description=description)
 
     def setUp(self):
-        for i in range(1,5):
-            self.create_article(title="Title%s" % i )
+        for i in range(1, 5):
+            self.create_article(title="Title%s" % i)
         self.articleService = ArticleService()
         self.promoted_article_list = self.articleService.get_promoted_articles()
 
@@ -127,16 +105,15 @@ class ArticleServiceTest(TestCase):
         filter(self.assertTrue, self.get_list_of_promoted_fields_from_article_model_list())
 
     def test_promoted_articles_count_is_3(self):
-        self.assertEquals(self.promoted_article_list.__len__(),3)
+        self.assertEquals(self.promoted_article_list.__len__(), 3)
+
 
 class CategoryViewTest(TestCase):
-
     def setUp(self):
-        self.url = reverse("vikalp.views.category_list")
-        self.response = self.client.get(self.url)
-
-    def test_view_reverse_url(self):
-        self.assertEquals("/stories/",self.url)
+        self.factory = RequestFactory()
+        self.request = self.factory.get('article/category/')
+        self.request.user = User.objects.create_user(username='jacob', email='jacob', password='top_secret')
+        self.response = categoryPage.category_list(self.request)
 
     def test_response_code(self):
         self.assertEquals(200, self.response.status_code)
@@ -146,14 +123,14 @@ class CategoryServiceTest(TestCase):
     def create_article(self, title="Test Title", content="Test Content", promoted="t", user_id=randint(1, 100),
                        description="Test Description"):
         return Article.objects.create(title=title, content=content, promoted=promoted, user_id=user_id,
-                                  description=description)
+                                      description=description)
 
     def create_categories(self, title="category1"):
         return ArticleCategory.objects.create(title=title)
 
     def setUp(self):
-        for i in range(1,5):
-            self.create_article(title="Title%s" % i , promoted='f')
+        for i in range(1, 5):
+            self.create_article(title="Title%s" % i, promoted='f')
             self.create_categories(title="category%s" % i)
 
         self.articleService = ArticleService()
@@ -165,4 +142,4 @@ class CategoryServiceTest(TestCase):
         self.assertEquals(4, len(self.article_list))
 
     def test_get_all_categories(self):
-        self.assertEquals(4,len(self.categories))
+        self.assertEquals(4, len(self.categories))

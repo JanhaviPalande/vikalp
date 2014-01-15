@@ -1,28 +1,23 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from views import promoted_article_on_homepage, category_list, article_list
+from mezzanine.conf import settings
 
-import os
-
-
-def get_static_root():
-    global PROJECT_ROOT, STATIC_URL, STATIC_ROOT
-    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-    STATIC_URL = "/static/"
-    STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
-
-
-get_static_root()
+from vikalp.views.article_list_view import ArticleList
+from vikalp.views.category_page_view import CategoryPage
+from vikalp.views.home_page_view import HomePage
 
 admin.autodiscover()
 
+homePage = HomePage()
+categoryPage = CategoryPage()
+articleList = ArticleList()
 # Add the urlpatterns for any custom Django applications here.
 # You can also change the ``home`` view to add your own functionality
 # to the project's homepage.
 urlpatterns = patterns('',
                        (r'^static/(?P<path>.*)$',
                         'django.views.static.serve',
-                        {'document_root': STATIC_ROOT}), )
+                        {'document_root': settings.STATIC_ROOT}), )
 
 
 # Adds ``STATIC_URL`` to the context of error pages, so that error
@@ -59,12 +54,12 @@ urlpatterns += patterns("",
                         # should be used if you want to customize the homepage's template.
 
                         # url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
-                        url("^$", promoted_article_on_homepage, name="home"),
-                        (r"^stories/$", category_list),
-                        (r"^article/$", article_list),
-                        url("^article/tag/(?P<tag>.*)$", "vikalp.views.article_list", name="article_list_tag"),
-                        url("^article/category/(?P<category>.*)$", "vikalp.views.article_list", name="article_list_category"),
-                        url("^asset_proxy/$", "vikalp.views.static_proxy", name="static_proxy"),
+                        url("^$", homePage.promoted_article_on_homepage , name="home"),
+                        (r"^stories/$",categoryPage.category_list),
+                        (r"^article/$", articleList.article_list),
+                        url("^article/tag/(?P<tag>.*)$", articleList.article_list, name="article_list_tag"),
+                        url("^article/category/(?P<category>.*)$", articleList.article_list, name="article_list_category"),
+                        url("^asset_proxy/$", "vikalp.views.views.static_proxy", name="static_proxy"),
 
 
 

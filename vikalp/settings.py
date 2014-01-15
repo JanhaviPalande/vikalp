@@ -357,6 +357,13 @@ COMPRESS_ENABLED = True
 COMPRESS_PARSER = 'compressor.parser.HtmlParser'
 
 
+
+
+########################
+#   DEFAULTS    #
+########################
+DEFAULT_CATEGORY_IMAGE = 'img/livelihood.png'
+
 ##################
 # LOCAL SETTINGS #
 ##################

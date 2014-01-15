@@ -23,8 +23,8 @@ class ArticleService():
     def get_all_articles_under_tag(self, content_type, tag):
         return Article.objects.raw(self.rendered_query_to_fetch_all_articles_under_tag(content_type, tag))
 
-    def get_all_articles_in_category(self, articles, category):
-        return articles.filter(article_categories=category)
+    def get_all_articles_in_category(self, category):
+        return Article.objects.filter(article_categories=category)
 
     def get_all_article_categories(self):
         return ArticleCategory.objects.all()
