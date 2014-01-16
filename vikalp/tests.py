@@ -11,10 +11,12 @@ from vikalp.local_settings import BLOG_SLUG, DEBUG, STATIC_URL, MEDIA_URL, TEMPL
 from django.test import RequestFactory
 from vikalp.service.article_service import ArticleService
 from settings import SITE_TITLE
+from vikalp.views.policy_edits_view import PolicyEdits, get_title
 
 homePage = HomePage()
 categoryPage = CategoryPage()
 articleList = ArticleList()
+policyEdits = PolicyEdits()
 
 
 class SettingsTest(TestCase):
@@ -81,6 +83,9 @@ class ArticleServiceTest(TestCase):
         return Article.objects.create(title=title, content=content, promoted=promoted, user_id=user_id,
                                       description=description)
 
+    def create_categories(self, title="category1"):
+        return ArticleCategory.objects.create(title=title)
+
     def setUp(self):
         for i in range(1, 5):
             self.create_article(title="Title%s" % i)
@@ -101,6 +106,12 @@ class ArticleServiceTest(TestCase):
 
     def test_promoted_articles_count_is_3(self):
         self.assertEquals(self.promoted_article_list.__len__(), 3)
+
+    def test_get_policy_edits_category(self):
+        self.create_categories(title="Policy Edits")
+        category = self.articleService.get_policy_edit_category()
+        self.assertIn("policy", reduce(get_title, category).title.lower())
+
 
 
 
@@ -173,3 +184,12 @@ class ArticleListTest(TestCase):
         self.context = articleList.get_context_for_article_list(self.articles)
         self.assertEquals(self.context['articles'], self.articles)
 
+class PolicyEditsViewTest(TestCase):
+    def setUp(self):
+        self.factory = RequestFactory()
+        self.request = self.factory.get('policy-edits')
+        self.request.user = User.objects.create_user(username='jacob', email='jacob', password='top_secret')
+        self.response = policyEdits.policy_edit_list(self.request)
+
+    def test_response_code(self):
+        self.assertEquals(200, self.response.status_code)

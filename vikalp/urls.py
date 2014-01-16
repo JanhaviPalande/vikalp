@@ -5,12 +5,13 @@ from mezzanine.conf import settings
 from vikalp.views.article_list_view import ArticleList
 from vikalp.views.category_page_view import CategoryPage
 from vikalp.views.home_page_view import HomePage
-
+from vikalp.views.policy_edits_view import PolicyEdits
 admin.autodiscover()
 
 homePage = HomePage()
 categoryPage = CategoryPage()
 articleList = ArticleList()
+policyEdits = PolicyEdits()
 # Add the urlpatterns for any custom Django applications here.
 # You can also change the ``home`` view to add your own functionality
 # to the project's homepage.
@@ -60,6 +61,7 @@ urlpatterns += patterns("",
                         url("^article/tag/(?P<tag>.*)$", articleList.article_list, name="article_list_tag"),
                         url("^article/category/(?P<category>.*)$", articleList.article_list, name="article_list_category"),
                         url("^asset_proxy/$", "vikalp.views.views.static_proxy", name="static_proxy"),
+                        url("^policy-edits/$",policyEdits.policy_edit_list, name="policy-edits"),
 
 
 

@@ -1,8 +1,10 @@
 from vikalp.models import Article, ArticleCategory
 from vikalp.service.raw_queries import raw_query_to_get_all_articles_assigned_to_tag_id
-
+from vikalp.helper_functions.service_filter import remove_policy_edits_from_categories
 NUMBER_OF_CAROUSEL_ARTICLES = 3
 NUMBER_OF_PROMOTED_ARTICLES_TO_BE_FETECHED = 3
+
+
 
 
 class ArticleService():
@@ -27,7 +29,10 @@ class ArticleService():
         return Article.objects.filter(article_categories=category)
 
     def get_all_article_categories(self):
-        return ArticleCategory.objects.all()
+        return remove_policy_edits_from_categories(ArticleCategory.objects.all())
 
     def get_carousel_content(self):
         return Article.objects.filter(add_to_carousel='t')[:NUMBER_OF_CAROUSEL_ARTICLES]
+
+    def get_policy_edit_category(self):
+        return ArticleCategory.objects.filter(title__icontains="policy")
