@@ -17,15 +17,13 @@ class ArticleList:
 
 
     def paginate_article_list(self, articles, request):
-        prefetch = ("categories", "keywords__keyword")
-        articles = articles.select_related("user").prefetch_related(*prefetch)
         articles = paginate(articles, request.GET.get("page", 1),
                             settings.BLOG_POST_PER_PAGE,
                             settings.MAX_PAGING_LINKS)
         return articles
 
 
-    def get_context_for_article_list(self, articles, author, category, tag):
+    def get_context_for_article_list(self, articles, author=None, category=None, tag=None):
         context = {"articles": articles,
                    "tag": tag, "category": category, "author": author}
         return context

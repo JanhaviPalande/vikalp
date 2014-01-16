@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.core.urlresolvers import reverse
 from mezzanine.blog.views import User
+from mezzanine.conf import settings
 from models import Article, ArticleCategory
 from vikalp.views.article_list_view import ArticleList
 from vikalp.views.category_page_view import CategoryPage
@@ -63,12 +64,6 @@ class PromotedArticleViewTest(TestCase):
     def test_article_view_title(self):
         self.assertIn("Home", self.response.content)
 
-    def test_article_view_site_title(self):
-        self.assertIn(SITE_TITLE, self.response.content)
-
-    def test_article_view_site_tagline(self):
-        self.assertIn(SITE_TAGLINE, self.response.content)
-
     def test_only_3_articles_displayed_on_homepage(self):
         self.assertNotIn(self.article1.title, self.response.content)
         self.assertIn(self.article2.title, self.response.content)
@@ -108,7 +103,8 @@ class ArticleServiceTest(TestCase):
         self.assertEquals(self.promoted_article_list.__len__(), 3)
 
 
-class CategoryViewTest(TestCase):
+
+class ArticleCategoryViewTest(TestCase):
     def setUp(self):
         self.factory = RequestFactory()
         self.request = self.factory.get('article/category/')
@@ -119,7 +115,7 @@ class CategoryViewTest(TestCase):
         self.assertEquals(200, self.response.status_code)
 
 
-class CategoryServiceTest(TestCase):
+class ArticleCategoryServiceTest(TestCase):
     def create_article(self, title="Test Title", content="Test Content", promoted="t", user_id=randint(1, 100),
                        description="Test Description"):
         return Article.objects.create(title=title, content=content, promoted=promoted, user_id=user_id,
@@ -128,18 +124,52 @@ class CategoryServiceTest(TestCase):
     def create_categories(self, title="category1"):
         return ArticleCategory.objects.create(title=title)
 
+    def add_categories(self, article):
+        for article_category in self.article_categories:                               #REMOVE THIS
+            article.article_categories.add(article_category)
+        return article
+
     def setUp(self):
+        self.articles = []
+        self.article_categories = []
         for i in range(1, 5):
-            self.create_article(title="Title%s" % i, promoted='f')
-            self.create_categories(title="category%s" % i)
-
+            self.articles.append(self.create_article(title="Title%s" % i, promoted='f'))
+            self.article_categories.append(self.create_categories(title="category%s" % i))
+        self.article_without_categories = self.create_article(title="No Category Article", promoted='f')
+        self.articles = map(self.add_categories, self.articles)
         self.articleService = ArticleService()
-        self.article_list = self.articleService.get_all_articles()
         self.categories = self.articleService.get_all_article_categories()
-
-    def test_all_articles_fetch(self):
-        filter(self.assertTrue, self.article_list)
-        self.assertEquals(4, len(self.article_list))
+        self.article_in_category = self.articleService.get_all_articles_in_category(self.article_categories[0])
 
     def test_get_all_categories(self):
         self.assertEquals(4, len(self.categories))
+
+    def test_get_articles_in_category(self):
+        self.assertEquals(4, len(self.article_in_category))
+
+    def test_no_articles_returned_when_no_category_is_assigned(self):
+        self.assertNotIn(self.article_without_categories,self.article_in_category)
+
+
+class ArticleListTest(TestCase):
+    def create_article(self, title="Test Title", content="Test Content", promoted="t", user_id=randint(1, 100),
+                       description="Test Description"):
+        return Article.objects.create(title=title, content=content, promoted=promoted, user_id=user_id,
+                                      description=description)
+
+    def setUp(self):
+        self.articles = []
+        for i in range(1, 21):
+            self.articles.append(self.create_article(title="Title%s" % i, promoted='f'))
+        self.factory = RequestFactory()
+        self.request = self.factory.get('article/')
+        self.request.user = User.objects.create_user(username='jacob', email='jacob', password='top_secret')
+
+    def test_pagination(self):
+        articles = articleList.paginate_article_list(articles=self.articles, request=self.request)
+        self.assertEquals(settings.BLOG_POST_PER_PAGE, len(articles))
+
+    def test_for_context_creation(self):
+        self.context = articleList.get_context_for_article_list(self.articles)
+        self.assertEquals(self.context['articles'], self.articles)
+
