@@ -10,10 +10,12 @@ def get_title(category):
 
 
 class PolicyEdits:
-    def policy_edit_list(self,request,template="article/article_list.html"):
+    def policy_edit_list(self, request, template="article/article_list.html"):
         category = articleService.get_policy_edit_category()
-        if(category):
+        if (category):
             category = reduce(get_title, category)
+            return render(request, template, article_list.get_context_for_article_list(
+                articleService.get_all_articles_in_category(category), category=category))
         else:
-            category = None
-        return render(request, template, article_list.get_context_for_article_list(articleService.get_all_articles_in_category(category), category=category))
+            return render(request, template, article_list.get_context_for_article_list(None, category=None))
+
