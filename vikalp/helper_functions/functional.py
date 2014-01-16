@@ -17,10 +17,10 @@ def check_if_middleware_exists(middleware):
 def get_model_content_type(app_name, model_name):
         return ContentType.objects.get(app_label=app_name, model=model_name)
 
-def process_tag_or_categories(tag_or_category, model):
-    tag_or_category = tag_or_category.strip('/')
-    tag_or_category = get_object_or_404(model, slug=tag_or_category)
-    return tag_or_category
+def process_tag_or_categories_or_article(tag_or_category_or_article, model):
+    tag_or_category_or_article = tag_or_category_or_article.strip('/')
+    tag_or_category_or_article = get_object_or_404(model, slug=tag_or_category_or_article)
+    return tag_or_category_or_article
 
 
 def field_check(x):

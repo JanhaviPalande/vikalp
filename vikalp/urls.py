@@ -6,12 +6,21 @@ from vikalp.views.article_list_view import ArticleList
 from vikalp.views.category_page_view import CategoryPage
 from vikalp.views.home_page_view import HomePage
 from vikalp.views.policy_edits_view import PolicyEdits
+from vikalp.views.article_detail_view import ArticleDetail
+
 admin.autodiscover()
 
 homePage = HomePage()
 categoryPage = CategoryPage()
 articleList = ArticleList()
 policyEdits = PolicyEdits()
+articleDetail = ArticleDetail()
+
+_slashes = (
+    "article" if settings.BLOG_SLUG else "",
+    "/" if settings.APPEND_SLASH else "",
+)
+
 # Add the urlpatterns for any custom Django applications here.
 # You can also change the ``home`` view to add your own functionality
 # to the project's homepage.
@@ -22,6 +31,7 @@ urlpatterns = patterns('',
 
 
 # Adds ``STATIC_URL`` to the context of error pages, so that error
+# pages can use JS, CSS and images.
 urlpatterns += patterns("",
 
                         # Change the admin prefix here to use an alternate URL for the
@@ -55,14 +65,16 @@ urlpatterns += patterns("",
                         # should be used if you want to customize the homepage's template.
 
                         # url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
-                        url("^$", homePage.promoted_article_on_homepage , name="home"),
-                        (r"^stories/$",categoryPage.category_list),
+                        url("^$", homePage.promoted_article_on_homepage, name="home"),
                         (r"^article/$", articleList.article_list),
+                        (r"^stories/$", categoryPage.category_list),
                         url("^article/tag/(?P<tag>.*)$", articleList.article_list, name="article_list_tag"),
-                        url("^article/category/(?P<category>.*)$", articleList.article_list, name="article_list_category"),
+                        url("^article/category/(?P<category>.*)$", articleList.article_list,
+                            name="article_list_category"),
                         url("^asset_proxy/$", "vikalp.views.views.static_proxy", name="static_proxy"),
-                        url("^policy-edits/$",policyEdits.policy_edit_list, name="policy-edits"),
-
+                        url("^policy-edits/$", policyEdits.policy_edit_list, name="policy-edits"),
+                        # url("^article/(?P<slug>.*)/$", articleDetail.article_detail),
+                        url("^article/(?P<slug>.*)$" , articleDetail.article_detail, name="article_detail"),
 
 
                         # HOMEPAGE FOR A BLOG-ONLY SITE
@@ -105,6 +117,5 @@ urlpatterns += patterns("",
                         # ("^%s/" % settings.SITE_PREFIX, include("mezzanine.urls"))
 
 )
-# pages can use JS, CSS and images.
 handler404 = "mezzanine.core.views.page_not_found"
 handler500 = "mezzanine.core.views.server_error"

@@ -1,7 +1,7 @@
 from mezzanine.conf import settings
 from mezzanine.generic.models import Keyword
 from mezzanine.utils.views import paginate, render
-from vikalp.helper_functions.functional import get_model_content_type, process_tag_or_categories
+from vikalp.helper_functions.functional import get_model_content_type, process_tag_or_categories_or_article
 from vikalp.models import ArticleCategory
 from vikalp.views.views import articleService, MODEL_NAME, APP_NAME
 
@@ -33,10 +33,10 @@ class ArticleList:
         settings.use_editable()
         articles = articleService.get_all_published_articles(request)
         if tag is not None:
-            tag = process_tag_or_categories(tag, Keyword)
+            tag = process_tag_or_categories_or_article(tag, Keyword)
             articles= self.get_articles_for_given_tag(tag)
         if category is not None:
-            category = process_tag_or_categories(category, ArticleCategory)
+            category = process_tag_or_categories_or_article(category, ArticleCategory)
             articles = self.get_articles_for_given_category(category)
         author = None
         if tag is None:
