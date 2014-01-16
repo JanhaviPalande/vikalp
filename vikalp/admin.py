@@ -12,7 +12,7 @@ from vikalp.models import Article, ArticleCategory
 class ArticleAdmin(BlogPostAdmin):
     fieldsets = deepcopy(BlogPostAdmin.fieldsets)
     fieldsets[0][1]['fields'] = tuple(map(field_check, fieldsets[0][1]['fields']))
-    fieldsets[0][1]["fields"] += ("promoted",)
+    fieldsets[0][1]["fields"] += ("article_author", "promoted",)
     filter_horizontal = ('article_categories',"related_posts",)
 
     def save_form(self, request, form, change):

@@ -16,6 +16,7 @@ class Article(BlogPost):
     article_categories = models.ManyToManyField("ArticleCategory",
                                         verbose_name=("Categories"),
                                         blank=True, related_name="articles")
+    article_author = models.CharField(verbose_name="Story Author", max_length=128, blank=True)
 
     @models.permalink
     def get_absolute_url(self):

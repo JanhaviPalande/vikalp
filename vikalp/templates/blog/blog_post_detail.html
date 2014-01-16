@@ -17,6 +17,7 @@
     {% block title %}
         <h1>{{ blog_post.title }}</h1>
     {% endblock %}
+
     {{ blog_post.content|richtext_filters|safe }}
 
     {% block article_comments %}
