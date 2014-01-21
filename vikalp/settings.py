@@ -380,9 +380,23 @@ DEFAULT_CATEGORY_IMAGE = 'img/livelihood.png'
 JQUERY_FILENAME = "jquery-1.10.2.js"
 COMMENTS_USE_RATINGS = False
 
+
+
+##################
+# EMAIL SETTINGS #
+##################
+
+EMAIL_HOST_USER = 'vikalpgithub@gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_PASSWORD']
+EMAIL_PORT = 587
+
+
 ####################
 # DYNAMIC SETTINGS #
 ####################
+
 
 # set_dynamic_settings() will rewrite globals based on what has been
 # defined so far, in order to provide some better defaults where
@@ -397,13 +411,3 @@ except ImportError:
 else:
     set_dynamic_settings(globals())
 
-
-##################
-# EMAIL SETTINGS #
-##################
-
-EMAIL_HOST_USER = 'vikalpgithub@gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_PASSWORD = os.environ['EMAIL_PASSWORD']
-EMAIL_PORT = 587
