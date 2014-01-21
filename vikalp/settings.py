@@ -24,7 +24,9 @@ ALLOWED_HOSTS = ['*']
 # Controls the ordering and grouping of the admin menu.fb_browse
 #
 ADMIN_MENU_ORDER = (
-    ("Content", ("pages.Page", "vikalp.Article", "vikalp.ArticleCategory", ("Article Categories", "vikalp.ArticleCategory"), ("Media Library", "fb_browse"),)),
+    ("Content", (
+    "pages.Page", "vikalp.Article", "vikalp.ArticleCategory", ("Article Categories", "vikalp.ArticleCategory"),
+    ("Media Library", "fb_browse"),)),
     ("Site", ("sites.Site", "redirects.Redirect", "conf.Setting")),
     ("Users", ("auth.User", "auth.Group",)),
 )
@@ -394,3 +396,14 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
+
+
+##################
+# EMAIL SETTINGS #
+##################
+
+EMAIL_HOST_USER = 'vikalpgithub@gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_PASSWORD']
+EMAIL_PORT = 587
