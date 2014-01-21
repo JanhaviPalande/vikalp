@@ -266,6 +266,7 @@ INSTALLED_APPS = (
     "compressor",
     "vikalp",
     "coverage",
+    "django_mandrill",
     # "mezzanine.mobile",
 )
 
@@ -380,18 +381,7 @@ DEFAULT_CATEGORY_IMAGE = 'img/livelihood.png'
 JQUERY_FILENAME = "jquery-1.10.2.js"
 COMMENTS_USE_RATINGS = False
 
-
-
-##################
-# EMAIL SETTINGS #
-##################
-
-EMAIL_HOST_USER = 'vikalpgithub@gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_PASSWORD = os.environ['EMAIL_PASSWORD']
-EMAIL_PORT = 587
-
+from vikalp.email_settings import *
 
 ####################
 # DYNAMIC SETTINGS #
