@@ -17,6 +17,8 @@ class Article(BlogPost):
                                         verbose_name=("Categories"),
                                         blank=True, related_name="articles")
     article_author = models.CharField(verbose_name="Story Author", max_length=128, blank=True)
+    add_to_carousel = models.BooleanField(verbose_name="Add this article to carousel", default=False)
+
 
     @models.permalink
     def get_absolute_url(self):

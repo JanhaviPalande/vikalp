@@ -1,3 +1,5 @@
+{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags extra_tags %}
+
 <div id="myCarousel" class="carousel slide">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -8,31 +10,18 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-
-        <div class="item active">
-            <div class="fill"
-                 style="background-image:url('/static/img/carousel1.jpg');"></div>
-            <div class="carousel-caption">
-{#                <h1>Lorem Ipsum</h1>#}
+        {% for article in carousel_content %}
+            <div class="item {% ifequal forloop.counter0 0 %}active{% endifequal %}">
+                <a href="{{ article.get_absolute_url }}">
+                    <div class="fill" style="background-image: url(
+                            {{ MEDIA_URL }}{% thumbnail article.featured_image 0 0 %});"></div>
+                    <div class="carousel-caption">
+                        <h1>{{ article.title }}</h1>
+                        {{ article.description|truncatechars:256 }}
+                    </div>
+                </a>
             </div>
-        </div>
-
-        <div class="item">
-            <div class="fill"
-                 style="background-image:url('/static/img/carousel2.jpg');"></div>
-            <div class="carousel-caption">
-{#                <h1>Lorem Ipsum</h1>#}
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="fill"
-                 style="background-image:url('/static/img/carousel3.jpg');"></div>
-            <div class="carousel-caption">
-{#                <h1>Lorem Ipsum</h1>#}
-            </div>
-        </div>
-
+        {% endfor %}
     </div>
 
     <!-- Controls -->

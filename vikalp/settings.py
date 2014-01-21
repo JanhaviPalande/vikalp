@@ -381,6 +381,7 @@ DEFAULT_CATEGORY_IMAGE = 'img/livelihood.png'
 JQUERY_FILENAME = "jquery-1.10.2.js"
 COMMENTS_USE_RATINGS = False
 
+
 from vikalp.email_settings import *
 
 
