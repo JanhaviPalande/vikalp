@@ -15,6 +15,7 @@ articleService = ArticleService()
 pageService = PageService()
 
 
+
 @staff_member_required
 def static_proxy(request):
 

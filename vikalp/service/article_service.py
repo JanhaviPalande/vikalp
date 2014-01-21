@@ -36,3 +36,7 @@ class ArticleService():
 
     def get_policy_edit_category(self):
         return ArticleCategory.objects.filter(title__icontains="policy")
+
+    def get_published_articles_with_related_articles(self, request):
+        return Article.objects.published(
+            for_user=request.user).select_related()

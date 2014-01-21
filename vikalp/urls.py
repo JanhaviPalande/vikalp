@@ -74,6 +74,7 @@ urlpatterns += patterns("",
                         url("^asset_proxy/$", "vikalp.views.views.static_proxy", name="static_proxy"),
                         url("^policy-edits/$", policyEdits.policy_edit_list, name="policy-edits"),
                         # url("^article/(?P<slug>.*)/$", articleDetail.article_detail),
+                        url("^article/download/(?P<slug>.*)$" , articleDetail.article_download, name="article_detail"),
                         url("^article/(?P<slug>.*)$" , articleDetail.article_detail, name="article_detail"),
 
 
