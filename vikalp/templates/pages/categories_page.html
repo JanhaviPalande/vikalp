@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags static %}
+{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags static extra_tags %}
 
 {% block meta_title %}{{ page.meta_title }}{% endblock %}
 
@@ -15,11 +15,12 @@
 
         {% for category in categories %}
             <a class="list-group-item" href="{% url "article_list_category" category.slug %}">
-                <img class="img-responsive list-inline pull-left"
-                     src="{% get_media_prefix %}{{ category.category_image }}" width="50"
-                     height="50">
+                <img class="img-responsive list-inline pull-left featured-thumb" src="
+                        {% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{{ category.category_image }}"
+                     width="50" height="50"/>
                 <h4 class="list-group-item-heading">{{ category }}</h4>
-                <p class="list-group-item-text">{{ category.category_description }}</p></a>
+
+                <p class="list-group-item-text">{{ category.category_description|linebreaks }}</p></a>
         {% endfor %}
 
     </div>

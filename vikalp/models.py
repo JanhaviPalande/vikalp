@@ -6,7 +6,7 @@ from vikalp.settings import STATIC_URL, DEFAULT_CATEGORY_IMAGE
 
 
 def get_default_category_image_location():
-    return STATIC_URL + DEFAULT_CATEGORY_IMAGE
+    return DEFAULT_CATEGORY_IMAGE
 
 
 
