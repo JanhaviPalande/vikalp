@@ -17,7 +17,7 @@
                                                    href="{{ child_page.get_absolute_url }}">{{ child_page.title }}</a>
                                                     {% with menu_pages|get:child_page.id as child_child_pages %}
                                                         {% for child_child_page in child_child_pages %}
-                                                            <a class="" href="{{ child__child_page.get_absolute_url }}">{{ child_child_page.title }}</a>
+                                                            <a class="" href="{{ child_child_page.get_absolute_url }}">{{ child_child_page.title }}</a>
                                                         {% endfor %}
                                                     {% endwith %}
                                             </div>
