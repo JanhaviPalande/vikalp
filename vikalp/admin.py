@@ -7,13 +7,17 @@ from vikalp.helper_functions.functional import field_check
 from vikalp.models import Article, ArticleCategory
 
 
-
-
 class ArticleAdmin(BlogPostAdmin):
     fieldsets = deepcopy(BlogPostAdmin.fieldsets)
     fieldsets[0][1]['fields'] = tuple(map(field_check, fieldsets[0][1]['fields']))
-    fieldsets[0][1]["fields"] += ("article_author", ("promoted","add_to_carousel",),)
-    filter_horizontal = ('article_categories',"related_posts",)
+    fieldsets[0][1]["fields"] += ("article_author", ("promoted", "add_to_carousel",),)
+    filter_horizontal = ('article_categories', "related_posts",)
+    list_display = deepcopy(BlogPostAdmin.list_display)
+    list_display += ("promoted", "add_to_carousel",)
+    list_editable = deepcopy(BlogPostAdmin.list_editable)
+    list_editable += ("promoted", "add_to_carousel",  )
+    list_filter = deepcopy(BlogPostAdmin.list_filter)
+    list_filter += ("promoted", "add_to_carousel",)
 
     def save_form(self, request, form, change):
         OwnableAdmin.save_form(self, request, form, change)
