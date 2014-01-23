@@ -11,15 +11,20 @@
                             {% if page.has_children_in_menu %}
                                 {% with menu_pages|get:page.id as child_pages %}
                                     {% for child_page in child_pages %}
-                                        <div class="col-md-1">
+                                        <div class="col-md-4">
                                             <div class="list-group">
-                                                <a class="list-group-item-heading"
-                                                   href="{{ child_page.get_absolute_url }}">{{ child_page.title }}</a>
-                                                    {% with menu_pages|get:child_page.id as child_child_pages %}
-                                                        {% for child_child_page in child_child_pages %}
-                                                            <a class="" href="{{ child_child_page.get_absolute_url }}">{{ child_child_page.title }}</a>
-                                                        {% endfor %}
-                                                    {% endwith %}
+                                                <div><a class="list-group-item-heading"
+                                                        href="{{ child_page.get_absolute_url }}">{{ child_page.title }}</a>
+                                                </div>
+                                                {% with menu_pages|get:child_page.id as child_child_pages %}
+                                                    {% for child_child_page in child_child_pages %}
+
+                                                        <div><a class=""
+                                                                href="{{ child_child_page.get_absolute_url }}">{{ child_child_page.title }}</a>
+                                                        </div>
+
+                                                    {% endfor %}
+                                                {% endwith %}
                                             </div>
                                         </div>
                                     {% endfor %}
