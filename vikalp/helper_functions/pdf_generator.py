@@ -11,7 +11,7 @@ class PDFGenerator:
         return file
 
     def generate_pdf_filename(self, filename):
-        return str(filename) + ".pdf"
+        return str(filename).decode('utf-8') + ".pdf"
 
 
     def fetch_resources(self, uri, rel):
