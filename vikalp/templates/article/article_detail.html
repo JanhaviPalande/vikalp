@@ -18,7 +18,7 @@
         <h1>{{ article.title }}</h1>
     {% endblock %}
     {% block article_author %}
-        {% if article.article_author %}<h5><em>Author</em> - <u>{{ article.article_author }}</u></h5>{% endif %}
+        {% if article.article_author %}<h5> <b><i>By</i> {{ article.article_author }}</b> {% else %}Posted{% endif %} on {{ article.publish_date.date }}</h5>
     {% endblock %}
 
     {{ article.content|richtext_filters|safe }}
