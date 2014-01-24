@@ -33,5 +33,5 @@ class ArticleDetail:
                                                        self.article_service.get_published_articles_with_related_articles(
                                                            request))
         response = self.pdf_generator.generate_pdf_from_html(html=self.build_pdf_content(article),
-                                                             file=self.build_response(article_title=article.title))
+                                                             file=self.build_response(article_title=article.slug))
         return response

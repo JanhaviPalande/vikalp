@@ -1,5 +1,5 @@
 {% extends "article/article_list.html" %}
-{% load mezzanine_tags comment_tags keyword_tags rating_tags i18n future disqus_tags %}
+{% load mezzanine_tags comment_tags keyword_tags rating_tags i18n future disqus_tags staticfiles %}
 
 
 {% block meta_title %}{{ article.meta_title }}{% endblock %}
@@ -27,15 +27,15 @@
         {% if article.allow_comments %}{% comments_for article %}{% endif %}
     {% endblock %}
 
+
 {% endblock %}
 
 {% block side_bar %}
 
-    {% include "includes/sidebar/download_article.html" %}
+    {% include "includes/sidebar/social_media.html" %}
     {% include "includes/sidebar/category_list.html" %}
     {% include "includes/sidebar/related_posts.html" %}
     {% include "includes/sidebar/tag_cloud.html" %}
-    {% include "includes/sidebar/social_media.html" %}
 
 {% endblock %}
 

@@ -1,26 +1,20 @@
+{% load staticfiles %}
 <div class="push50">
-    <div class="well">
-        <h4>Share this story</h4>
-        <div class="share-btn">
-            {% include "includes/sidebar/social_media/facebook.html" %}
-        </div>
-        <div class="share-btn">
-            {% include "includes/sidebar/social_media/twitter.html" %}
-        </div>
-        <div class="share-btn">
-            {% include "includes/sidebar/social_media/google_plus.html" %}
-        </div>
-        <div class="share-btn">
-            {% include "includes/sidebar/social_media/linkedin.html" %}
-        </div>
-        <div class="share-btn">
-            {% include "includes/sidebar/social_media/pinterest.html" %}
-        </div>
-        <div class="share-btn">
-            {% include "includes/sidebar/social_media/tumblr.html" %}
-        </div>
-        <div class="share-btn">
-            {% include "includes/sidebar/social_media/stumbleupon.html" %}
+    <div>
+        <div class="well">
+            <h4>Share this story</h4>
+            <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+                <a class="addthis_button_facebook"></a>
+                <a class="addthis_button_twitter"></a>
+                <a class="addthis_button_google_plusone_share"></a>
+                <a class="addthis_button_email"></a>
+                <a class="addthis_button_linkedin"></a>
+                <a class="addthis_button_pinterest_share"></a>
+                <a class="addthis_button_tumblr"></a>
+                <a class="addthis_button_stumbleupon"></a>
+            </div>
+            <script type="text/javascript">var addthis_config = {"data_track_addressbar": true};</script>
+            <script type="text/javascript" src="{% static "js/addthis_widget.js" %}"></script>
         </div>
     </div>
 </div>
