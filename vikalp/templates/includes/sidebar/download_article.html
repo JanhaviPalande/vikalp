@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <div class="well">
-        <a href="/article/download/{{ article.slug }}">Download this story</a>
+    <a style = "text-decoration: none;" href="/article/download/{{ article.slug }}"> <img height="32px" src="{% static "img/saveas.png" %}"/> Download this story</a>
 </div>
