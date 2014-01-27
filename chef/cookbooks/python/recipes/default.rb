@@ -8,11 +8,6 @@ rpm_package "/tmp/epel-release-6-8.noarch.rpm" do
 	action :install
 end
 
-package "python" do
-	version	"2.6.6-51.el6"
-	action	:install
-end
-
 package "python-pip" do
 	action	:install
 end
