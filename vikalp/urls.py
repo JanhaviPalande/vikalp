@@ -32,6 +32,7 @@ urlpatterns = patterns('',
 
 # Adds ``STATIC_URL`` to the context of error pages, so that error
 # pages can use JS, CSS and images.
+handler404 = "mezzanine.core.views.page_not_found"
 urlpatterns += patterns("",
 
                         # Change the admin prefix here to use an alternate URL for the
@@ -66,7 +67,7 @@ urlpatterns += patterns("",
 
                         # url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
                         url("^$", homePage.promoted_article_on_homepage, name="home"),
-                        (r"^article/$", articleList.article_list),
+                        (r"^article/$", categoryPage.category_list),
                         (r"^stories/$", categoryPage.category_list),
                         url("^article/tag/(?P<tag>.*)$", articleList.article_list, name="article_list_tag"),
                         url("^article/category/(?P<category>.*)$", articleList.article_list,
@@ -118,5 +119,4 @@ urlpatterns += patterns("",
                         # ("^%s/" % settings.SITE_PREFIX, include("mezzanine.urls"))
 
 )
-handler404 = "mezzanine.core.views.page_not_found"
 handler500 = "mezzanine.core.views.server_error"

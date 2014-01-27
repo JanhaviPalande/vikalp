@@ -1,7 +1,7 @@
 from mezzanine.conf import settings
 from mezzanine.generic.models import Keyword
 from mezzanine.utils.views import paginate, render
-from vikalp.helper_functions.functional import get_model_content_type, process_tag_or_categories_or_article
+from vikalp.helper_functions.functional import get_model_content_type, process_tag_or_categories_or_article, get_page
 from vikalp.models import ArticleCategory
 from vikalp.views.views import articleService, MODEL_NAME, APP_NAME
 
@@ -23,15 +23,16 @@ class ArticleList:
         return articles
 
 
-    def get_context_for_article_list(self, articles, author=None, category=None, tag=None):
+    def get_context_for_article_list(self, articles, author=None, category=None, tag=None, page=None):
         context = {"articles": articles,
-                   "tag": tag, "category": category, "author": author}
+                   "tag": tag, "category": category, "author": author, "page": page}
         return context
 
 
     def article_list(self, request, tag=None, category=None, template="article/article_list.html"):
         settings.use_editable()
         articles = articleService.get_all_published_articles(request)
+        get_page(request)
         if tag is not None:
             tag = process_tag_or_categories_or_article(tag, Keyword)
             articles= self.get_articles_for_given_tag(tag)
@@ -41,4 +42,4 @@ class ArticleList:
         author = None
         if tag is None:
             articles = self.paginate_article_list(articles, request)
-        return render(request, template, self.get_context_for_article_list(articles, author, category, tag))
+        return render(request, template, self.get_context_for_article_list(articles, author, category, tag, get_page(request)))

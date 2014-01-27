@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from vikalp.helper_functions.functional import get_page
 from vikalp.views.views import articleService
 from vikalp.views.article_list_view import ArticleList
 
@@ -15,6 +16,7 @@ class PolicyEdits:
         if category:
             category = reduce(get_title, category)
             return render(request, template, article_list.get_context_for_article_list(
-                articleService.get_all_articles_in_category(category), category=category))
+                articleService.get_all_articles_in_category(category), category=category, page=get_page(request)))
         else:
-            return render(request, template, article_list.get_context_for_article_list(None, category=None))
+            return render(request, template,
+                          article_list.get_context_for_article_list(None, category=None, page=get_page(request)))

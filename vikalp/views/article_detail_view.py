@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from vikalp.helper_functions.functional import process_tag_or_categories_or_article
+from vikalp.helper_functions.functional import process_tag_or_categories_or_article, get_page
 from vikalp.helper_functions.pdf_generator import PDFGenerator
 from vikalp.service.article_service import ArticleService
 from vikalp.helper_functions.pdf_generator import StyleArticlePDF
@@ -16,7 +16,7 @@ class ArticleDetail:
     def article_detail(self, request, slug, template="article/article_detail.html"):
         articles = self.article_service.get_published_articles_with_related_articles(request)
         article = process_tag_or_categories_or_article(slug, articles)
-        return render(request, template, {"article": article})
+        return render(request, template, {"article": article, "page": get_page(request)})
 
 
     def build_response(self, article_title):
