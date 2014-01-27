@@ -336,7 +336,18 @@ footer {
     padding-left: 15px;
     display: inline;
 }
+.btn{
+    margin-top: 15px;
+}
 
 .list-unstyled li{
     padding-top: 10px;
+}
+
+.form-fields input{
+    width:265px;
+}
+
+.form-fields textarea{
+    width: 500px;
 }
