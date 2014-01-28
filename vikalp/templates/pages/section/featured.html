@@ -1,16 +1,18 @@
-{% extends "pages/section/section_color.html" %}
+{% extends "pages/section/section_base.html" %}
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags %}
 
-{% block section_heading %}
-    <div class="col-lg-12 text-center">
-        <h2>{% trans "Featured Stories" %}</h2>
-        <br>
-    </div>
-{% endblock %}
+{#{% block section_heading %}#}
+{#    <div class="col-lg-12 text-center">#}
+{#        <h2>{% trans "Featured Stories" %}</h2>#}
+{#        <br>#}
+{#    </div>#}
+{#{% endblock %}#}
 
 {% block section_content %}
-    {% for article in promoted_articles %}
-            <div class="col-lg-4 col-md-4">
+    <div class="col-lg-8 text-left">
+        <h2 class="paddingleft15">Featured Stories</h2>
+        {% for article in promoted_articles %}
+            <div class="col-lg-6 col-md-6">
                 <a id="feature-article" href="{{ article.get_absolute_url }}">
                     <div class="thumbnail">
 
@@ -28,5 +30,27 @@
                     </div>
                 </a>
             </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
+    <div class="col-lg-4 col-md-4">
+    <h2 class="paddingleft15">Categories</h2>
+        <div id="story-categories" class="list-group">
+
+            {% for category in categories %}
+                <a class="list-group-item" href="{% url "article_list_category" category.slug %}">
+                    <img class="img-responsive list-inline pull-left featured-thumb" src="
+
+
+
+                            {% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{{ category.category_image }}"
+                         width="50" height="50"/>
+                    <h4>{{ category }}</h4>
+
+                    {#                    <p class="list-group-item-text">{{ category.category_description|linebreaks }}</p>#}
+                </a>
+            {% endfor %}
+
+        </div>
+    </div>
+
 {% endblock %}

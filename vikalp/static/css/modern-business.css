@@ -203,13 +203,14 @@ a#feature-article {
 
 #story-categories .list-group-item{
     padding-bottom: 20px;
-
+    color:#ab3333;
 }
 #story-categories .list-group-item-heading{
     color:#ab3333;
 }
 #story-categories img{
     margin-right:10px;
+    align-content: center;
 }
 /* Social Icons Styles */
 .list-social-icons {
@@ -373,5 +374,9 @@ footer {
     margin-bottom: 3%;
     text-align: left;
     text-shadow: none;
-    font-size: 14px;
+    font-size: 1.3em;
+}
+
+.paddingleft15 {
+    padding-left: 15px;
 }

@@ -3,10 +3,10 @@ from mezzanine.conf import settings
 from vikalp.views.views import articleService
 
 class HomePage:
-    def get_context_for_promoted_articles(self, article_promoted_list, carousel_content):
-        return {"promoted_articles": article_promoted_list, "carousel_content": carousel_content}
+    def get_context_for_promoted_articles(self, article_promoted_list, carousel_content, categories):
+        return {"promoted_articles": article_promoted_list, "carousel_content": carousel_content, "categories": categories}
 
 
     def promoted_article_on_homepage(self, request, template="pages/index.html"):
         settings.use_editable()
-        return render(request, template, self.get_context_for_promoted_articles(articleService.get_promoted_articles(), articleService.get_carousel_content()))
+        return render(request, template, self.get_context_for_promoted_articles(articleService.get_promoted_articles(), articleService.get_carousel_content(), articleService.get_all_article_categories()))

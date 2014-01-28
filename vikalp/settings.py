@@ -367,7 +367,7 @@ COMPRESS_PARSER = 'compressor.parser.HtmlParser'
 ########################
 DEFAULT_CATEGORY_IMAGE = 'img/livelihood.png'
 NUMBER_OF_CAROUSEL_ITEMS = 3
-NUMBER_OF_FEATURED_ITEMS = 3
+NUMBER_OF_FEATURED_ITEMS = 2
 
 ##################
 # LOCAL SETTINGS #
