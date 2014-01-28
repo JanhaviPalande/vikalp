@@ -39,19 +39,12 @@
 
 <body id="{% block body_id %}body{% endblock %}">
 
-{#<div id="main-title">#}
-{#    <div class="container">#}
-{#        {% include "pages/menus/site_title.html" %}#}
-{#    </div>#}
-{#</div>#}
-
 <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     {% page_menu "pages/menus/pagemenu.html" %}
 </nav>
 
 {% if on_home %}
-    {% include "pages/menus/carousel.html" %}
-    {% block home_page %}#}
+    {% block home_page %}}
     {% endblock %}
 {% endif %}
 

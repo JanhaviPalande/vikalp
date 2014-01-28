@@ -16,8 +16,10 @@
                     <div class="fill" style="background-image: url(
                             {{ MEDIA_URL }}{% thumbnail article.featured_image 0 0 %});"></div>
                     <div class="carousel-caption">
-                        <h1>{{ article.title }}</h1>
-                        {{ article.description|truncatechars:256 }}
+                        {#                        <h1>{{ article.title }}</h1>#}
+                        <div class="carousel-well">
+                            {{ article.description|truncatechars:256 }}
+                        </div>
                     </div>
                 </a>
             </div>
