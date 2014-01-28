@@ -33,15 +33,12 @@
         {% endfor %}
     </div>
     <div class="col-lg-4 col-md-4">
-    <h2 class="paddingleft15">Categories</h2>
+    <h2>Categories</h2>
         <div id="story-categories" class="list-group">
 
             {% for category in categories %}
                 <a class="list-group-item" href="{% url "article_list_category" category.slug %}">
                     <img class="img-responsive list-inline pull-left featured-thumb" src="
-
-
-
                             {% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{{ category.category_image }}"
                          width="50" height="50"/>
                     <h4>{{ category }}</h4>
