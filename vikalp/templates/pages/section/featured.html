@@ -1,12 +1,6 @@
 {% extends "pages/section/section_base.html" %}
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags %}
 
-{#{% block section_heading %}#}
-{#    <div class="col-lg-12 text-center">#}
-{#        <h2>{% trans "Featured Stories" %}</h2>#}
-{#        <br>#}
-{#    </div>#}
-{#{% endblock %}#}
 
 {% block section_content %}
     <div class="col-lg-8 text-left">
@@ -32,39 +26,41 @@
             </div>
         {% endfor %}
         <div class="paddingleft15">
+
             <h2>About Vikalp Sangam</h2>
 
-            <p>As the world hurtles towards greater ecological devastation, inequalities, and social conflicts, the
-                biggest
-                question facing us is: are there alternative ways of meeting human needs and aspirations, without
-                trashing
-                the earth and without leaving half of humanity behind?
-            </p>
+                <p>
+                    As the world hurtles towards greater ecological devastation, inequalities, and social conflicts, the
+                    biggest question facing us is: are there alternative ways of meeting human needs and aspirations,
+                    without trashing the earth and without leaving half of humanity behind?
+                </p>
 
-            <p>
-                Across India (as in the rest of the world), this question is being answered by a multitude of
-                grassroots
-                and
-                policy initiatives: from meeting basic needs in ecologically sensitive ways to decentralised
-                governance
-                and
-                producer-consumer movements, from rethinking urban and rural spaces towards sustainability to
-                struggles
-                for
-                social and economic equity.</p>
+                <p>
+                    Across India (as in the rest of the world), this question is being answered by a multitude of
+                    grassroots and policy initiatives: from meeting basic needs in ecologically sensitive ways to
+                    decentralised governance and producer-consumer movements, from rethinking urban and rural spaces
+                    towards sustainability to struggles for social and economic equity.
+                </p>
 
-            <p>Unfortunately, documentation and public awareness of such initiatives in India is poor. There are very
-                few attempts to consolidate and present in cohesive manner, the range of these alternatives.</p>
+                <p>
+                    Unfortunately, documentation and public awareness of such initiatives in India is poor. There are
+                    very few attempts to consolidate and present in cohesive manner, the range of these alternatives.
+                </p>
 
-            <p>We offer this website as one response to these gaps. It hopes to feature alternatives in the full range
-                of human endeavour as they take place in India, and through this to help build bridges amongst them,
-                learn from each other, and together present a challenge to the mainstream system. This is part of a
-                larger process in which the co-host organizations are involved, at networking alternatives in India and
-                internationally.</p>
+                <p>
+                    We offer this website as one response to these gaps. It hopes to feature alternatives in the full
+                    range
+                    of human endeavour as they take place in India, and through this to help build bridges amongst them,
+                    learn from each other, and together present a challenge to the mainstream system. This is part of a
+                    larger process in which the co-host organizations are involved, at networking alternatives in India
+                    and internationally<strong>.....</strong>
+                </p>
 
-            <p><a href="/about" class="btn btn-primary btn-large">Read More</a></p>
+
+                <p><a href="/about" class="btn btn-primary btn-large">Read More</a></p>
+            </div>
         </div>
-    </div>
+
     <div class="col-lg-4 col-md-4">
         <h2>Categories</h2>
 
@@ -72,23 +68,14 @@
 
             {% for category in categories %}
                 <a class="list-group-item" href="{% url "article_list_category" category.slug %}">
-                    <img class="img-responsive list-inline pull-left featured-thumb" src="
-
-
-
-
-
-
-                            {% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{{ category.category_image }}"
+                    <img class="img-responsive list-inline pull-left featured-thumb"
+                         src="{% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{{ category.category_image }}"
                          width="50" height="50"/>
                     <h4>{{ category }}</h4>
-
-                    {#                    <p class="list-group-item-text">{{ category.category_description|linebreaks }}</p>#}
                 </a>
             {% endfor %}
 
         </div>
     </div>
-
 
 {% endblock %}

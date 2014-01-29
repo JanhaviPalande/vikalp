@@ -14,11 +14,14 @@
 {% endmetablock %}{% endblock %}
 
 {% block main %}
+
     {% block title %}
         <h1>{{ article.title }}</h1>
     {% endblock %}
+
     {% block article_author %}
-        {% if article.article_author %}<h5> <b><i>By</i> {{ article.article_author }}</b> {% else %}Posted{% endif %} on {{ article.publish_date.date }}</h5>
+        {% if article.article_author %}<h5> <b>By {{ article.article_author }}</b> {% else %}Posted{% endif %}
+        on {{ article.publish_date.date }}</h5>
     {% endblock %}
 
     {{ article.content|richtext_filters|safe }}
@@ -26,7 +29,6 @@
     {% block article_comments %}
         {% if article.allow_comments %}{% comments_for article %}{% endif %}
     {% endblock %}
-
 
 {% endblock %}
 
@@ -39,111 +41,3 @@
     {% include "includes/sidebar/tag_cloud.html" %}
 
 {% endblock %}
-
-
-
-
-{#{% block main %}#}
-{##}
-{#    {% block article_detail_postedby %}#}
-{#        {% editable article.publish_date %}#}
-{#            <h6>#}
-{#                {% trans "Posted by" %}:#}
-{#                {% with article.user as author %}#}
-{#                    <a href="{% url "article_list_author" author %}">{{ author.get_full_name|default:author.username }}</a>#}
-{#                {% endwith %}#}
-{#                {% blocktrans with sometime=article.publish_date|timesince %}{{ sometime }} ago{% endblocktrans %}#}
-{#            </h6>#}
-{#        {% endeditable %}#}
-{#    {% endblock %}#}
-{#    {% block article_detail_commentlink %}#}
-{#        <p>#}
-{#            {% if article.allow_comments %}#}
-{#                {% if settings.COMMENTS_DISQUS_SHORTNAME %}#}
-{#                    (<a href="{{ article.get_absolute_url }}#disqus_thread"#}
-{#                        data-disqus-identifier="{% disqus_id_for article %}">{% spaceless %}#}
-{#                    {% trans "Comments" %}#}
-{#                {% endspaceless %}</a>)#}
-{#                {% else %}(<a href="#comments">{% spaceless %}#}
-{#                    {% blocktrans count comments_count=article.comments_count %}{{ comments_count }} comment#}
-{#                        {% plural %}{{ comments_count }} comments{% endblocktrans %}#}
-{#                {% endspaceless %}</a>)#}
-{#                {% endif %}#}
-{#            {% endif %}#}
-{#        </p>#}
-{#    {% endblock %}#}
-{##}
-{#    {% block article_detail_featured_image %}#}
-{#        {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}#}
-{#            <p><img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 600 0 %}"></p>#}
-{#        {% endif %}#}
-{#    {% endblock %}#}
-{##}
-{#    {% if settings.COMMENTS_DISQUS_SHORTNAME %}#}
-{#        {% include "generic/includes/disqus_counts.html" %}#}
-{#    {% endif %}#}
-{##}
-{#    {% block article_detail_content %}#}
-{#        {% editable article.content %}#}
-{#            {{ article.content|richtext_filters|safe }}#}
-{#        {% endeditable %}#}
-{#    {% endblock %}#}
-{##}
-{#    {% block article_detail_keywords %}#}
-{#        {% keywords_for article as tags %}#}
-{#        {% if tags %}#}
-{#            {% spaceless %}#}
-{#                <ul class="unstyled tags">#}
-{#                    <li>{% trans "Tags" %}:</li>#}
-{#                    {% for tag in tags %}#}
-{#                        <li><a href="{% url "article_list_tag" tag.slug %}">{{ tag }}</a></li>#}
-{#                    {% endfor %}#}
-{#                </ul>#}
-{#            {% endspaceless %}#}
-{#        {% endif %}#}
-{#    {% endblock %}#}
-{##}
-{#    {% rating_for article %}#}
-{##}
-{#    {% block article_detail_sharebuttons %}#}
-{#        {% set_short_url_for article %}#}
-{#        <a class="btn small primary share-twitter" target="_blank"#}
-{#           href="http://twitter.com/home?status={{ article.short_url|urlencode }}%20{{ article.title|urlencode }}">{% trans "Share on Twitter" %}</a>#}
-{#        <a class="btn small primary share-facebook" target="_blank"#}
-{#           href="http://facebook.com/sharer.php?u={{ request.build_absolute_uri }}&amp;t={{ article.title|urlencode }}">{% trans "Share on Facebook" %}</a>#}
-{#    {% endblock %}#}
-{##}
-{#    {% block article_previous_next %}#}
-{#        <ul class="pager">#}
-{#            {% with article.get_previous_by_publish_date as previous %}#}
-{#                {% if previous %}#}
-{#                    <li class="previous">#}
-{#                        <a href="{{ previous.get_absolute_url }}">&larr; {{ previous }}</a>#}
-{#                    </li>#}
-{#                {% endif %}#}
-{#            {% endwith %}#}
-{#            {% with article.get_next_by_publish_date as next %}#}
-{#                {% if next %}#}
-{#                    <li class="next">#}
-{#                        <a href="{{ next.get_absolute_url }}">{{ next }} &rarr;</a>#}
-{#                    </li>#}
-{#                {% endif %}#}
-{#            {% endwith %}#}
-{#        </ul>#}
-{#    {% endblock %}#}
-{##}
-{#    {% block article_detail_related_posts %}#}
-{#        {% if article.related_posts.all %}#}
-{#            <div id="related-posts">#}
-{#                <h3>{% trans 'Related posts' %}</h3>#}
-{#                <ul class="unstyled">#}
-{#                    {% for post in article.related_posts.all %}#}
-{#                        <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>#}
-{#                    {% endfor %}#}
-{#                </ul>#}
-{#            </div>#}
-{#        {% endif %}#}
-{#    {% endblock %}#}
-{##}
-{##}
-{#{% endblock %}#}

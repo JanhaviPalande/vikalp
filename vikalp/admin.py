@@ -7,7 +7,7 @@ from vikalp.helper_functions.functional import field_check
 from vikalp.models import Article, ArticleCategory
 
 
-class ArticleAdmin(BlogPostAdmin):
+class ArticleAdmin(BlogPostAdmin, DisplayableAdmin):
     fieldsets = deepcopy(BlogPostAdmin.fieldsets)
     fieldsets[0][1]['fields'] = tuple(map(field_check, fieldsets[0][1]['fields']))
     fieldsets[0][1]["fields"] += ("article_author", ("promoted", "add_to_carousel",),)

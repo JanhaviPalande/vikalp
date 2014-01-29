@@ -3,29 +3,64 @@
 
 {% block meta_title %}{{ page.meta_title }}{% endblock %}
 
-{% block main %}
+{% block article_main %}
 
     {% block title %}
-        <h1>
+        <h1 class="text-center">
             {% trans "Story Categories" %}
         </h1>
     {% endblock %}
 
-    <div id="story-categories" class="list-group">
+    <div id="storypage-categories">
 
-        {% for category in categories %}
-            <a class="list-group-item" href="{% url "article_list_category" category.slug %}">
-                <img class="img-responsive list-inline pull-left featured-thumb" src="
-                        {% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{{ category.category_image }}"
-                     width="50" height="50"/>
-                <h4 class="list-group-item-heading">{{ category }}</h4>
+        {% for articleCategory in articleCategories %}
+            {% for category, articles in articleCategory.items %}
 
-                <p class="list-group-item-text">{{ category.category_description|linebreaks }}</p></a>
+                <div id="bakri" class="col-md-5 col-sm-5">
+                    <div class="col-md-12 col-sm-12 col-xs-12 media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object"
+                                 src="
+                                         {% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{{ category.category_image }}"
+                                 width="80" height="80">
+                        </a>
+
+                        <div class="media-body">
+                            <a href="{% url "article_list_category" category.slug %}"> <h4 class="media-heading">{{ category }}</h4></a>
+
+                            <p>{{ category.category_description|truncatechars:100 }}</p>
+                        </div>
+
+                    </div>
+
+                    {% for article in articles %}
+                        <div id="article-thumbnail-wrapper" class="col-md-6 col-sm-6 col-xs-6">
+                            <a href="{{ article.get_absolute_url }}">
+                                <div id="article-thumbnail" class="">
+
+                                    {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}
+                                        <img class="col-md-6 col-sm-6 "
+                                             src="{{ MEDIA_URL }}{% thumbnail article.featured_image 90 90 %}">
+                                    {% endif %}
+
+                                    <div class="col-md-6 col-sm-6  caption">
+                                        <h5>{{ article.title }}</h5>
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+
+                    {% endfor %}
+                    <div class="col-md-12">
+                        <a class="pull-right" href="{% url "article_list_category" category.slug %}"> More Stories >> </a>
+                    </div>
+                </div>
+
+            {% endfor %}
         {% endfor %}
 
-    </div>
-{% endblock %}
 
-{% block side_bar %}
-    {% include "includes/sidebar/tag_cloud.html" %}
+    </div>
 {% endblock %}

@@ -3,6 +3,7 @@ import os
 import xhtml2pdf.pisa as pisa
 from django.conf import settings
 
+
 PDF_AUTHOR_TIME_STAMP_STYLE = "<div style='font-size:12px;'>Author - %s, Published on - %s.%s.%s</div>"
 
 PDF_ARTICLE_STYLE = "<div style='font-size:28px;'>%s</div>"

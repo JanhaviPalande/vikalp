@@ -23,7 +23,7 @@
         {% else %}
             {% blocktrans with start=results.start_index end=results.end_index total=results.paginator.count %}
                 <h3>Showing {{ total }} results matching your query:
-                {{ query }}</h3>
+                    {{ query }}</h3>
             {% endblocktrans %}
         {% endif %}
     </p>
@@ -36,7 +36,7 @@
 
                 <p class="list-group-item-text">{{ result.description|truncatewords_html:20|safe }}</p>
                 <span class="badge">Read More</span>
-            <br>
+                <br>
             </a>
         {% endfor %}
     </div>

@@ -67,16 +67,16 @@ urlpatterns += patterns("",
 
                         # url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
                         url("^$", homePage.promoted_article_on_homepage, name="home"),
-                        (r"^article/$", categoryPage.category_list),
-                        (r"^stories/$", categoryPage.category_list),
+                        (r"^article/$", categoryPage.category_list_with_two_articles),
+                        (r"^stories/$", categoryPage.category_list_with_two_articles),
                         url("^article/tag/(?P<tag>.*)$", articleList.article_list, name="article_list_tag"),
                         url("^article/category/(?P<category>.*)$", articleList.article_list,
                             name="article_list_category"),
                         url("^asset_proxy/$", "vikalp.views.views.static_proxy", name="static_proxy"),
                         url("^policy.*/$", policyEdits.policy_edit_list, name="policy-edits"),
                         # url("^article/(?P<slug>.*)/$", articleDetail.article_detail),
-                        url("^article/download/(?P<slug>.*)$" , articleDetail.article_download, name="article_detail"),
-                        url("^article/(?P<slug>.*)$" , articleDetail.article_detail, name="article_detail"),
+                        url("^article/download/(?P<slug>.*)$", articleDetail.article_download, name="article_detail"),
+                        url("^article/(?P<slug>.*)$", articleDetail.article_detail, name="article_detail"),
 
 
                         # HOMEPAGE FOR A BLOG-ONLY SITE

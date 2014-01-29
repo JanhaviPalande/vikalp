@@ -2,10 +2,9 @@ from vikalp.models import Article, ArticleCategory
 from vikalp.service.raw_queries import raw_query_to_get_all_articles_assigned_to_tag_id
 from vikalp.helper_functions.service_filter import remove_policy_edits_from_categories
 from mezzanine.conf import settings
+
 NUMBER_OF_CAROUSEL_ARTICLES = settings.NUMBER_OF_CAROUSEL_ITEMS
 NUMBER_OF_PROMOTED_ARTICLES_TO_BE_FETECHED = settings.NUMBER_OF_FEATURED_ITEMS
-
-
 
 
 class ArticleService():
@@ -26,11 +25,19 @@ class ArticleService():
     def get_all_articles_under_tag(self, content_type, tag):
         return Article.objects.raw(self.rendered_query_to_fetch_all_articles_under_tag(content_type, tag))
 
-    def get_all_articles_in_category(self, category):
-        return Article.objects.filter(article_categories=category)
+    def get_all_articles_in_category(self, category, limit=None):
+        return Article.objects.filter(article_categories=category)[:limit]
 
     def get_all_article_categories(self):
         return remove_policy_edits_from_categories(ArticleCategory.objects.all())
+
+    def get_all_article_categories_with_their_articles(self):
+        articleCategories = map(self.make_dict, remove_policy_edits_from_categories(ArticleCategory.objects.all()))
+        return articleCategories
+
+    def make_dict(self, articleCategory):
+        articles = self.get_all_articles_in_category(articleCategory, limit=2)
+        return {articleCategory: articles}
 
     def get_carousel_content(self):
         return Article.objects.filter(add_to_carousel='t')[:NUMBER_OF_CAROUSEL_ARTICLES]
