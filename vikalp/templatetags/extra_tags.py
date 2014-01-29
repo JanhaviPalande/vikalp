@@ -28,3 +28,7 @@ def insert_placeholder(arg):
     string.insert(1, ('placeholder="%s"' % arg.help_text))
     string = ' '.join(string)
     return string
+
+@register.filter
+def length(arg):
+    return len(arg)

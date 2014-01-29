@@ -1,14 +1,22 @@
-{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags %}
+{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags extra_tags %}
 <div class="push50"></div>
-    <div class="well">
-        {% keywords_for vikalp.article as tags %}
-        {% if tags %}
-            <h4>{% trans "Explore Stories" %}</h4>
-            <div class="tag_cloud">
-                {% for tag in tags %}
-                    <a href="{% url "blog_post_list_tag" tag.slug %}" class="tag-weight-{{ tag.weight }}">{{ tag }}</a>
-                {% endfor %}
-            </div>
+<div class="well">
+    {% keywords_for vikalp.article as tags %}
+    {% if tags %}
+        <h4>{% trans "Explore Stories" %}</h4>
+        <div class="tag_cloud">
+            {% for tag in tags %}
 
-        {% endif %}
-    </div>
+                {% if tags|length < 25 %}
+                        <a href="{% url "article_list_tag" tag.slug %}" class="tag-weight-{{ tag.weight }}">{{ tag }}</a>
+                {% else %}
+                    {% ifnotequal tag.weight 1 %}
+                        <a href="{% url "article_list_tag" tag.slug %}" class="tag-weight-{{ tag.weight }}">{{ tag }}</a>
+                    {% endifnotequal %}
+                {% endif %}
+
+            {% endfor %}
+        </div>
+
+    {% endif %}
+</div>
