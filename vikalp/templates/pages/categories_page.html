@@ -18,15 +18,15 @@
 
                 <div id="bakri" class="col-md-5 col-sm-5">
                     <div class="col-md-12 col-sm-12 col-xs-12 media">
-                        <a class="pull-left" href="#">
+                        <a class="pull-left" href="{% url "article_list_category" category.slug %}">
                             <img class="media-object"
-                                 src="
-                                         {% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{{ category.category_image }}"
+                                 src="{% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{{ category.category_image }}"
                                  width="80" height="80">
                         </a>
 
                         <div class="media-body">
-                            <a href="{% url "article_list_category" category.slug %}"> <h4 class="media-heading">{{ category }}</h4></a>
+                            <a href="{% url "article_list_category" category.slug %}">
+                                <h4 id="story-page-category-heading" class="media-heading">{{ category }}</h4></a>
 
                             <p>{{ category.category_description|truncatechars:100 }}</p>
                         </div>
@@ -44,7 +44,7 @@
                                     {% endif %}
 
                                     <div class="col-md-6 col-sm-6  caption">
-                                        <h5>{{ article.title }}</h5>
+                                        <h5 id="story-page-article-title">{{ article.title }}</h5>
                                         </p>
                                     </div>
                                 </div>
@@ -53,8 +53,8 @@
                         </div>
 
                     {% endfor %}
-                    <div class="col-md-12">
-                        <a class="pull-right" href="{% url "article_list_category" category.slug %}"> More Stories >> </a>
+                    <div id="more-stories-link" class="col-md-12 media">
+                        <a id="more-stories-link-text" class="pull-right" href="{% url "article_list_category" category.slug %}"> More Stories>> </a>
                     </div>
                 </div>
 
