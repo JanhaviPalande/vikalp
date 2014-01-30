@@ -12,16 +12,13 @@
     <div class="carousel-inner">
         {% for article in carousel_content %}
             <div class="item {% ifequal forloop.counter0 0 %}active{% endifequal %}">
-                <a href="{{ article.get_absolute_url }}">
-                    <div class="fill" style="background-image: url(
-                            {{ MEDIA_URL }}{% thumbnail article.featured_image 0 0 %});"></div>
-                    <div class="carousel-caption">
-                        {#                        <h1>{{ article.title }}</h1>#}
-                        <div class="carousel-well">
-                            {{ article.description|truncatechars:256 }}
-                        </div>
+                <div class="fill" style="background-image: url(
+                        {{ MEDIA_URL }}{% thumbnail article.featured_image 0 0 %});"></div>
+                <div class="carousel-caption">
+                    <div class="carousel-well">
+                        {{ article.description|truncatechars:256 }}
                     </div>
-                </a>
+                </div>
             </div>
         {% endfor %}
     </div>
