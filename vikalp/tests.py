@@ -42,7 +42,7 @@ class SettingsTest(TestCase):
         self.assertEquals("jquery-1.10.2.js", JQUERY_FILENAME)
 
     def test_check_site_title_tagline(self):
-        self.assertEquals("Vikalp", SITE_TITLE)
+        self.assertIn("Vikalp", SITE_TITLE)
         self.assertEquals("Alternatives Forum!", SITE_TAGLINE)
 
 
