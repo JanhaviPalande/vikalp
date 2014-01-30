@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+
 <html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
 {% load pages_tags mezzanine_tags i18n future compress staticfiles %}
+
 <head>
     {% get_current_language as LANGUAGE_CODE %}
     {% get_available_languages as LANGUAGES %}
@@ -37,8 +39,8 @@
 
 </head>
 
-<body id="{% block body_id %}body{% endblock %}">
 
+<body id="{% block body_id %}body{% endblock %}">
 <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     {% page_menu "pages/menus/pagemenu.html" %}
 </nav>
@@ -75,7 +77,9 @@
     </div>
     <div class="push60"></div>
 {% endif %}
+
 {% include "pages/menus/footer.html" %}
 {% include "google-analytics/google-analytics.html" %}
+
 </body>
 </html>

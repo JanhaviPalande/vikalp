@@ -1,5 +1,5 @@
 /*
-DO NOT REMOVE THESE COMMENTS, THEY ARE VERY IMPORTANT
+DO NOT REMOVE THESE COMMENTS, THEY ARE VERY IMPORTANT, REMOVING THEM SCREWS UP THE CSS, BUT WE DON'T KNOW WHY!!!
 Custom CSS for...
 'Modern Business' HTML Theme by Start Bootstrap
 
@@ -466,6 +466,5 @@ footer {
 }
 
 #storypage-categories {
-
     margin-left: 100px;
 }
