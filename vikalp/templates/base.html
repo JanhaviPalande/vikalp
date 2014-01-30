@@ -4,6 +4,7 @@
 {% load pages_tags mezzanine_tags i18n future compress staticfiles %}
 
 <head>
+
     {% get_current_language as LANGUAGE_CODE %}
     {% get_available_languages as LANGUAGES %}
     {% get_current_language_bidi as LANGUAGE_BIDI %}
@@ -27,14 +28,6 @@
     <!-- Add custom CSS here -->
     <link rel="stylesheet" href="{% static "css/modern-business.css" %}">
     <link href="{% static "font/font-awesome.css" %}" rel="stylesheet">
-
-    <!-- JavaScript -->
-
-    <script src="{% static "js/"|add:settings.JQUERY_FILENAME %}"></script>
-    <script src="{% static "js/bootstrap.js" %}"></script>
-    <script src="{% static "js/modern-business.js" %}"></script>
-    <script src="{% static "js/app.js" %}"></script>
-    <script src="{% static "js/html5shiv.js" %}"></script>
 
 
 </head>
@@ -80,6 +73,15 @@
 
 {% include "pages/menus/footer.html" %}
 {% include "google-analytics/google-analytics.html" %}
+
+
+<!-- JavaScript -->
+
+<script src="{% static "js/"|add:settings.JQUERY_FILENAME %}"></script>
+<script src="{% static "js/bootstrap.js" %}"></script>
+<script src="{% static "js/modern-business.js" %}"></script>
+<script src="{% static "js/app.js" %}"></script>
+<script src="{% static "js/html5shiv.js" %}"></script>
 
 </body>
 </html>

@@ -2,14 +2,6 @@
 
 {% load mezzanine_tags %}
 
-{% block extra_js %}
-    {{ block.super }}
-    <script>
-        $(function () {
-            $('.middle :input:visible:enabled:first').focus();
-        });
-    </script>
-{% endblock %}
 
 {% block main %}
     {{ block.super }}
@@ -31,4 +23,13 @@
         </form>
     {% endif %}
 
+{% endblock %}
+
+{% block extra_js %}
+    {{ block.super }}
+    <script>
+        $(function () {
+            $('.middle :input:visible:enabled:first').focus();
+        });
+    </script>
 {% endblock %}

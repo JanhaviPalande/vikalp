@@ -2,6 +2,7 @@
 
 {% load i18n future mezzanine_tags %}
 
+
 {% block meta_title %}{% trans "Search Results" %}{% endblock %}
 {% block title %}{% trans "Search Results" %}{% endblock %}
 
@@ -18,12 +19,11 @@
     <p>
         {% if results.paginator.count == 0 %}
             {% blocktrans %}
-                No results were found in {{ search_type }} matching your query: {{ query }}
+                No results were found matching your query: {{ query }}
             {% endblocktrans %}
         {% else %}
             {% blocktrans with start=results.start_index end=results.end_index total=results.paginator.count %}
-                <h3>Showing {{ total }} results matching your query:
-                    {{ query }}</h3>
+                <h3>Showing {{ total }} results matching your query: {{ query }}</h3>
             {% endblocktrans %}
         {% endif %}
     </p>
