@@ -11,11 +11,11 @@ class FunctionalTest(unittest.TestCase):
 
     def test_logo_title_featured_articles_link_and_tag_cloud(self):
         #On Home
-        self.driver.get(HOMEPAGE)
+        self.driver.get(live_server_url)
 
         #Click on logo, would lead to same page
         self.driver.find_element_by_class_name("navbar-brand").click()
-        self.assertIn(HOMEPAGE, self.driver.current_url)
+        self.assertIn(live_server_url, self.driver.current_url)
 
         #Check site title
         self.assertIn(SITE_TITLE, self.driver.title)
@@ -54,7 +54,7 @@ class FunctionalTest(unittest.TestCase):
 
     def test_search_for_an_article_display_search_results_and_click_on_article_to_view_it(self):
         # Visit Home Page
-        self.driver.get(HOMEPAGE)
+        self.driver.get(live_server_url)
         self.assertIn(SITE_TITLE, self.driver.title)
 
         # Find the search form
@@ -64,7 +64,7 @@ class FunctionalTest(unittest.TestCase):
         element.send_keys(SEARCHTEXT + Keys.RETURN)
 
         # Check that the page displayed is the search results page
-        self.assertIn("/search/?q="+SEARCHTEXT, self.driver.current_url)
+        self.assertIn("/search/?q=" + SEARCHTEXT, self.driver.current_url)
         self.assertIn("Search Results", self.driver.title)
         self.assertTrue(self.driver.find_element_by_class_name("list-group-item-heading").is_displayed())
 
@@ -78,7 +78,7 @@ class FunctionalTest(unittest.TestCase):
 
     def test_main_categories_link_individual_category_link_on_categories_page_and_article_page(self):
         # Visit Home Page
-        self.driver.get(HOMEPAGE)
+        self.driver.get(live_server_url)
 
         # Find categories link (The link is displayed as Stories on our website)
         element = self.driver.find_element_by_link_text("Stories")

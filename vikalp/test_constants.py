@@ -1,2 +1,2 @@
-HOMEPAGE = "http://localhost:8000/"
+live_server_url = "http://localhost:8000/"
 SEARCHTEXT = "homestay"

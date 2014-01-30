@@ -1,11 +1,9 @@
+from .settings import *
 
-# DEBUG = True
-from .settings import * # noqa
 
 TEST_RUNNER = 'django.test.simple.DjangoTestSuiteRunner'
 COMPRESS_ENABLED = True
 DEBUG = True
-
 
 DATABASES = {
     "default": {

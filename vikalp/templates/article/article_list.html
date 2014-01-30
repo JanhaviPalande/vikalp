@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags %}
 
+
 {% block meta_title %}{% if category %}{{ category }}{% else %}{{ tag }}{% endif %}{% endblock %}
 
 {% block main %}
+
     {% block title %}
         <h1>
             {% if category %}

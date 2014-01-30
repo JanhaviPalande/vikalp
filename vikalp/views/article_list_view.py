@@ -11,7 +11,6 @@ class ArticleList:
         return articleService.get_all_articles_under_tag(get_model_content_type(APP_NAME, MODEL_NAME), tag)
 
 
-
     def get_articles_for_given_category(self, category):
         return articleService.get_all_articles_in_category(category)
 
@@ -35,11 +34,12 @@ class ArticleList:
         get_page(request)
         if tag is not None:
             tag = process_tag_or_categories_or_article(tag, Keyword)
-            articles= self.get_articles_for_given_tag(tag)
+            articles = self.get_articles_for_given_tag(tag)
         if category is not None:
             category = process_tag_or_categories_or_article(category, ArticleCategory)
             articles = self.get_articles_for_given_category(category)
         author = None
         if tag is None:
             articles = self.paginate_article_list(articles, request)
-        return render(request, template, self.get_context_for_article_list(articles, author, category, tag, get_page(request)))
+        return render(request, template,
+                      self.get_context_for_article_list(articles, author, category, tag, get_page(request)))

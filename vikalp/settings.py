@@ -25,8 +25,8 @@ ALLOWED_HOSTS = ['*']
 #
 ADMIN_MENU_ORDER = (
     ("Content", (
-    "pages.Page", "vikalp.Article", "vikalp.ArticleCategory", ("Article Categories", "vikalp.ArticleCategory"),
-    ("Media Library", "fb_browse"),)),
+        "pages.Page", "vikalp.Article", "vikalp.ArticleCategory", ("Article Categories", "vikalp.ArticleCategory"),
+        ("Media Library", "fb_browse"),)),
     ("Site", ("sites.Site", "redirects.Redirect", "conf.Setting")),
     ("Users", ("auth.User", "auth.Group",)),
 )
@@ -383,7 +383,6 @@ NUMBER_OF_FEATURED_ITEMS = 2
 JQUERY_FILENAME = "jquery-1.10.2.js"
 COMMENTS_USE_RATINGS = False
 
-
 from vikalp.email_settings import *
 
 
@@ -405,4 +404,3 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
-

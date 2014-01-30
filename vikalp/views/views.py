@@ -7,18 +7,16 @@ from mezzanine.conf import settings
 from vikalp.service.article_service import ArticleService
 from vikalp.service.page_service import PageService
 
-MODEL_NAME = "article"
 
+MODEL_NAME = "article"
 APP_NAME = "vikalp"
 
 articleService = ArticleService()
 pageService = PageService()
 
 
-
 @staff_member_required
 def static_proxy(request):
-
     url = request.GET["u"]
     url = url.split('/static/')
     host = url[0]

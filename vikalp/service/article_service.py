@@ -1,7 +1,8 @@
 from vikalp.models import Article, ArticleCategory
-from vikalp.service.raw_queries import raw_query_to_get_all_articles_assigned_to_tag_id
+from vikalp.service.raw_queries import raw_query_to_get_all_articles_assigned_to_a_tag_id
 from vikalp.helper_functions.service_filter import remove_policy_edits_from_categories
 from mezzanine.conf import settings
+
 
 NUMBER_OF_CAROUSEL_ARTICLES = settings.NUMBER_OF_CAROUSEL_ITEMS
 NUMBER_OF_PROMOTED_ARTICLES_TO_BE_FETECHED = settings.NUMBER_OF_FEATURED_ITEMS
@@ -20,7 +21,7 @@ class ArticleService():
         return articles
 
     def rendered_query_to_fetch_all_articles_under_tag(self, content_type, tag):
-        return raw_query_to_get_all_articles_assigned_to_tag_id % (str(tag.id), str(content_type.pk))
+        return raw_query_to_get_all_articles_assigned_to_a_tag_id % (str(tag.id), str(content_type.pk))
 
     def get_all_articles_under_tag(self, content_type, tag):
         return Article.objects.raw(self.rendered_query_to_fetch_all_articles_under_tag(content_type, tag))

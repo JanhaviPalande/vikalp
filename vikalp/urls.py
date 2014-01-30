@@ -8,6 +8,7 @@ from vikalp.views.home_page_view import HomePage
 from vikalp.views.policy_edits_view import PolicyEdits
 from vikalp.views.article_detail_view import ArticleDetail
 
+
 admin.autodiscover()
 
 homePage = HomePage()

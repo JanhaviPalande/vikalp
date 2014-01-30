@@ -1,5 +1,4 @@
 from django.test import TestCase
-from django.core.urlresolvers import reverse
 from mezzanine.blog.views import User
 from mezzanine.conf import settings
 from models import Article, ArticleCategory
@@ -12,6 +11,7 @@ from django.test import RequestFactory
 from vikalp.service.article_service import ArticleService
 from settings import SITE_TITLE
 from vikalp.views.policy_edits_view import PolicyEdits, get_title
+
 
 homePage = HomePage()
 categoryPage = CategoryPage()
@@ -113,8 +113,6 @@ class ArticleServiceTest(TestCase):
         self.assertIn("policy", reduce(get_title, category).title.lower())
 
 
-
-
 class ArticleCategoryViewTest(TestCase):
     def setUp(self):
         self.factory = RequestFactory()
@@ -159,7 +157,7 @@ class ArticleCategoryServiceTest(TestCase):
         self.assertEquals(4, len(self.article_in_category))
 
     def test_no_articles_returned_when_no_category_is_assigned(self):
-        self.assertNotIn(self.article_without_categories,self.article_in_category)
+        self.assertNotIn(self.article_without_categories, self.article_in_category)
 
 
 class ArticleListTest(TestCase):
@@ -183,6 +181,7 @@ class ArticleListTest(TestCase):
     def test_for_context_creation(self):
         self.context = articleList.get_context_for_article_list(self.articles)
         self.assertEquals(self.context['articles'], self.articles)
+
 
 class PolicyEditsViewTest(TestCase):
     def setUp(self):
