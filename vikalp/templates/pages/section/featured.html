@@ -3,11 +3,11 @@
 
 
 {% block section_content %}
-    <div class="col-lg-8 text-left">
+    <div class="col-md-8 text-left">
 
         <h2 class="paddingleft15">Featured Stories</h2>
         {% for article in promoted_articles %}
-            <div class="col-lg-6 col-md-6">
+            <div class="col-md-6">
                 <a id="feature-article" href="{{ article.get_absolute_url }}">
                     <div class="thumbnail">
 
@@ -34,7 +34,7 @@
     </div>
 
 
-    <div class="col-lg-4 col-md-4">
+    <div class="col-md-4">
         <h2>Categories</h2>
 
         <div id="story-categories" class="list-group">
