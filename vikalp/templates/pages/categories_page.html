@@ -16,7 +16,7 @@
         {% for articleCategory in articleCategories %}
             {% for category, articles in articleCategory.items %}
 
-                <div id="bakri" class="col-md-5 col-sm-5">
+                <div id="bakri" class="col-md-5  col-sm-5">
                     <div class="col-md-12 col-sm-12 col-xs-12 media">
                         <a class="pull-left" href="{% url "article_list_category" category.slug %}">
                             <img class="media-object"

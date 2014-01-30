@@ -133,6 +133,7 @@ a#feature-article {
 
 .thumbnail > img {
     height: 300px;
+    width: 100%;
 }
 
 .tab-pane {
@@ -328,14 +329,14 @@ footer {
     min-height: 850px;
 }
 
-@media screen and (max-width: 992px) and (min-width: 768px){
-    .generic_section{
+@media screen and (max-width: 992px) and (min-width: 768px) {
+    .generic_section {
         padding: 100px 0px;
     }
 }
 
-@media screen and (max-width: 1200px) and (min-width: 992px){
-    .generic_section{
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+    .generic_section {
         padding: 100px 0px;
     }
 }
@@ -462,4 +463,9 @@ footer {
 
 #more-stories-link-text {
     color: #333333;
+}
+
+#storypage-categories {
+
+    margin-left: 100px;
 }
