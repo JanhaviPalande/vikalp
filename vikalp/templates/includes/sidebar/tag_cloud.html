@@ -8,10 +8,11 @@
             {% for tag in tags %}
 
                 {% if tags|length < 25 %}
-                        <a href="{% url "article_list_tag" tag.slug %}" class="tag-weight-{{ tag.weight }}">{{ tag }}</a>
+                    <a href="{% url "article_list_tag" tag.slug %}" class="tag-weight-{{ tag.weight }}">{{ tag }}</a>
                 {% else %}
                     {% ifnotequal tag.weight 1 %}
-                        <a href="{% url "article_list_tag" tag.slug %}" class="tag-weight-{{ tag.weight }}">{{ tag }}</a>
+                        <a href="{% url "article_list_tag" tag.slug %}"
+                           class="tag-weight-{{ tag.weight | add:"-1" }}">{{ tag }}</a>
                     {% endifnotequal %}
                 {% endif %}
 
