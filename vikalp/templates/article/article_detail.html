@@ -1,5 +1,5 @@
 {% extends "article/article_list.html" %}
-{% load mezzanine_tags comment_tags keyword_tags rating_tags i18n future disqus_tags staticfiles %}
+{% load mezzanine_tags comment_tags keyword_tags rating_tags i18n future disqus_tags staticfiles extra_tags %}
 
 
 {% block meta_title %}{{ article.meta_title }}{% endblock %}
@@ -20,8 +20,9 @@
     {% endblock %}
 
     {% block article_author %}
-        {% if article.article_author %}<h5> <b>By {{ article.article_author }}</b> {% else %}Posted{% endif %}
-        on {{ article.publish_date.date }}</h5>
+        {% if article.article_author %}<h5> <b>By {{ article.article_author }}</b> {% else %}
+            Posted{% endif %}
+        on {{ article.publish_date.date }} {% if article.article_categories|get_first %} <b>in <a href="{% url "article_list_category" article.article_categories|get_first_slug %}">{{ article.article_categories|get_first }}</a></b>{% endif %}</h5>
     {% endblock %}
 
     {{ article.content|richtext_filters|safe }}

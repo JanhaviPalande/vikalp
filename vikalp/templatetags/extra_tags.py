@@ -31,6 +31,23 @@ def insert_placeholder(arg):
     return string
 
 
+def get_slug(arg):
+    if arg:
+        return arg.slug
+    else:
+        return False
+
+
+def check_if_exists(arg):
+    if(arg):
+        return arg[0]
+    else:
+      return False
+
 @register.filter
-def length(arg):
-    return len(arg)
+def get_first(arg):
+    return check_if_exists(arg.all())
+
+@register.filter
+def get_first_slug(arg):
+    return get_slug(check_if_exists(arg.all()))
