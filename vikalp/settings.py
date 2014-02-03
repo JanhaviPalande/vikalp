@@ -365,7 +365,7 @@ COMPRESS_PARSER = 'compressor.parser.HtmlParser'
 ########################
 #   DEFAULTS    #
 ########################
-DEFAULT_CATEGORY_IMAGE = 'img/livelihood.png'
+DEFAULT_CATEGORY_IMAGE = 'img/default.png'
 NUMBER_OF_CAROUSEL_ITEMS = 3
 NUMBER_OF_FEATURED_ITEMS = 2
 
@@ -380,7 +380,8 @@ NUMBER_OF_FEATURED_ITEMS = 2
 #     from local_settings import *
 # except ImportError:
 #     pass
-JQUERY_FILENAME = "jquery-1.10.2.js"
+
+JQUERY_FILENAME = "jquery-1.7.1.min.js"
 COMMENTS_USE_RATINGS = False
 
 from vikalp.email_settings import *

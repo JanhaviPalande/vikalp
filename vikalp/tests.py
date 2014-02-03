@@ -39,7 +39,7 @@ class SettingsTest(TestCase):
         self.assertIn("static", STATIC_ROOT)
 
     def test_jquery_file_name(self):
-        self.assertEquals("jquery-1.10.2.js", JQUERY_FILENAME)
+        self.assertEquals("jquery-1.7.1.min.js", JQUERY_FILENAME)
 
     def test_check_site_title_tagline(self):
         self.assertEquals("Vikalp", SITE_TITLE)
