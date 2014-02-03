@@ -13,6 +13,8 @@
 
                         {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}
                             <img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 250 0 %}">
+                        {% else %}
+                            <img src="{{ STATIC_URL }}{% thumbnail "img/default.png" 250 0 %}">
                         {% endif %}
 
                         <div class="caption">

@@ -383,7 +383,6 @@ NUMBER_OF_FEATURED_ITEMS = 2
 
 JQUERY_FILENAME = "jquery-1.7.1.min.js"
 COMMENTS_USE_RATINGS = False
-
 from vikalp.email_settings import *
 
 

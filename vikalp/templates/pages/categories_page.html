@@ -22,7 +22,11 @@
                     <div class="col-md-12 col-sm-12 col-xs-12 media">
                         <a class="pull-left" href="{% url "article_list_category" category.slug %}">
                             <img class="media-object"
-                                 src="{% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{{ category.category_image }}"
+                                 src="
+
+
+
+                                         {% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{{ category.category_image }}"
                                  width="80" height="80">
                         </a>
 
@@ -43,6 +47,9 @@
                                     {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}
                                         <img class="col-md-6 col-sm-6 "
                                              src="{{ MEDIA_URL }}{% thumbnail article.featured_image 90 90 %}">
+                                    {% else %}
+                                        <img class="col-md-6 col-sm-6"
+                                             src="{{ STATIC_URL }}{% thumbnail "img/default.png" 90 90 %}">
                                     {% endif %}
 
                                     <div class="col-md-6 col-sm-6  caption">
@@ -56,7 +63,8 @@
 
                     {% endfor %}
                     <div id="more-stories-link" class="col-md-12 media">
-                        <a id="more-stories-link-text" class="pull-right" href="{% url "article_list_category" category.slug %}"> More Stories </a>
+                        <a id="more-stories-link-text" class="pull-right"
+                           href="{% url "article_list_category" category.slug %}"> More Stories </a>
                     </div>
                 </div>
 
