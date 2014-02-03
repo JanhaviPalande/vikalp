@@ -26,4 +26,5 @@ class Article(BlogPost):
 class ArticleCategory(BlogCategory):
     category_image = models.ImageField(verbose_name="Category Symbol", upload_to="uploads/",
                                        default=get_default_category_image_location())
-    category_description = models.TextField(verbose_name="Category Description")
+    category_description = models.TextField(verbose_name="Category One Liner (100 Chars)", max_length=100)
+    category_long_description = models.TextField(verbose_name="Category Long Description", default="")

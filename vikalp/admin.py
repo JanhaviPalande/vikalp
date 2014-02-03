@@ -26,7 +26,7 @@ class ArticleAdmin(BlogPostAdmin, DisplayableAdmin):
 
 class ArticleCategoryAdmin(BlogCategoryAdmin):
     fieldsets = deepcopy(BlogCategoryAdmin.fieldsets)
-    fieldsets[0][1]['fields'] += ('category_image', 'category_description',)
+    fieldsets[0][1]['fields'] += ('category_image', 'category_description', 'category_long_description',)
 
     def in_menu(self):
         return True
