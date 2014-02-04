@@ -10,9 +10,12 @@
 
         {% if category %}
             <h1>{{ category }}</h1>
-            <div class="well">
-                <i>{{ category.category_long_description }}</i>
-            </div>
+            {% if category.category_long_description %}
+                <div class="well">
+                    <i>{{ category.category_long_description }}</i>
+                </div>
+            {% endif %}
+
         {% else %}
             {% if tag %}
                 <h1>{{ tag }}</h1>
