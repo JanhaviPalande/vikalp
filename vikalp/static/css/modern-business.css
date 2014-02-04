@@ -164,8 +164,20 @@ a#feature-article {
 
 /* Half Page Height Carousel Customization */
 .carousel {
-    height: 75%;
+    margin-top: 50px;
+    height: 70%;
 }
+
+@media (max-width: 767px) {
+
+    .carousel{
+        margin-top: 50px;
+        height: 50%;
+    }
+
+}
+
+
 
 .item,
 .active,
@@ -284,13 +296,6 @@ footer {
 }
 
 /* Responsive Styles */
-@media (max-width: 767px) {
-
-    .carousel {
-        height: 70%; /* increases the carousel height so it looks good on phones */
-    }
-
-}
 
 .tag_cloud a:nth-child(2n+1) {
     color: #2e2e2e;
@@ -333,12 +338,21 @@ footer {
     .generic_section {
         padding: 100px 0px;
     }
+
+    .carousel{
+        margin-top: 100px;
+        height: 60%;
+    }
+
+
 }
 
 @media screen and (max-width: 1200px) and (min-width: 992px) {
     .generic_section {
         padding: 100px 0px;
     }
+
+
 }
 
 #article-list-link img {
