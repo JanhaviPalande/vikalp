@@ -20,27 +20,35 @@
     {% endblock %}
 
     {% block article_author %}
-        {% if article.article_author %}<h5> <b>By {{ article.article_author }}</b> {% else %}
-            Posted{% endif %}
-        on {{ article.publish_date.date }} {% if article.article_categories|get_first %}<b>in <a
-                href="{% url "article_list_category" article.article_categories|get_first_slug %}">{{ article.article_categories|get_first }}</a>
-            </b>{% endif %}
-        </h5>
+        <div id="author-date-category">
+            {% if article.article_author %}<h5> <b>By {{ article.article_author }}</b> {% else %}
+                Posted{% endif %}
+            on {{ article.publish_date.date }} {% if article.article_categories|get_first %}<b>in <a
+                    href="{% url "article_list_category" article.article_categories|get_first_slug %}">{{ article.article_categories|get_first }}</a>
+                </b>{% endif %}
+            </h5>
+        </div>
     {% endblock %}
 
     {{ article.content|richtext_filters|safe }}
     <br><br>
     {% keywords_for article as tags %}
     {% if tags %}
-        <h5><b>Story Tags:</b>
-            {% for tag in tags %}
-                <a href="{% url "article_list_tag" tag.slug %}">{{ tag }}</a>{% if not forloop.last %},{% endif %}
-            {% endfor %}</h5>
+        <div id="story-tags">
+            <h5><b>Story Tags:</b>
+                {% for tag in tags %}
+                    <a href="{% url "article_list_tag" tag.slug %}">{{ tag }}</a>{% if not forloop.last %},{% endif %}
+                {% endfor %}</h5>
+        </div>
     {% endif %}
     <br>
 
     {% block article_comments %}
-        {% if article.allow_comments %}{% comments_for article %}{% endif %}
+        {% if article.allow_comments %}
+            <div id="article-comments">
+                {% comments_for article %}
+            </div>
+        {% endif %}
     {% endblock %}
 
 {% endblock %}

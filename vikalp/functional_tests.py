@@ -110,10 +110,20 @@ class FunctionalTest(unittest.TestCase):
         # Click on the first article in the list
         self.driver.find_element_by_id("article-list-link").click()
 
-        # Check that the article is displayed
+        # Check that the article page is displayed
         self.assertIn("article/homestay-with-a-difference/", self.driver.current_url)
         self.assertIn("Homestay with a Difference!", self.driver.title)
+
+        # Check that the various elements on the article page are displayed
         self.assertTrue(self.driver.find_element_by_tag_name("h1").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("author-date-category").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("story-tags").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("article-comments").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("social-media-sharing").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("download-link").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("category-list").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("related-stories").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("tag-cloud").is_displayed())
 
 
     def tearDown(self):
