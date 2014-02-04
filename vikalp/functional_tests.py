@@ -73,7 +73,7 @@ class FunctionalTest(unittest.TestCase):
 
         # Check that the article page is displayed
         self.assertIn("article/homestay-with-a-difference/", self.driver.current_url)
-        self.assertIn("Homestay With a Difference!", self.driver.title)
+        self.assertIn("Homestay with a Difference!", self.driver.title)
         self.assertTrue(self.driver.find_element_by_tag_name("h1").is_displayed())
 
     def test_main_categories_link_individual_category_link_on_categories_page_and_article_page(self):
@@ -87,17 +87,24 @@ class FunctionalTest(unittest.TestCase):
         element.click()
 
         # Check that the categories page is displayed
-        self.assertIn("/stories/", self.driver.current_url)
+        self.assertIn("/article/", self.driver.current_url)
         self.assertIn("Stories", self.driver.title)
         self.assertTrue(self.driver.find_element_by_tag_name("h1").is_displayed())
-        self.assertTrue(self.driver.find_element_by_id("story-categories").is_displayed())
+
+        # Check that the boxex for each category and various elements inside it are displayed.
+        self.assertTrue(self.driver.find_element_by_id("storypage-categories").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("bakri").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("article-thumbnail-wrapper").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("more-stories-link").is_displayed())
+
 
         # Click on the first category in the list
-        self.driver.find_element_by_class_name("list-group-item").click()
+        self.driver.find_element_by_id("story-page-category-heading").click()
 
-        # # Check that the articles page is displayed
+        # Check that the articles page is displayed
         self.assertIn("/article/category/", self.driver.current_url)
         self.assertTrue(self.driver.find_element_by_tag_name("h1").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("category-long-description").is_displayed())
         self.assertTrue(self.driver.find_element_by_id("articles-list").is_displayed())
 
         # Click on the first article in the list
@@ -105,7 +112,7 @@ class FunctionalTest(unittest.TestCase):
 
         # Check that the article is displayed
         self.assertIn("article/homestay-with-a-difference/", self.driver.current_url)
-        self.assertIn("Homestay With a Difference!", self.driver.title)
+        self.assertIn("Homestay with a Difference!", self.driver.title)
         self.assertTrue(self.driver.find_element_by_tag_name("h1").is_displayed())
 
 
