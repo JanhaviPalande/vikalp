@@ -1,5 +1,6 @@
 {% load i18n mezzanine_tags comment_tags rating_tags %}
 
+
 <ul class="unstyled">
     {% for comment in comments_for_thread %}
 
@@ -75,7 +76,6 @@
         </li>
     {% endfor %}
     {% if no_comments %}
-        <li>{% trans "There are currently no comments" %}</li>
+        <li>{% trans "There are no comments yet on this Story." %}</li>
     {% endif %}
 </ul>
-
