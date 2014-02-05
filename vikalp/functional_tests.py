@@ -9,6 +9,7 @@ class FunctionalTest(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
 
+
     def test_logo_title_featured_articles_link_and_tag_cloud(self):
         #On Home
         self.driver.get(live_server_url)
@@ -69,12 +70,26 @@ class FunctionalTest(unittest.TestCase):
         self.assertTrue(self.driver.find_element_by_class_name("list-group-item-heading").is_displayed())
 
         # Click on the link of the article displayed on the search results page
+        self.assertIn(("results matching your query: %s" % SEARCHTEXT), self.driver.page_source)
         self.driver.find_element_by_class_name("list-group-item-heading").click()
+        self.assertTrue(self.driver.find_element_by_id("category-list").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("tag-cloud").is_displayed())
 
         # Check that the article page is displayed
         self.assertIn("article/homestay-with-a-difference/", self.driver.current_url)
         self.assertIn("Homestay with a Difference!", self.driver.title)
+
+        # Check that the various elements on the article page are displayed
         self.assertTrue(self.driver.find_element_by_tag_name("h1").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("author-date-category").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("story-tags").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("article-comments").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("social-media-sharing").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("download-link").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("category-list").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("related-stories").is_displayed())
+        self.assertTrue(self.driver.find_element_by_id("tag-cloud").is_displayed())
+
 
     def test_main_categories_link_individual_category_link_on_categories_page_and_article_page(self):
         # Visit Home Page

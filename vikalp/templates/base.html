@@ -21,22 +21,19 @@
         <link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
     {% endifinstalled %}
 
-
-
-
-
     <link href=" {% static "css/bootstrap.css" %}" rel="stylesheet">
 
     <!-- Add custom CSS here -->
     <link rel="stylesheet" href="{% static "css/modern-business.css" %}">
     <link href="{% static "font/font-awesome.css" %}" rel="stylesheet">
 
+    <!-- Javascript -->
+
     <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
     <script src="{% static "js/bootstrap.js" %}"></script>
     <script src="{% static "js/modern-business.js" %}"></script>
     <script src="{% static "js/app.js" %}"></script>
     <script src="{% static "js/html5shiv.js" %}"></script>
-
 
 </head>
 
@@ -60,10 +57,9 @@
                 <div class="col-md-12">
                     {% block article_main %}{% endblock %}
                 </div>
+
                 <div class="col-md-8">
-
                     {% block main %}{% endblock %}
-
                 </div>
 
                 <div class="col-md-4">
@@ -76,15 +72,12 @@
 
 
     </div>
+
     <div class="push60"></div>
 {% endif %}
 
 {% include "pages/menus/footer.html" %}
 {% include "google-analytics/google-analytics.html" %}
-
-
-<!-- JavaScript -->
-
 
 </body>
 </html>
