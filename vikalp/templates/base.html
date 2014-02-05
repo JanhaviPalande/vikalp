@@ -23,11 +23,19 @@
 
 
 
+
+
     <link href=" {% static "css/bootstrap.css" %}" rel="stylesheet">
 
     <!-- Add custom CSS here -->
     <link rel="stylesheet" href="{% static "css/modern-business.css" %}">
     <link href="{% static "font/font-awesome.css" %}" rel="stylesheet">
+
+    <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
+    <script src="{% static "js/bootstrap.js" %}"></script>
+    <script src="{% static "js/modern-business.js" %}"></script>
+    <script src="{% static "js/app.js" %}"></script>
+    <script src="{% static "js/html5shiv.js" %}"></script>
 
 
 </head>
@@ -77,11 +85,6 @@
 
 <!-- JavaScript -->
 
-<script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
-<script src="{% static "js/bootstrap.js" %}"></script>
-<script src="{% static "js/modern-business.js" %}"></script>
-<script src="{% static "js/app.js" %}"></script>
-<script src="{% static "js/html5shiv.js" %}"></script>
 
 </body>
 </html>
