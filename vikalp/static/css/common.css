@@ -12,7 +12,6 @@
   left: 50%;
   margin-left: -10px;
 }
- Take from Bootstrap */
 
 
 .search-box-wrapper{
@@ -23,7 +22,7 @@
     position: absolute;
     color:#ab282e;
     right:7px;
-    top:25%;
+    top:30%;
 }
 
 .navbar-default .navbar-nav>li>a{
