@@ -1,8 +1,7 @@
 {% load mezzanine_tags i18n future %}
 <form action="{% url "search" %}" class="navbar-form navbar-search navbar-right">
-    <div class="right-inner-addon">
-        <i class="fa fa-search"></i>
-
+    <span class="search-box-wrapper">
+        <i class="glyphicon glyphicon-search"></i>
         <input class="search-query form-control" placeholder="{% trans "Search" %}" type="text" name="q"
                value="{{ request.REQUEST.q }}">
 
@@ -21,6 +20,5 @@
                 </select>
             {% endif %}
         {% endif %}
-
-    </div>
+    </span>
 </form>

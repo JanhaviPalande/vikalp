@@ -3,7 +3,7 @@
   ---------------------------------------------------
     A set of useful LESS mixins
     More info at: http://lesselements.com
-  ---------------------------------------------------*/
+  ---------------------------------------------------
 .menu-arrow-after {
   content: '';
   display: block;
@@ -17,4 +17,45 @@
   left: 50%;
   margin-left: -10px;
 }
-/* Take from Bootstrap */
+ Take from Bootstrap */
+
+
+.search-box-wrapper{
+    position:relative;
+    display:inline-block;
+}
+.search-box-wrapper i{
+    position: absolute;
+    color:#ab282e;
+    right:7px;
+    top:25%;
+}
+
+.navbar-default .navbar-nav>li>a{
+  color:#ab282e;
+  text-decoration: none;
+  font-weight: normal;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+  color:#ab282e;
+  text-decoration: none;
+}
+
+header a.navbar-brand{
+  background: url(/static/img/Vikalp_Logo_90_45.png) no-repeat left center;
+  display: block;
+  text-indent: -300px;
+  width: 90px;
+  height: 45px;
+  overflow: hidden;
+  margin-top: 2px;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+  background-color: #ab282e;
+  color:#fff;
+  font-weight:normal;
+
+}
+
+
+
