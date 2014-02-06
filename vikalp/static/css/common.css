@@ -1,54 +1,55 @@
 
 .menu-arrow-after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-color: transparent transparent #fff transparent;
-  border-style: solid;
-  border-width: 10px;
-  top: 80%;
-  left: 50%;
-  margin-left: -10px;
-}
-
-
-.search-box-wrapper{
-    position:relative;
-    display:inline-block;
-}
-.search-box-wrapper i{
+    content: '';
+    display: block;
     position: absolute;
-    color:#ab282e;
-    right:7px;
-    top:30%;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent #fff transparent;
+    border-style: solid;
+    border-width: 10px;
+    top: 80%;
+    left: 50%;
+    margin-left: -10px;
 }
 
-.navbar-default .navbar-nav>li>a{
-  color:#ab282e;
-  text-decoration: none;
-  font-weight: bold;
-}
-.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
-  color:#ab282e;
-  text-decoration: none;
+.search-box-wrapper {
+    position: relative;
+    display: inline-block;
 }
 
-header a.navbar-brand{
-  background: url(/static/img/Vikalp_Logo_90_45.png) no-repeat left center;
-  display: block;
-  text-indent: -300px;
-  width: 90px;
-  height: 45px;
-  overflow: hidden;
-  margin-top: 2px;
+.search-box-wrapper i {
+    position: absolute;
+    color: #ab282e;
+    right: 7px;
+    top: 30%;
 }
 
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
-  background-color: #ab282e;
-  color:#fff;
-  font-weight: bold;
+.navbar-default .navbar-nav > li > a {
+    color: #ab282e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #ab282e;
+    text-decoration: none;
+}
+
+header a.navbar-brand {
+    background: url(/static/img/Vikalp_Logo_90_45.png) no-repeat left center;
+    display: block;
+    text-indent: -300px;
+    width: 90px;
+    height: 45px;
+    overflow: hidden;
+    margin-top: 2px;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: #ab282e;
+    color: #fff;
+    font-weight: bold;
 }
 
 .navbar {
