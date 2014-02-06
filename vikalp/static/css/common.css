@@ -25,6 +25,10 @@
     top: 30%;
 }
 
+.navbar {
+    box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);
+}
+
 .navbar-default .navbar-nav > li > a {
     color: #ab282e;
     text-decoration: none;
@@ -39,7 +43,6 @@
 header a.navbar-brand {
     background: url(/static/img/Vikalp_Logo_90_45.png) no-repeat left center;
     display: block;
-    text-indent: -300px;
     width: 90px;
     height: 45px;
     overflow: hidden;
@@ -50,8 +53,4 @@ header a.navbar-brand {
     background-color: #ab282e;
     color: #fff;
     font-weight: bold;
-}
-
-.navbar {
-    box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.75);
 }
