@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags %}
+{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags endless %}
 
 
 {% block meta_title %}{% if category %}{{ category }}{% else %}{{ tag }}{% endif %}{% endblock %}
@@ -25,29 +25,14 @@
         {% endif %}
 
     {% endblock %}
-
-
-    <div id="articles-list" class="list-group">
-
-        {% for article in articles %}
-            {% editable article.title %}
-                <a id="article-list-link" class="list-group-item" href="{{ article.get_absolute_url }}">
-                    {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}
-                        <img class="pull-left featured-thumb"
-                             src="{{ MEDIA_URL }}{% thumbnail article.featured_image 90 90 %}">
-                    {% else %}
-                        <img class="pull-left featured-thumb"
-                             src="{{ STATIC_URL }}{% thumbnail "img/default.png" 90 90 %}" width="90" height="90">
-                    {% endif %}
-                    <h4 class="list-group-item-heading">{{ article.title }}</h4>
-
-                    <p class="list-group-item-text">{{ article.description|truncatechars:256|safe }}</p>
-                </a>
-            {% endeditable %}
-        {% endfor %}
-
+    <div id="articles-list " class="list-group endless_page_template">
+        {% include page_template %}
     </div>
-
+    {% block js %}
+        {{ block.super }}
+        <script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
+        <script>$.endlessPaginate();</script>
+    {% endblock %}
 {% endblock %}
 
 {% block side_bar %}

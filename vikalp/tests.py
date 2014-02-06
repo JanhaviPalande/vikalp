@@ -174,10 +174,6 @@ class ArticleListTest(TestCase):
         self.request = self.factory.get('article/')
         self.request.user = User.objects.create_user(username='jacob', email='jacob', password='top_secret')
 
-    def test_pagination(self):
-        articles = articleList.paginate_article_list(articles=self.articles, request=self.request)
-        self.assertEquals(settings.BLOG_POST_PER_PAGE, len(articles))
-
     def test_for_context_creation(self):
         self.context = articleList.get_context_for_article_list(self.articles)
         self.assertEquals(self.context['articles'], self.articles)

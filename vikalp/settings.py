@@ -267,6 +267,7 @@ INSTALLED_APPS = (
     "vikalp",
     "coverage",
     "django_mandrill",
+    'endless_pagination',
     # "mezzanine.mobile",
 )
 
@@ -380,10 +381,12 @@ NUMBER_OF_FEATURED_ITEMS = 2
 #     from local_settings import *
 # except ImportError:
 #     pass
-
 JQUERY_FILENAME = "jquery-1.7.1.min.js"
 COMMENTS_USE_RATINGS = False
+ENDLESS_PAGINATION_LOADING = """<img src="/static/img/loader.gif" alt="loading" />"""
+ENDLESS_PAGINATION_PER_PAGE = 10
 from email_settings import *
+
 
 
 

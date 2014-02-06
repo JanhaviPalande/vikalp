@@ -3,6 +3,7 @@ from django.core.exceptions import MiddlewareNotUsed
 from mezzanine.conf import settings
 from django.shortcuts import get_object_or_404
 from mezzanine.utils.urls import path_to_slug
+from mezzanine.utils.views import paginate
 from vikalp.views.views import pageService
 
 
@@ -39,3 +40,16 @@ def get_page(request):
     slug = path_to_slug(request.path_info)
     pages = pageService.get_page_ascendants(request, slug)
     return reduce(default_or_value, pages, "");
+
+def translate_to_model(articles):
+    list_of_articles = []
+    for article in articles:
+        list_of_articles.append(article)
+    return list_of_articles
+
+def paginate_article_list(self, articles, request):
+    articles = paginate(articles, request.GET.get("page", 1),
+                        settings.BLOG_POST_PER_PAGE,
+                        settings.MAX_PAGING_LINKS)
+    return articles
+

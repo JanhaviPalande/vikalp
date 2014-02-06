@@ -1,7 +1,8 @@
+from django.template import RequestContext
 from mezzanine.conf import settings
 from mezzanine.generic.models import Keyword
 from mezzanine.utils.views import paginate, render
-from vikalp.helper_functions.functional import get_model_content_type, process_tag_or_categories_or_article, get_page
+from vikalp.helper_functions.functional import get_model_content_type, process_tag_or_categories_or_article, get_page, translate_to_model
 from vikalp.models import ArticleCategory
 from vikalp.views.views import articleService, MODEL_NAME, APP_NAME
 
@@ -15,31 +16,26 @@ class ArticleList:
         return articleService.get_all_articles_in_category(category)
 
 
-    def paginate_article_list(self, articles, request):
-        articles = paginate(articles, request.GET.get("page", 1),
-                            settings.BLOG_POST_PER_PAGE,
-                            settings.MAX_PAGING_LINKS)
-        return articles
 
-
-    def get_context_for_article_list(self, articles, author=None, category=None, tag=None, page=None):
+    def get_context_for_article_list(self, articles, author=None, category=None, tag=None, page=None, page_template = "article/article_list_page.html"):
         context = {"articles": articles,
-                   "tag": tag, "category": category, "author": author, "page": page}
+                   "tag": tag, "category": category, "author": author, "page": page, "page_template" : page_template,}
         return context
 
 
     def article_list(self, request, tag=None, category=None, template="article/article_list.html"):
         settings.use_editable()
+        page_template = "article/article_list_page.html"
         articles = articleService.get_all_published_articles(request)
-        get_page(request)
         if tag is not None:
             tag = process_tag_or_categories_or_article(tag, Keyword)
             articles = self.get_articles_for_given_tag(tag)
+            articles = translate_to_model(articles)
         if category is not None:
             category = process_tag_or_categories_or_article(category, ArticleCategory)
             articles = self.get_articles_for_given_category(category)
         author = None
-        if tag is None:
-            articles = self.paginate_article_list(articles, request)
+        if request.is_ajax():
+            template = page_template
         return render(request, template,
-                      self.get_context_for_article_list(articles, author, category, tag, get_page(request)))
+                      self.get_context_for_article_list(articles, author, category, tag, get_page(request)), context_instance=RequestContext(request))
