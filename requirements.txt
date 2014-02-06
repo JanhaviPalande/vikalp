@@ -33,3 +33,4 @@ travis==0.0.1
 wsgiref==0.1.2
 xhtml2pdf==0.0.5
 django-mandrill==0.1.0
+django-endless-pagination==2.0
