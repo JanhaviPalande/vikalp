@@ -1,7 +1,7 @@
 {% load i18n future pages_tags mezzanine_tags compress staticfiles %}
 
 
-<header class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+<header class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -20,7 +20,7 @@
                         {% ifequal in_menu '1' %}
                             {% ifnotequal page.title "Home" %}
                                 <li {% if page.is_current_or_ascendant %}class="active"{% endif %}><a
-                                href="{{ page.get_absolute_url }}">{{ page.title }}</a></li>
+                                href="{{ page.get_absolute_url }}">{{ page.title | upper }}</a></li>
                             {% endifnotequal %}
                         {% endifequal %}
                     {% endfor %}

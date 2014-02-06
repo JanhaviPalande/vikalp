@@ -96,7 +96,7 @@ class FunctionalTest(unittest.TestCase):
         self.driver.get(live_server_url)
 
         # Find categories link (The link is displayed as Stories on our website)
-        element = self.driver.find_element_by_link_text("Stories")
+        element = self.driver.find_element_by_link_text("STORIES")
 
         # Click on the categories link
         element.click()
