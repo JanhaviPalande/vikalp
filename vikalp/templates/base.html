@@ -15,6 +15,10 @@
     <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
     <meta name="description" content="{% block meta_description %}{% endblock %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <!--[if lt IE 9]>
+      <script src="{% static "js/html5shiv.js" %}"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 
     {% ifinstalled mezzanine.blog %}
@@ -25,6 +29,8 @@
     <link href=" {% static "css/bootstrap.min.css" %}" rel="stylesheet">
     <link href=" {% static "css/common.css" %}" rel="stylesheet">
     <link href=" {% static "css/common_responsive.css" %}" rel="stylesheet">
+    <link href=" {% static "css/home_page.css" %}" rel="stylesheet">
+    <link href=" {% static "css/home_page_responsive.css" %}" rel="stylesheet">
 
     <!-- Add custom CSS here -->
     <link rel="stylesheet" href="{% static "css/modern-business.css" %}">
@@ -32,8 +38,6 @@
     <!-- Javascript -->
 
     <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
-    <script src="{% static "js/html5shiv.js" %}"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <script src="{% static "js/bootstrap.min.js" %}"></script>
     <script src="{% static "js/modern-business.js" %}"></script>
     <script src="{% static "js/app.js" %}"></script>
@@ -44,40 +48,40 @@
 
 <body id="{% block body_id %}body{% endblock %}">
 {% page_menu "pages/menus/pagemenu.html" %}
+<div id="content">
+    {% if on_home %}
+        {% block home_page %}
+        {% endblock %}
+    {% endif %}
 
-{% if on_home %}
-    {% block home_page %}
-    {% endblock %}
-{% endif %}
+    {% if not on_home %}
+        <div class="section generic_section">
 
-{% if not on_home %}
-    <div class="section generic_section">
+            <div class="container">
 
-        <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        {% block article_main %}{% endblock %}
+                    </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    {% block article_main %}{% endblock %}
+                    <div class="col-md-8">
+                        {% block main %}{% endblock %}
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="push60"></div>
+                        {% block side_bar %}{% endblock %}
+                    </div>
                 </div>
 
-                <div class="col-md-8">
-                    {% block main %}{% endblock %}
-                </div>
-
-                <div class="col-md-4">
-                    <div class="push60"></div>
-                    {% block side_bar %}{% endblock %}
-                </div>
             </div>
+
 
         </div>
 
-
-    </div>
-
-    <div class="push60"></div>
-{% endif %}
-
+        <div class="push60"></div>
+    {% endif %}
+</div>
 {% include "pages/menus/footer.html" %}
 {% include "google-analytics/google-analytics.html" %}
 

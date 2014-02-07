@@ -1,23 +1,54 @@
 {% extends "pages/section/section_base.html" %}
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags extra_tags static %}
 
+{% block section_class %}category-section{% endblock %}
+
+{% block section_heading %}
+    <h2>{% trans "STORIES BY CATEGORY" %}</h2>
+{% endblock %}
 
 {% block section_content %}
-    <div class="col-md-12 text-center">
-        <h2>{% trans "Categories" %}</h2>
-        <br>
+    {% for article in promoted_articles %}
+{#    <div class="col-xs-6 col-sm-6 col-lg-3 category">#}
+    <div class="col-xs-6 col-sm-3 category">
+        <div class="row top-sub-section">
+            <div class="col-xs-3">
+                <img class="img-responsive" src="../../../static/media/uploads/Energy.png" alt=""/>
+            </div>
+            <div class="col-xs-9">
+                <h4>Environment and ecology</h4>
+            </div>
+        </div>
+        <div class="row image-sub-section">
+            <div class="col-xs-12">
+                <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail article.featured_image 450 300 %}" alt=""/>
+            </div>
+        </div>
+        <div class="row plain-text-sub-section">
+            <p class="col-xs-12">
+                Chilka traditional fishers struggle
+            </p>
+        </div>
     </div>
-
-    {% article_categories vikalp.article as categories %}
-
-    {% for category in categories %}
-        {#        <div class="col-lg-3 col-md-4 col-sm-6">#}
-        <a id="categories-icons" class="col-lg-2 col-md-3 col-sm-4" style="width: 200px; height: 200px"
-           href="{% url "blog_post_list_category" category.slug %}">
-            <img class="img-responsive"
-                 src="{% get_media_prefix %}{{ category.category_image }}" width="130" height="130">
-            <h5>{{ category }}</h5></a>
-        {#        </div>#}
     {% endfor %}
-
+    <div class="col-xs-6 col-sm-3 category">
+        <div class="row top-sub-section">
+            <div class="col-xs-3">
+                <img class="img-responsive" src="../../../static/media/uploads/Energy.png" alt=""/>
+            </div>
+            <div class="col-xs-9">
+                <h4>Environment and ecology</h4>
+            </div>
+        </div>
+        <div class="row image-sub-section">
+            <div class="col-xs-12">
+                <img class="img-responsive" src="../../../static/media/uploads/01_sm_bhuj_setu.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="row plain-text-sub-section">
+            <p class="col-xs-12">
+                Chilka traditional fishers struggle
+            </p>
+        </div>
+    </div>
 {% endblock %}

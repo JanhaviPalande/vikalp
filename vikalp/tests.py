@@ -68,7 +68,7 @@ class PromotedArticleViewTest(TestCase):
 
     def test_only_2_articles_displayed_on_homepage(self):
         self.assertNotIn(self.article1.title, self.response.content)
-        self.assertNotIn(self.article2.title, self.response.content)
+        self.assertIn(self.article2.title, self.response.content)
         self.assertIn(self.article3.title, self.response.content)
         self.assertIn(self.article4.title, self.response.content)
 
@@ -105,7 +105,7 @@ class ArticleServiceTest(TestCase):
         filter(self.assertTrue, self.get_list_of_promoted_fields_from_article_model_list())
 
     def test_promoted_articles_count_is_3(self):
-        self.assertEquals(self.promoted_article_list.__len__(), 2)
+        self.assertEquals(self.promoted_article_list.__len__(), 3)
 
     def test_get_policy_edits_category(self):
         self.create_categories(title="Policy Edits")

@@ -1,4 +1,9 @@
 @media (max-width: 399px) {
+    header ul.navbar-nav.nav form{
+        padding: 10px 15px;
+        margin: 0;
+        border:0px;
+    }
 
 }
 @media (min-width:400px) and (max-width: 767px) {
@@ -10,12 +15,23 @@
       margin: 0;
       border:0px;
     }
-}
-@media (min-width:768px) and (max-width: 991px) {
-    .navbar-default .navbar-nav>li>a{
-        font-size:
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+        border:0px none;
     }
 
+}
+@media (min-width:768px) and (max-width: 991px) {
+    .navbar-default .navbar-nav > li > a{
+        font-size:.7em;
+    }
+    header .container{
+        margin:0px auto;
+        width: 95%;
+    }
+
+    .navbar-default .navbar-form{
+        padding: 0;
+    }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 

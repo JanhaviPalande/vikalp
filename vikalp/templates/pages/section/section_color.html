@@ -1,8 +1,8 @@
-<div class="section-colored">
+<section class="{% block section_class %}{% endblock %}">
     <div class="container">
         {% block section_heading %}{% endblock %}
         <div class="row">
             {% block section_content %}{% endblock %}
         </div>
     </div>
-</div>
+</section>

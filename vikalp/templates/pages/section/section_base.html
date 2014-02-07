@@ -1,8 +1,8 @@
-<div class="section">
+<section class="{% block section_class %}{% endblock %}">
     <div class="container">
         {% block section_heading %}{% endblock %}
-        <div class="row">
+        <div class="row no-margin">
             {% block section_content %}{% endblock %}
         </div>
     </div>
-</div>
+</section>
