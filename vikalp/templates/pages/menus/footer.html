@@ -1,5 +1,6 @@
 {% load i18n future pages_tags extra_tags %}
 
+
 <div id="footer">
     <div class="container">
         <div class="row">
@@ -12,17 +13,15 @@
                                 {% with menu_pages|get:page.id as child_pages %}
                                     {% for child_page in child_pages %}
                                         <div class="col-md-4">
-                                            <div class="list-group">
-                                                <div><a class="list-group-item-heading"
-                                                        href="{{ child_page.get_absolute_url }}">{{ child_page.title }}</a>
-                                                </div>
+                                            <div class="list-group"> {% if '3' in child_page.in_menus %}
+                                                <div>
+                                                    <a class="list-group-item-heading" href="{{ child_page.get_absolute_url }}">{{ child_page.title }}</a>
+                                                </div> {% endif %}
                                                 {% with menu_pages|get:child_page.id as child_child_pages %}
-                                                    {% for child_child_page in child_child_pages %}
-
-                                                        <div><a class=""
-                                                                href="{{ child_child_page.get_absolute_url }}">{{ child_child_page.title }}</a>
-                                                        </div>
-
+                                                    {% for child_child_page in child_child_pages %} {% if '3' in child_child_page.in_menus %}
+                                                        <div>
+                                                            <a class="list-group-item-heading" href="{{ child_child_page.get_absolute_url }}">{{ child_child_page.title }}</a>
+                                                        </div> {% endif %}
                                                     {% endfor %}
                                                 {% endwith %}
                                             </div>

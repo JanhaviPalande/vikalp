@@ -24,3 +24,4 @@ media/uploads/
 blogpost.csv
 *.pdf
 *.log
+*.iml
