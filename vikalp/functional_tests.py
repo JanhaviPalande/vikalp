@@ -76,8 +76,7 @@ class FunctionalTest(unittest.TestCase):
         self.assertTrue(self.driver.find_element_by_id("tag-cloud").is_displayed())
 
         # Check that the article page is displayed
-        self.assertIn("article/homestay-with-a-difference/", self.driver.current_url)
-        self.assertIn("Homestay with a Difference!", self.driver.title)
+        self.assertIn("article/", self.driver.current_url)
 
         # Check that the various elements on the article page are displayed
         self.assertTrue(self.driver.find_element_by_tag_name("h1").is_displayed())
@@ -126,8 +125,7 @@ class FunctionalTest(unittest.TestCase):
         self.driver.find_element_by_id("article-list-link").click()
 
         # Check that the article page is displayed
-        self.assertIn("article/homestay-with-a-difference/", self.driver.current_url)
-        self.assertIn("Homestay with a Difference!", self.driver.title)
+        self.assertIn("article/", self.driver.current_url)
 
         # Check that the various elements on the article page are displayed
         self.assertTrue(self.driver.find_element_by_tag_name("h1").is_displayed())
