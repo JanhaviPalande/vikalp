@@ -23,10 +23,11 @@ class FunctionalTest(unittest.TestCase):
         self.assertTrue(self.driver.find_element_by_class_name("navbar-brand").is_displayed())
 
         #Click on featured articles
-        self.driver.find_element_by_id("feature-article").click()
+        self.driver.find_element_by_id("featured-article").click()
 
         #On Article Page
         self.assertIn("article", self.driver.current_url)
+
         #Article Title is displayed
         self.assertTrue(self.driver.find_element_by_tag_name("h1").is_displayed())
 
