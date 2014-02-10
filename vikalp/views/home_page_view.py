@@ -8,7 +8,6 @@ class HomePage:
         return {"promoted_articles": article_promoted_list, "carousel_content": carousel_content,
                 "categories": categories, "latest_articles": latest_articles}
 
-
     def promoted_article_on_homepage(self, request, template="pages/index.html"):
         settings.use_editable()
         return render(request, template, self.get_context_for_promoted_articles(articleService.get_promoted_articles(),

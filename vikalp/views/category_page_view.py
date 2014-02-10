@@ -8,7 +8,6 @@ class CategoryPage:
     def get_context_for_category_list(self, categories, page):
         return {"articleCategories": categories, "page": page, "default_image": settings.DEFAULT_CATEGORY_IMAGE}
 
-
     def category_list(self, request, template="pages/categories_page.html"):
         settings.use_editable()
         return render(request, template,
