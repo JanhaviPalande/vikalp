@@ -41,16 +41,16 @@
                     <div class="row category-page-category-list-wrapper">
                         {% for article in articles %}
                             <div class="col-xs-6 col-sm-3 category">
-                                <div class="top-sub-section">
+                                <a href="{{ article.slug }}" style="text-decoration: none"> <div class="top-sub-section">
                                     <h4>{{ article.title }}</h4>
                                 </div>
                                 <div class="image-sub-section col-xs-12">
                                     {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}
-                                        <img  class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail article.featured_image 450 300 %}">
+                                        <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail article.featured_image 450 300 %}">
                                     {% else %}
                                         <img class="img-responsive" src="{{ STATIC_URL }}{% thumbnail "img/default.png" 450 300 %}">
                                     {% endif %}
-                                </div>
+                                </div> </a>
                                 <div class="plain-text-sub-section">
                                     <p class="col-xs-12">
                                         {{ article.description | truncatechars:200 }}
@@ -58,7 +58,7 @@
 
 
                                     <div class="read-more-wrapper">
-                                        <a class="read-more" href="">
+                                        <a class="read-more" href="{{ article.slug }}">
                                             Read More
                                         </a>
                                     </div>
