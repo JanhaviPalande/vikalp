@@ -1,0 +1,37 @@
+.top-title h1{
+    margin: 0;
+    padding: 0;
+ }
+.top-title .link{
+    text-align: right;
+}
+
+.top-title a{
+    position: relative;
+    bottom: -14px;
+}
+.border-bottom-only{
+    border-bottom: 1px solid #ddd;
+}
+
+#storypage-categories{
+    margin-top: 20px;
+}
+.category-page-heading{
+    background-color: #9E332E;
+    margin: 0;
+}
+.category-title-link{
+    background-image: url('/static/media/uploads/.thumbnails/alternative_economies-60x60.png');
+    padding-left: 65px;
+    background-repeat: no-repeat;
+    color: #fff;
+    line-height: 3.2;
+    text-transform: uppercase;
+    display: block;
+    height: 50px;
+}
+.category-title-link:hover{
+    text-decoration: none;
+    color:#fff;
+}

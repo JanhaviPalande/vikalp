@@ -1,0 +1,89 @@
+.top-title {
+  .heading {
+    padding: 0;
+  }
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+  .link {
+    text-align: right;
+  }
+  a {
+    position: relative;
+    bottom: -14px;
+  }
+}
+
+.border-bottom-only-wrapper .col-xs-12 {
+  padding: 0;
+}
+
+.border-bottom-only {
+  border-bottom: 2px solid #ddd;
+}
+
+#storypage-categories {
+  margin-top: 20px;
+}
+
+.category-page-heading {
+  background-color: #9E332E;
+  margin: 0;
+}
+
+.category-title-link {
+  background-image: url('/static/media/uploads/.thumbnails/alternative_economies-60x60.png');
+  padding-left: 65px;
+  background-repeat: no-repeat;
+  color: #fff;
+  line-height: 3.2;
+  text-transform: uppercase;
+  display: block;
+  height: 50px;
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.category-page-category-list-wrapper {
+  margin: 10px 0px;
+}
+
+.category-topping-wrapper {
+  padding: 0;
+  .category {
+    padding: 0px;
+    margin-right: 10px;
+  }
+  .image-sub-section {
+    padding: 0px;
+  }
+  .top-sub-section h4 {
+    background-color: #ddd;
+    color: #000;
+    font-family: Roboto-Light;
+    padding: 10px 10px 20px 10px;
+    text-transform: none;
+    margin: 0;
+    font-size: 1em;
+  }
+  .plain-text-sub-section {
+    p {
+      color: #000;
+      font-family: Roboto-Light;
+      font-size: 0.75em;
+      background-color: #ddd;
+      padding: 10px 10px;
+    }
+    .read-more-wrapper {
+      background-color: #ddd;
+      a {
+        text-transform: none;
+        font-size: .75em;
+        font-weight: bold;
+      }
+    }
+  }
+}

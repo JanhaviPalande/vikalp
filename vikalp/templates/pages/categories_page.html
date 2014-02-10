@@ -8,63 +8,67 @@
 {% block article_main %}
 
     {% block title %}
-        <h1 class="text-center">
-            {% trans "Story Categories" %}
-        </h1>
+        <div class="row top-title">
+            <div class="col-xs-7 heading">
+                <h1>Stories by category</h1>
+            </div>
+            <div class="col-xs-5 link">
+                <a class="read-more" href="#">Show all latest stories</a>
+            </div>
+        </div>
+
+        <div class="row border-bottom-only-wrapper">
+            <div class="col-xs-12">
+                <div class="border-bottom-only"></div>
+            </div>
+        </div>
     {% endblock %}
 
-    <div id="storypage-categories">
+    <section id="storypage-categories" class="row">
 
         {% for articleCategory in articleCategories %}
             {% for category, articles in articleCategory.items %}
 
-                <div id="bakri" class="col-md-5  col-sm-5">
-                    <div class="col-md-12 col-sm-12 col-xs-12 media">
-                        <a class="pull-left" href="{% url "article_list_category" category.slug %}">
-                            <img class="media-object"
-                                 src="
-
-
-
-                                         {% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{{ category.category_image }}"
-                                 width="80" height="80">
-                        </a>
-
-                        <div class="media-body">
-                            <a href="{% url "article_list_category" category.slug %}">
-                                <h4 id="story-page-category-heading" class="media-heading">{{ category }}</h4></a>
-
-                            <p>{{ category.category_description|truncatechars:100 }}</p>
-                        </div>
-
-                    </div>
-
-                    {% for article in articles %}
-                        <div id="article-thumbnail-wrapper" class="col-md-6 col-sm-6 col-xs-6">
-                            <a href="{{ article.get_absolute_url }}">
-                                <div id="article-thumbnail" class="">
-
-                                    {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}
-                                        <img class="col-md-6 col-sm-6 "
-                                             src="{{ MEDIA_URL }}{% thumbnail article.featured_image 90 90 %}">
-                                    {% else %}
-                                        <img class="col-md-6 col-sm-6"
-                                             src="{{ STATIC_URL }}{% thumbnail "img/default.png" 90 90 %}">
-                                    {% endif %}
-
-                                    <div class="col-md-6 col-sm-6  caption">
-                                        <h5 id="story-page-article-title">{{ article.title }}</h5>
-                                        </p>
-                                    </div>
-                                </div>
-
+                <div class="col-xs-12 category-topping-wrapper">
+                    {% if articles %}
+                        <div class="category-page-heading">
+                            <a class="category-title-link" style="background-image: url('{% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{% thumbnail category.category_image 50 50 %}')"
+                               href="{% url "article_list_category" category.slug %}">
+                                {{ category }}
                             </a>
                         </div>
+                    {% endif %}
+                    <div class="row category-page-category-list-wrapper">
+                        {% for article in articles %}
+                            <div class="col-xs-6 col-sm-3 category">
+                                <div class="top-sub-section">
+                                    <h4>{{ article.title }}</h4>
+                                </div>
+                                <div class="image-sub-section col-xs-12">
+                                    {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}
+                                        <img  class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail article.featured_image 450 300 %}">
+                                    {% else %}
+                                        <img class="img-responsive" src="{{ STATIC_URL }}{% thumbnail "img/default.png" 450 300 %}">
+                                    {% endif %}
+                                </div>
+                                <div class="plain-text-sub-section">
+                                    <p class="col-xs-12">
+                                        {{ article.description | truncatechars:200 }}
+                                    </p>
 
-                    {% endfor %}
-                    <div id="more-stories-link" class="col-md-12 media">
-                        <a id="more-stories-link-text" class="pull-right"
-                           href="{% url "article_list_category" category.slug %}"> More Stories </a>
+                                    <div class="read-more-wrapper">
+                                        <a class="read-more" href="">
+                                            Read More
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+                    </div>
+                    <div class="read-more-wrapper">
+                        <a class="read-more"
+                           href="{% url "article_list_category" category.slug %}"> See all stories </a>
                     </div>
                 </div>
 
@@ -72,5 +76,10 @@
         {% endfor %}
 
 
-    </div>
+    </section>
+{% endblock %}
+
+{% block side_bar %}
+    {% include "includes/sidebar/category_list.html" %}
+    {% include "includes/sidebar/tag_cloud.html" %}
 {% endblock %}
