@@ -65,14 +65,13 @@
                             {% else %}
                                 <img class="img-responsive" src="{{ STATIC_URL }}'img/default.png'">
                             {% endif %}
-                            {#                            <img class="img-responsive" src="{% static 'media/uploads/01_sm_bhuj_setu.jpg' %}"#}
-                            {#                                 alt="...">#}
+
                         </div>
                         <div class="col-xs-8">
                             <a href="{{ article.get_absolute_url }}"><h4 id="featured-article" class="media-heading">{{ article.title }}</h4>
                             </a>
 
-                            <p>{{ article.description }}</p>
+                            <p>{{ article.description|truncatechars:256 }}</p>
 
                         </div>
                     </li>
@@ -88,44 +87,3 @@
         </div>
     </div>
 </section>
-
-
-{##}
-{#<div id="myCarousel" class="carousel slide">#}
-{##}
-{#    <!-- Indicators -->#}
-{#    <ol class="carousel-indicators">#}
-{#        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>#}
-{#        <li data-target="#myCarousel" data-slide-to="1"></li>#}
-{#        <li data-target="#myCarousel" data-slide-to="2"></li>#}
-{#    </ol>#}
-{##}
-{#    <!-- Wrapper for slides -->#}
-{#    <div class="carousel-inner">#}
-{##}
-{#        {% for article in carousel_content %}#}
-{##}
-{#            <div class="item {% ifequal forloop.counter0 0 %} active {% endifequal %}">#}
-{#                <div class="fill" style="background-image: url(#}
-{#                        {{ MEDIA_URL }}{% thumbnail article.featured_image 0 0 %});"></div>#}
-{#                <div class="carousel-caption">#}
-{#                    <div class="carousel-well">#}
-{#                        {{ article.description|truncatechars:256 }}#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{##}
-{#        {% endfor %}#}
-{##}
-{#    </div>#}
-{##}
-{#    <!-- Controls -->#}
-{#    <a class="left carousel-control" href="#myCarousel" data-slide="prev">#}
-{#        <span class="icon-prev"></span>#}
-{#    </a>#}
-{##}
-{#    <a class="right carousel-control" href="#myCarousel" data-slide="next">#}
-{#        <span class="icon-next"></span>#}
-{#    </a>#}
-{##}
-{#</div>#}
