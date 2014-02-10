@@ -7,4 +7,4 @@ cd ../
 sudo python manage.py syncdb --noinput
 sudo python manage.py migrate
 sudo python manage.py loaddata /vagrant/vikalp/fixture/initial_pages.json
-sudo python manage.py laoddata /vagrant/initial_user.json
+sudo python manage.py loaddata /vagrant/initial_user.json

@@ -49,3 +49,26 @@ class ArticleService():
     def get_published_articles_with_related_articles(self, request):
         return Article.objects.published(
             for_user=request.user).select_related()
+
+    def get_published_articles_ordered_by_date(self):
+        return Article.objects.published().order_by('publish_date')
+
+    def article_categories_not_in_categories_covered(self, article, categories_covered):
+        return filter(lambda x: x not in categories_covered, article.article_categories.all())
+
+    def get_latest_articles(self):
+        categories_covered = []
+        latest_articles = {}
+        redundant_articles = []
+        articles = self.get_published_articles_ordered_by_date()
+        for article in articles:
+            unused_article_categories = self.article_categories_not_in_categories_covered(article, categories_covered)
+            if (unused_article_categories and len(latest_articles) < 4):
+                latest_articles[article] = unused_article_categories[0]
+                categories_covered.append(unused_article_categories[0])
+            else:
+                redundant_articles.append(article)
+        while(len(latest_articles) < 4 and len(articles) > 4):
+            article = redundant_articles.pop()
+            latest_articles[article] = article.article_categories.all[0]
+        return latest_articles
