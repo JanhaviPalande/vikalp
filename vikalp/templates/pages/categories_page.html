@@ -56,20 +56,24 @@
                                         {{ article.description | truncatechars:200 }}
                                     </p>
 
+
                                     <div class="read-more-wrapper">
                                         <a class="read-more" href="">
                                             Read More
                                         </a>
                                     </div>
+
                                 </div>
                             </div>
 
                         {% endfor %}
                     </div>
-                    <div class="read-more-wrapper">
-                        <a class="read-more"
-                           href="{% url "article_list_category" category.slug %}"> See all stories </a>
-                    </div>
+                    {% if articles %}
+                        <div class="read-more-wrapper">
+                            <a class="read-more"
+                               href="{% url "article_list_category" category.slug %}"> See all stories </a>
+                        </div>
+                    {% endif %}
                 </div>
 
             {% endfor %}
