@@ -188,3 +188,7 @@ class PolicyEditsViewTest(TestCase):
 
     def test_response_code(self):
         self.assertEquals(200, self.response.status_code)
+
+
+class GetLatestArticles(TestCase):
+    pass
