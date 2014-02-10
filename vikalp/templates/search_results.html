@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load i18n future mezzanine_tags %}
+{% load i18n future mezzanine_tags pages_tags endless %}
 
 
 {% block meta_title %}{% trans "Search Results" %}{% endblock %}
@@ -15,33 +15,15 @@
 {% endblock %}
 
 {% block main %}
-
-    <p>
-        {% if results.paginator.count == 0 %}
-            {% blocktrans %}
-                No results were found matching your query: {{ query }}
-            {% endblocktrans %}
-        {% else %}
-            {% blocktrans with start=results.start_index end=results.end_index total=results.paginator.count %}
-                <h3>Showing {{ total }} results matching your query: {{ query }}</h3>
-            {% endblocktrans %}
-        {% endif %}
-    </p>
-
     <div id="search-results" class="list-group">
-        {% for result in results.object_list %}
-            <a class="list-group-item" href="{{ result.get_absolute_url }}">
-                <h4><span class="list-group-item-heading">{{ result }}</span></h4>
-
-
-                <p class="list-group-item-text">{{ result.description|truncatewords_html:20|safe }}</p>
-                <span class="badge">Read More</span>
-                <br>
-            </a>
-        {% endfor %}
+        {% include page_template %}
     </div>
+    {% block js %}
+        {{ block.super }}
+        <script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
+        <script>$.endlessPaginate();</script>
+    {% endblock %}
 
-    {% pagination_for results %}
 
 {% endblock %}
 

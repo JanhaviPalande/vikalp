@@ -3,9 +3,15 @@ from urlparse import urlparse, urljoin
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.staticfiles import finders
 from django.http import HttpResponse
+from django.shortcuts import render
+from django.template import RequestContext
 from mezzanine.conf import settings
+from mezzanine.core.models import Displayable
+from mezzanine.generic import get_model
 from vikalp.service.article_service import ArticleService
 from vikalp.service.page_service import PageService
+from django.utils.translation import ugettext_lazy as _
+
 
 
 MODEL_NAME = "article"
@@ -40,3 +46,31 @@ def static_proxy(request):
             with open(path, "rb") as f:
                 response = f.read()
     return HttpResponse(response, mimetype=mimetype)
+
+
+def search(request, template="search_results.html"):
+    """
+    Display search results. Takes an optional "contenttype" GET parameter
+    in the form "app-name.ModelName" to limit search results to a single model.
+    """
+    settings.use_editable()
+    query = request.GET.get("q", "")
+    # page = request.GET.get("page", 1)
+    page_template = "search_results_page.html"
+    # per_page = settings.SEARCH_PER_PAGE
+    # max_paging_links = settings.MAX_PAGING_LINKS
+    try:
+        search_model = get_model(*request.GET.get("type", "").split(".", 1))
+        if not issubclass(search_model, Displayable):
+            raise TypeError
+    except TypeError:
+        search_model = Displayable
+        search_type = _("Everything")
+    else:
+        search_type = search_model._meta.verbose_name_plural.capitalize()
+    results = search_model.objects.search(query, for_user=request.user)
+    if request.is_ajax():
+        template = page_template
+    context = {"query": query, "results": results,
+               "search_type": search_type, "page_template": page_template}
+    return render(request, template, context, context_instance=RequestContext(request))

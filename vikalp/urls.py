@@ -80,6 +80,7 @@ urlpatterns += patterns("",
                         # url("^article/(?P<slug>.*)/$", articleDetail.article_detail),
                         url("^article/download/(?P<slug>.*)$", articleDetail.article_download, name="article_detail"),
                         url("^article/(?P<slug>.*)$", articleDetail.article_detail, name="article_detail"),
+                        url("^search/$", "vikalp.views.views.search", name="search"),
 
 
                         # HOMEPAGE FOR A BLOG-ONLY SITE

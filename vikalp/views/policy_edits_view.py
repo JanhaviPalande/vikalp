@@ -17,6 +17,7 @@ class PolicyEdits:
         page_template = "article/article_list_page.html"
         if category:
             category = reduce(get_title, category)
+            category.category_long_description = None
             articles = articleService.get_all_articles_in_category(category)
             if request.is_ajax():
                 template = page_template
