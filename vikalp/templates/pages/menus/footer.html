@@ -1,30 +1,37 @@
 {% load i18n future pages_tags extra_tags %}
 
 
-<div id="footer">
+<footer id="footer">
     <div class="container">
         <div class="row">
-
+            <div class="col-md-2 logo hidden-sm hidden-xs">
+                <img class="img-responsive hidden-md" src="/static/img/footer_big_logo.png" alt=""/>
+                <img class="img-responsive visible-md" src="/static/img/footer_small_logo.png" alt=""/>
+            </div>
             {% for page in page_branch %}
                 {% for in_menu in page.in_menus %}
                     {% ifequal in_menu '3' %}
                         {% ifequal page.parent None %}
                             {% if page.has_children_in_menu %}
                                 {% with menu_pages|get:page.id as child_pages %}
+
                                     {% for child_page in child_pages %}
-                                        <div class="col-md-4">
-                                            <div class="list-group"> {% if '3' in child_page.in_menus %}
-                                                <div>
-                                                    <a class="list-group-item-heading" href="{{ child_page.get_absolute_url }}">{{ child_page.title }}</a>
-                                                </div> {% endif %}
+                                        <div class="col-md-2">
+                                            <ul class="list-group"> {% if '3' in child_page.in_menus %}
+                                                <li class="list-group-item">
+                                                    <a class="list-group-item-heading"
+                                                       href="{{ child_page.get_absolute_url }}">{{ child_page.title }}</a>
+                                                </li> {% endif %}
                                                 {% with menu_pages|get:child_page.id as child_child_pages %}
-                                                    {% for child_child_page in child_child_pages %} {% if '3' in child_child_page.in_menus %}
-                                                        <div>
-                                                            <a class="list-group-item-heading" href="{{ child_child_page.get_absolute_url }}">{{ child_child_page.title }}</a>
-                                                        </div> {% endif %}
+                                                    {% for child_child_page in child_child_pages %}
+                                                        {% if '3' in child_child_page.in_menus %}
+                                                            <li class="list-group-item">
+                                                                <a class="list-group-item-text"
+                                                                   href="{{ child_child_page.get_absolute_url }}">{{ child_child_page.title }}</a>
+                                                            </li> {% endif %}
                                                     {% endfor %}
                                                 {% endwith %}
-                                            </div>
+                                            </ul>
                                         </div>
                                     {% endfor %}
                                 {% endwith %}
@@ -38,6 +45,5 @@
             {% endfor %}
 
         </div>
-
     </div>
-</div>
+</footer>

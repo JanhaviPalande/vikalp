@@ -4,29 +4,34 @@
     font-weight: 300;
     src: local('Roboto Light'), local('Roboto-Light'), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/Hgo13k-tfSpn0qi1SFdUfbO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
 }
+
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
 }
+
 @font-face {
     font-family: 'Roboto-Medium';
     font-style: normal;
     font-weight: 500;
     src: local('Roboto Medium'), local('Roboto-Medium'), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/RxZJdnzeo3R5zSexge8UUbO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
 }
+
 @font-face {
     font-family: 'Roboto-Black';
     font-style: normal;
     font-weight: 900;
     src: local('Roboto Black'), local('Roboto-Black'), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/mnpfi9pxYH-Go5UiibESIrO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
 }
-body{
+
+body {
     font-family: Roboto;
     font-size: 16px;
 }
-h1, h2, h3, h4, h5, h6{
+
+h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     color: #9E332E;
     text-shadow: none;
@@ -34,7 +39,6 @@ h1, h2, h3, h4, h5, h6{
     /*font-weight: bold;*/
     font-family: Roboto-Black;
 }
-
 
 .menu-arrow-after {
     content: '';
@@ -94,47 +98,89 @@ header a.navbar-brand {
     font-weight: bold;
 }
 
-#content{
+#content {
     margin-top: 50px;
 }
-.no-right-margin{
-    margin-right:0;
-}
-.no-margin{
-    margin:0;
+
+.no-right-margin {
+    margin-right: 0;
 }
 
-.see-all-stories-wrapper{
+.no-margin {
+    margin: 0;
+}
+
+.see-all-stories-wrapper {
     text-align: right;
     margin: 20px 0px;
     padding-right: 10px;
 }
 
-.see-all-stories{
+.see-all-stories {
     text-transform: uppercase;
     color: #9E332E;
-    font-size:1.125em;
+    font-size: 1.125em;
     text-decoration: none;
 }
 
-.see-all-stories:hover{
+.see-all-stories:hover {
     text-decoration: none;
     color: #9E332E;
 }
 
-.read-more-wrapper{
+.read-more-wrapper {
     text-align: right;
     margin: 20px 0px;
     padding-right: 10px;
 }
 
-.read-more{
+.read-more {
     text-transform: uppercase;
     color: #9E332E;
     text-decoration: none;
 }
 
-.read-more:hover{
+.read-more:hover {
     text-decoration: none;
     color: #9E332E;
 }
+
+footer {
+    background-color: #58585a;
+    padding-top: 20px;
+}
+
+footer .container {
+    width: 90%;
+}
+
+footer .logo img {
+    padding-top: 10px;
+}
+
+footer .list-group-item {
+    background: none;
+    border: 0px none;
+}
+
+footer .list-group-item a {
+    text-transform: uppercase;
+    color: #e8e9ea;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+footer .list-group-item a:hover {
+    color: #e8e9ea;
+    text-decoration: none;
+}
+
+footer .list-group-item-heading {
+{#    font-size: 1.25em;#}
+}
+
+footer .list-group-item-text {
+{#    font-size: 1em;#}
+}
+
+

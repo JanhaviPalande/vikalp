@@ -14,11 +14,11 @@ html, body {
 }
 
 /*body {*/
-    /*font-family: "Antenna", Arial, sans-serif;*/
+/*font-family: "Antenna", Arial, sans-serif;*/
 /*}*/
 
 /*h1, h2, h3, h4, h5, h6 {*/
-    /*font-family: "Antenna", Arial, sans-serif;*/
+/*font-family: "Antenna", Arial, sans-serif;*/
 /*}*/
 
 .img-home-portfolio,
@@ -100,7 +100,7 @@ html, body {
 }
 
 /*.carousel-caption {*/
-    /*color: #000000;*/
+/*color: #000000;*/
 /*}*/
 
 a#feature-article {
@@ -164,32 +164,30 @@ a#feature-article {
 
 /* Half Page Height Carousel Customization */
 /*.carousel {*/
-    /*margin-top: 50px;*/
-    /*height: 70%;*/
+/*margin-top: 50px;*/
+/*height: 70%;*/
 /*}*/
 
 /*@media (max-width: 767px) {*/
 
-    /*.carousel{*/
-        /*margin-top: 50px;*/
-        /*height: 50%;*/
-    /*}*/
-
+/*.carousel{*/
+/*margin-top: 50px;*/
+/*height: 50%;*/
 /*}*/
 
-
+/*}*/
 
 /*.item,*/
 /*.active,*/
 /*.carousel-inner {*/
-    /*height: 100%;*/
+/*height: 100%;*/
 /*}*/
 
 /*.fill {*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*background-position: center;*/
-    /*background-size: cover;*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*background-position: center;*/
+/*background-size: cover;*/
 /*}*/
 
 #categories-icons {
@@ -277,7 +275,7 @@ a#feature-article {
     font-style: italic;
 }
 
-/* Footer Styles */
+/* Footer Styles
 
 #footer {
     background-color: #000000;
@@ -294,6 +292,7 @@ a#feature-article {
 footer {
     margin: 50px 0;
 }
+*/
 
 /* Responsive Styles */
 
@@ -340,10 +339,9 @@ footer {
     }
 
     /*.carousel{*/
-        /*margin-top: 100px;*/
-        /*height: 60%;*/
+    /*margin-top: 100px;*/
+    /*height: 60%;*/
     /*}*/
-
 
 }
 
@@ -351,7 +349,6 @@ footer {
     .generic_section {
         padding: 100px 0px;
     }
-
 
 }
 
@@ -385,27 +382,27 @@ footer {
 }
 
 /*.carousel-well {*/
-    /*min-height: 20px;*/
-    /*width: auto;*/
-    /*padding-left: 3%;*/
-    /*padding-right: 13%;*/
-    /*padding-top: 3%;*/
-    /*padding-bottom: 3%;*/
-    /*margin-bottom: 20px;*/
-    /*background-color: rgba(169, 169, 169, .6);*/
-    /*border: 0px;*/
-    /*border-radius: 5px;*/
-    /*-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);*/
-    /*box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);*/
+/*min-height: 20px;*/
+/*width: auto;*/
+/*padding-left: 3%;*/
+/*padding-right: 13%;*/
+/*padding-top: 3%;*/
+/*padding-bottom: 3%;*/
+/*margin-bottom: 20px;*/
+/*background-color: rgba(169, 169, 169, .6);*/
+/*border: 0px;*/
+/*border-radius: 5px;*/
+/*-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);*/
+/*box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);*/
 /*}*/
 
 /*.carousel-caption {*/
-    /*width: 50%;*/
-    /*margin-left: 32%;*/
-    /*margin-bottom: 3%;*/
-    /*text-align: left;*/
-    /*text-shadow: none;*/
-    /*font-size: 1.3em;*/
+/*width: 50%;*/
+/*margin-left: 32%;*/
+/*margin-bottom: 3%;*/
+/*text-align: left;*/
+/*text-shadow: none;*/
+/*font-size: 1.3em;*/
 /*}*/
 
 .paddingleft15 {
