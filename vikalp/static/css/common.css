@@ -103,3 +103,38 @@ header a.navbar-brand {
 .no-margin{
     margin:0;
 }
+
+.see-all-stories-wrapper{
+    text-align: right;
+    margin: 20px 0px;
+    padding-right: 10px;
+}
+
+.see-all-stories{
+    text-transform: uppercase;
+    color: #9E332E;
+    font-size:1.125em;
+    text-decoration: none;
+}
+
+.see-all-stories:hover{
+    text-decoration: none;
+    color: #9E332E;
+}
+
+.read-more-wrapper{
+    text-align: right;
+    margin: 20px 0px;
+    padding-right: 10px;
+}
+
+.read-more{
+    text-transform: uppercase;
+    color: #9E332E;
+    text-decoration: none;
+}
+
+.read-more:hover{
+    text-decoration: none;
+    color: #9E332E;
+}
