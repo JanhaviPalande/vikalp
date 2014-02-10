@@ -26,3 +26,4 @@ blogpost.csv
 *.log
 *.iml
 META-INF/
+.sass-cache/
