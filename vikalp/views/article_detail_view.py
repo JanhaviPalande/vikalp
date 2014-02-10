@@ -7,6 +7,15 @@ from vikalp.helper_functions.pdf_generator import StyleArticlePDF
 from vikalp.helper_functions.pdf_generator import PDF_CONTENT_TYPE
 
 
+def article_category_is_policy_edits(category):
+    if('policy' in category.title.lower()):
+        return True
+
+
+def article_is_a_policy_edit(article):
+    return filter(article_category_is_policy_edits, article.article_categories.all())
+
+
 class ArticleDetail:
     def __init__(self):
         self.article_service = ArticleService()
@@ -16,7 +25,11 @@ class ArticleDetail:
     def article_detail(self, request, slug, template="article/article_detail.html"):
         articles = self.article_service.get_published_articles_with_related_articles(request)
         article = process_tag_or_categories_or_article(slug, articles)
-        return render(request, template, {"article": article, "page": get_page(request)})
+        page = get_page(request)
+        if(article_is_a_policy_edit(article)):
+            request.path_info = '/policy-edits/'
+            page = get_page(request)
+        return render(request, template, {"article": article, "page": page})
 
 
     def build_response(self, article_title):
