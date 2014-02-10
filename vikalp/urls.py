@@ -7,6 +7,7 @@ from vikalp.views.category_page_view import CategoryPage
 from vikalp.views.home_page_view import HomePage
 from vikalp.views.policy_edits_view import PolicyEdits
 from vikalp.views.article_detail_view import ArticleDetail
+from vikalp.views.article_list_by_date import ArticleListByDate
 
 
 admin.autodiscover()
@@ -16,6 +17,7 @@ categoryPage = CategoryPage()
 articleList = ArticleList()
 policyEdits = PolicyEdits()
 articleDetail = ArticleDetail()
+articleListByDate = ArticleListByDate()
 
 _slashes = (
     "article" if settings.BLOG_SLUG else "",
@@ -69,7 +71,7 @@ urlpatterns += patterns("",
                         # url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
                         url("^$", homePage.promoted_article_on_homepage, name="home"),
                         (r"^article/$", categoryPage.category_list_with_two_articles),
-                        (r"^stories/$", categoryPage.category_list_with_two_articles),
+                        (r"^stories/$", articleListByDate.article_list_by_date ),
                         url("^article/tag/(?P<tag>.*)$", articleList.article_list, name="article_list_tag"),
                         url("^article/category/(?P<category>.*)$", articleList.article_list,
                             name="article_list_category"),

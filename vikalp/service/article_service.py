@@ -16,8 +16,8 @@ class ArticleService():
         articles = Article.objects.all()
         return articles
 
-    def get_all_published_articles(self, request):
-        articles = Article.objects.published(for_user=request.user)
+    def get_all_published_articles_without_carousel_items_and_policy_edits(self, request):
+        articles = Article.objects.published(for_user=request.user).filter(add_to_carousel=False).exclude(article_categories=self.get_policy_edit_category())
         return articles
 
     def rendered_query_to_fetch_all_articles_under_tag(self, content_type, tag):
@@ -56,6 +56,9 @@ class ArticleService():
     def article_categories_not_in_categories_covered(self, article, categories_covered):
         return filter(lambda x: x not in categories_covered, article.article_categories.all())
 
+    def get_published_articles(self, offset, limit):
+        return Article.objects.published()[offset: limit]
+
     def get_latest_articles(self):
         categories_covered = []
         latest_articles = {}
@@ -68,7 +71,7 @@ class ArticleService():
                 categories_covered.append(unused_article_categories[0])
             else:
                 redundant_articles.append(article)
-        while(len(latest_articles) < 4 and len(articles) > 4):
+        while (len(latest_articles) < 4 and len(articles) > 4):
             article = redundant_articles.pop()
             latest_articles[article] = article.article_categories.all[0]
         return latest_articles

@@ -384,7 +384,7 @@ NUMBER_OF_FEATURED_ITEMS = 3
 JQUERY_FILENAME = "jquery-1.7.1.min.js"
 COMMENTS_USE_RATINGS = False
 ENDLESS_PAGINATION_LOADING = """<img src="/static/img/loader.gif" alt="loading" />"""
-ENDLESS_PAGINATION_PER_PAGE = 10
+ENDLESS_PAGINATION_PER_PAGE = 9
 from email_settings import *
 
 

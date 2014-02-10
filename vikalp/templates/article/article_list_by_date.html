@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags endless %}
+
+
+{% block meta_title %}{% if category %}{{ category }}{% else %}{{ tag }}{% endif %}{% endblock %}
+
+{% block main %}
+
+    {% block title %}
+
+        {% if category %}
+            <h1>{{ category }}</h1>
+            {% if category.category_long_description %}
+                <div id="category-long-description" class="well">
+                    <i>{{ category.category_long_description }}</i>
+                </div>
+            {% endif %}
+
+        {% else %}
+            {% if tag %}
+                <h1>{{ tag }}</h1>
+            {% else %}
+                <h1>Stories</h1>
+            {% endif %}
+        {% endif %}
+
+    {% endblock %}
+    <div id="articles-list" class="list-group endless_page_template">
+        {% include page_template %}
+    </div>
+    {% block js %}
+        {{ block.super }}
+        <script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
+        <script>$.endlessPaginate();</script>
+    {% endblock %}
+{% endblock %}
+
+{% block side_bar %}
+    {% include "includes/sidebar/category_list.html" %}
+    {% include "includes/sidebar/tag_cloud.html" %}
+{% endblock %}
