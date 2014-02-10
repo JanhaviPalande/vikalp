@@ -31,6 +31,6 @@ static==0.4
 transifex-client==0.10
 travis==0.0.1
 wsgiref==0.1.2
-xhtml2pdf==0.0.5
+xhtml2pdf==0.0.5 --allow-external xhtml2pdf --allow-unverified xhtml2pdf
 django-mandrill==0.1.0
 django-endless-pagination==2.0
