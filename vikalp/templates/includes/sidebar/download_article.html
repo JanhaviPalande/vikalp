@@ -1,7 +1,9 @@
+
 {% load staticfiles %}
 
 
-<div id="download-link" class="well">
-    <a style="text-decoration: none;" href="/article/download/{{ article.slug }}"> <img height="32px"
-              src="{% static "img/saveas.png" %}"/>Download this Story</a>
+<div class="btn-group btn-group-xs pull-left">
+    <a href="/article/download/{{ article.slug }}" type="button" class="btn btn-default">DOWNLOAD STORY
+        <span class="glyphicon glyphicon-download-alt"></span>
+    </a>
 </div>

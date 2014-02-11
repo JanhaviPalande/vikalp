@@ -275,3 +275,29 @@ a.carousel-control {
     background-image: none;
   }
 }
+
+.download-social-bar{
+  margin:5px 0px;
+  padding: 5px;
+  background-color: $light-gray-col;
+  .btn{
+    border:0px none;
+    color:$dark-brick-col;
+    background: none;
+  }
+  .dont-style-me{
+    &.btn{
+      font-size: 0.8em;
+      cursor: default;
+      &:active{
+        border:0px none;
+        background: none;
+      }
+      &:hover{
+        background: none;
+        border:0px none;
+
+      }
+    }
+  }
+}

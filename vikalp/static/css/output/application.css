@@ -5224,6 +5224,24 @@ a.carousel-control.left {
 a.carousel-control.right {
   background-image: none; }
 
+.download-social-bar {
+  margin: 5px 0px;
+  padding: 5px;
+  background-color: #e6e7e8; }
+  .download-social-bar .btn {
+    border: 0px none;
+    color: #9e332e;
+    background: none; }
+  .download-social-bar .dont-style-me.btn {
+    font-size: 0.8em;
+    cursor: default; }
+    .download-social-bar .dont-style-me.btn:active {
+      border: 0px none;
+      background: none; }
+    .download-social-bar .dont-style-me.btn:hover {
+      background: none;
+      border: 0px none; }
+
 @media (max-width: 399px) {
   header ul.navbar-nav.nav form {
     padding: 10px 15px;
