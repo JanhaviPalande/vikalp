@@ -35,7 +35,6 @@ var FixCategoryHeight = (function () {
 
 var FixCarousalHeight = (function () {
     function setHeight() {
-        console.log("Hurray !!!!!!!!!!");
         var featureListHeight = $(".featured-list").innerHeight();
         $(".fill-image").css("height", featureListHeight);
     }
@@ -44,9 +43,7 @@ var FixCarousalHeight = (function () {
         if ($(".featured-list").offset().left > 200) {
             var numberOfImages = $(".featured-list img").length;
             $(".featured-list img").each(function () {
-                console.log($(this));
                 $(this).load(function () {
-                    console.log(numberOfImages)
                     numberOfImages = numberOfImages - 1;
                     if (numberOfImages === 0) {
                         setHeight();
