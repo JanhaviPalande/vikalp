@@ -5560,7 +5560,7 @@ footer .list-group-item {
   .category-topping-wrapper .image-sub-section {
     padding: 0px; }
   .category-topping-wrapper .top-sub-section h4 {
-    background-color: #ddd;
+    background-color: #E6E7E8;
     color: #000;
     font-family: Roboto-Light;
     padding: 10px 10px 20px 10px;
@@ -5571,10 +5571,10 @@ footer .list-group-item {
     color: #000;
     font-family: Roboto-Light;
     font-size: 0.75em;
-    background-color: #ddd;
+    background-color: #E6E7E8;
     padding: 10px 10px; }
   .category-topping-wrapper .plain-text-sub-section .read-more-wrapper {
-    background-color: #ddd; }
+    background-color: #E6E7E8; }
     .category-topping-wrapper .plain-text-sub-section .read-more-wrapper a {
       text-transform: none;
       font-size: .75em;
