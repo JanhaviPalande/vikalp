@@ -17,7 +17,7 @@
     }
     .carousel-caption-bottom {
       padding: 10px 10px 30px 40px;
-      background: #ddd;
+      background: $light-gray-col;
     }
     .featured-list {
       padding: 10px 5px 10px 30px;
@@ -64,7 +64,7 @@
       padding: 0px;
     }
     .carousel-caption-bottom {
-      background: #ddd;
+      background: $light-gray-col;
       padding: 10px 10px 30px 40px;
     }
     .featured-list {
@@ -84,7 +84,7 @@
   }
   .category-section {
     .category {
-      border-right: 10px solid #E6E7E8;
+      border-right: 10px solid $light-gray-col;
       margin-bottom: 10px;
     }
     .container {

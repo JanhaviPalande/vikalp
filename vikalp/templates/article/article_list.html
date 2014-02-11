@@ -4,28 +4,30 @@
 
 {% block meta_title %}{% if category %}{{ category }}{% else %}{{ tag }}{% endif %}{% endblock %}
 
-{% block main %}
+{% block article_main %}
 
     {% block title %}
-
-        {% if category %}
-            <h1>{{ category }}</h1>
-            {% if category.category_long_description %}
-                <div id="category-long-description" class="well">
-                    <i>{{ category.category_long_description }}</i>
+        <div class="category-page-heading">
+            {% if category %}
+                <div class="category-title-link" style="background-image: url('{% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{% thumbnail category.category_image 50 50 %}')">
+                    {{ category }}
                 </div>
-            {% endif %}
 
-        {% else %}
-            {% if tag %}
-                <h1>{{ tag }}</h1>
             {% else %}
-                <h1>Stories</h1>
+                {% if tag %}
+                    <div class="category-title-link no-icon">
+                        {{ tag }}
+                    </div>
+                {% else %}
+                    <div class="category-title-link no-icon">
+                        Stories
+                    </div>
+                {% endif %}
             {% endif %}
-        {% endif %}
+        </div>
 
     {% endblock %}
-    <div id="articles-list" class="list-group endless_page_template">
+    <div class="row category-page-category-list-wrapper category-topping-wrapper" id="articles-list">
         {% include page_template %}
     </div>
     {% block js %}

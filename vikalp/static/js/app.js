@@ -1,3 +1,38 @@
+var FixCategoryHeight = (function(){
+    function setHeight(){
+        $(".category-page-category-list-wrapper").each(function(){
+            var ele = $(this),
+                maxHHeight = 0,
+                maxPHeight = 0;
+
+            ele.find('h4').each(function(){
+                if(maxHHeight < $(this).innerHeight()){
+                    maxHHeight = $(this).innerHeight();
+                }
+            });
+            ele.find('p').each(function(){
+                if(maxPHeight < $(this).innerHeight()){
+                    maxPHeight = $(this).innerHeight();
+                }
+            });
+
+            ele.find('h4').each(function(){
+                $(this).css("height", maxHHeight + "px");
+            });
+            ele.find('p').each(function(){
+                $(this).css("height", maxPHeight + "px");
+            });
+        });
+    }
+
+    return {
+      init: function(){
+          setHeight();
+      }
+    };
+})();
+
+
 $(document).ready( function() {
     
 //	$.fn.smint = function( options ) {
@@ -113,5 +148,6 @@ $(document).ready( function() {
 //	$("#footer").on('click',function(){
 //		$("#footer .list-group-item").toggle();
 //	});
-//
+
+    FixCategoryHeight.init();
 });

@@ -1,8 +1,8 @@
 from django.template import RequestContext
 from mezzanine.conf import settings
-from mezzanine.utils.views import render, paginate
-from vikalp.helper_functions.functional import get_model_content_type, process_tag_or_categories_or_article, get_page, translate_to_model
-from vikalp.views.views import articleService, MODEL_NAME, APP_NAME
+from mezzanine.utils.views import render
+from vikalp.helper_functions.functional import get_page
+from vikalp.views.views import articleService
 
 
 class ArticleListByDate:
