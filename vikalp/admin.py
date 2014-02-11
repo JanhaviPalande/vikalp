@@ -17,6 +17,7 @@ class ArticleAdmin(BlogPostAdmin, DisplayableAdmin):
     list_editable = deepcopy(BlogPostAdmin.list_editable)
     list_editable += ("promoted", "add_to_carousel",  )
     list_filter = deepcopy(BlogPostAdmin.list_filter)
+    list_filter = tuple(map(field_check, list_filter))
     list_filter += ("promoted", "add_to_carousel",)
 
     def save_form(self, request, form, change):
