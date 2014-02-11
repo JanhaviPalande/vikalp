@@ -3,7 +3,7 @@
 {% load mezzanine_tags %}
 
 
-{% block main %}
+{% block article_main %}
     {{ block.super }}
     {% if request.GET.sent %}
         {% editable page.form.response %}
