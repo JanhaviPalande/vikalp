@@ -7,14 +7,12 @@
   src: local("Roboto Light"), local("Roboto-Light"), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/Hgo13k-tfSpn0qi1SFdUfbO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");
 }
 
-
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   src: local("Roboto Regular"), local("Roboto-Regular"), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff) format("woff");
 }
-
 
 @font-face {
   font-family: 'Roboto-Medium';
@@ -23,14 +21,12 @@
   src: local("Roboto Medium"), local("Roboto-Medium"), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/RxZJdnzeo3R5zSexge8UUbO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");
 }
 
-
 @font-face {
   font-family: 'Roboto-Black';
   font-style: normal;
   font-weight: 900;
   src: local("Roboto Black"), local("Roboto-Black"), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/mnpfi9pxYH-Go5UiibESIrO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");
 }
-
 
 body {
   font-family: Roboto;
@@ -198,48 +194,47 @@ footer {
   height: 10px;
 }
 
-.navigator{
-  h4{
+.navigator {
+  h4 {
     margin-bottom: 30px;
   }
 }
 
-#category-list{
-  .row{
+#category-list {
+  .row {
     margin-right: 0px;
     margin-left: 10px;
-      
+
   }
-  h5{
+  h5 {
     margin: 10px 0px;
   }
-  ul li{
-    a{
+  ul li {
+    a {
       font-size: 0.8em;
       text-transform: uppercase;
       vertical-align: top;
-      color:$dark-brick-col;
-      text-decoration:none;
-    }
-    a:hover{
+      color: $dark-brick-col;
       text-decoration: none;
-      color:$dark-brick-col;
     }
-
+    a:hover {
+      text-decoration: none;
+      color: $dark-brick-col;
+    }
 
   }
 }
 
-#tag-cloud{
-  div.tag_cloud{
+#tag-cloud {
+  div.tag_cloud {
     text-align: justify;
   }
-  h5{
+  h5 {
     margin: 10px 0px;
   }
-  a{
+  a {
     text-decoration: none;
-    &:hover{
+    &:hover {
       text-decoration: none;
     }
 
@@ -268,5 +263,15 @@ footer {
 
   .tag-weight-4 {
     font-size: 1.3em;
+  }
+}
+
+a.carousel-control {
+  &.left {
+    background-image: none;
+
+  }
+  &.right {
+    background-image: none;
   }
 }
