@@ -4,30 +4,46 @@
 
 {% block meta_title %}{% if category %}{{ category }}{% else %}{{ tag }}{% endif %}{% endblock %}
 
-{% block main %}
-
-    {% block title %}
-
-        {% if category %}
-            <h1>{{ category }}</h1>
-            {% if category.category_long_description %}
-                <div id="category-long-description" class="well">
-                    <i>{{ category.category_long_description }}</i>
+{% block article_main %}
+    <div class="row top-title">
+        {% block title %}
+            {% if category %}
+                <div class="col-xs-7 heading">
+                    <h1>{{ category }}</h1>
                 </div>
-            {% endif %}
-
-        {% else %}
-            {% if tag %}
-                <h1>{{ tag }}</h1>
+                {% if category.category_long_description %}
+                    <div id="category-long-description" class="well">
+                        <i>{{ category.category_long_description }}</i>
+                    </div>
+                {% endif %}
             {% else %}
-                <h1>Stories</h1>
+                {% if tag %}
+                    <div class="col-xs-7 heading">
+                        <h1>{{ tag }}</h1>
+                    </div>
+                {% else %}
+                    <div class="col-xs-7 heading">
+                        <h1>Latest Stories</h1>
+                    </div>
+                {% endif %}
             {% endif %}
-        {% endif %}
+            <div class="col-xs-5 link">
+                <a class="read-more" href="/stories/">Show stories by category</a>
+            </div>
+        {% endblock %}
+    </div>
 
-    {% endblock %}
-    <div id="articles-list" class="list-group endless_page_template">
+
+    <div class="row border-bottom-only-wrapper">
+        <div class="col-xs-12">
+            <div class="border-bottom-only"></div>
+        </div>
+    </div>
+
+    <div class="row category-page-category-list-wrapper category-topping-wrapper" id="articles-list">
         {% include page_template %}
     </div>
+
     {% block js %}
         {{ block.super }}
         <script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>

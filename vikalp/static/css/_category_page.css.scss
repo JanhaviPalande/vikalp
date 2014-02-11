@@ -1,6 +1,8 @@
 @import "variables.css.scss";
 
 .top-title {
+  margin-left:0px;
+  margin-right: 15px;
   .heading {
     padding: 0;
   }
@@ -17,20 +19,26 @@
   }
 }
 
-.border-bottom-only-wrapper .col-xs-12 {
-  padding: 0;
+.border-bottom-only-wrapper{
+  .col-xs-12{
+    padding: 0;
+  }
+  margin-left:0px;
+  margin-right: 15px;
 }
 
 .border-bottom-only {
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid $light-gray-col;
 }
 
 #storypage-categories {
   margin-top: 20px;
+  margin-right: 15px;
+  margin-left: 0px;
 }
 
 .category-page-heading {
-  background-color: $dark-brick-color-1;
+  background-color: $dark-brick-col;
   margin: 0;
 }
 
@@ -38,14 +46,14 @@
   background-image: url('/static/media/uploads/.thumbnails/alternative_economies-60x60.png');
   padding-left: 65px;
   background-repeat: no-repeat;
-  color: #fff;
+  color: $white;
   line-height: 3.2;
   text-transform: uppercase;
   display: block;
   height: 50px;
   &:hover {
     text-decoration: none;
-    color: #fff;
+    color: $white;
   }
 }
 
@@ -55,16 +63,40 @@
 
 .category-topping-wrapper {
   padding: 0;
+  .category-link-wrapper{
+    text-decoration: none;
+    &:hover{
+      text-decoration: none;
+      h4{
+        text-decoration: none;
+      }
+    }
+    h4{
+      text-decoration: none;
+    }
+  }
+  .category-title-wrapper{
+    display: block;
+    padding: 8px 0px;
+    background: $light-gray-col;
+    color:$dark-brick-col;
+
+    text-decoration: none;
+    &:hover{
+      text-decoration: none;
+      color:$dark-brick-col;
+    }
+  }
   .category {
     padding: 0px;
-    border-right: 10px solid #fff;
+    border-right: 10px solid $white;
   }
   .image-sub-section {
     padding: 0px;
   }
   .top-sub-section h4 {
-    background-color: #E6E7E8;
-    color: #000;
+    background-color: $light-gray-col;
+    color: $black;
     font-family: Roboto-Light;
     padding: 10px 10px 20px 10px;
     text-transform: none;
@@ -73,14 +105,14 @@
   }
   .plain-text-sub-section {
     p {
-      color: #000;
+      color: $black;
       font-family: Roboto-Light;
       font-size: 0.75em;
-      background-color: #E6E7E8;
+      background-color: $light-gray-col;
       padding: 10px 10px;
     }
     .read-more-wrapper {
-      background-color: #E6E7E8;
+      background-color: $light-gray-col;
       a {
         text-transform: none;
         font-size: .75em;

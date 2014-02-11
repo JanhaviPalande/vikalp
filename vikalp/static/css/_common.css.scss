@@ -39,7 +39,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
-  color: $dark-brick-color-1;
+  color: $dark-brick-col;
   text-shadow: none;
   opacity: 1;
   /*font-weight: bold;*/
@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   width: 0;
   height: 0;
-  border-color: transparent transparent #fff transparent;
+  border-color: transparent transparent $white transparent;
   border-style: solid;
   border-width: 10px;
   top: 80%;
@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   i {
     position: absolute;
-    color: $dark-brick-color-1;
+    color: $dark-brick-col;
     right: 7px;
     top: 30%;
   }
@@ -76,13 +76,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: $dark-brick-color-1;
+  color: $dark-brick-col;
   text-decoration: none;
   font-weight: bold;
   font-family: Roboto-Black;
   font-size: 1.125em;
   &:hover, &:focus {
-    color: $dark-brick-color-1;
+    color: $dark-brick-col;
     text-decoration: none;
   }
 }
@@ -102,11 +102,11 @@ header {
 }
 
 .navbar-default .navbar-nav > .active > a {
-  background-color: $dark-brick-color-1;
+  background-color: $dark-brick-col;
   color: #fff;
   font-weight: bold;
   &:hover, &:focus {
-    background-color: $dark-brick-color-1;
+    background-color: $dark-brick-col;
     color: #fff;
     font-weight: bold;
   }
@@ -132,12 +132,12 @@ header {
 
 .see-all-stories {
   text-transform: uppercase;
-  color: $dark-brick-color-1;
+  color: $dark-brick-col;
   font-size: 1.125em;
   text-decoration: none;
   &:hover {
     text-decoration: none;
-    color: $dark-brick-color-1;
+    color: $dark-brick-col;
   }
 }
 
@@ -149,11 +149,11 @@ header {
 
 .read-more {
   text-transform: uppercase;
-  color: $dark-brick-color-1;
+  color: $dark-brick-col;
   text-decoration: none;
   &:hover {
     text-decoration: none;
-    color: $dark-brick-color-1;
+    color: $dark-brick-col;
   }
 }
 
@@ -178,11 +178,11 @@ footer {
     border: 0px none;
     a {
       text-transform: uppercase;
-      color: $dark-brick-color;
+      color: $lighter-gray-col;
       text-decoration: none;
       font-size: 0.8em;
       &:hover {
-        color: $dark-brick-color;
+        color: $lighter-gray-col;
         text-decoration: none;
       }
     }
@@ -190,7 +190,7 @@ footer {
 }
 
 .right-border-separator {
-  border-right: 2px solid #ddd;
+  border-right: 2px solid $light-gray-col;
   padding-right: 30px;
 }
 
@@ -218,12 +218,12 @@ footer {
       font-size: 0.8em;
       text-transform: uppercase;
       vertical-align: top;
-      color:$dark-brick-color-1;
+      color:$dark-brick-col;
       text-decoration:none;
     }
     a:hover{
       text-decoration: none;
-      color:$dark-brick-color-1;
+      color:$dark-brick-col;
     }
 
 
@@ -244,13 +244,13 @@ footer {
     }
 
     &:nth-child(2n+1) {
-      color: $dark-brick-color-1;
+      color: $dark-brick-col;
     }
     &:nth-child(2n) {
-      color: #DDD;
+      color: $dark-gray-col;
     }
     &:nth-child(3n) {
-      color: #EBAE43;
+      color: $yellow-col;
     }
   }
 
