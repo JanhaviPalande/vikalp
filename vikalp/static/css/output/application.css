@@ -5556,7 +5556,7 @@ footer .list-group-item {
   padding: 0; }
   .category-topping-wrapper .category {
     padding: 0px;
-    margin-right: 10px; }
+    border-right: 10px solid #fff; }
   .category-topping-wrapper .image-sub-section {
     padding: 0px; }
   .category-topping-wrapper .top-sub-section h4 {
@@ -5582,7 +5582,10 @@ footer .list-group-item {
 
 @media (max-width: 399px) {
   .category-topping-wrapper .category {
-    width: 100%; } }
+    width: 100%; }
+
+  .category-topping-wrapper .category {
+    border-right: 0px none; } }
 @media (min-width: 400px) and (max-width: 767px) {
   .category-topping-wrapper .category {
     width: 47%; } }
