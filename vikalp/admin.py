@@ -10,12 +10,12 @@ from vikalp.models import Article, ArticleCategory
 class ArticleAdmin(BlogPostAdmin, DisplayableAdmin):
     fieldsets = deepcopy(BlogPostAdmin.fieldsets)
     fieldsets[0][1]['fields'] = tuple(map(field_check, fieldsets[0][1]['fields']))
-    fieldsets[0][1]["fields"] += ("article_author", ("promoted", "add_to_carousel",),('lattitude', 'longitude',),)
+    fieldsets[0][1]["fields"] += ("article_author", ("promoted", "add_to_carousel",), ('latitude', 'longitude',),)
     filter_horizontal = ('article_categories', "related_posts",)
     list_display = deepcopy(BlogPostAdmin.list_display)
     list_display += ("promoted", "add_to_carousel",)
     list_editable = deepcopy(BlogPostAdmin.list_editable)
-    list_editable += ("promoted", "add_to_carousel",  )
+    list_editable += ("promoted", "add_to_carousel",)
     list_filter = deepcopy(BlogPostAdmin.list_filter)
     list_filter = tuple(map(field_check, list_filter))
     list_filter += ("promoted", "add_to_carousel",)
@@ -36,4 +36,3 @@ class ArticleCategoryAdmin(BlogCategoryAdmin):
 admin.site.register(Article, ArticleAdmin)
 admin.site.unregister(BlogPost)
 admin.site.register(ArticleCategory, ArticleCategoryAdmin)
-
