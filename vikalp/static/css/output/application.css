@@ -5204,20 +5204,18 @@ footer .list-group-item {
   text-decoration: none; }
   #tag-cloud a:hover {
     text-decoration: none; }
-  #tag-cloud a:nth-child(2n+1) {
-    color: #9e332e; }
-  #tag-cloud a:nth-child(2n) {
-    color: #bcbec0; }
-  #tag-cloud a:nth-child(3n) {
-    color: #fc9d1c; }
 #tag-cloud .tag-weight-1 {
-  font-size: 0.8em; }
+  font-size: 0.8em;
+  color: #bcbec0; }
 #tag-cloud .tag-weight-2 {
-  font-size: 1em; }
+  font-size: 1em;
+  color: #fc9d1c; }
 #tag-cloud .tag-weight-3 {
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  color: #cd5751; }
 #tag-cloud .tag-weight-4 {
-  font-size: 1.3em; }
+  font-size: 1.3em;
+  color: #9e332e; }
 
 a.carousel-control.left {
   background-image: none; }
@@ -5572,7 +5570,7 @@ a.carousel-control.right {
   margin-left: 0px; }
 
 .category-page-heading {
-  background-color: #9e332e;
+  background-color: #bcbec0;
   margin: 0; }
 
 .category-title-link {
@@ -5628,11 +5626,13 @@ a.carousel-control.right {
     color: black;
     font-family: Roboto-Light;
     font-size: 0.75em;
-    background-color: #e6e7e8;
+    background-color: #f1f1f2;
     padding: 10px 10px; }
   .category-topping-wrapper .plain-text-sub-section .read-more-wrapper {
     background-color: #e6e7e8; }
     .category-topping-wrapper .plain-text-sub-section .read-more-wrapper a {
+      position: relative;
+      top: -9px;
       text-transform: none;
       font-size: .75em;
       font-weight: bold; }
