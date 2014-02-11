@@ -5324,7 +5324,8 @@ a.carousel-control.right {
     background-size: cover;
     background-repeat: none;
     background-position: center center;
-    width: 100%; }
+    width: 100%;
+    height: 600px; }
 
 .carousel-caption {
   left: 10%;
@@ -5509,6 +5510,8 @@ a.carousel-control.right {
   .category-section .plain-text-sub-section p {
     font-size: 0.8em; } }
 @media (min-width: 992px) and (max-width: 1199px) {
+  .top-carousel-wrapper .fill-image {
+    height: 500px; }
   .top-carousel-wrapper .verticle-border {
     height: 480px; } }
 @media (min-width: 1200px) {
