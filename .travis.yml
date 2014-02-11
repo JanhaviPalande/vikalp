@@ -1,7 +1,7 @@
 language: python
 python:
   - "2.7"
-install: "pip install pypdf --allow-external pypdf --allow-unverified pypdf"
+install: "pip install --allow-external pypdf --allow-unverified pypdf pypdf"
 install: "pip install -r requirements.txt"
 env:
   - DJANGO=1.5 DJANGO_SETTINGS_MODULE=vikalp.local_settings EMAIL_PASSWORD='!abcd1234'
