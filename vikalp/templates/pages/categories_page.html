@@ -13,7 +13,7 @@
                 <h1>Stories by category</h1>
             </div>
             <div class="col-xs-5 link">
-                <a class="read-more" href="/stories/latest/">Show all latest stories</a>
+                <a class="read-more" href="/stories/">Show all latest stories</a>
             </div>
         </div>
 
@@ -58,7 +58,7 @@
 
 
                                     <div class="read-more-wrapper">
-                                        <a class="read-more" href="{{ article.slug }}">
+                                        <a class="read-more" href="{{ article.get_absolute_url }}">
                                             Read More
                                         </a>
                                     </div>

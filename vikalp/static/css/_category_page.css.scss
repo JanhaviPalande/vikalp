@@ -43,7 +43,9 @@
 }
 
 .category-title-link {
-  background-image: url('/static/media/uploads/.thumbnails/alternative_economies-60x60.png');
+  &.no-icon{
+    padding-left: 10px;
+  }
   padding-left: 65px;
   background-repeat: no-repeat;
   color: $white;

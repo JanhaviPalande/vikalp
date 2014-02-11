@@ -5545,7 +5545,6 @@ footer .list-group-item {
   margin: 0; }
 
 .category-title-link {
-  background-image: url("/static/media/uploads/.thumbnails/alternative_economies-60x60.png");
   padding-left: 65px;
   background-repeat: no-repeat;
   color: white;
@@ -5553,6 +5552,8 @@ footer .list-group-item {
   text-transform: uppercase;
   display: block;
   height: 50px; }
+  .category-title-link.no-icon {
+    padding-left: 10px; }
   .category-title-link:hover {
     text-decoration: none;
     color: white; }

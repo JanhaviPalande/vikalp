@@ -4,7 +4,7 @@
 {% if articles %}
     {% paginate articles %}
     {% for article in articles %}
-        <div class="col-xs-6 col-sm-4 category apnacategory">
+        <div class="col-xs-6 col-sm-4 category">
 
 
                 {% for category in article.article_categories.all %}
@@ -39,7 +39,7 @@
                         <p class="col-xs-12">{{ article.description|truncatechars:150|safe }}</p>
 
                         <div class="read-more-wrapper">
-                            <a class="read-more" href="{{ article.slug }}">
+                            <a class="read-more" href="{{ article.get_absolute_url }}">
                                 Read More
                             </a>
                         </div>
