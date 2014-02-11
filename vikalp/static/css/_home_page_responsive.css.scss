@@ -1,6 +1,6 @@
 @media (max-width: 399px) {
   .top-carousel-wrapper {
-    .carousel-indicators{
+    .carousel-indicators {
       bottom: -5px;
     }
     .no-right-margin {
@@ -47,7 +47,7 @@
 
 @media (min-width: 400px) and (max-width: 767px) {
   .top-carousel-wrapper {
-    .carousel-indicators{
+    .carousel-indicators {
       bottom: -5px;
     }
 
@@ -139,10 +139,9 @@
 @media (min-width: 992px) and (max-width: 1199px) {
   .top-carousel-wrapper {
     .fill-image {
-//      height: 500px;
+      //      height: 500px;
     }
-    .verticle-border
-    {
+    .verticle-border {
       height: 480px;
 
     }
