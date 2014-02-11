@@ -1,3 +1,5 @@
+@import "variables.css.scss";
+
 .top-title {
   .heading {
     padding: 0;
@@ -28,7 +30,7 @@
 }
 
 .category-page-heading {
-  background-color: #9E332E;
+  background-color: $dark-brick-color-1;
   margin: 0;
 }
 

@@ -9,8 +9,8 @@
             <ul class="list-unstyled">
                 {% for category in categories %}
                     {% if not forloop.counter|divisibleby:2 %}
-                        <img  class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail category.category_image 20 20 %}">
-                        <li><a href="{% url "article_list_category" category.slug %}">{{ category }}</a></li>
+                        <!-- <img  class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail category.category_image 30 30 %}"> -->
+                        <li style="list-style-image:url({{ MEDIA_URL }}{% thumbnail category.category_image 20 20 %})"><a href="{% url "article_list_category" category.slug %}">{{ category }}</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -19,8 +19,8 @@
             <ul class="list-unstyled">
                 {% for category in categories %}
                     {% if forloop.counter|divisibleby:2 %}
-                        <img  class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail category.category_image 20 20 %}">
-                        <li><a href="{% url "article_list_category" category.slug %}">{{ category }}</a></li>
+                        <!-- <img  class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail category.category_image 30 30 %}"> -->
+                        <li style="list-style-image:url('{{ MEDIA_URL }}{% thumbnail category.category_image 20 20 %}')"><a href="{% url "article_list_category" category.slug %}">{{ category }}</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

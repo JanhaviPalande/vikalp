@@ -1,10 +1,10 @@
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags extra_tags %}
 
 
-<div id="tag-cloud" class="well">
+<div id="tag-cloud">
     {% keywords_for vikalp.article as tags %}
     {% if tags %}
-        <h4>{% trans "Explore Stories" %}</h4>
+        <h5>{% trans "Explore Stories" %}</h5>
         <div class="tag_cloud">
             {% for tag in tags %}
 

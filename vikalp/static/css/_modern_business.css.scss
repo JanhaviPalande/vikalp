@@ -214,33 +214,33 @@ a#feature-article {
   font-style: italic;
 }
 
-.tag_cloud a {
-  &:nth-child(2n+1) {
-    color: #2e2e2e;
-  }
-  &:nth-child(2n) {
-    color: #9E8F6C;
-  }
-  &:nth-child(3n) {
-    color: #3B6E8F;
-  }
-}
+// .tag_cloud a {
+//   &:nth-child(2n+1) {
+//     color: #2e2e2e;
+//   }
+//   &:nth-child(2n) {
+//     color: #9E8F6C;
+//   }
+//   &:nth-child(3n) {
+//     color: #3B6E8F;
+//   }
+// }
 
-.tag-weight-1 {
-  /*font-size: 90%;*/
-}
+// .tag-weight-1 {
+//   /*font-size: 90%;*/
+// }
 
-.tag-weight-2 {
-  /*font-size: 120%;*/
-}
+// .tag-weight-2 {
+//   /*font-size: 120%;*/
+// }
 
-.tag-weight-3 {
-  /*font-size: 150%;*/
-}
+// .tag-weight-3 {
+//   /*font-size: 150%;*/
+// }
 
-.tag-weight-4 {
-  /*font-size: 180%;*/
-}
+// .tag-weight-4 {
+//   /*font-size: 180%;*/
+// }
 
 .push60 {
   height: 60px;

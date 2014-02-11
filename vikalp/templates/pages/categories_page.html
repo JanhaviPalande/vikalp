@@ -40,7 +40,7 @@
                     {% endif %}
                     <div class="row category-page-category-list-wrapper">
                         {% for article in articles %}
-                            <div class="col-xs-6 col-sm-3 category">
+                            <div class="col-xs-6 col-sm-4 category">
                                 <a href="{{ article.slug }}" style="text-decoration: none"> <div class="top-sub-section">
                                     <h4>{{ article.title }}</h4>
                                 </div>
@@ -84,12 +84,6 @@
 {% endblock %}
 
 {% block side_bar %}
-    <div class="navigator">
-        <h4>
-        <span class="glyphicon glyphicon-align-justify"></span>
-        Navigator
-        </h4>
-    </div>
     {% include "includes/sidebar/category_list.html" %}
     {% include "includes/sidebar/tag_cloud.html" %}
 {% endblock %}

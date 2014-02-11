@@ -5052,7 +5052,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
-  color: #9E332E;
+  color: #9e332e;
   text-shadow: none;
   opacity: 1;
   /*font-weight: bold;*/
@@ -5076,7 +5076,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block; }
   .search-box-wrapper i {
     position: absolute;
-    color: #9E332E;
+    color: #9e332e;
     right: 7px;
     top: 30%; }
 
@@ -5084,13 +5084,13 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.3); }
 
 .navbar-default .navbar-nav > li > a {
-  color: #9E332E;
+  color: #9e332e;
   text-decoration: none;
   font-weight: bold;
   font-family: Roboto-Black;
   font-size: 1.125em; }
   .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #9E332E;
+    color: #9e332e;
     text-decoration: none; }
 
 header a.navbar-brand {
@@ -5104,11 +5104,11 @@ header .container {
   width: 90%; }
 
 .navbar-default .navbar-nav > .active > a {
-  background-color: #9E332E;
+  background-color: #9e332e;
   color: #fff;
   font-weight: bold; }
   .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    background-color: #9E332E;
+    background-color: #9e332e;
     color: #fff;
     font-weight: bold; }
 
@@ -5128,12 +5128,12 @@ header .container {
 
 .see-all-stories {
   text-transform: uppercase;
-  color: #9E332E;
+  color: #9e332e;
   font-size: 1.125em;
   text-decoration: none; }
   .see-all-stories:hover {
     text-decoration: none;
-    color: #9E332E; }
+    color: #9e332e; }
 
 .read-more-wrapper {
   text-align: right;
@@ -5142,11 +5142,11 @@ header .container {
 
 .read-more {
   text-transform: uppercase;
-  color: #9E332E;
+  color: #9e332e;
   text-decoration: none; }
   .read-more:hover {
     text-decoration: none;
-    color: #9E332E; }
+    color: #9e332e; }
 
 footer {
   background-color: #58585a;
@@ -5178,6 +5178,47 @@ footer .list-group-item {
 .space-xs {
   height: 10px; }
 
+.navigator h4 {
+  margin-bottom: 30px; }
+
+#category-list .row {
+  margin-right: 0px;
+  margin-left: 10px; }
+#category-list h5 {
+  margin: 10px 0px; }
+#category-list ul li a {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  vertical-align: top;
+  color: #9e332e;
+  text-decoration: none; }
+#category-list ul li a:hover {
+  text-decoration: none;
+  color: #9e332e; }
+
+#tag-cloud div.tag_cloud {
+  text-align: justify; }
+#tag-cloud h5 {
+  margin: 10px 0px; }
+#tag-cloud a {
+  text-decoration: none; }
+  #tag-cloud a:hover {
+    text-decoration: none; }
+  #tag-cloud a:nth-child(2n+1) {
+    color: #9e332e; }
+  #tag-cloud a:nth-child(2n) {
+    color: #DDD; }
+  #tag-cloud a:nth-child(3n) {
+    color: #EBAE43; }
+#tag-cloud .tag-weight-1 {
+  font-size: 0.8em; }
+#tag-cloud .tag-weight-2 {
+  font-size: 1em; }
+#tag-cloud .tag-weight-3 {
+  font-size: 1.2em; }
+#tag-cloud .tag-weight-4 {
+  font-size: 1.3em; }
+
 @media (max-width: 399px) {
   header ul.navbar-nav.nav form {
     padding: 10px 15px;
@@ -5186,7 +5227,11 @@ footer .list-group-item {
   header a.navbar-brand {
     background: url(/static/img/header_small_logo.png) no-repeat left center;
     width: 63px;
-    height: 30px; } }
+    height: 30px; }
+
+  .right-border-separator {
+    border-right: 0px none;
+    padding-right: 15px; } }
 @media (min-width: 400px) and (max-width: 767px) {
   header ul.navbar-nav.nav {
     float: none !important; }
@@ -5201,7 +5246,11 @@ footer .list-group-item {
   header a.navbar-brand {
     background: url(/static/img/header_small_logo.png) no-repeat left center;
     width: 63px;
-    height: 30px; } }
+    height: 30px; }
+
+  .right-border-separator {
+    border-right: 0px none;
+    padding-right: 15px; } }
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar-default .navbar-nav > li > a {
     font-size: .7em; }
@@ -5216,7 +5265,11 @@ footer .list-group-item {
   header a.navbar-brand {
     background: url(/static/img/header_small_logo.png) no-repeat left center;
     width: 63px;
-    height: 30px; } }
+    height: 30px; }
+
+  .right-border-separator {
+    border-right: 0px none;
+    padding-right: 15px; } }
 @media (min-width: 992px) and (max-width: 1199px) {
   header a.navbar-brand {
     background: url(/static/img/header_small_logo.png) no-repeat left center;
@@ -5280,23 +5333,23 @@ footer .list-group-item {
 
 .carousel-caption h2, .carousel-caption-bottom h2 {
   text-transform: uppercase;
-  color: #9E332E;
+  color: #9e332e;
   text-shadow: none;
   opacity: 1;
   font-weight: bold;
   font-size: 1.125em; }
 
 .carousel-caption p, .carousel-caption-bottom p {
-  color: #9E332E;
+  color: #9e332e;
   text-align: justify;
   font-family: Roboto-Light;
   font-size: 0.75em; }
 
 .featured-list {
-  color: #9E332E; }
+  color: #9e332e; }
   .featured-list a {
     /*font-size: 1em;*/
-    color: #9E332E;
+    color: #9e332e;
     text-transform: uppercase;
     text-decoration: none; }
     .featured-list a:hover {
@@ -5340,7 +5393,7 @@ footer .list-group-item {
   .category-section h2 {
     font-size: 1.125em; }
   .category-section .top-sub-section {
-    background-color: #9E332E; }
+    background-color: #9e332e; }
     .category-section .top-sub-section h4 {
       color: #fff;
       padding-left: 0;
@@ -5349,13 +5402,13 @@ footer .list-group-item {
     .category-section .top-sub-section .col-xs-3 {
       padding: 0; }
   .category-section .image-sub-section {
-    background-color: #9E332E; }
+    background-color: #9e332e; }
     .category-section .image-sub-section .col-xs-12 {
       padding: 0; }
   .category-section .category {
     border-right: 10px solid #E6E7E8; }
   .category-section .plain-text-sub-section {
-    background-color: #9E332E;
+    background-color: #9e332e;
     color: #fff; }
     .category-section .plain-text-sub-section p {
       height: 50px;
@@ -5363,6 +5416,9 @@ footer .list-group-item {
       text-transform: uppercase;
       font-size: .875em;
       padding: 5px; }
+
+.carousel-control {
+  font-size: 2em; }
 
 @media (max-width: 399px) {
   .top-carousel-wrapper .carousel-indicators {
@@ -5477,7 +5533,7 @@ footer .list-group-item {
   margin-top: 20px; }
 
 .category-page-heading {
-  background-color: #9E332E;
+  background-color: #9e332e;
   margin: 0; }
 
 .category-title-link {
@@ -5523,3 +5579,10 @@ footer .list-group-item {
       text-transform: none;
       font-size: .75em;
       font-weight: bold; }
+
+@media (max-width: 399px) {
+  .category-topping-wrapper .category {
+    width: 100%; } }
+@media (min-width: 400px) and (max-width: 767px) {
+  .category-topping-wrapper .category {
+    width: 47%; } }

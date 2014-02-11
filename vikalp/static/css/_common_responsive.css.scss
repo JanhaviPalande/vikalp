@@ -11,6 +11,11 @@
       height: 30px;
     }
   }
+  .right-border-separator {
+    border-right: 0px none;
+    padding-right: 15px;
+  }
+
 }
 
 @media (min-width: 400px) and (max-width: 767px) {
@@ -32,6 +37,10 @@
     width: 63px;
     height: 30px;
   }
+  .right-border-separator {
+    border-right: 0px none;
+    padding-right: 15px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -49,6 +58,10 @@
     background: url(/static/img/header_small_logo.png) no-repeat left center;
     width: 63px;
     height: 30px;
+  }
+  .right-border-separator {
+    border-right: 0px none;
+    padding-right: 15px;
   }
 }
 
