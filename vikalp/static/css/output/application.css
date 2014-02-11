@@ -5352,6 +5352,14 @@ a.carousel-control.right {
 
 .featured-list {
   color: #9e332e; }
+  .featured-list.in-sidebar li {
+    background-color: #e6e7e8;
+    padding: 5px; }
+  .featured-list.in-sidebar .row {
+    margin: 0px;
+    margin-bottom: 8px; }
+    .featured-list.in-sidebar .row .col-xs-4 {
+      padding: 0; }
   .featured-list a {
     /*font-size: 1em;*/
     color: #9e332e;

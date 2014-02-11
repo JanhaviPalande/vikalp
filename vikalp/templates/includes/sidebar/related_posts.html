@@ -1,20 +1,36 @@
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags %}
 
+
 {% if article.related_posts.all %}
 
-    <div id="related-stories" class="well">
+    <div class="featured-list in-sidebar">
 
-        <h4>Related Stories</h4>
+        <h5>{% trans "Related Stories" %}</h5>
 
-        <div class="row">
+        <ul class="list-unstyled">
 
-            <ul class="list-styled">
-                {% for post in article.related_posts.all %}
-                    <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
-                {% endfor %}
-            </ul>
+            {% for post in article.related_posts.all %}
+                <li class="row">
+                    <div class="col-xs-4">
+                        {% if settings.BLOG_USE_FEATURED_IMAGE and post.featured_image %}
+                            <img class="img-responsive"
+                                 src="{{ MEDIA_URL }}{% thumbnail article.featured_image 300 230 %}">
+                        {% else %}
+                            <img class="img-responsive" src="{{ STATIC_URL }}{% thumbnail 'default.png' 300 230 %}">
+                        {% endif %}
+                    </div>
+                    <div class="col-xs-8">
+                        <a href="{{ post.get_absolute_url }}"><h4 id="featured-article"
+                                                                  class="media-heading">{{ post.title }}</h4>
+                        </a>
 
-        </div>
+                        <p>{{ post.description|truncatechars:256 }}</p>
+
+                    </div>
+                </li>
+
+            {% endfor %}
+        </ul>
 
     </div>
 

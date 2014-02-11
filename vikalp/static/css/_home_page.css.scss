@@ -41,6 +41,19 @@
 }
 
 .featured-list {
+  &.in-sidebar {
+    li {
+      background-color: $light-gray-col;
+      padding: 5px;
+    }
+    .row {
+      margin: 0px;
+      margin-bottom: 8px;
+      .col-xs-4 {
+        padding: 0;
+      }
+    }
+  }
   color: $dark-brick-col;
   a {
     /*font-size: 1em;*/

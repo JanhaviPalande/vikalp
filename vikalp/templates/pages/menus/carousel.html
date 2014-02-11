@@ -63,7 +63,7 @@
                             {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}
                                 <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail article.featured_image 300 230 %}">
                             {% else %}
-                                <img class="img-responsive" src="{{ STATIC_URL }}'img/default.png'">
+                                <img class="img-responsive" src="{{ STATIC_URL }}{% thumbnail 'img/default.png' 300 230%}">
                             {% endif %}
 
                         </div>
@@ -82,6 +82,7 @@
                             </div>
                         </li>
                     {% endifnotequal %}
+
                 {% endfor %}
             </ul>
         </div>
