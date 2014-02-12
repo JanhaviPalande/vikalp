@@ -5192,7 +5192,7 @@ footer .list-group-item {
   padding-bottom: 4px; }
   .category-list-wrapper ul li a {
     font-size: 0.8em;
-    text-transform: uppercase;
+    text-transform: inherit;
     vertical-align: top;
     color: #9e332e;
     text-decoration: none; }
