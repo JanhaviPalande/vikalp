@@ -52,7 +52,7 @@ class ArticleService():
             for_user=request.user).select_related()
 
     def get_published_articles_ordered_by_date(self):
-        return Article.objects.published().order_by('publish_date')
+        return Article.objects.published().order_by('publish_date').reverse()
 
     def article_categories_not_in_categories_covered(self, article, categories_covered):
         return filter(lambda x: x not in categories_covered, article.article_categories.all())
@@ -67,7 +67,8 @@ class ArticleService():
         categories_covered = []
         latest_articles = {}
         redundant_articles = []
-        articles = self.get_published_articles_ordered_by_date()
+        articles = self.get_published_articles_ordered_by_date().exclude(
+            article_categories=self.get_policy_edit_category())
         for article in articles:
             unused_article_categories = self.article_categories_not_in_categories_covered(article, categories_covered)
             if unused_article_categories and len(latest_articles) < 4:
