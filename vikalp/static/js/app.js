@@ -112,6 +112,26 @@ var CategoryHeightFix = (function(){
     }
 })();
 
+var SetPageSeparatorBar  = (function(){
+    function setIt(){
+        if($(".right-section").length > 0 && $(".right-section").offset().top > 200 )
+            return;
+        if($(".left-section").innerHeight() < $(".right-section").innerHeight()){
+            $(".left-section").removeClass("right-border-separator");
+            $(".right-section").addClass("left-border-separator");
+        }
+        else{
+            $(".left-section").addClass("right-border-separator");
+            $(".right-section").removeClass("left-border-separator");
+        }
+    }
+    return{
+        init: function(){
+            setIt();
+        }
+    }
+})();
+
 $(document).ready(function () {
 
     $('a#feature-article').hover(function () {
@@ -123,4 +143,5 @@ $(document).ready(function () {
     PageEventsList.init();
     LoadMoreCallback.init();
     CategoryHeightFix.init();
+    SetPageSeparatorBar.init();
 });
