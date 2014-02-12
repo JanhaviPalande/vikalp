@@ -63,10 +63,8 @@ var PageEventsList = (function () {
             $(window).resize(function () {
                 resizeHandler();
             });
-
         }
     }
-
 })();
 
 var LoadMoreCallback = (function(){
@@ -135,10 +133,6 @@ $(document).ready(function () {
 });
 
 $(window).load(function () {
-    $('a#feature-article').hover(function () {
-        $(this).find('p').toggle();
-    });
-
     FixCategoryHeight.init();
     FixCarousalHeight.init();
     CategoryHeightFix.init();
