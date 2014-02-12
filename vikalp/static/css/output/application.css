@@ -5428,9 +5428,9 @@ a.carousel-control.right {
   .category-section h2 {
     font-size: 1.125em; }
   .category-section .top-sub-section {
-    background-color: #9e332e; }
+    background-color: white; }
     .category-section .top-sub-section h4 {
-      color: white;
+      color: #9e332e;
       padding-left: 0;
       font-family: Roboto;
       font-size: 1.125em; }
@@ -5443,8 +5443,8 @@ a.carousel-control.right {
   .category-section .category {
     border-right: 10px solid #e6e7e8; }
   .category-section .plain-text-sub-section {
-    background-color: #9e332e;
-    color: #fff; }
+    background-color: white;
+    color: #9e332e; }
     .category-section .plain-text-sub-section p {
       height: 50px;
       font-weight: normal;
@@ -5621,7 +5621,7 @@ a.carousel-control.right {
   .category-topping-wrapper .image-sub-section {
     padding: 0px; }
   .category-topping-wrapper .top-sub-section h4 {
-    background-color: #e6e7e8;
+    background-color: #f1f1f2;
     color: black;
     font-family: Roboto-Light;
     padding: 10px 10px 20px 10px;

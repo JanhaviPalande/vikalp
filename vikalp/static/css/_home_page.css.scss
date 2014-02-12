@@ -109,9 +109,9 @@
     font-size: 1.125em;
   }
   .top-sub-section {
-    background-color: $dark-brick-col;
+    background-color: $white;
     h4 {
-      color: $white;
+      color: $dark-brick-col;
       padding-left: 0;
       font-family: Roboto;
       font-size: 1.125em;
@@ -130,8 +130,8 @@
     border-right: 10px solid $light-gray-col;
   }
   .plain-text-sub-section {
-    background-color: $dark-brick-col;
-    color: #fff;
+    background-color: $white;
+    color: $dark-brick-col;
     p {
       height: 50px;
       font-weight: normal;
