@@ -310,6 +310,7 @@ a.carousel-control {
   }
   .load-more-bottom-button{
     button{
+      display: inline-block !important;
       border-radius: 0px;
       font-weight: bold;
       color:$dark-brick-col;

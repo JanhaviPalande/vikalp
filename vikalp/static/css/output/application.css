@@ -5248,6 +5248,7 @@ a.carousel-control.right {
 .endless_more:hover {
   text-decoration: none; }
 .endless_more .load-more-bottom-button button {
+  display: inline-block !important;
   border-radius: 0px;
   font-weight: bold;
   color: #9e332e;
