@@ -32,12 +32,11 @@
     <script src="{% static "js/app.js" %}"></script>
     <script src="{% static "js/bootstrap.min.js" %}"></script>
     <script src="{% static "js/modern-business.js" %}"></script>
+
     {% block js %}
         {{ block.super }}
         <script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
     {% endblock %}
-
-
 
 </head>
 
@@ -92,6 +91,7 @@
 
     {% endif %}
 </div>
+
 {% include "pages/menus/footer.html" %}
 {% include "google-analytics/google-analytics.html" %}
 
