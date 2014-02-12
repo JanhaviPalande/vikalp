@@ -193,6 +193,11 @@ footer {
   padding-right: 30px;
 }
 
+.left-border-separator {
+  border-left: 2px solid $light-gray-col;
+  padding-left: 30px;
+}
+
 .space-xs {
   height: 10px;
 }
@@ -232,6 +237,7 @@ footer {
 #tag-cloud {
   div.tag_cloud {
     text-align: center;
+    padding-bottom: 20px;
   }
   h5 {
     margin: 10px 0px;

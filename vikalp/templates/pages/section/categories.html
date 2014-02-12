@@ -9,6 +9,7 @@
 {% endblock %}
 
 {% block section_content %}
+    <div class="category-page-category-list-wrapper">
     {% for article, category in latest_articles.items %}
         <div class="col-xs-6 col-sm-3 category">
             <div class="row top-sub-section">
@@ -37,6 +38,7 @@
             </div>
         </div>
     {% endfor %}
+    </div>
 
     <div class="col-xs-12 see-all-stories-wrapper">
         <a class="see-all-stories" href="/article">SEE ALL STORIES</a>

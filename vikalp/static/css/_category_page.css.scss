@@ -20,6 +20,7 @@
 }
 
 .border-bottom-only-wrapper{
+  border-right: 10px solid $white;
   .col-xs-12{
     padding: 0;
   }
@@ -43,6 +44,7 @@
 }
 
 .category-title-link {
+  border-right:10px solid $white;  
   &.no-icon{
     padding-left: 10px;
   }
