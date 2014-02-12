@@ -84,6 +84,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
+  &.navbar-fixed-top{
+    border:0px;
+  }
   a.navbar-brand {
     background: url(/static/img/header_big_logo.png) no-repeat left center;
     display: block;
@@ -210,6 +213,7 @@ footer {
     margin: 10px 0px;
   }
   ul li {
+    padding-bottom: 4px;
     a {
       font-size: 0.8em;
       text-transform: uppercase;
@@ -237,16 +241,6 @@ footer {
     &:hover {
       text-decoration: none;
     }
-
-//    &:nth-child(2n+1) {
-//      color: $dark-brick-col;
-//    }
-//    &:nth-child(2n) {
-//      color: $dark-gray-col;
-//    }
-//    &:nth-child(3n) {
-//      color: $yellow-col;
-//    }
   }
 
   .tag-weight-1 {

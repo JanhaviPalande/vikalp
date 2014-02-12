@@ -5093,6 +5093,8 @@ h1, h2, h3, h4, h5, h6 {
     color: #9e332e;
     text-decoration: none; }
 
+header.navbar-fixed-top {
+  border: 0px; }
 header a.navbar-brand {
   background: url(/static/img/header_big_logo.png) no-repeat left center;
   display: block;
@@ -5186,18 +5188,20 @@ footer .list-group-item {
   margin-left: 10px; }
 #category-list h5 {
   margin: 10px 0px; }
-#category-list ul li a {
-  font-size: 0.8em;
-  text-transform: uppercase;
-  vertical-align: top;
-  color: #9e332e;
-  text-decoration: none; }
-#category-list ul li a:hover {
-  text-decoration: none;
-  color: #9e332e; }
+#category-list ul li {
+  padding-bottom: 4px; }
+  #category-list ul li a {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    vertical-align: top;
+    color: #9e332e;
+    text-decoration: none; }
+  #category-list ul li a:hover {
+    text-decoration: none;
+    color: #9e332e; }
 
 #tag-cloud div.tag_cloud {
-  text-align: justify; }
+  text-align: center; }
 #tag-cloud h5 {
   margin: 10px 0px; }
 #tag-cloud a {
@@ -5423,8 +5427,7 @@ a.carousel-control.right {
   /*-webkit-box-shadow: 0px 0px 23px 1px rgba(50, 50, 50, 0.7);*/
   /*-moz-box-shadow:    0px 0px 23px 1px rgba(50, 50, 50, 0.7);*/
   /*box-shadow:         0px 0px 23px 1px rgba(50, 50, 50, 0.7);*/
-  background-color: #e6e7e8;
-  padding: 10px 0px 40px 0px; }
+  background-color: #e6e7e8; }
   .category-section h2 {
     font-size: 1.125em; }
   .category-section .top-sub-section {

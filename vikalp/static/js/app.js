@@ -93,6 +93,25 @@ var LoadMoreCallback = (function(){
     };
 })();
 
+var CategoryHeightFix = (function(){
+    function setHeight(){
+        var maxLIHeight = 0;
+        $("#category-list li").each(function () {
+            if (maxLIHeight < $(this).innerHeight()) {
+                maxLIHeight = $(this).innerHeight();
+            }
+        });
+        $("#category-list li").each(function () {
+            $(this).css("height", maxLIHeight + "px");
+        });
+    }
+    return{
+        init : function(){
+            setHeight();
+        }
+    }
+})();
+
 $(document).ready(function () {
 
     $('a#feature-article').hover(function () {
@@ -103,4 +122,5 @@ $(document).ready(function () {
     FixCarousalHeight.init();
     PageEventsList.init();
     LoadMoreCallback.init();
+    CategoryHeightFix.init();
 });
