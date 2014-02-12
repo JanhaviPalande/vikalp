@@ -5185,17 +5185,20 @@ footer .list-group-item {
 
 .category-list-wrapper .row {
   margin-right: 0px;
-  margin-left: 10px; }
+  margin-left: 0px; }
 .category-list-wrapper h5 {
   margin: 10px 0px; }
 .category-list-wrapper ul li {
+  list-style-position: inside;
   padding-bottom: 4px; }
   .category-list-wrapper ul li a {
     font-size: 0.8em;
-    text-transform: inherit;
+    text-transform: uppercase;
     vertical-align: top;
     color: #9e332e;
-    text-decoration: none; }
+    text-decoration: none;
+    position: relative;
+    top: 5px; }
   .category-list-wrapper ul li a:hover {
     text-decoration: none;
     color: #9e332e; }
@@ -5256,6 +5259,12 @@ a.carousel-control.right {
 
 .right-section h5 {
   padding-top: 10px; }
+
+.no-padding {
+  padding: 0; }
+
+.no-margin {
+  margin: 0; }
 
 @media (max-width: 399px) {
   header ul.navbar-nav.nav form {
