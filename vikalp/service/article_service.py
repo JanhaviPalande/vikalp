@@ -52,7 +52,7 @@ class ArticleService():
             for_user=request.user).select_related()
 
     def get_published_articles_ordered_by_date(self):
-        return Article.objects.published().order_by('publish_date').reverse()
+        return Article.objects.published().order_by('-publish_date')
 
     def article_categories_not_in_categories_covered(self, article, categories_covered):
         return filter(lambda x: x not in categories_covered, article.article_categories.all())
