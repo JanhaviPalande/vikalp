@@ -42,15 +42,7 @@ var FixCarousalHeight = (function () {
 
     function trigger() {
         if ($(".featured-list").length >0 && $(".featured-list").offset().left > 200) {
-            var numberOfImages = $(".featured-list img").length;
-            $(".featured-list img").each(function () {
-                $(this).load(function () {
-                    numberOfImages = numberOfImages - 1;
-                    if (numberOfImages === 0) {
-                        setHeight();
-                    }
-                });
-            });
+            setHeight();
         }
     }
 
@@ -132,16 +124,23 @@ var SetPageSeparatorBar  = (function(){
     }
 })();
 
-$(document).ready(function () {
 
+$(document).ready(function () {
+    $('a#feature-article').hover(function () {
+        $(this).find('p').toggle();
+    });
+
+    PageEventsList.init();
+    LoadMoreCallback.init();
+});
+
+$(window).load(function () {
     $('a#feature-article').hover(function () {
         $(this).find('p').toggle();
     });
 
     FixCategoryHeight.init();
     FixCarousalHeight.init();
-    PageEventsList.init();
-    LoadMoreCallback.init();
     CategoryHeightFix.init();
     SetPageSeparatorBar.init();
 });
