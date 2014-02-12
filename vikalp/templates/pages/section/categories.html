@@ -1,6 +1,7 @@
 {% extends "pages/section/section_base.html" %}
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags extra_tags static %}
 
+
 {% block section_class %}category-section{% endblock %}
 
 {% block section_heading %}
@@ -8,49 +9,28 @@
 {% endblock %}
 
 {% block section_content %}
-    {% for article in promoted_articles %}
-{#    <div class="col-xs-6 col-sm-6 col-lg-3 category">#}
-    <div class="col-xs-6 col-sm-3 category">
-        <div class="row top-sub-section">
-            <div class="col-xs-3">
-                <img class="img-responsive" src="../../../static/media/uploads/Energy.png" alt=""/>
+    {% for article, category in latest_articles.items %}
+        <div class="col-xs-6 col-sm-3 category">
+            <div class="row top-sub-section">
+                <div class="col-xs-3">
+                    <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail category.category_image 77 72 %}"/>
+                </div>
+                <div class="col-xs-9">
+                    <h4>{{ category }}</h4>
+                </div>
             </div>
-            <div class="col-xs-9">
-                <h4>Environment and ecology</h4>
+            <div class="row image-sub-section">
+                <div class="col-xs-12">
+                    <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail article.featured_image 450 300 %}"/>
+                </div>
+            </div>
+            <div class="row plain-text-sub-section">
+                <p class="col-xs-12">
+                    {{ article.title }}
+                </p>
             </div>
         </div>
-        <div class="row image-sub-section">
-            <div class="col-xs-12">
-                <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail article.featured_image 450 300 %}" alt=""/>
-            </div>
-        </div>
-        <div class="row plain-text-sub-section">
-            <p class="col-xs-12">
-                Chilka traditional fishers struggle
-            </p>
-        </div>
-    </div>
     {% endfor %}
-    <div class="col-xs-6 col-sm-3 category">
-        <div class="row top-sub-section">
-            <div class="col-xs-3">
-                <img class="img-responsive" src="../../../static/media/uploads/Energy.png" alt=""/>
-            </div>
-            <div class="col-xs-9">
-                <h4>Environment and ecology</h4>
-            </div>
-        </div>
-        <div class="row image-sub-section">
-            <div class="col-xs-12">
-                <img class="img-responsive" src="/static/media/uploads/blog/.thumbnails/carousel1-450x300.jpg" alt=""/>
-            </div>
-        </div>
-        <div class="row plain-text-sub-section">
-            <p class="col-xs-12">
-                Chilka traditional fishers struggle
-            </p>
-        </div>
-    </div>
 
     <div class="col-xs-12 see-all-stories-wrapper">
         <a class="see-all-stories" href="/article">SEE ALL STORIES</a>
