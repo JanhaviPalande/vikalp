@@ -15,16 +15,10 @@
 {% endblock %}
 
 {% block article_main %}
+    <h4><p>Found {{ results|length }} results for your query: {{ query }}</p></h4>
     <div id="search-results" class="list-group">
         {% include page_template %}
     </div>
-    {% block js %}
-        {{ block.super }}
-        <script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
-        <script>$.endlessPaginate();</script>
-    {% endblock %}
-
-
 {% endblock %}
 
 

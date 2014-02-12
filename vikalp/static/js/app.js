@@ -81,6 +81,7 @@ var LoadMoreCallback = (function(){
     function callback(){
          $.endlessPaginate({
             onCompleted:function(){
+                console.log("In Complete")
                 FixCategoryHeight.init();
             }
         });

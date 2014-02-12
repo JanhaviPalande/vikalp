@@ -30,11 +30,6 @@
     <div class="row category-page-category-list-wrapper category-topping-wrapper" id="articles-list">
         {% include page_template %}
     </div>
-    {% block js %}
-        {{ block.super }}
-        <script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
-        <script>$.endlessPaginate();</script>
-    {% endblock %}
 {% endblock %}
 
 {% block side_bar %}
