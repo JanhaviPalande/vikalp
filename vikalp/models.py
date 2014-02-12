@@ -14,8 +14,8 @@ class Article(BlogPost):
                                                 blank=True, related_name="articles")
     article_author = models.CharField(verbose_name="Story Author", max_length=128, blank=True)
     add_to_carousel = models.BooleanField(verbose_name="Add this article to carousel", default=False)
-    latitude = models.DecimalField(verbose_name="Article Lattitude", null=True, blank=True, decimal_places=7, max_digits=10)
-    longitude = models.DecimalField(verbose_name="Article Longitude", null=True, blank=True, decimal_places=7, max_digits=10)
+    latitude = models.DecimalField(verbose_name="Story Location Latitude", null=True, blank=True, decimal_places=7, max_digits=10)
+    longitude = models.DecimalField(verbose_name="Story Location Longitude", null=True, blank=True, decimal_places=7, max_digits=10)
 
 
     @models.permalink
