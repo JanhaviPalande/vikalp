@@ -1,15 +1,16 @@
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags endless %}
 {% paginate results %}
 
-    {% for result in results%}
-        <a class="list-group-item" href="{{ result.get_absolute_url }}">
-            <h4><span class="list-group-item-heading">{{ result }}</span></h4>
+<h4><p>Showing {{ results|length }} results for your query: </p></h4>
+{% for result in results %}
+    <a class="list-group-item" href="{{ result.get_absolute_url }}">
+        <h4><span class="list-group-item-heading">{{ result }}</span></h4>
 
 
-            <p class="list-group-item-text">{{ result.description|truncatewords_html:20|safe }}</p>
-            <span class="badge">Read More</span>
-            <br>
-        </a>
-    {% endfor %}
+        <p class="list-group-item-text">{{ result.description|truncatewords_html:20|safe }}</p>
+        <span class="badge">Read More</span>
+        <br>
+    </a>
+{% endfor %}
 
 {% show_more '<button type="button" class="btn btn-default">Load More</button>' %}

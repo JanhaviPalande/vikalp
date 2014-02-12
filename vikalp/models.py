@@ -22,7 +22,7 @@ class Article(BlogPost):
     def get_absolute_url(self):
         url_name = "blog_post_detail"
         kwargs = {"slug": self.slug}
-        return (url_name, (), kwargs)
+        return url_name, (), kwargs
 
 
 class ArticleCategory(BlogCategory):
