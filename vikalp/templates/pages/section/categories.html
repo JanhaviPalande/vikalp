@@ -21,7 +21,13 @@
             </div>
             <div class="row image-sub-section">
                 <div class="col-xs-12">
-                    <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail article.featured_image 450 300 %}"/>
+                    {% if article.featured_image %}
+                        <img class="img-responsive"
+                             src="{{ MEDIA_URL }}{% thumbnail article.featured_image 450 300 %}"/>
+                    {% else %}
+                        <img class="img-responsive"
+                             src="{{ STATIC_URL }}{% thumbnail 'img/default.png' 450 300 %}"/>
+                    {% endif %}
                 </div>
             </div>
             <div class="row plain-text-sub-section">
