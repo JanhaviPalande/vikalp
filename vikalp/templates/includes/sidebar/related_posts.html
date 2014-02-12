@@ -14,7 +14,7 @@
                     <div class="col-xs-4">
                         {% if settings.BLOG_USE_FEATURED_IMAGE and post.featured_image %}
                             <img class="img-responsive"
-                                 src="{{ MEDIA_URL }}{% thumbnail article.featured_image 300 230 %}">
+                                 src="{{ MEDIA_URL }}{% thumbnail post.featured_image 300 230 %}">
                         {% else %}
                             <img class="img-responsive" src="{{ STATIC_URL }}{% thumbnail 'default.png' 300 230 %}">
                         {% endif %}
