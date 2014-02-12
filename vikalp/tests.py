@@ -1,6 +1,5 @@
 from django.test import TestCase
 from mezzanine.blog.views import User
-from mezzanine.conf import settings
 from models import Article, ArticleCategory
 from vikalp.views.article_list_view import ArticleList
 from vikalp.views.category_page_view import CategoryPage
@@ -42,7 +41,7 @@ class SettingsTest(TestCase):
         self.assertEquals("jquery-1.7.1.min.js", JQUERY_FILENAME)
 
     def test_check_site_title_tagline(self):
-        self.assertEquals("Vikalp", SITE_TITLE)
+        self.assertEquals("Vikalp Sangam", SITE_TITLE)
         self.assertEquals("Alternatives Forum!", SITE_TAGLINE)
 
 

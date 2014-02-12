@@ -1,7 +1,7 @@
 ######################
 # MEZZANINE SETTINGS #
 ######################
-SITE_TITLE = "Vikalp"
+SITE_TITLE = "Vikalp Sangam"
 SITE_TAGLINE = "Alternatives Forum!"
 ugettext = lambda s: s
 USE_I18N = True
