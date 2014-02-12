@@ -305,3 +305,14 @@ a.carousel-control {
     }
   }
 }
+.endless_more{
+  &:hover{
+    text-decoration: none;
+  }
+  .load-more-bottom-button{
+    button{
+      color:$dark-brick-col;
+      background-color: $light-gray-col;
+    }
+  }
+}

@@ -5240,6 +5240,12 @@ a.carousel-control.right {
       background: none;
       border: 0px none; }
 
+.endless_more:hover {
+  text-decoration: none; }
+.endless_more .load-more-bottom-button button {
+  color: #9e332e;
+  background-color: #e6e7e8; }
+
 @media (max-width: 399px) {
   header ul.navbar-nav.nav form {
     padding: 10px 15px;
