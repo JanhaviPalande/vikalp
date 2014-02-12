@@ -48,6 +48,14 @@ def check_if_exists(arg):
 def get_first(arg):
     return check_if_exists(arg.all())
 
+
+
+
+@register.filter
+def lensort(categories):
+    categories.sort(key=lambda x: len(x.title), reverse=False)
+    return categories
+
 @register.filter
 def get_first_slug(arg):
     return get_slug(check_if_exists(arg.all()))

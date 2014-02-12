@@ -5055,7 +5055,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #9e332e;
   text-shadow: none;
   opacity: 1;
-  /*font-weight: bold;*/
   font-family: Roboto-Black; }
 
 .menu-arrow-after {
@@ -5184,45 +5183,42 @@ footer .list-group-item {
 .space-xs {
   height: 10px; }
 
-.navigator h4 {
-  margin-bottom: 30px; }
-
-#category-list .row {
+.category-list-wrapper .row {
   margin-right: 0px;
   margin-left: 10px; }
-#category-list h5 {
+.category-list-wrapper h5 {
   margin: 10px 0px; }
-#category-list ul li {
+.category-list-wrapper ul li {
   padding-bottom: 4px; }
-  #category-list ul li a {
+  .category-list-wrapper ul li a {
     font-size: 0.8em;
     text-transform: uppercase;
     vertical-align: top;
     color: #9e332e;
     text-decoration: none; }
-  #category-list ul li a:hover {
+  .category-list-wrapper ul li a:hover {
     text-decoration: none;
     color: #9e332e; }
 
-#tag-cloud div.tag_cloud {
+.tag-cloud-wrapper div.tag_cloud {
   text-align: center;
   padding-bottom: 20px; }
-#tag-cloud h5 {
+.tag-cloud-wrapper h5 {
   margin: 10px 0px; }
-#tag-cloud a {
+.tag-cloud-wrapper a {
   text-decoration: none; }
-  #tag-cloud a:hover {
+  .tag-cloud-wrapper a:hover {
     text-decoration: none; }
-#tag-cloud .tag-weight-1 {
+.tag-cloud-wrapper .tag-weight-1 {
   font-size: 0.8em;
   color: #bcbec0; }
-#tag-cloud .tag-weight-2 {
+.tag-cloud-wrapper .tag-weight-2 {
   font-size: 1em;
   color: #fc9d1c; }
-#tag-cloud .tag-weight-3 {
+.tag-cloud-wrapper .tag-weight-3 {
   font-size: 1.2em;
   color: #cd5751; }
-#tag-cloud .tag-weight-4 {
+.tag-cloud-wrapper .tag-weight-4 {
   font-size: 1.3em;
   color: #9e332e; }
 
@@ -5256,6 +5252,9 @@ a.carousel-control.right {
   font-weight: bold;
   color: #9e332e;
   background-color: #e6e7e8; }
+
+.right-section h5 {
+  padding-top: 10px; }
 
 @media (max-width: 399px) {
   header ul.navbar-nav.nav form {

@@ -1,7 +1,7 @@
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags extra_tags %}
 
 
-<div id="tag-cloud">
+<div id="tag-cloud" class="tag-cloud-wrapper">
     {% keywords_for vikalp.article as tags %}
     {% if tags %}
         <h5>{% trans "Explore Stories" %}</h5>

@@ -1,9 +1,10 @@
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags extra_tags %}
 
 
-<div id="category-list">
+<div id="category-list" class="category-list-wrapper">
     <h5>Story Categories</h5>
     {% article_categories vikalp.article as categories %}
+    {% with categories|lensort as categories %}
     <div class="row">
         <div class="col-sm-6">
             <ul class="list-unstyled">
@@ -24,4 +25,5 @@
             </ul>
         </div>
     </div>
+    {% endwith %}
 </div>

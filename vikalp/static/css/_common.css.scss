@@ -38,7 +38,6 @@ h1, h2, h3, h4, h5, h6 {
   color: $dark-brick-col;
   text-shadow: none;
   opacity: 1;
-  /*font-weight: bold;*/
   font-family: Roboto-Black;
 }
 
@@ -202,13 +201,13 @@ footer {
   height: 10px;
 }
 
-.navigator {
-  h4 {
-    margin-bottom: 30px;
-  }
-}
+//.navigator {
+//  h4 {
+//    margin-bottom: 30px;
+//  }
+//}
 
-#category-list {
+.category-list-wrapper {
   .row {
     margin-right: 0px;
     margin-left: 10px;
@@ -234,7 +233,7 @@ footer {
   }
 }
 
-#tag-cloud {
+.tag-cloud-wrapper {
   div.tag_cloud {
     text-align: center;
     padding-bottom: 20px;
@@ -316,5 +315,11 @@ a.carousel-control {
       color:$dark-brick-col;
       background-color: $light-gray-col;
     }
+  }
+}
+
+.right-section{
+  h5{
+    padding-top: 10px;
   }
 }
