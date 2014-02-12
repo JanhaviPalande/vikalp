@@ -15,7 +15,7 @@
                             {% if page.has_children_in_menu %}
                                 {% with menu_pages|get:page.id as child_pages %}
                                     {% for child_page in child_pages %}
-                                        {% if child_pages|length == 3 %}
+                                        {% if child_pages|length == 3 or child_pages|length == 2 %}
                                             <div class="col-md-3">
                                         {% else %}
                                             <div class="col-md-2">
