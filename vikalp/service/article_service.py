@@ -61,7 +61,7 @@ class ArticleService():
         return Article.objects.published()[offset: limit]
 
     def get_articles_with_lat_long(self):
-        return Article.objects.published().exclude(lattitude__isnull=True).exclude(longitude__isnull=True)
+        return Article.objects.published().exclude(latitude__isnull=True).exclude(longitude__isnull=True)
 
     def get_latest_articles(self):
         categories_covered = []
