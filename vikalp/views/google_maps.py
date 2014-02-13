@@ -14,7 +14,7 @@ class ArticleMap:
         self.gmap = maps.Map(opts={
             'center': latLng,
             'mapTypeId': maps.MapTypeId.ROADMAP,
-            'zoom': 5,
+            'zoom': 4,
             'mapTypeControlOptions': {
                 'style': maps.MapTypeControlStyle.DEFAULT
             },
@@ -69,6 +69,7 @@ def get_article_link(article):
 
 def get_article_lat_long(article):
     return maps.LatLng(article.latitude, article.longitude)
+
 
 def google_map(request, template="map.html"):
     center_lag_lng = maps.LatLng(21.1610858, 79.0725102)

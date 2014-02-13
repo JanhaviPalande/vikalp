@@ -3,15 +3,24 @@
 
 {% block article_main %}
 
-{{ form.map }}
-{{ form.media.js }}
-<script type="text/javascript">
-    window.myobj = {
-        markerOver: function () {
-            this.openInfoWindow();
-        }
-    };
-</script>
+    <div class="map-page-writeup">
+        <h2>Explore Stories by Location</h2>
+
+        <p style="padding-right: 30px">Click on a marker to read a story around that location. Zoom in to get a more
+            specific location or to see if there are more stories in one area.</p>
+    </div>
+
+    <div class="map" style="padding-left: 20%; padding-right: 20%">
+        {{ form.map }}
+        {{ form.media.js }}
+        <script type="text/javascript">
+            window.myobj = {
+                markerOver: function () {
+                    this.openInfoWindow();
+                }
+            };
+        </script>
+    </div>
 
 {% endblock %}
 
