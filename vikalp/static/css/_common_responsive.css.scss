@@ -15,6 +15,9 @@
     border-right: 0px none;
     padding-right: 15px;
   }
+  .comments-section form input[type=text], .comments-section form textarea{
+    width: 100%;
+  }
 
 }
 

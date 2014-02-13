@@ -41,6 +41,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Roboto-Black;
 }
 
+a{
+  text-decoration: none;
+  color:$dark-brick-col;
+  &:hover{
+    text-decoration: none;
+    color:$dark-brick-col;
+  }
+}
+
 .menu-arrow-after {
   content: '';
   display: block;
@@ -89,8 +98,8 @@ header {
   a.navbar-brand {
     background: url(/static/img/header_big_logo.png) no-repeat left center;
     display: block;
-    width: 244px;
-    height: 30px;
+    width: 309px;
+    height: 35px;
     overflow: hidden;
     margin-top: 8px;
   }

@@ -5057,6 +5057,13 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
   font-family: Roboto-Black; }
 
+a {
+  text-decoration: none;
+  color: #9e332e; }
+  a:hover {
+    text-decoration: none;
+    color: #9e332e; }
+
 .menu-arrow-after {
   content: '';
   display: block;
@@ -5097,8 +5104,8 @@ header.navbar-fixed-top {
 header a.navbar-brand {
   background: url(/static/img/header_big_logo.png) no-repeat left center;
   display: block;
-  width: 244px;
-  height: 30px;
+  width: 309px;
+  height: 35px;
   overflow: hidden;
   margin-top: 8px; }
 header .container {
@@ -5365,7 +5372,10 @@ a.carousel-control.right {
 
   .right-border-separator {
     border-right: 0px none;
-    padding-right: 15px; } }
+    padding-right: 15px; }
+
+  .comments-section form input[type=text], .comments-section form textarea {
+    width: 100%; } }
 @media (min-width: 400px) and (max-width: 767px) {
   header ul.navbar-nav.nav {
     float: none !important; }
