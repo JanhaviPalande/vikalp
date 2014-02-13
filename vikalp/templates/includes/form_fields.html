@@ -29,7 +29,7 @@
 
             <div class="controls">
                 <div class="form-fields">
-                    {% if field.help_text %}
+                    {% if field.help_text and field.help_text != 'required' %}
                         <div class="help-text"> {{ field.help_text }} </div>
                     {% endif %}
                     {% autoescape off %}{{ field }}{% endautoescape %}
