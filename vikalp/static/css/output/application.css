@@ -5271,9 +5271,15 @@ a.carousel-control.right {
   margin-right: -10px; }
 .comments-section form {
   padding: 10px 0px; }
+  .comments-section form .help-text {
+    color: #bcbec0;
+    padding: 5px 0px;
+    margin: 0; }
+  .comments-section form input[type=text], .comments-section form textarea {
+    width: 400px; }
 .comments-section .text-body {
   padding-left: 70px; }
-.comments-section h3 {
+.comments-section h3, .comments-section h4, .comments-section h5 {
   text-transform: inherit;
   font-family: Roboto; }
 .comments-section ul {

@@ -336,11 +336,19 @@ a.carousel-control {
   }
   form{
     padding:10px 0px; 
+    .help-text{
+      color:$dark-gray-col;
+      padding: 5px 0px;
+      margin: 0;
+    }
+    input[type=text], textarea{
+      width: 400px;
+    }
   }
   .text-body{
     padding-left: 70px;
   }
-  h3{
+  h3, h4, h5{
     text-transform: inherit;
     font-family: Roboto;
   }
