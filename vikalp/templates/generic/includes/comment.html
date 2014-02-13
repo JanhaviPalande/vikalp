@@ -18,7 +18,7 @@
                             <img src="{% gravatar_url comment.email %}">
                         {% endif %}
                     </div>
-                    <div class="text-body">
+                    <div>
                         <div>
                             <span class="user-name">{{ comment.user_name }}</span>
                             <span class="timespan">{% blocktrans with sometime=comment.submit_date|timesince %}{{ sometime }}
@@ -53,7 +53,7 @@
                                 <img src="{% gravatar_url comment.email %}">
                             {% endif %}
                         </div>
-                        <div class="text-body">
+                        <div>
                             <span class="user-name">{{ comment.user_name }}</span>
                             <span class="timespan">{% blocktrans with sometime=comment.submit_date|timesince %}
                             {{ sometime }} ago{% endblocktrans %}</span>
@@ -79,8 +79,8 @@
             {% comment_thread comment %}
         </li>
     {% endfor %}
-    {% if no_comments %}
-        <li>{% trans "There are no comments yet on this Story." %}</li>
-    {% endif %}
 </ul>
+{% endif %}
+{% if no_comments %}
+    {% trans "There are no comments yet on this Story." %}
 {% endif %}
