@@ -53,7 +53,7 @@
 
     {% block article_comments %}
         {% if article.allow_comments %}
-            <div id="article-comments">
+            <div id="article-comments" class="comments-section">
                 {% comments_for article %}
             </div>
         {% endif %}

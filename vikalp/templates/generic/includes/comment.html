@@ -1,7 +1,7 @@
 {% load i18n mezzanine_tags comment_tags rating_tags %}
 
-
-<ul class="unstyled">
+{% if comments_for_thread %}
+<ul class="list-unstyled">
     {% for comment in comments_for_thread %}
 
         <li id="comment-{{ comment.id }}"
@@ -9,55 +9,59 @@
             {% editable comment.is_public comment.is_removed %}
                 {% if not comment.is_removed and comment.is_public %}
 
-                    <strong>
+                    <div class="pull-left">
                         {% if comment.url %}
                             <a href="{{ comment.url }}">
                                 <img src="{% gravatar_url comment.email %}">
-                                {{ comment.user_name }}
                             </a>
                         {% else %}
                             <img src="{% gravatar_url comment.email %}">
-                            {{ comment.user_name }}
                         {% endif %}
-                    </strong>
-                    <span class="timespan">{% blocktrans with sometime=comment.submit_date|timesince %}{{ sometime }}
-                        ago{% endblocktrans %}</span>
-                    <p>{{ comment.comment|comment_filter }}</p>
-
-                    <a href="{{ request.path }}#comment-{{ comment.id }}">{% trans "Link" %}</a> /
-                    <a href="#reply-{{ comment.id }}" class="reply">{% trans "Reply" %}</a>
-                    <form class="reply-form" method="post" id="reply-{{ comment.id }}"
-                          action="{{ comment_url }}#reply-{{ comment.id }}"
-                          {% if replied_to != comment.id %}style="display:none;"{% endif %}>
-                        {% if replied_to == comment.id %}
-                            {% fields_for posted_comment_form %}
-                        {% else %}
-                            {% fields_for unposted_comment_form %}
-                        {% endif %}
-                        <input type="hidden" name="replied_to" value="{{ comment.id }}">
-                        <input class="btn btn-primary btn-large" type="submit" value="{% trans "Reply" %}">
-                    </form>
+                    </div>
+                    <div>
+                        <div>
+                            <span class="user-name">{{ comment.user_name }}</span>
+                            <span class="timespan">{% blocktrans with sometime=comment.submit_date|timesince %}{{ sometime }}
+                            ago{% endblocktrans %}</span>
+                        </div>
+                        <div>{{ comment.comment|comment_filter }}</div>
+                        <div>
+                            <a href="#reply-{{ comment.id }}" class="reply">{% trans "Reply" %}</a>
+                            <form class="reply-form" method="post" id="reply-{{ comment.id }}"
+                                  action="{{ comment_url }}#reply-{{ comment.id }}"
+                                  {% if replied_to != comment.id %}style="display:none;"{% endif %}>
+                                {% if replied_to == comment.id %}
+                                    {% fields_for posted_comment_form %}
+                                {% else %}
+                                    {% fields_for unposted_comment_form %}
+                                {% endif %}
+                                <input type="hidden" name="replied_to" value="{{ comment.id }}">
+                                <input class="btn btn-primary btn-large" type="submit" value="{% trans "Reply" %}">
+                            </form>
+                        </div>
+                    </div>
 
                 {% else %}
 
                     {% if request.user.is_staff %}
-                        <strong>
+                        <div class="pull-left">
                             {% if comment.url %}
                                 <a href="{{ comment.url }}">
                                     <img src="{% gravatar_url comment.email %}">
-                                    {{ comment.user_name }}
                                 </a>
                             {% else %}
                                 <img src="{% gravatar_url comment.email %}">
-                                {{ comment.user_name }}
                             {% endif %}
-                        </strong>
-                        <span class="timespan">{% blocktrans with sometime=comment.submit_date|timesince %}
+                        </div>
+                        <div>
+                            <span class="user-name">{{ comment.user_name }}</span>
+                            <span class="timespan">{% blocktrans with sometime=comment.submit_date|timesince %}
                             {{ sometime }} ago{% endblocktrans %}</span>
-                        <p>{{ comment.comment|comment_filter }}</p>
+                        </div>
+                        <div>{{ comment.comment|comment_filter }}</div>
                     {% endif %}
 
-                    <p>
+                    <div>
                         {% if comment.is_removed %}
                             {% trans "Comment deleted" %}
                         {% else %}
@@ -65,7 +69,7 @@
                         {% endif %}
                         <span class="timespan">{% blocktrans with sometime=comment.submit_date|timesince %}
                             {{ sometime }} ago{% endblocktrans %}</span>
-                    </p>
+                    </div>
 
                 {% endif %}
             {% endeditable %}
@@ -79,3 +83,4 @@
         <li>{% trans "There are no comments yet on this Story." %}</li>
     {% endif %}
 </ul>
+{% endif %}

@@ -122,6 +122,18 @@ var SetPageSeparatorBar  = (function(){
     }
 })();
 
+var CommentsUI = (function(){
+    function bindEvent(){
+        $("#addNewCommentBtn").click(function(){
+            $("#addNewCommentsFormWrapper").toggle("fast");
+        });
+    }
+    return {
+        init: function(){
+            bindEvent();
+        }
+    }
+})();
 
 $(document).ready(function () {
     $('a#feature-article').hover(function () {
@@ -130,6 +142,7 @@ $(document).ready(function () {
 
     PageEventsList.init();
     LoadMoreCallback.init();
+    CommentsUI.init();
 });
 
 $(window).load(function () {

@@ -10,21 +10,28 @@
     }</style>
 
     {% comment_thread object_for_comments %}
-    <h3>{% trans "New Comment" %}</h3>
-
-    <form method="post" id="comment" action="{{ comment_url }}#comment">
-
-        {% if not request.POST.replied_to %}
-            {% fields_for posted_comment_form %}
-        {% else %}
-            {% fields_for unposted_comment_form %}
-        {% endif %}
-
-        <div class="form-actions">
-            <input class="btn btn-primary btn-large" type="submit" value="{% trans "Comment" %}">
+    <a class="new-comment-button" id="addNewCommentBtn">
+        <h3>{% trans "Add New Comment" %}</h3>
+    </a>
+    <div id="addNewCommentsFormWrapper">
+        <div class="help-block">
+            <span>Fields marked with <span class="color-red">*</span> are mandatory</span>
         </div>
 
-    </form>
+        <form method="post" id="comment" action="{{ comment_url }}#comment">
+
+            {% if not request.POST.replied_to %}
+                {% fields_for posted_comment_form %}
+            {% else %}
+                {% fields_for unposted_comment_form %}
+            {% endif %}
+
+            <div class="form-actions">
+                <input class="btn btn-primary btn-large" type="submit" value="{% trans "Post" %}">
+            </div>
+
+        </form>
+    </div>
 
 </div>
 
