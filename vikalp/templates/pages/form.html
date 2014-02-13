@@ -15,12 +15,14 @@
                 {{ page_form.content|richtext_filters|safe }}
             {% endeditable %}
         {% endwith %}
-        <form method="post"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %} class="comments-section">
-            {% fields_for form %}
-            <div class="form-actions" style="padding-top: 10px">
-                <input class="btn btn-primary btn-large" type="submit" value="{{ page.form.button_text }}">
-            </div>
-        </form>
+        <div class="comments-section">
+            <form method="post"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+                {% fields_for form %}
+                <div class="form-actions" style="padding-top: 10px">
+                    <input class="btn btn-primary btn-large" type="submit" value="{{ page.form.button_text }}">
+                </div>
+            </form>
+        </div>
     {% endif %}
 
 {% endblock %}
