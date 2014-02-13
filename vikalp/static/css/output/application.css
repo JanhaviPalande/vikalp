@@ -5338,6 +5338,15 @@ a.carousel-control.right {
 .form-control {
   border-radius: 0px; }
 
+#author-date-category .text, #story-tags .text {
+  color: #bcbec0; }
+#author-date-category a, #story-tags a {
+  color: #9e332e;
+  text-decoration: none; }
+  #author-date-category a:hover, #story-tags a:hover {
+    color: #9e332e;
+    text-decoration: none; }
+
 @media (max-width: 399px) {
   header ul.navbar-nav.nav form {
     padding: 10px 15px;

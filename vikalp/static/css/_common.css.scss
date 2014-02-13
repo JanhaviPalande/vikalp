@@ -201,12 +201,6 @@ footer {
   height: 10px;
 }
 
-//.navigator {
-//  h4 {
-//    margin-bottom: 30px;
-//  }
-//}
-
 .category-list-wrapper {
   .row {
     margin-right: 0px;
@@ -432,4 +426,19 @@ a.carousel-control {
 
 .form-control{
   border-radius: 0px;
+}
+
+#author-date-category, #story-tags{
+  .text{
+    color:$dark-gray-col;
+  }
+  a{
+    color:$dark-brick-col;
+    text-decoration: none;
+    &:hover{
+      color:$dark-brick-col;
+      text-decoration: none;
+    }
+  }
+
 }
