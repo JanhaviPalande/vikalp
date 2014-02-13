@@ -2,10 +2,11 @@
 
 
 {% if articles %}
+
     {% paginate articles %}
+
     {% for article in articles %}
         <div class="col-xs-6 col-sm-4 category">
-
 
                 {% for category in article.article_categories.all %}
                     {% ifequal forloop.counter 1 %}
@@ -15,6 +16,7 @@
                         </a>
                     {% endifequal %}
                 {% endfor %}
+
                 {% editable article.title %}
 
                 <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
@@ -34,7 +36,6 @@
                     </div>
                 </a>
 
-
                     <div class="plain-text-sub-section">
                         <p class="col-xs-12">{{ article.description|truncatechars:150|safe }}</p>
 
@@ -47,8 +48,7 @@
                 {% endeditable %}
         </div>
     {% endfor %}
-    
+
         {% include "includes/loadmore.html" %}
-    
-    
+
 {% endif %}

@@ -72,6 +72,7 @@ def get_article_lat_long(article):
 
 
 def google_map(request, template="map.html"):
+    page_template = "map_page.html"
     center_lag_lng = maps.LatLng(21.1610858, 79.0725102)
     articles = articleService.get_articles_with_lat_long()
     if(articles):
@@ -84,5 +85,5 @@ def google_map(request, template="map.html"):
         article_map.add_window_to_markers()
     else:
         article_map = ArticleMap(center_lag_lng)
-    context = {'form': MapForm(initial={'map': article_map.gmap})}
+    context = {'form': MapForm(initial={'map': article_map.gmap}), 'page_template': page_template}
     return render(request, template, context)

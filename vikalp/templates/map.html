@@ -11,15 +11,7 @@
     </div>
 
     <div class="map" style="padding-left: 20%; padding-right: 20%">
-        {{ form.map }}
-        {{ form.media.js }}
-        <script type="text/javascript">
-            window.myobj = {
-                markerOver: function () {
-                    this.openInfoWindow();
-                }
-            };
-        </script>
+        {% include page_template %}
     </div>
 
 {% endblock %}
