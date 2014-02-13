@@ -1,3 +1,8 @@
+{% extends "base.html" %}
+
+
+{% block article_main %}
+
 {{ form.map }}
 {{ form.media.js }}
 <script type="text/javascript">
@@ -7,3 +12,12 @@
         }
     };
 </script>
+
+{% endblock %}
+
+{% block side_bar %}
+
+    {% include "includes/sidebar/category_list.html" %}
+    {% include "includes/sidebar/tag_cloud.html" %}
+
+{% endblock %}
