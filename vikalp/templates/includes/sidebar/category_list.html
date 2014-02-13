@@ -4,26 +4,13 @@
 <div id="category-list" class="category-list-wrapper">
     <h5>Story Categories</h5>
     {% article_categories vikalp.article as categories %}
-    {% with categories|lensort as categories %}
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-12 no-padding">
             <ul class="list-unstyled">
                 {% for category in categories %}
-                    {% if not forloop.counter|divisibleby:2 %}
                         <li style="list-style-image:url({{ MEDIA_URL }}{% thumbnail category.category_image 30 30 %})"><a href="{% url "article_list_category" category.slug %}">{{ category }}</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-12 no-padding">
-            <ul class="list-unstyled">
-                {% for category in categories %}
-                    {% if forloop.counter|divisibleby:2 %}
-                        <li style="list-style-image:url('{{ MEDIA_URL }}{% thumbnail category.category_image 30 30 %}')"><a href="{% url "article_list_category" category.slug %}">{{ category }}</a></li>
-                    {% endif %}
                 {% endfor %}
             </ul>
         </div>
     </div>
-    {% endwith %}
 </div>
