@@ -17,12 +17,13 @@ class Article(BlogPost):
     latitude = models.DecimalField(verbose_name="Story Location Latitude", null=True, blank=True, decimal_places=7, max_digits=10)
     longitude = models.DecimalField(verbose_name="Story Location Longitude", null=True, blank=True, decimal_places=7, max_digits=10)
 
-
     @models.permalink
     def get_absolute_url(self):
         url_name = "blog_post_detail"
         kwargs = {"slug": self.slug}
         return url_name, (), kwargs
+
+Article._meta.get_field('gen_description').default = False
 
 
 class ArticleCategory(BlogCategory):
