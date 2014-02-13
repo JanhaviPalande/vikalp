@@ -68,7 +68,7 @@
 
                         {% endfor %}
                     </div>
-                    {% if articles %}
+                    {% if articles|length >= 3 %}
                         <div class="read-more-wrapper">
                             <a class="read-more"
                                href="{% url "article_list_category" category.slug %}"> See all stories </a>
