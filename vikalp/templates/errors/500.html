@@ -7,6 +7,13 @@
 {% endblock %}
 
 {% block article_main %}
-{#    {% trans "Sorry, an error occurred. Seems like a Bad Gateway!" %}#}
-    <img style="height: 100%; width: 100%; padding-bottom: 108px;" src="{{ STATIC_URL }}{{ 'img/500page.png' }}"/>
+    {#    {% trans "Sorry, an error occurred. Seems like a Bad Gateway!" %}#}
+    <img style="height: 100%; width: 100%;" src="{{ STATIC_URL }}{{ 'img/500page.png' }}"/>
+{% endblock %}
+
+{% block side_bar %}
+
+    {% include "includes/sidebar/category_list.html" %}
+    {% include "includes/sidebar/tag_cloud.html" %}
+
 {% endblock %}
