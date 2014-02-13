@@ -347,27 +347,19 @@ a.carousel-control {
     padding-left: 70px;
   }
   h3{
-    // color:$dark-gray-col;
     text-transform: inherit;
-    // font-size: 1.4em;
     font-family: Roboto;
-    // font-weight: normal;
   }
   ul {
-    margin:8px 0px;
     padding:15px;
+    margin: 10px 20px;
     background-color: rgba(188, 190, 192,.3);
     border:3px solid rgba(200, 200, 200,.2);
-  }
-
-  ul li > ul {
-    margin: 10px 20px;
-    // padding-left:60px;
-  }
-
-   ul li > ul li > ul{
-    &.list-unstyled{
-      // padding-left:60px;
+    &.dont-style{
+      padding-left:0px;
+      margin: 0px;
+      background-color: transparent;
+      border: none;
     }
   }
 
@@ -410,7 +402,6 @@ a.carousel-control {
   .new-comment-button{
     cursor: pointer;
     text-decoration: none;
-    // display: inline-block;
     &:hover{
       text-decoration: none;
     }

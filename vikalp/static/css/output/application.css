@@ -5277,12 +5277,15 @@ a.carousel-control.right {
   text-transform: inherit;
   font-family: Roboto; }
 .comments-section ul {
-  margin: 8px 0px;
   padding: 15px;
+  margin: 10px 20px;
   background-color: rgba(188, 190, 192, 0.3);
   border: 3px solid rgba(200, 200, 200, 0.2); }
-.comments-section ul li > ul {
-  margin: 10px 20px; }
+  .comments-section ul.dont-style {
+    padding-left: 0px;
+    margin: 0px;
+    background-color: transparent;
+    border: none; }
 .comments-section .pull-left {
   margin-right: 10px; }
   .comments-section .pull-left img {

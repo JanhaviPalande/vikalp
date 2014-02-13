@@ -128,9 +128,62 @@ var CommentsUI = (function(){
             $("#addNewCommentsFormWrapper").toggle("fast");
         });
     }
+    function setLevels(){
+        var buckets = [];
+        function hasElement(num){
+            for(var i=0; i< buckets.length; i++){
+                if(buckets[i] === num)
+                return true;
+            }
+            return false;
+        }
+
+        function getIndex(num){
+            for(var i=0; i< buckets.length; i++){
+                if(buckets[i] == num)
+                return i;
+            }
+        }
+
+        function getBuckets(){
+            $("#comments ul").each(function(index){
+                var value = $(this).offset().left;
+                if(!hasElement(value)){
+                    buckets.push(value);
+                }
+            });
+
+            buckets.sort(function(a, b){
+                return a > b;
+            });
+        }
+
+        function setLevelClasses(){
+            $("#comments ul").each(function(index){
+                var value = $(this).offset().left;
+                var index = getIndex(value);
+                $(this).attr("data-level", index);
+            });
+        }
+        function applyLevelClass(){
+            $("#comments ul").each(function(index){
+                var value = $(this).attr("data-level")
+                if(value > 2)
+                    $(this).addClass("dont-style");
+            });
+
+        }
+
+        getBuckets();
+        setLevelClasses();
+        applyLevelClass();
+    }
     return {
         init: function(){
-            bindEvent();
+            try{
+                bindEvent();
+                setLevels();
+            }catch(e){}
         }
     }
 })();
@@ -142,7 +195,6 @@ $(document).ready(function () {
 
     PageEventsList.init();
     LoadMoreCallback.init();
-    CommentsUI.init();
 });
 
 $(window).load(function () {
@@ -150,4 +202,5 @@ $(window).load(function () {
     FixCarousalHeight.init();
     CategoryHeightFix.init();
     SetPageSeparatorBar.init();
+    CommentsUI.init();
 });
