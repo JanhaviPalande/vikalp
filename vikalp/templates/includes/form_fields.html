@@ -30,7 +30,9 @@
             <div class="controls">
                 <div class="form-fields">
                     {% autoescape off %}{{ field }}{% endautoescape %}
-                    <div class="help-text"> {{ field.help_text }} </div>
+                    {% if field.help_text %}
+                        <div class="help-block"> {{ field.help_text }} </div>
+                    {% endif %}
                 </div>
                 {% if field.errors %}
                     <span class="help-inline">
