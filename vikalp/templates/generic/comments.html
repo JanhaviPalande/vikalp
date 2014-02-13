@@ -13,6 +13,11 @@
     {{ obj.description }}
 {% endmetablock %}{% endblock %}
 
-{% block main %}
+{% block article_main %}
     {% comments_for obj %}
+{% endblock %}
+
+{% block side_bar %}
+    {% include "includes/sidebar/category_list.html" %}
+    {% include "includes/sidebar/tag_cloud.html" %}
 {% endblock %}
