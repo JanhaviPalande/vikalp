@@ -5661,7 +5661,7 @@ a.carousel-control.right {
     text-align: right; }
   .top-title a {
     position: relative;
-    bottom: -14px; }
+    bottom: -32px; }
 
 .border-bottom-only-wrapper {
   border-right: 10px solid white;
@@ -5744,8 +5744,7 @@ a.carousel-control.right {
       position: relative;
       top: -9px;
       text-transform: none;
-      font-size: .75em;
-      font-weight: bold; }
+      font-size: .75em; }
 
 @media (max-width: 399px) {
   .category-topping-wrapper .category {
