@@ -336,24 +336,38 @@ a.carousel-control {
 }
 
 .comments-section{
+  .border-bottom-only-wrapper{
+    margin-top:30px;
+    margin-right: -10px;
+  }
+  form{
+    padding:10px 0px; 
+  }
+  .text-body{
+    padding-left: 70px;
+  }
   h3{
-    color:$dark-gray-col;
+    // color:$dark-gray-col;
     text-transform: inherit;
-    font-size: 1.4em;
+    // font-size: 1.4em;
     font-family: Roboto;
-    font-weight: normal;
+    // font-weight: normal;
   }
   ul {
-    padding:5px 0px;
+    margin:8px 0px;
+    padding:15px;
+    background-color: rgba(188, 190, 192,.3);
+    border:3px solid rgba(200, 200, 200,.2);
   }
 
   ul li > ul {
-    padding-left:60px;
+    margin: 10px 20px;
+    // padding-left:60px;
   }
 
    ul li > ul li > ul{
     &.list-unstyled{
-      padding-left:60px;
+      // padding-left:60px;
     }
   }
 
@@ -362,7 +376,6 @@ a.carousel-control {
     img{
       padding: 14px;
       background-color: $lighter-gray-col;
-      border-radius:4px;
     }
   }
   .user-name{
@@ -397,7 +410,7 @@ a.carousel-control {
   .new-comment-button{
     cursor: pointer;
     text-decoration: none;
-    display: inline-block;
+    // display: inline-block;
     &:hover{
       text-decoration: none;
     }
@@ -411,12 +424,17 @@ a.carousel-control {
   color:$red;  
 }
 .btn-primary{
+  border-radius: 0px;
   &:hover{
-    background-color: $light-gray-col;
+    background-color: $dark-brick-col;
     border: 1px solid $light-gray-col;
-    color: $dark-brick-col;
+    color: $white;
   }
   border: 1px solid $light-gray-col;
-  color: $dark-brick-col;
-  background-color: $lighter-gray-col;
+  color: $white;
+  background-color: $dark-brick-col;
+}
+
+.form-control{
+  border-radius: 0px;
 }
