@@ -3,14 +3,17 @@ from django.contrib import admin
 from mezzanine.blog.admin import BlogPostAdmin, BlogCategoryAdmin
 from mezzanine.blog.models import BlogPost
 from mezzanine.core.admin import OwnableAdmin, DisplayableAdmin
-from vikalp.helper_functions.functional import field_check
+from vikalp.helper_functions.functional import field_check, insert_before
 from vikalp.models import Article, ArticleCategory
+
+
 
 
 class ArticleAdmin(BlogPostAdmin, DisplayableAdmin):
     fieldsets = deepcopy(BlogPostAdmin.fieldsets)
     fieldsets[0][1]['fields'] = tuple(map(field_check, fieldsets[0][1]['fields']))
     fieldsets[0][1]["fields"] += ("article_author", ("promoted", "add_to_carousel",), ('latitude', 'longitude',),)
+    fieldsets[0][1]["fields"] = insert_before(fieldsets[0][1]["fields"], "content", "article_author")
     filter_horizontal = ('article_categories', "related_posts",)
     list_display = deepcopy(BlogPostAdmin.list_display)
     list_display += ("promoted", "add_to_carousel",)

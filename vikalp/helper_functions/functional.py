@@ -53,3 +53,9 @@ def paginate_article_list(self, articles, request):
                         settings.MAX_PAGING_LINKS)
     return articles
 
+
+def insert_before(aSet, element1, element2):
+    aList = list(aSet)
+    aList.remove(element2)
+    aList.insert(aList.index(element1), element2)
+    return tuple(aList)
