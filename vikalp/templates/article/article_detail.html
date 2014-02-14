@@ -46,10 +46,6 @@
                 {% endfor %}
         </div>
     {% endif %}
-    <div class="download-social-bar btn-toolbar" role="toolbar" id="social-media-sharing">
-        {% include "includes/sidebar/download_article.html" %}
-        {% include "includes/sidebar/social_media.html" %}
-    </div>
 
     {% block article_comments %}
         {% if article.allow_comments %}
