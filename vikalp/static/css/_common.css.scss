@@ -465,3 +465,95 @@ a.carousel-control {
     padding-left: 30px;
   }
 }
+
+// .logos-collection{
+//   .logos-collection-wrapper{
+//     height: 60px;
+//     width: 230px;
+//     position: relative;
+//     overflow: hidden;
+
+//     a{
+//       position: absolute;
+//       display: block;
+//       background-repeat: no-repeat;
+//       background-size: cover;
+//     }
+
+//     a.kaplawriksh{
+//       left:0px;
+//       top:0px;
+//       background-position: left top;
+//       height: 60px;
+//       width: 45px;
+//     }
+//     a.bhumi{
+//       background-position: top center;
+//       width:148px;
+//       height: 38px;
+//       left:45px;
+//       top:0px;
+
+//     }
+//     a.shiksha{
+//       bottom: 0px;
+//       background-position: bottom center;
+//       width: 185px;
+//       height: 24px;
+//       left: 45px;
+//     }
+//     a.deccan{
+//       left: 193px;
+//       top: -2px;
+//       background-position: right top;
+//       height: 38px;
+//       width: 38px;
+//     }
+//   }
+// }
+
+.logos-collection{
+  .logos-collection-wrapper{
+    margin-top: 20px;
+    height: 50px;
+    width: 186px;
+    position: relative;
+    overflow: hidden;
+
+    a{
+      position: absolute;
+      display: block;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    a.kaplawriksh{
+      left:0px;
+      top:0px;
+      background-position: left top;
+      height: 49px;
+      width: 36px;
+    }
+    a.bhumi{
+      background-position: top center;
+      width:121px;
+      height: 30px;
+      left:36px;
+      top:0px;
+    }
+    a.shiksha{
+      bottom: 0px;
+      background-position: bottom center;
+      width: 150px;
+      height: 19px;
+      left: 36px;
+    }
+    a.deccan{
+      left: 156px;
+      top: -2px;
+      background-position: right top;
+      height: 32px;
+      width: 30px;
+    }
+  }
+}

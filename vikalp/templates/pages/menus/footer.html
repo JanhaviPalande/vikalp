@@ -5,8 +5,22 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2 logo hidden-sm hidden-xs">
-                <img class="img-responsive hidden-md" src="/static/img/footer_big_logo.png" alt=""/>
-                <img class="img-responsive visible-md" src="/static/img/footer_small_logo.png" alt=""/>
+                <div class="">
+                    <img class="img-responsive hidden-md" src="/static/img/footer_big_logo.png" alt=""/>
+                    <img class="img-responsive visible-md" src="/static/img/footer_small_logo.png" alt=""/>
+                </div>
+                <div class="logos-collection">
+                    <div class="logos-collection-wrapper">
+                      <a class="kaplawriksh" style="background-image:url('/static/img/kalpavriksh_m.png')" href="http://www.kalpavriksh.org" target="_blank">
+                      </a>  
+                      <a class="bhumi" style="background-image:url('/static/img/bhoomimaglogo_m.jpg')"  target="_blank" href="http://bhoomimagazine.org">
+                      </a>
+                      <a class="shiksha" style="background-image:url('/static/img/shikshantarlogo_m.jpg')" target="_blank" href="http://www.swaraj.org/shikshantar/">
+                      </a>
+                      <a class="deccan" style="background-image:url('/static/img/ddslogo_m.jpg')" target="_blank" href="http://www.ddsindia.com/">
+                      </a>
+                    </div>
+                </div>
             </div>
             {% for page in page_branch %}
                 {% for in_menu in page.in_menus %}

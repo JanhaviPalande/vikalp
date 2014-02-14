@@ -5364,6 +5364,42 @@ a.carousel-control.right {
   background: url("/static/img/navigator.png") no-repeat center left transparent;
   padding-left: 30px; }
 
+.logos-collection .logos-collection-wrapper {
+  margin-top: 20px;
+  height: 50px;
+  width: 186px;
+  position: relative;
+  overflow: hidden; }
+  .logos-collection .logos-collection-wrapper a {
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .logos-collection .logos-collection-wrapper a.kaplawriksh {
+    left: 0px;
+    top: 0px;
+    background-position: left top;
+    height: 49px;
+    width: 36px; }
+  .logos-collection .logos-collection-wrapper a.bhumi {
+    background-position: top center;
+    width: 121px;
+    height: 30px;
+    left: 36px;
+    top: 0px; }
+  .logos-collection .logos-collection-wrapper a.shiksha {
+    bottom: 0px;
+    background-position: bottom center;
+    width: 150px;
+    height: 19px;
+    left: 36px; }
+  .logos-collection .logos-collection-wrapper a.deccan {
+    left: 156px;
+    top: -2px;
+    background-position: right top;
+    height: 32px;
+    width: 30px; }
+
 @media (max-width: 399px) {
   header ul.navbar-nav.nav form {
     padding: 10px 15px;
