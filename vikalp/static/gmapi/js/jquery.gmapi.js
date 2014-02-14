@@ -1,9 +1,10 @@
-(function($) {
+(function ($) {
     // Return new instance of a class using an array of parameters.
     function instance(constructor, args) {
         function F() {
             return constructor.apply(this, args);
         }
+
         F.prototype = constructor.prototype;
         return new F();
     }
@@ -30,7 +31,7 @@
     //   openInfoWindow, closeInfoWindow, and getInfoWindow
     // If a Marker, adds a getMarker function to the InfoWindow.
     function linkInfo(obj, info) {
-        obj.openInfoWindow = function() {
+        obj.openInfoWindow = function () {
             if (obj instanceof google.maps.Marker) {
                 info.open(obj.getMap(), obj);
             }
@@ -38,14 +39,14 @@
                 info.open(obj);
             }
         };
-        obj.closeInfoWindow = function() {
+        obj.closeInfoWindow = function () {
             info.close();
         };
-        obj.getInfoWindow = function() {
+        obj.getInfoWindow = function () {
             return info;
         };
         if (obj instanceof google.maps.Marker) {
-            info.getMarker = function() {
+            info.getMarker = function () {
                 return obj;
             };
         }
@@ -54,8 +55,8 @@
     // Add events to an object.
     function addEvents(obj, events) {
         for (e in events) {
-            (function(eventName, handlerName, once) {
-                var handler = function() {
+            (function (eventName, handlerName, once) {
+                var handler = function () {
                     property(handlerName, window).apply(this, arguments);
                 };
                 if (once) {
@@ -123,7 +124,7 @@
     function toBounds(obj) {
         var bounds = new google.maps.LatLngBounds();
         if (obj instanceof google.maps.MVCArray ||
-                $.isArray(obj) || $.isPlainObject(obj)) {
+            $.isArray(obj) || $.isPlainObject(obj)) {
             for (var k in obj) {
                 bounds.union(toBounds(obj[k]));
             }
@@ -145,7 +146,7 @@
 
     // Clear all objects and remove them.
     function removeObjects(name) {
-        return function() {
+        return function () {
             var div = $(this);
             // Get any existing objects.
             var objects = div.data(name);
@@ -160,7 +161,7 @@
 
     // Add and render an array of objects.
     function addObjects(name, obj) {
-        return function() {
+        return function () {
             if (obj) {
                 var div = $(this);
                 // Get a map reference.
@@ -183,7 +184,7 @@
 
     // Fit the map to the objects.
     function fitObjects(name, zoom) {
-        return function() {
+        return function () {
             var div = $(this);
             // Get a map reference.
             var map = div.data('map');
@@ -206,56 +207,56 @@
 
     // Add our custom methods to jQuery.
     $.fn.extend({
-        removeMarkers: function() {
+        removeMarkers: function () {
             return this.each(removeObjects('markers'));
         },
-        removePolylines: function() {
+        removePolylines: function () {
             return this.each(removeObjects('polylines'));
         },
-        removePolygons: function() {
+        removePolygons: function () {
             return this.each(removeObjects('polygons'));
         },
-        addMarkers: function(obj) {
+        addMarkers: function (obj) {
             return this.each(addObjects('markers', obj));
         },
-        addPolylines: function(obj) {
+        addPolylines: function (obj) {
             return this.each(addObjects('polylines', obj));
         },
-        addPolygons: function(obj) {
+        addPolygons: function (obj) {
             return this.each(addObjects('polygons', obj));
         },
-        fitMarkers: function(zoom) {
+        fitMarkers: function (zoom) {
             return this.each(fitObjects('markers', zoom));
         },
-        fitPolylines: function(zoom) {
+        fitPolylines: function (zoom) {
             return this.each(fitObjects('polylines', zoom));
         },
-        fitPolygons: function(zoom) {
+        fitPolygons: function (zoom) {
             return this.each(fitObjects('polygons', zoom));
         },
-        getMarkers: function() {
+        getMarkers: function () {
             // If 'this' is a collection, only returns objects from first.
             return this.data('markers');
         },
-        getPolylines: function() {
+        getPolylines: function () {
             // If 'this' is a collection, only returns objects from first.
             return this.data('polylines');
         },
-        getPolygons: function() {
+        getPolygons: function () {
             // If 'this' is a collection, only returns objects from first.
             return this.data('polygons');
         },
-        getMap: function() {
+        getMap: function () {
             // If 'this' is a collection, only returns objects from first.
             return this.data('map');
         },
-        applyMap: function(obj) {
+        applyMap: function (obj) {
             var objects = Array();
             objects['mkr'] = 'markers';
             objects['pln'] = 'polylines';
             objects['pgn'] = 'polygons';
 
-            return this.each(function() {
+            return this.each(function () {
                 var div = $(this);
                 // Get rid of any existing objects.
                 for (var k in objects) {
@@ -279,8 +280,8 @@
                 }
             });
         },
-        initMap: function() {
-            return this.each(function() {
+        initMap: function () {
+            return this.each(function () {
                 var div = $(this);
                 var mapdiv = div.children('div');
                 var data = (mapdiv.attr('class').match(/{.*}/) || [])[0];
@@ -289,7 +290,7 @@
                     div.applyMap($.parseJSON(data));
                     var mapimg = div.children('img');
                     google.maps.event.addListenerOnce(div.data('map'),
-                        'tilesloaded', function() {
+                        'tilesloaded', function () {
                             mapimg.css('z-index', -1);
                         }
                     );
@@ -297,7 +298,7 @@
             });
         }
     });
-    $(function() {
+    $(function () {
         // Startup: Find any maps and initialize them.
         $('div.gmap:visible').initMap();
     });
