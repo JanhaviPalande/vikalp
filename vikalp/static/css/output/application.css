@@ -5360,6 +5360,10 @@ a.carousel-control.right {
     color: #9e332e;
     text-decoration: none; }
 
+.navigator h4 {
+  background: url("/static/img/navigator.png") no-repeat center left transparent;
+  padding-left: 30px; }
+
 @media (max-width: 399px) {
   header ul.navbar-nav.nav form {
     padding: 10px 15px;
