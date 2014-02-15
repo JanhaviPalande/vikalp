@@ -29,7 +29,7 @@ def process_tag_or_categories_or_article(tag_or_category_or_article, model):
 
 
 def field_check(x):
-    if (x == 'categories'):
+    if x == 'categories':
         return "article_categories"
     else:
         return x
@@ -39,13 +39,15 @@ def get_page(request):
     check_if_middleware_exists("mezzanine.pages")
     slug = path_to_slug(request.path_info)
     pages = pageService.get_page_ascendants(request, slug)
-    return reduce(default_or_value, pages, "");
+    return reduce(default_or_value, pages, "")
+
 
 def translate_to_model(articles):
     list_of_articles = []
     for article in articles:
         list_of_articles.append(article)
     return list_of_articles
+
 
 def paginate_article_list(self, articles, request):
     articles = paginate(articles, request.GET.get("page", 1),
