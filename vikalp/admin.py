@@ -7,8 +7,6 @@ from vikalp.helper_functions.functional import field_check, insert_before
 from vikalp.models import Article, ArticleCategory
 
 
-
-
 class ArticleAdmin(BlogPostAdmin, DisplayableAdmin):
     fieldsets = deepcopy(BlogPostAdmin.fieldsets)
     fieldsets[0][1]['fields'] = tuple(map(field_check, fieldsets[0][1]['fields']))
@@ -20,6 +18,7 @@ class ArticleAdmin(BlogPostAdmin, DisplayableAdmin):
     list_editable = deepcopy(BlogPostAdmin.list_editable)
     list_editable += ("promoted", "add_to_carousel",)
     list_filter = deepcopy(BlogPostAdmin.list_filter)
+    list_filter = filter(lambda x: x != 'keywords__keyword', list_filter)
     list_filter = tuple(map(field_check, list_filter))
     list_filter += ("promoted", "add_to_carousel",)
 
