@@ -5,29 +5,23 @@
 
     <div class="container">
         <div class="row">
+            <div class="col-xs-12 hidden-md hidden-lg">
+                <div class="logos-collection lg ">
+                    {% include "includes/footer_logo_lg.html" %}
+                </div>
+                
+            </div>
             <div class="col-md-2 logo hidden-sm hidden-xs">
                 <div id="footer-logo">
                     <a href="/"> <img class="img-responsive hidden-md" src="/static/img/footer_big_logo.png"/> </a>
                     <a href="/"> <img class="img-responsive visible-md" src="/static/img/footer_small_logo.png"/> </a>
                 </div>
-
-                <div class="logos-collection">
-                    <div class="logos-collection-wrapper">
-                        <a class="kaplawriksh" style="background-image:url('/static/img/kalpavriksh_m.png')"
-                           href="http://www.kalpavriksh.org" target="_blank">
-                        </a>
-                        <a class="bhumi" style="background-image:url('/static/img/bhoomimaglogo_m.jpg')" target="_blank"
-                           href="http://bhoomimagazine.org">
-                        </a>
-                        <a class="shiksha" style="background-image:url('/static/img/shikshantarlogo_m.jpg')"
-                           target="_blank" href="http://www.swaraj.org/shikshantar/">
-                        </a>
-                        <a class="deccan" style="background-image:url('/static/img/ddslogo_m.jpg')" target="_blank"
-                           href="http://www.ddsindia.com/">
-                        </a>
-                    </div>
+                <div class="logos-collection lg hidden-md">
+                    {% include "includes/footer_logo_lg.html" %}
                 </div>
-
+                <div class="logos-collection md visible-md">
+                    {% include "includes/footer_logo_md.html" %}
+                </div>
             </div>
 
 
