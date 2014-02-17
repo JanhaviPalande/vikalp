@@ -67,21 +67,21 @@ var PageEventsList = (function () {
     }
 })();
 
-var LoadMoreCallback = (function(){
+var LoadMoreCallback = (function(jq){
     function callback(){
-         $.endlessPaginate({
+         jq.endlessPaginate({
             onCompleted:function(){
                 FixCategoryHeight.init();
             }
         });
-        $.endlessPaginate();
+        jq.endlessPaginate();
     }
     return{
         init: function(){
             callback();
         }
     };
-})();
+})($);
 
 var CategoryHeightFix = (function(){
     function setHeight(){

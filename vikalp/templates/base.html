@@ -31,14 +31,19 @@
     <link href=" {% static "css/output/application.css" %}" rel="stylesheet">
 
     <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
-    <script src="{% static "js/app.js" %}"></script>
     <script src="{% static "js/bootstrap.min.js" %}"></script>
-    <script src="{% static "js/modern-business.js" %}"></script>
 
     {% block js %}
         {{ block.super }}
         <script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
     {% endblock %}
+
+
+
+
+    <script src="{% static "js/app.js" %}"></script>
+    <script src="{% static "js/modern-business.js" %}"></script>
+
 
 </head>
 
