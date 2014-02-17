@@ -49,6 +49,12 @@
 
     {% block article_comments %}
         {% if article.allow_comments %}
+            <div class="space-xs"></div>
+            <div class="row border-bottom-only-wrapper default-margin-right-margin">
+                <div class="col-xs-12">
+                    <div class="border-bottom-only"></div>
+                </div>
+            </div>
             <div id="article-comments" class="comments-section">
                 {% comments_for article %}
             </div>
