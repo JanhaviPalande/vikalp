@@ -18,9 +18,10 @@
     <a class="new-comment-button" id="addNewCommentBtn">
         <h4>{% trans "Add New Comment" %}</h4>
     </a>
+
     <div id="addNewCommentsFormWrapper">
         <div class="help-block">
-            <span>Fields marked with <span class="color-red">*</span> are mandatory</span>
+            <span>{% trans "Fields marked with" %} <span class="color-red">*</span> {% trans "are mandatory" %}</span>
         </div>
 
         <form method="post" id="comment" action="{{ comment_url }}#comment">
