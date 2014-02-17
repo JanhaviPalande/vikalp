@@ -20,7 +20,7 @@
                         {% ifequal in_menu '1' %}
                             {% ifnotequal page.title "Home" %}
                                 <li {% if page.is_current_or_ascendant %}class="active"{% endif %}><a
-                                        href="{{ page.get_absolute_url }}">{{ page.title | upper }}</a></li>
+                                        href="{{ page.get_absolute_url }}">{% blocktrans with page.title|upper as page_title %}{{ page_title }}{% endblocktrans %}</a></li>
                             {% endifnotequal %}
                         {% endifequal %}
                     {% endfor %}
