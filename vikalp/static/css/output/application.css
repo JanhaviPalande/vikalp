@@ -5364,41 +5364,76 @@ a.carousel-control.right {
   background: url("/static/img/navigator.png") no-repeat center left transparent;
   padding-left: 30px; }
 
-.logos-collection .logos-collection-wrapper {
+.logos-collection.lg .logos-collection-wrapper {
   margin: 20px 0px;
   height: 50px;
   width: 186px;
   position: relative;
   overflow: hidden; }
-  .logos-collection .logos-collection-wrapper a {
+  .logos-collection.lg .logos-collection-wrapper a {
     position: absolute;
     display: block;
     background-repeat: no-repeat;
     background-size: cover; }
-  .logos-collection .logos-collection-wrapper a.kaplawriksh {
+  .logos-collection.lg .logos-collection-wrapper a.kaplawriksh {
     left: 0px;
     top: 0px;
     background-position: left top;
     height: 49px;
     width: 36px; }
-  .logos-collection .logos-collection-wrapper a.bhumi {
+  .logos-collection.lg .logos-collection-wrapper a.bhumi {
     background-position: top center;
     width: 121px;
     height: 30px;
     left: 36px;
     top: 0px; }
-  .logos-collection .logos-collection-wrapper a.shiksha {
+  .logos-collection.lg .logos-collection-wrapper a.shiksha {
     bottom: 0px;
     background-position: bottom center;
     width: 150px;
     height: 19px;
     left: 36px; }
-  .logos-collection .logos-collection-wrapper a.deccan {
+  .logos-collection.lg .logos-collection-wrapper a.deccan {
     left: 156px;
     top: -2px;
     background-position: right top;
     height: 32px;
     width: 30px; }
+.logos-collection.md .logos-collection-wrapper {
+  margin: 20px 0px;
+  height: 126px;
+  width: 120px;
+  position: relative;
+  overflow: hidden; }
+  .logos-collection.md .logos-collection-wrapper a {
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .logos-collection.md .logos-collection-wrapper a.kaplawriksh {
+    left: 0px;
+    top: 0px;
+    background-position: center center;
+    height: 80px;
+    width: 60px; }
+  .logos-collection.md .logos-collection-wrapper a.deccan {
+    left: 60px;
+    top: 0px;
+    background-position: center center;
+    height: 80px;
+    width: 60px; }
+  .logos-collection.md .logos-collection-wrapper a.bhumi {
+    background-position: top center;
+    width: 120px;
+    height: 30px;
+    left: 0px;
+    top: 80px; }
+  .logos-collection.md .logos-collection-wrapper a.shiksha {
+    bottom: 0px;
+    background-position: top center;
+    width: 120px;
+    height: 15px;
+    top: 111px; }
 
 @media (max-width: 399px) {
   header ul.navbar-nav.nav form {
