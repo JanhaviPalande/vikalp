@@ -98,6 +98,6 @@ def get_article_map():
 
 def google_map(request, template="map.html"):
     article_map = get_article_map()
-    page_template = "map_page.html"
-    context = {'form': MapForm(initial={'map': article_map}), 'page_template': page_template}
+    map_page = "map_page.html"
+    context = {'form': MapForm(initial={'map': article_map}), 'map_page': map_page}
     return render(request, template, context)
