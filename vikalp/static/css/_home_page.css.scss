@@ -41,6 +41,15 @@
 }
 
 .featured-list {
+  li.row{
+    padding:10px 0px;
+    background-color: $lighter-gray-col;
+    margin-bottom: 5px;
+    &:nth-child(2n){
+      background-color: $light-gray-col;
+    }
+  }
+  
   &.in-sidebar {
     li {
       background-color: $light-gray-col;
@@ -93,6 +102,7 @@
   width: 1px;
   right: 0;
   border-left: 1px solid $light-gray-col;
+  top:-10px;
 }
 
 .about_section {

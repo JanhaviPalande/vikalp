@@ -5571,6 +5571,12 @@ a.carousel-control.right {
 
 .featured-list {
   color: #9e332e; }
+  .featured-list li.row {
+    padding: 10px 0px;
+    background-color: #f1f1f2;
+    margin-bottom: 5px; }
+    .featured-list li.row:nth-child(2n) {
+      background-color: #e6e7e8; }
   .featured-list.in-sidebar li {
     background-color: #e6e7e8;
     padding: 5px; }
@@ -5609,7 +5615,8 @@ a.carousel-control.right {
   margin: 10px 0px;
   width: 1px;
   right: 0;
-  border-left: 1px solid #e6e7e8; }
+  border-left: 1px solid #e6e7e8;
+  top: -10px; }
 
 .about_section h2 {
   font-size: 1.125em; }
