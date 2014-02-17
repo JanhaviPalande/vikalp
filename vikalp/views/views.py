@@ -1,9 +1,7 @@
-import json
 import os
 from urlparse import urlparse, urljoin
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.staticfiles import finders
-from django.forms import forms
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import RequestContext
@@ -13,10 +11,7 @@ from mezzanine.generic import get_model
 from vikalp.service.article_service import ArticleService
 from vikalp.service.page_service import PageService
 from django.utils.translation import ugettext_lazy as _
-from gmapi import maps
-from gmapi.forms.widgets import GoogleMap
-
-
+from vikalp.views.google_maps import get_article_map, MapFormForSideBar
 
 
 MODEL_NAME = "article"
@@ -76,6 +71,7 @@ def search(request, template="search_results.html"):
     results = search_model.objects.search(query, for_user=request.user)
     if request.is_ajax():
         template = page_template
+    article_map = get_article_map
     context = {"query": query, "results": results,
-               "search_type": search_type, "page_template": page_template}
+               "search_type": search_type, "page_template": page_template, 'form': MapFormForSideBar(initial={'map': article_map})}
     return render(request, template, context, context_instance=RequestContext(request))

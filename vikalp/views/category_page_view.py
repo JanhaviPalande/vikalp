@@ -1,12 +1,14 @@
 from django.shortcuts import render
 from vikalp.helper_functions.functional import get_page
+from vikalp.views.google_maps import get_article_map, MapFormForSideBar
 from vikalp.views.views import articleService
 from mezzanine.conf import settings
 
 
 class CategoryPage:
     def get_context_for_category_list(self, categories, page):
-        return {"articleCategories": categories, "page": page, "default_image": settings.DEFAULT_CATEGORY_IMAGE}
+        article_map = get_article_map
+        return {"articleCategories": categories, "page": page, "default_image": settings.DEFAULT_CATEGORY_IMAGE, 'form': MapFormForSideBar(initial={'map': article_map})}
 
     def category_list(self, request, template="pages/categories_page.html"):
         settings.use_editable()

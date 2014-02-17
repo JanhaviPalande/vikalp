@@ -1,10 +1,10 @@
 from django.template import RequestContext
 from mezzanine.conf import settings
 from mezzanine.generic.models import Keyword
-from mezzanine.utils.views import paginate, render
-from vikalp.helper_functions.functional import get_model_content_type, process_tag_or_categories_or_article, get_page, \
-    translate_to_model
+from mezzanine.utils.views import render
+from vikalp.helper_functions.functional import get_model_content_type, process_tag_or_categories_or_article, get_page, translate_to_model
 from vikalp.models import ArticleCategory
+from vikalp.views.google_maps import get_article_map, MapFormForSideBar
 from vikalp.views.views import articleService, MODEL_NAME, APP_NAME
 
 
@@ -17,8 +17,10 @@ class ArticleList:
 
     def get_context_for_article_list(self, articles, author=None, category=None, tag=None, page=None,
                                      page_template="article/article_list_page.html"):
+        article_map = get_article_map
         context = {"articles": articles,
-                   "tag": tag, "category": category, "author": author, "page": page, "page_template": page_template, }
+                   "tag": tag, "category": category, "author": author, "page": page, "page_template": page_template,
+                   'form': MapFormForSideBar(initial={'map': article_map})}
         return context
 
     def article_list(self, request, tag=None, category=None, template="article/article_list.html"):

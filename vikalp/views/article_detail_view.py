@@ -5,6 +5,7 @@ from vikalp.helper_functions.pdf_generator import PDFGenerator
 from vikalp.service.article_service import ArticleService
 from vikalp.helper_functions.pdf_generator import StyleArticlePDF
 from vikalp.helper_functions.pdf_generator import PDF_CONTENT_TYPE
+from vikalp.views.google_maps import get_article_map, MapFormForSideBar
 
 
 def article_category_is_policy_edits(category):
@@ -26,10 +27,11 @@ class ArticleDetail:
         articles = self.article_service.get_published_articles_with_related_articles(request)
         article = process_tag_or_categories_or_article(slug, articles)
         page = get_page(request)
+        article_map = get_article_map
         if(article_is_a_policy_edit(article)):
             request.path_info = '/policy-edits/'
             page = get_page(request)
-        return render(request, template, {"article": article, "page": page})
+        return render(request, template, {"article": article, "page": page, 'form': MapFormForSideBar(initial={'map': article_map})})
 
 
     def build_response(self, article_title):

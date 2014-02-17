@@ -2,12 +2,14 @@ from django.template import RequestContext
 from mezzanine.conf import settings
 from mezzanine.utils.views import render
 from vikalp.helper_functions.functional import get_page
+from vikalp.views.google_maps import get_article_map, MapFormForSideBar
 from vikalp.views.views import articleService
 
 
 class ArticleListByDate:
-    def get_context_for_article_list(self, articles, page=None, page_template = "article/article_list_by_date_page.html"):
-        context = {"articles": articles, "page": page, "page_template" : page_template,}
+    def get_context_for_article_list(self, articles, page=None, page_template="article/article_list_by_date_page.html"):
+        article_map = get_article_map
+        context = {"articles": articles, "page": page, "page_template": page_template, 'form': MapFormForSideBar(initial={'map': article_map})}
         return context
 
 

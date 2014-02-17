@@ -1,12 +1,21 @@
+import re
 from django.forms import forms
 from django.shortcuts import render
 from gmapi import maps
 from gmapi.forms.widgets import GoogleMap
-from vikalp.views.views import articleService
+from vikalp.service.article_service import ArticleService
+
+
+articleService = ArticleService()
 
 
 class MapForm(forms.Form):
-    map = forms.Field(widget=GoogleMap(attrs={'width': 510, 'height': 510}))
+    map = forms.Field(widget=GoogleMap(attrs={'width': 500, 'height': 500}))
+
+
+
+class MapFormForSideBar(forms.Form):
+    map = forms.Field(widget=GoogleMap(attrs={'width': 285, 'height': 295}))
 
 
 class ArticleMap:
@@ -71,11 +80,10 @@ def get_article_lat_long(article):
     return maps.LatLng(article.latitude, article.longitude)
 
 
-def google_map(request, template="map.html"):
-    page_template = "map_page.html"
+def get_article_map():
     center_lag_lng = maps.LatLng(21.1610858, 79.0725102)
     articles = articleService.get_articles_with_lat_long()
-    if(articles):
+    if (articles):
         contentList = map(get_article_link, articles)
         articleInfos = map(create_article_info, contentList)
         latLongList = map(get_article_lat_long, articles)
@@ -85,5 +93,11 @@ def google_map(request, template="map.html"):
         article_map.add_window_to_markers()
     else:
         article_map = ArticleMap(center_lag_lng)
-    context = {'form': MapForm(initial={'map': article_map.gmap}), 'page_template': page_template}
+    return article_map.gmap
+
+
+def google_map(request, template="map.html"):
+    article_map = get_article_map()
+    page_template = "map_page.html"
+    context = {'form': MapForm(initial={'map': article_map}), 'page_template': page_template}
     return render(request, template, context)
