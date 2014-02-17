@@ -5273,6 +5273,11 @@ a.carousel-control.right {
 .no-margin {
   margin: 0; }
 
+.border-bottom-only-wrapper.default-margin-right-margin {
+  margin-right: -15px; }
+.border-bottom-only-wrapper.default-margin-left-margin {
+  margin-left: -15px; }
+
 .comments-section .border-bottom-only-wrapper {
   margin-top: 30px;
   margin-right: -10px; }

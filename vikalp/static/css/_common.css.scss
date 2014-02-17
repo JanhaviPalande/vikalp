@@ -338,6 +338,15 @@ a.carousel-control {
   margin: 0;
 }
 
+.border-bottom-only-wrapper {
+  &.default-margin-right-margin{
+    margin-right:-15px;
+  }
+  &.default-margin-left-margin{
+    margin-left:-15px;
+  }
+}
+
 .comments-section{
   .border-bottom-only-wrapper{
     margin-top:30px;
