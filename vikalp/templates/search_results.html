@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block article_main %}
-    <h4><p>Found {{ results|length }} results for your query: {{ query }}</p></h4>
+    <h4><p>{% blocktrans %}Found {{ results|length }} results for your query: {{ query }}{% endblocktrans %}</p></h4>
     <div id="search-results" class="list-group">
         {% include page_template %}
     </div>
