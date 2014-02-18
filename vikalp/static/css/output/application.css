@@ -5448,6 +5448,9 @@ a.carousel-control.right {
   margin: 10px auto;
   display: block; }
 
+.img-responsive {
+  margin: 0 auto; }
+
 @media (max-width: 399px) {
   header ul.navbar-nav.nav form {
     padding: 10px 15px;

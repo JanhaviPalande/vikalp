@@ -19,7 +19,7 @@ Vagrantfile.bak
 *.swp
 .vagrant
 .idea
-CACHE
+vikalp/static/CACHE/
 media/uploads/
 blogpost.csv
 *.pdf

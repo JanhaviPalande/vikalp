@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
-{% load pages_tags mezzanine_tags i18n future compress staticfiles static %}
+{% load pages_tags mezzanine_tags i18n future staticfiles static compress  %}
 
 <head>
 
@@ -22,27 +22,22 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    {% compress css %}
+        <link href="{{ STATIC_URL }}css/output/application.css" rel="stylesheet">
+    {% endcompress %}
+    {% compress js %}
+        <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
+        <script src="{% static "js/bootstrap.min.js" %}"></script>
 
-    {% ifinstalled mezzanine.blog %}
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
-        <link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
-    {% endifinstalled %}
+        {% block js %}
+            {{ block.super }}
+            <script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
+        {% endblock %}
 
-    <link href=" {% static "css/output/application.css" %}" rel="stylesheet">
+        <script src="{% static "js/app.js" %}"></script>
+        <script src="{% static "js/modern-business.js" %}"></script>
 
-    <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
-    <script src="{% static "js/bootstrap.min.js" %}"></script>
-
-    {% block js %}
-        {{ block.super }}
-        <script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
-    {% endblock %}
-
-
-
-
-    <script src="{% static "js/app.js" %}"></script>
-    <script src="{% static "js/modern-business.js" %}"></script>
+    {% endcompress %}
 
 
 </head>
