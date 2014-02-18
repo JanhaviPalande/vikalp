@@ -15,7 +15,7 @@ class MapForm(forms.Form):
 
 
 class MapFormForSideBar(forms.Form):
-    map = forms.Field(widget=GoogleMap(attrs={'width': 285, 'height': 295}))
+    map = forms.Field(widget=GoogleMap(attrs={'width': 285, 'height': 300}))
 
 
 class ArticleMap:
