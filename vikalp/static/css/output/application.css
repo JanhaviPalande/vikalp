@@ -5572,7 +5572,7 @@ a.carousel-control.right {
 .featured-list {
   color: #9e332e; }
   .featured-list li.row {
-    padding: 10px 0px;
+    padding: 15px 0px;
     background-color: #f1f1f2;
     margin-bottom: 5px; }
     .featured-list li.row:nth-child(2n) {
@@ -5615,7 +5615,6 @@ a.carousel-control.right {
   margin: 10px 0px;
   width: 1px;
   right: 0;
-  border-left: 1px solid #e6e7e8;
   top: -10px; }
 
 .about_section h2 {
