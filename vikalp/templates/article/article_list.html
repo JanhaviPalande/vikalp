@@ -10,7 +10,7 @@
         <div class="category-page-heading">
             {% if category %}
                 <div class="category-title-link" style="background-image: url('{% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{% thumbnail category.category_image 50 50 %}')">
-                    {{ category }}
+                    {% with category.title as category_title %}{% trans category_title %}{% endwith %}
                 </div>
 
             {% else %}

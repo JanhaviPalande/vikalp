@@ -12,7 +12,7 @@
                     {% ifequal forloop.counter 1 %}
                         <a class="category-title-wrapper" href="{{ category.get_absolute_url }}">
                             <img src="{{ MEDIA_URL }}{% thumbnail category.category_image 30 30 %}"/>
-                            {{ category }}
+                            {% with category.title as category_title %}{% trans category_title %}{% endwith %}
                         </a>
                     {% endifequal %}
                 {% endfor %}
@@ -41,7 +41,7 @@
 
                         <div class="read-more-wrapper">
                             <a class="read-more" href="{{ article.get_absolute_url }}">
-                                Read More
+                                {% trans "Read More" %}
                             </a>
                         </div>
                     </div>

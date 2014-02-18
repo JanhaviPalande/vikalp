@@ -4,8 +4,6 @@
 .DS_Store
 .coverage
 vikalpvenv/
-locale/
-vikalp/locale/
 gettext/
 .tx
 node_modules/

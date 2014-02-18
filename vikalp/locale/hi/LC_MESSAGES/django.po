@@ -1,0 +1,369 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Vikalp\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-17 12:34+0000\n"
+"PO-Revision-Date: 2014-02-18 11:18+0530\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: hi\n"
+"X-Generator: Poedit 1.6.4\n"
+
+#: settings.py:11
+msgid "Tamil"
+msgstr ""
+
+#: settings.py:12
+msgid "English"
+msgstr ""
+
+#: templates/base.html:79
+msgid "Navigator"
+msgstr ""
+
+#: templates/map.html:9
+msgid "Explore Stories by Location"
+msgstr "स्थान के आधार पर कहानियाँ"
+
+#: templates/map.html:11
+msgid ""
+"Click on a marker to read a story around that location. Zoom in to get a "
+"more specific location or to see if there are more stories in one area."
+msgstr ""
+
+#: templates/search_results.html:6 templates/search_results.html.py:7
+#: templates/search_results.html:14
+msgid "Search Results"
+msgstr "खोज का परिणाम"
+
+#: templates/search_results.html:11 templates/pages/menus/breadcrumb.html:7
+#: templates/pages/menus/dropdown.html:10
+#: templates/pages/menus/footer_tree.html:11
+#: templates/pages/menus/mobile.html:10 templates/pages/menus/primary.html:8
+#: templates/pages/menus/tree.html:10
+msgid "Home"
+msgstr ""
+
+#: templates/search_results.html:18
+#, python-format
+msgid "Found %(results|length)s results for your query: %(query)s"
+msgstr ""
+
+#: templates/search_results_page.html:11
+#: templates/pages/categories_page.html:62
+#: templates/pages/section/about.html:30
+msgid "Read More"
+msgstr "और पढ़ें"
+
+#: templates/article/article_detail.html:24
+msgid "By"
+msgstr ""
+
+#: templates/article/article_detail.html:25
+msgid "Posted"
+msgstr ""
+
+#: templates/article/article_detail.html:26
+msgid "on"
+msgstr ""
+
+#: templates/article/article_detail.html:26
+msgid "in"
+msgstr ""
+
+#: templates/article/article_detail.html:43
+msgid "Story Tags:"
+msgstr ""
+
+#: templates/article/article_list.html:23
+msgid "Stories"
+msgstr "कहानियाँ"
+
+#: templates/article/article_list_by_date.html:26
+msgid "Latest Stories"
+msgstr "ताज़ा कहानियाँ"
+
+
+#: templates/blog/blog_post_list.html:23
+msgid "Blog"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:6
+msgid "Recent Posts"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:19
+msgid "Archive"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:37
+#: templates/pages/section/featured.html:40
+msgid "Categories"
+msgstr "विषय"
+
+#: templates/blog/includes/filter_panel.html:51
+msgid "Tags"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:67
+msgid "Authors"
+msgstr "लेखक"
+
+#: templates/blog/includes/filter_panel.html:80
+msgid "Feeds"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:82
+#: templates/blog/includes/filter_panel.html:86
+#: templates/blog/includes/filter_panel.html:90
+#: templates/blog/includes/filter_panel.html:94
+msgid "RSS"
+msgstr ""
+
+
+#: templates/blog/includes/filter_panel.html:83
+#: templates/blog/includes/filter_panel.html:87
+#: templates/blog/includes/filter_panel.html:91
+#: templates/blog/includes/filter_panel.html:95
+msgid "Atom"
+msgstr ""
+
+#: templates/email/comment_notification.html:6
+msgid "A new comment has been posted on"
+msgstr "एक नया विचार आया है"
+
+#: templates/email/comment_notification.html:10
+#, python-format
+msgid ""
+"\n"
+"    At %(submit_date)s %(user_name)s wrote:\n"
+"    "
+msgstr ""
+
+#: templates/errors/404.html:6
+msgid "Page not found"
+msgstr ""
+
+#: templates/errors/500.html:6
+msgid "Error"
+msgstr ""
+
+#: templates/generic/includes/comment.html:24
+#, python-format
+msgid ""
+"%(sometime)s\n"
+"                            ago"
+msgstr ""
+
+#: templates/generic/includes/comment.html:29
+#: templates/generic/includes/comment.html:39
+msgid "Reply"
+msgstr "जवाब भेजें"
+
+#: templates/generic/includes/comment.html:58
+#: templates/generic/includes/comment.html:70
+#, python-format
+msgid ""
+"\n"
+"                            %(sometime)s ago"
+msgstr ""
+
+#: templates/generic/includes/comment.html:66
+msgid "Comment deleted"
+msgstr ""
+
+#: templates/generic/includes/comment.html:68
+msgid "Comment awaiting approval"
+msgstr ""
+
+#: templates/generic/includes/comment.html:85
+msgid "There are no comments yet on this Story."
+msgstr "इस कहानी पर अब तक कोई विचार नहीं आए"
+
+#: templates/generic/includes/comments.html:6
+msgid "Comments"
+msgstr "विचार"
+
+#: templates/generic/includes/comments.html:19
+msgid "Add New Comment"
+msgstr "नया विचार"
+
+#: templates/generic/includes/comments.html:24
+msgid "Fields marked with"
+msgstr ""
+
+#: templates/generic/includes/comments.html:24
+msgid "are mandatory"
+msgstr ""
+
+#: templates/generic/includes/comments.html:36
+msgid "Post"
+msgstr ""
+
+#: templates/generic/includes/rating.html:7
+msgid "Current rating"
+msgstr ""
+
+#: templates/generic/includes/rating.html:9
+msgid "Currently unrated"
+msgstr ""
+
+#: templates/generic/includes/rating.html:19
+msgid "Rate"
+msgstr ""
+
+#: templates/includes/editable_form.html:17
+msgid "Save"
+msgstr "सेव करें"
+
+#: templates/includes/editable_form.html:18
+msgid "Cancel"
+msgstr "रद्द करें"
+
+#: templates/includes/editable_form.html:26
+msgid "Edit"
+msgstr ""
+
+#: templates/includes/editable_toolbar.html:7
+#: templates/includes/editable_toolbar.html:9
+msgid "Admin"
+msgstr ""
+
+#: templates/includes/editable_toolbar.html:11
+msgid "Log out"
+msgstr ""
+
+#: templates/includes/pagination.html:8
+msgid "Page"
+msgstr ""
+
+#: templates/includes/pagination.html:8
+msgid "of"
+msgstr ""
+
+#: templates/includes/search_form.html:5
+msgid "Search"
+msgstr ""
+
+#: templates/includes/search_form.html:13 views/views.py:68
+msgid "Everything"
+msgstr ""
+
+#: templates/includes/sidebar/category_list.html:5
+msgid "Story Categories"
+msgstr "कहानियो ं के विषय"
+
+
+#: templates/includes/sidebar/related_posts.html:8
+msgid "Related Content"
+msgstr "संबंधित कहानियाँ"
+
+#: templates/includes/sidebar/tag_cloud.html:7
+msgid "Explore Stories"
+msgstr "कहानियाँ देखें"
+
+#: templates/pages/categories_page.html:16
+msgid "Show all latest stories"
+msgstr "सारी ताज़ा कहानियाँ देखें"
+
+#: templates/pages/categories_page.html:74
+msgid "See all stories"
+msgstr "सभी कहानियाँ देखें"
+
+#: templates/pages/menus/admin.html:32
+msgid "Add"
+msgstr ""
+
+#: templates/pages/menus/carousel.html:56
+
+msgid "Stories by category"
+msgstr "विषय के आधार पर कहानियाँ"
+
+msgid "STORIES BY CATEGORY"
+msgstr "विषय के आधार पर कहानियाँ"
+
+#: templates/pages/section/about.html:7
+msgid "ABOUT VIKALP SANGAM"
+msgstr "विकल्प संगम के बारे में पढ़ें"
+
+
+msgid "SEE ALL STORIES"
+msgstr "शेष कहानियाँ"
+
+#: templates/pages/section/featured.html:8
+msgid "Featured Stories"
+msgstr "खास कहानियाँ"
+
+#: templates/twitter/tweets.html:7
+msgid "Recent Tweets"
+msgstr ""
+
+#: templates/twitter/tweets.html:20
+#, python-format
+msgid "%(sometime)s ago"
+msgstr ""
+
+msgid "CONTRIBUTE"
+msgstr "योगदान"
+
+
+msgid "POLICY EDITORIALS"
+msgstr "संपादकीय"
+
+msgid "EDITORIALS"
+msgstr "संपादकीय"
+
+msgid "STORIES"
+msgstr "कहानियाँ"
+
+msgid "Highlights"
+msgstr "मुख्य बातें"
+
+msgid "ABOUT"
+msgstr "हमारा परिचय"
+
+#: templates/article/article_list_by_date.html:31
+msgid "Show stories by category"
+msgstr "विषय के आधार पर कहानियाँ"
+
+msgid "Alternative economies"
+msgstr "वैकल्पिक अर्थव्यवस्थाएं"
+
+msgid "Health & Hygiene"
+msgstr "स्वास्थ्य"
+
+msgid "Society & Culture"
+msgstr "समाज और संस्कृति"
+
+msgid "Learning & Education"
+msgstr "सीखना और शिक्षा"
+
+msgid "Environment & Ecology"
+msgstr "पर्यावरण"
+
+msgid "Livelihoods"
+msgstr "जीविका"
+
+msgid "Transportation"
+msgstr "परिवहन"
+
+msgid "Knowledge & Media"
+msgstr "जानकारी और मीडिया"
+
+msgid "Alternative Politics"
+msgstr "वैकल्पिक राजनीति"
+
+msgid "Policy Edits"
+msgstr "संपादकीय"
+
+msgid "Policy Edit"
+msgstr "संपादकीय"

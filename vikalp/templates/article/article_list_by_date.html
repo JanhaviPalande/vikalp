@@ -9,7 +9,7 @@
         {% block title %}
             {% if category %}
                 <div class="col-xs-7 heading">
-                    <h2>{{ category }}</h2>
+                    <h2>{% with category.title as category_title %}{% trans category_title %}{% endwith %}</h2>
                 </div>
                 {% if category.category_long_description %}
                     <div id="category-long-description" class="well">
