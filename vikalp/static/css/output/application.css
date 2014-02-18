@@ -5145,7 +5145,7 @@ header .container {
 
 .read-more-wrapper {
   text-align: right;
-  margin: 20px 0px;
+  margin: 0px 0px 25px 0px;
   padding-right: 10px; }
 
 .read-more {
@@ -5257,12 +5257,14 @@ a.carousel-control.right {
 
 .endless_more:hover {
   text-decoration: none; }
-.endless_more .load-more-bottom-button button {
-  display: inline-block !important;
-  border-radius: 0px;
-  font-weight: bold;
-  color: #9e332e;
-  background-color: #e6e7e8; }
+.endless_more .load-more-bottom-button {
+  margin-bottom: 10px; }
+  .endless_more .load-more-bottom-button button {
+    display: inline-block !important;
+    border-radius: 0px;
+    font-weight: bold;
+    color: #9e332e;
+    background-color: #e6e7e8; }
 
 .right-section h5 {
   padding-top: 10px; }
@@ -5439,6 +5441,10 @@ a.carousel-control.right {
     width: 120px;
     height: 15px;
     top: 111px; }
+
+.endless_loading img {
+  margin: 10px auto;
+  display: block; }
 
 @media (max-width: 399px) {
   header ul.navbar-nav.nav form {
@@ -5794,7 +5800,7 @@ a.carousel-control.right {
     color: #9e332e; }
 
 .category-page-category-list-wrapper {
-  margin: 10px 0px; }
+  margin: 10px 0px 0px 0px; }
 
 .category-topping-wrapper {
   padding: 0; }

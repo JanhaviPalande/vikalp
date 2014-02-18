@@ -150,7 +150,7 @@ header {
 
 .read-more-wrapper {
   text-align: right;
-  margin: 20px 0px;
+  margin: 0px 0px 25px 0px;
   padding-right: 10px;
 }
 
@@ -314,6 +314,7 @@ a.carousel-control {
     text-decoration: none;
   }
   .load-more-bottom-button{
+    margin-bottom: 10px;
     button{
       display: inline-block !important;
       border-radius: 0px;
@@ -566,5 +567,12 @@ a.carousel-control {
         top: 111px;
       }
     }
+  }
+}
+
+.endless_loading{
+  img{
+    margin:10px auto;
+    display: block;
   }
 }
