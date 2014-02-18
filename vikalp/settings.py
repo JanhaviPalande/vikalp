@@ -350,16 +350,17 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 #     "SECRET_KEY": SECRET_KEY,
 #     "NEVERCACHE_KEY": NEVERCACHE_KEY,
 # }
-COMPRESS_ROOT = STATIC_ROOT
+# COMPRESS_ROOT = STATIC_ROOT
 
 COMPRESS_PRECOMPILERS = (
-    ('text/less', 'lessc {infile} {outfile}'),
-    ('text/typescript', 'tsc {infile} --out {outfile}'),
+
 )
-
 COMPRESS_ENABLED = True
+COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter', 'vikalp.compressor.filters.YUglifyCSSFilter']
+COMPRESS_YUGLIFY_BINARY = "yuglify"
+COMPRESS_YUGLIFY_CSS_ARGUMENTS = '--terminal'
+COMPRESS_YUGLIFY_JS_ARGUMENTS = '--terminal'
 COMPRESS_PARSER = 'compressor.parser.HtmlParser'
-
 
 
 
