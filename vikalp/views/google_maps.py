@@ -13,7 +13,6 @@ class MapForm(forms.Form):
     map = forms.Field(widget=GoogleMap(attrs={'width': 500, 'height': 500}))
 
 
-
 class MapFormForSideBar(forms.Form):
     map = forms.Field(widget=GoogleMap(attrs={'width': 285, 'height': 300}))
 
