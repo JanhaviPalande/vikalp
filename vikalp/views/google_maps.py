@@ -10,11 +10,11 @@ articleService = ArticleService()
 
 
 class MapForm(forms.Form):
-    map = forms.Field(widget=GoogleMap(attrs={'width': 500, 'height': 500}))
+    map = forms.Field(widget=GoogleMap(attrs={'width': 500, 'height': 500, 'nojquery': True}))
 
 
 class MapFormForSideBar(forms.Form):
-    map = forms.Field(widget=GoogleMap(attrs={'width': 285, 'height': 300}))
+    map = forms.Field(widget=GoogleMap(attrs={'width': 285, 'height': 300, 'nojquery': True}))
 
 
 class ArticleMap:
