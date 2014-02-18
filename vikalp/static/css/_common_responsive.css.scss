@@ -18,7 +18,14 @@
   .comments-section form input[type=text], .comments-section form textarea{
     width: 100%;
   }
-
+  .comments-section{
+    ul{
+      padding: 4px;
+      li > ul{
+        margin: 0;
+      }
+    }
+  }
 }
 
 @media (min-width: 400px) and (max-width: 767px) {
@@ -43,6 +50,14 @@
   .right-border-separator {
     border-right: 0px none;
     padding-right: 15px;
+  }
+  .comments-section{
+    ul{
+      padding: 4px;
+      li > ul{
+        margin: 0;
+      }
+    }
   }
 }
 

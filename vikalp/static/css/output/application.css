@@ -5280,6 +5280,8 @@ a.carousel-control.right {
 .border-bottom-only-wrapper.default-margin-left-margin {
   margin-left: -15px; }
 
+.comments-section .comment-text-wrapper {
+  padding-left: 70px; }
 .comments-section .border-bottom-only-wrapper {
   margin-top: 30px;
   margin-right: -10px; }
@@ -5461,7 +5463,12 @@ a.carousel-control.right {
     padding-right: 15px; }
 
   .comments-section form input[type=text], .comments-section form textarea {
-    width: 100%; } }
+    width: 100%; }
+
+  .comments-section ul {
+    padding: 4px; }
+    .comments-section ul li > ul {
+      margin: 0; } }
 @media (min-width: 400px) and (max-width: 767px) {
   header ul.navbar-nav.nav {
     float: none !important; }
@@ -5480,7 +5487,12 @@ a.carousel-control.right {
 
   .right-border-separator {
     border-right: 0px none;
-    padding-right: 15px; } }
+    padding-right: 15px; }
+
+  .comments-section ul {
+    padding: 4px; }
+    .comments-section ul li > ul {
+      margin: 0; } }
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar-default .navbar-nav > li > a {
     font-size: .7em; }
