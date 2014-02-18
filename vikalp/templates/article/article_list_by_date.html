@@ -2,7 +2,7 @@
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags endless %}
 
 
-{% block meta_title %}{% if category %}{{ category }}{% else %}{{ tag }}{% endif %}{% endblock %}
+{% block meta_title %}{% if category %}{{ category }}{% endif %}{% if tag %}{{ tag }}{% else %}Latest Stories{% endif %}{% endblock %}
 
 {% block article_main %}
     <div class="row top-title">
