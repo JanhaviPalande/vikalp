@@ -19,27 +19,17 @@ class MapFormForSideBar(forms.Form):
 
 class ArticleMap:
     def __init__(self, latLng, infos=None, in_side_bar=False):
-        if in_side_bar:
-            self.gmap = maps.Map(opts={
-                'center': latLng,
-                'mapTypeId': maps.MapTypeId.ROADMAP,
-                'zoom': 4,
-                'scrollwheel': False,
-                'zoomControl': False,
-                'draggable': False,
-                'mapTypeControlOptions': {
-                    'style': maps.MapTypeControlStyle.DEFAULT
-                },
-            })
-        else:
-            self.gmap = maps.Map(opts={
-                'center': latLng,
-                'mapTypeId': maps.MapTypeId.ROADMAP,
-                'zoom': 4,
-                'mapTypeControlOptions': {
-                    'style': maps.MapTypeControlStyle.DEFAULT
-                },
-            })
+        self.gmap = maps.Map(opts={
+            'center': latLng,
+            'mapTypeId': maps.MapTypeId.ROADMAP,
+            'zoom': 4,
+            'scrollwheel': not in_side_bar,
+            'zoomControl': not in_side_bar,
+            'draggable': not in_side_bar,
+            'mapTypeControlOptions': {
+                'style': maps.MapTypeControlStyle.DEFAULT
+            },
+        })
         if (infos):
             self.infos = map(self.get_info, infos)
 
