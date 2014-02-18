@@ -99,18 +99,12 @@ def get_article_map(in_side_bar=False):
         contentList = map(get_article_link, articles)
         articleInfos = map(create_article_info, contentList)
         latLongList = map(get_article_lat_long, articles)
-        if in_side_bar:
-            article_map = ArticleMap(center_lag_lng, infos=articleInfos, in_side_bar=True)
-        else:
-            article_map = ArticleMap(center_lag_lng, infos=articleInfos)
+        article_map = ArticleMap(center_lag_lng, infos=articleInfos, in_side_bar=in_side_bar)
         articleMarkers = map(create_article_marker, latLongList, [article_map.gmap])
         article_map.assign_markers(articleMarkers)
         article_map.add_window_to_markers()
     else:
-        if in_side_bar:
-            article_map = ArticleMap(center_lag_lng, in_side_bar=True)
-        else:
-            article_map = ArticleMap(center_lag_lng)
+        article_map = ArticleMap(center_lag_lng, in_side_bar=in_side_bar)
     return article_map.gmap
 
 
