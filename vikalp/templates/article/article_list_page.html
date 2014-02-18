@@ -12,10 +12,10 @@
                     <div class="image-sub-section col-xs-12">
                         {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}
                             <img class="img-responsive"
-                                 src="{{ MEDIA_URL }}{% thumbnail article.featured_image 450 300 %}">
+                                 src="{{ MEDIA_URL }}{% thumbnail article.featured_image 315 210 %}">
                         {% else %}
                             <img class="img-responsive"
-                                 src="{{ STATIC_URL }}{% thumbnail "img/default.png" 450 300 %}">
+                                 src="{{ STATIC_URL }}{% thumbnail "img/default.png" 315 210 %}">
                         {% endif %}
                     </div>
                 </a>
