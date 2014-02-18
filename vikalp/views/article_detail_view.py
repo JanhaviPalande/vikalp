@@ -27,7 +27,7 @@ class ArticleDetail:
         articles = self.article_service.get_published_articles_with_related_articles(request)
         article = process_tag_or_categories_or_article(slug, articles)
         page = get_page(request)
-        article_map = get_article_map()
+        article_map = get_article_map(True)
         if(article_is_a_policy_edit(article)):
             request.path_info = '/policy-edits/'
             page = get_page(request)

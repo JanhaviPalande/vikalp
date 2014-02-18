@@ -7,7 +7,7 @@ from mezzanine.conf import settings
 
 class CategoryPage:
     def get_context_for_category_list(self, categories, page):
-        article_map = get_article_map()
+        article_map = get_article_map(True)
         return {"articleCategories": categories, "page": page, "default_image": settings.DEFAULT_CATEGORY_IMAGE, 'form': MapFormForSideBar(initial={'map': article_map})}
 
     def category_list(self, request, template="pages/categories_page.html"):

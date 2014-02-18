@@ -17,7 +17,7 @@ class ArticleList:
 
     def get_context_for_article_list(self, articles, author=None, category=None, tag=None, page=None,
                                      page_template="article/article_list_page.html"):
-        article_map = get_article_map()
+        article_map = get_article_map(True)
         context = {"articles": articles,
                    "tag": tag, "category": category, "author": author, "page": page, "page_template": page_template,
                    'form': MapFormForSideBar(initial={'map': article_map})}

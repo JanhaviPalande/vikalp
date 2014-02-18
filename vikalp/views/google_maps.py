@@ -18,16 +18,29 @@ class MapFormForSideBar(forms.Form):
 
 
 class ArticleMap:
-    def __init__(self, latLng, infos=None):
-        self.gmap = maps.Map(opts={
-            'center': latLng,
-            'mapTypeId': maps.MapTypeId.ROADMAP,
-            'zoom': 4,
-            'mapTypeControlOptions': {
-                'style': maps.MapTypeControlStyle.DEFAULT
-            },
-        })
-        if(infos):
+    def __init__(self, latLng, infos=None, in_side_bar=False):
+        if in_side_bar:
+            self.gmap = maps.Map(opts={
+                'center': latLng,
+                'mapTypeId': maps.MapTypeId.ROADMAP,
+                'zoom': 4,
+                'scrollwheel': False,
+                'zoomControl': False,
+                'draggable': False,
+                'mapTypeControlOptions': {
+                    'style': maps.MapTypeControlStyle.DEFAULT
+                },
+            })
+        else:
+            self.gmap = maps.Map(opts={
+                'center': latLng,
+                'mapTypeId': maps.MapTypeId.ROADMAP,
+                'zoom': 4,
+                'mapTypeControlOptions': {
+                    'style': maps.MapTypeControlStyle.DEFAULT
+                },
+            })
+        if (infos):
             self.infos = map(self.get_info, infos)
 
     def get_marker(self, articleMarker):
@@ -79,19 +92,25 @@ def get_article_lat_long(article):
     return maps.LatLng(article.latitude, article.longitude)
 
 
-def get_article_map():
+def get_article_map(in_side_bar=False):
     center_lag_lng = maps.LatLng(21.1610858, 79.0725102)
     articles = articleService.get_articles_with_lat_long()
     if (articles):
         contentList = map(get_article_link, articles)
         articleInfos = map(create_article_info, contentList)
         latLongList = map(get_article_lat_long, articles)
-        article_map = ArticleMap(center_lag_lng, articleInfos)
+        if in_side_bar:
+            article_map = ArticleMap(center_lag_lng, articleInfos, True)
+        else:
+            article_map = ArticleMap(center_lag_lng, articleInfos)
         articleMarkers = map(create_article_marker, latLongList, [article_map.gmap])
         article_map.assign_markers(articleMarkers)
         article_map.add_window_to_markers()
     else:
-        article_map = ArticleMap(center_lag_lng)
+        if in_side_bar:
+            article_map = ArticleMap(center_lag_lng, True)
+        else:
+            article_map = ArticleMap(center_lag_lng)
     return article_map.gmap
 
 

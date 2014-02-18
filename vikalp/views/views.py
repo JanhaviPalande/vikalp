@@ -71,7 +71,7 @@ def search(request, template="search_results.html"):
     results = search_model.objects.search(query, for_user=request.user)
     if request.is_ajax():
         template = page_template
-    article_map = get_article_map()
+    article_map = get_article_map(True)
     context = {"query": query, "results": results,
                "search_type": search_type, "page_template": page_template, 'form': MapFormForSideBar(initial={'map': article_map})}
     return render(request, template, context, context_instance=RequestContext(request))
