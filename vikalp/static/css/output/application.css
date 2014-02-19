@@ -5169,7 +5169,8 @@ footer .logo img {
   padding-top: 10px; }
 footer .list-group-item {
   background: none;
-  border: 0px none; }
+  border: 0px none;
+  padding: 6px 10px; }
   footer .list-group-item a {
     text-transform: uppercase;
     color: #f1f1f2;
