@@ -8,6 +8,11 @@ from vikalp.views.google_maps import get_article_map, MapFormForSideBar
 from vikalp.views.views import articleService, MODEL_NAME, APP_NAME
 
 
+def print_status(article):
+    print article.status
+    print article.title
+
+
 class ArticleList:
     def get_articles_for_given_tag(self, tag):
         return articleService.get_all_articles_under_tag(get_model_content_type(APP_NAME, MODEL_NAME), tag)
