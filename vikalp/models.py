@@ -10,7 +10,7 @@ def get_default_category_image_location():
 class Article(BlogPost):
     promoted = models.BooleanField(verbose_name="Promote Article to HomePage", default=False)
     article_categories = models.ManyToManyField("ArticleCategory",
-                                                verbose_name=("Categories"),
+                                                verbose_name="Categories",
                                                 blank=True, related_name="articles")
     article_author = models.CharField(verbose_name="Story Author", max_length=128, blank=True)
     add_to_carousel = models.BooleanField(verbose_name="Add this article to carousel", default=False)
