@@ -3,6 +3,24 @@
 
 
 {% block meta_title %}{% if category %}{{ category }}{% else %}{{ tag }}{% endif %}{% endblock %}
+{% block meta_keywords %}{% metablock %}
+    {% keywords_for page as keywords %}
+    {% for keyword in keywords %}
+        {% if not forloop.first %}, {% endif %}
+        {{ keyword }}
+    {% endfor %}
+{% endmetablock %}{% endblock %}
+
+{% block meta_description %}{% metablock %}
+    {% if category %}
+        {{ category.category_long_description }}
+    {% else %}
+        {{ page.description }}
+    {% endif %}
+
+
+{% endmetablock %}{% endblock %}
+
 
 {% block article_main %}
 
