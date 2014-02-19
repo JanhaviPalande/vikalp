@@ -7,6 +7,17 @@
 {% endblock %}
 
 {% block article_main %}
+<div class="error-wrapper">
+	<div class="content">
+		<div class="top-section">
+			<h1>500</h1>
+		</div>
+		<div class="bottom-section">
+			<h4>OOPS! something went wrong</h4>
+			<a class="btn btn-warning" href="/"> <div class="glyphicon glyphicon-home"></div> &nbsp;BACK TO HOMEPAGE</a>
+		</div>
+	</div>
+</div>
     <img style="height: 100%; width: 100%;" src="{{ STATIC_URL }}{{ 'img/500page.png' }}"/>
 {% endblock %}
 
