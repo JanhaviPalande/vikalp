@@ -72,7 +72,7 @@ class PromotedArticleViewTest(TestCase):
         self.assertIn(self.article4.title, self.response.content)
 
     def test_for_context_creation(self):
-        self.context = homePage.get_context_for_promoted_articles([self.article1, self.article2], None, None, None)
+        self.context = homePage.get_context_for_promoted_articles([self.article1, self.article2], None, None, None, None)
         self.assertEquals(self.context['promoted_articles'], [self.article1, self.article2])
 
 
