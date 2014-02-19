@@ -3,6 +3,7 @@ Mezzanine==1.4.16
 Pillow==2.2.1
 South==0.8.4
 astroid==1.0.1
+newrelic
 bleach==1.2.2
 coverage==3.6
 dj-database-url==0.2.2
