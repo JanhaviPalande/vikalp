@@ -5452,7 +5452,19 @@ a.carousel-control.right {
 .img-responsive {
   margin: 0 auto; }
 
+.error-wrapper {
+  text-align: center; }
+  .error-wrapper .top-section h1 {
+    font-size: 12em; }
+  .error-wrapper .top-section .glyphicon-cog {
+    font-size: 10em; }
+
 @media (max-width: 399px) {
+  .error-wrapper {
+    text-align: center; }
+    .error-wrapper .top-section h1 {
+      font-size: 8em; }
+
   header ul.navbar-nav.nav form {
     padding: 10px 15px;
     margin: 0;
@@ -5474,6 +5486,11 @@ a.carousel-control.right {
     .comments-section ul li > ul {
       margin: 0; } }
 @media (min-width: 400px) and (max-width: 767px) {
+  .error-wrapper {
+    text-align: center; }
+    .error-wrapper .top-section h1 {
+      font-size: 8em; }
+
   header ul.navbar-nav.nav {
     float: none !important; }
     header ul.navbar-nav.nav form {
