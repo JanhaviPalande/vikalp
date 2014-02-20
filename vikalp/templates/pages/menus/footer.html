@@ -5,22 +5,10 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 hidden-md hidden-lg">
-                <div class="logos-collection lg ">
-                    {% include "includes/footer_logo_lg.html" %}
-                </div>
-
-            </div>
-            <div class="col-md-2 logo hidden-sm hidden-xs">
+            <div class="col-md-3 logo hidden-sm hidden-xs">
                 <div id="footer-logo">
                     <a href="/"> <img class="img-responsive hidden-md" src="/static/img/footer_big_logo.png"/> </a>
                     <a href="/"> <img class="img-responsive visible-md" src="/static/img/footer_small_logo.png"/> </a>
-                </div>
-                <div class="logos-collection lg hidden-md">
-                    {% include "includes/footer_logo_lg.html" %}
-                </div>
-                <div class="logos-collection md visible-md">
-                    {% include "includes/footer_logo_md.html" %}
                 </div>
             </div>
 
@@ -67,7 +55,33 @@
 
             {% endfor %}
 
+
+        </div>
+        <div class="row logos-collection">
+            <div class="col-xs-6 col-sm-2">
+                <a href="http://www.kalpavriksh.org" target="_blank">
+                    <img src="/static/img/kalpavriksh_md.png" alt="" class="kalpawriksha img-responsive">
+                </a>
+            </div>
+            <div class="col-xs-6 visible-xs">
+                <a href="http://www.ddsindia.com/" target="_blank">
+                    <img src="/static/img/ddslogo_md.png" alt="" class="dds img-responsive">
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+                <a href="http://bhoomimagazine.org" target="_blank">
+                    <img src="/static/img/bhoomi_md.png" alt="" class="bhoomi img-responsive">
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-5">
+                <a href="http://www.swaraj.org/shikshantar/" target="_blank">
+                    <img src="/static/img/shikshantar_md.png" alt="" class="shikshantar img-responsive">
+                </a>
+            </div>
+            <div class="col-sm-2 hidden-xs">
+                <a href="http://www.ddsindia.com/" target="_blank">
+                    <img src="/static/img/ddslogo_md.png" alt="" class="dds img-responsive">
+                </a>
             </div>
         </div>
-
 </footer>
