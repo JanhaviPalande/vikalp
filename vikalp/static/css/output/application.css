@@ -5109,7 +5109,7 @@ header a.navbar-brand {
   overflow: hidden;
   margin-top: 8px; }
 header .container {
-  width: 90%; }
+  width: 95%; }
 header .language-wrapper {
   background-color: #fc9d1c;
   text-align: right; }
@@ -5491,10 +5491,8 @@ a.carousel-control.right {
     border-right: 0px none;
     padding-right: 15px; } }
 @media (min-width: 992px) and (max-width: 1199px) {
-  header a.navbar-brand {
-    background: url(/static/img/header_small_logo.png) no-repeat left center;
-    width: 63px;
-    height: 30px; } }
+  .navbar-default .navbar-nav > li > a {
+    font-size: 0.9em; } }
 .footer {
   position: fixed;
   background-color: black;
