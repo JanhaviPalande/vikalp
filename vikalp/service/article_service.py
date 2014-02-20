@@ -10,7 +10,7 @@ NUMBER_OF_PROMOTED_ARTICLES_TO_BE_FETECHED = settings.NUMBER_OF_FEATURED_ITEMS
 
 class ArticleService():
     def get_promoted_articles(self):
-        return Article.objects.filter(promoted='t')[:NUMBER_OF_PROMOTED_ARTICLES_TO_BE_FETECHED]
+        return Article.objects.filter(promoted='t').exclude(status=1)[:NUMBER_OF_PROMOTED_ARTICLES_TO_BE_FETECHED]
 
     def get_all_articles(self):
         articles = Article.objects.all()
