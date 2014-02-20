@@ -491,100 +491,6 @@ a.carousel-control {
   }
 }
 
-.logos-collection{
-  &.lg{
-    .logos-collection-wrapper{
-      margin: 20px 0px;
-      height: 50px;
-      width: 186px;
-      position: relative;
-      overflow: hidden;
-
-      a{
-        position: absolute;
-        display: block;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      a.kaplawriksh{
-        left:0px;
-        top:0px;
-        background-position: left top;
-        height: 49px;
-        width: 36px;
-      }
-      a.bhumi{
-        background-position: top center;
-        width:121px;
-        height: 30px;
-        left:36px;
-        top:0px;
-      }
-      a.shiksha{
-        bottom: 0px;
-        background-position: bottom center;
-        width: 150px;
-        height: 19px;
-        left: 36px;
-      }
-      a.deccan{
-        left: 156px;
-        top: -2px;
-        background-position: right top;
-        height: 32px;
-        width: 30px;
-      }
-    }
-  }
-
-  &.md{
-    .logos-collection-wrapper{
-      margin: 20px 0px;
-      height: 126px;
-      width: 120px;
-      position: relative;
-      overflow: hidden;
-
-      a{
-        position: absolute;
-        display: block;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      a.kaplawriksh{
-        left:0px;
-        top:0px;
-        background-position: center center;
-        height: 80px;
-        width: 60px;
-      }
-      a.deccan{
-        left: 60px;
-        top: 0px;
-        background-position: center center;
-        height: 80px;     
-        width: 60px;
-      }
-      a.bhumi{
-        background-position: top center;
-        width:120px;
-        height: 30px;
-        left:0px;
-        top:80px;
-      }
-      a.shiksha{
-        bottom: 0px;
-        background-position: top center;
-        width: 120px;
-        height: 15px;
-        top: 111px;
-      }
-    }
-  }
-}
-
 .endless_loading{
   img{
     margin:10px auto;
@@ -607,5 +513,23 @@ a.carousel-control {
     }
   }
   .bottom-section{
+  }
+}
+
+.logos-collection{
+  margin: 10px 0px;
+
+  img{
+    display: block;
+    margin: 0 auto;
+  }
+  .kalpawriksha{
+  }
+  .bhoomi{
+
+  }
+  .shikshantar{
+  }
+  .dds{
   }
 }
