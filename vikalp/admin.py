@@ -30,7 +30,8 @@ class ArticleAdmin(BlogPostAdmin, DisplayableAdmin):
         last_updated = obj.updated
         obj.save()
         if not last_updated or (last_updated and ((obj.updated - last_updated) > timedelta(hours=24))):
-            post_to_twitter("'" + obj.title + "' " + request.get_host() + obj.get_absolute_url())
+            # post_to_twitter("'" + obj.title + "' " + request.get_host() + obj.get_absolute_url())
+            post_to_twitter("'" + obj.title + "' " + "vikalpstaging.twhosted.com" + obj.get_absolute_url())
 
     def save_form(self, request, form, change):
         OwnableAdmin.save_form(self, request, form, change)
