@@ -1,8 +1,12 @@
+from datetime import timedelta
+
 from copy import deepcopy
 from django.contrib import admin
 from mezzanine.blog.admin import BlogPostAdmin, BlogCategoryAdmin
 from mezzanine.blog.models import BlogPost
 from mezzanine.core.admin import OwnableAdmin, DisplayableAdmin
+
+from vikalp.helper_functions.twitter import post_to_twitter
 from vikalp.helper_functions.functional import field_check, insert_before
 from vikalp.models import Article, ArticleCategory
 
@@ -21,6 +25,12 @@ class ArticleAdmin(BlogPostAdmin, DisplayableAdmin):
     list_filter = filter(lambda x: x != 'keywords__keyword', list_filter)
     list_filter = tuple(map(field_check, list_filter))
     list_filter += ("promoted", "add_to_carousel",)
+
+    def save_model(self, request, obj, form, change):
+        last_updated = obj.updated
+        obj.save()
+        if not last_updated or (last_updated and ((obj.updated - last_updated) > timedelta(hours=24))):
+            post_to_twitter(tweet_message="'" + obj.title + "' " + request.get_host() + obj.get_absolute_url())
 
     def save_form(self, request, form, change):
         OwnableAdmin.save_form(self, request, form, change)
