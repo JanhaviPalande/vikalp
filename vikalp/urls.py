@@ -70,6 +70,7 @@ urlpatterns += patterns("",
 
                         # url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
                         url("^$", homePage.promoted_article_on_homepage, name="home"),
+                        (r'^i18n/', include('django.conf.urls.i18n')),
                         (r"^article/$", categoryPage.category_list_with_two_articles),
                         (r"^stories/$", articleListByDate.article_list_by_date ),
                         url("^article/tag/(?P<tag>.*)$", articleList.article_list, name="article_list_tag"),

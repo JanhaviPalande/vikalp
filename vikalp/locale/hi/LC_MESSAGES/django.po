@@ -335,9 +335,6 @@ msgstr "हमारा परिचय"
 msgid "Show stories by category"
 msgstr "विषय के आधार पर कहानियाँ"
 
-msgid "Alternative economies"
-msgstr "वैकल्पिक अर्थव्यवस्थाएं"
-
 msgid "Health & Hygiene"
 msgstr "स्वास्थ्य"
 
@@ -362,8 +359,17 @@ msgstr "जानकारी और मीडिया"
 msgid "Alternative Politics"
 msgstr "वैकल्पिक राजनीति"
 
+msgid "Energy"
+msgstr "ऊर्जा"
+
 msgid "Policy Edits"
 msgstr "संपादकीय"
 
 msgid "Policy Edit"
 msgstr "संपादकीय"
+
+msgid "Alternative Economies"
+msgstr "वैकल्पिक अर्थव्यवस्थाएं"
+
+msgid "Settlements"
+msgstr "बस्तियां"

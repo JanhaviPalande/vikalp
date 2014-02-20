@@ -106,6 +106,17 @@ header {
   .container {
     width: 90%;
   }
+  .language-wrapper{
+    background-color:$yellow-col;
+    text-align: right;
+    label{
+      background-color: $yellow-col;
+      font-size: 10px;
+    }
+    .mchecked{
+      background-color: $dark-brick-col;
+    }
+  }
 }
 
 .navbar-default .navbar-nav > .active > a {
