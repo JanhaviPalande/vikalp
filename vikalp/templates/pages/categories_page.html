@@ -46,7 +46,7 @@
                         <div class="category-page-heading">
                             <a class="category-title-link" style="background-image: url('{% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{% thumbnail category.category_image 50 50 %}')"
                                href="{% url "article_list_category" category.slug %}">
-                                {{ category }}
+                                {% with category.title as category_title %}{% trans category_title %}{% endwith %}
                             </a>
                         </div>
                     {% endif %}

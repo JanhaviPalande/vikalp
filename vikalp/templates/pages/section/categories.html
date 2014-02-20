@@ -17,7 +17,7 @@
                     <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail category.category_image 70 70 %}"/>
                 </div>
                 <div class="col-xs-9">
-                    <h4><a class="see-all-stories" href="{{ category.get_absolute_url }}">{{ category }}</a></h4>
+                    <h4><a class="see-all-stories" href="{{ category.get_absolute_url }}">{% with category.title as category_title %}{% trans category_title %}{% endwith %}</a></h4>
                 </div>
             </div>
             <div class="row image-sub-section">
