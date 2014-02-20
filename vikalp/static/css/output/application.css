@@ -5772,6 +5772,14 @@ a.carousel-control.right {
   background-color: #bcbec0;
   margin: 0; }
 
+.category-description {
+  border-right: 10px solid white;
+  padding: 5px 10px 10px 15px;
+  text-indent: 20px;
+  background-color: #e6e7e8;
+  font-family: Roboto-Light;
+  font-size: .75em; }
+
 .category-title-link {
   border-right: 10px solid white;
   padding-left: 65px;

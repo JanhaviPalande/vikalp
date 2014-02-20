@@ -42,6 +42,14 @@
   background-color: $dark-gray-col;
   margin: 0;
 }
+.category-description{
+  border-right: 10px solid white;
+  padding: 5px 10px 10px 15px;
+  text-indent: 20px;
+  background-color: $light-gray-col;
+  font-family: Roboto-Light;
+  font-size: .75em;
+}
 
 .category-title-link {
   border-right:10px solid $white;  

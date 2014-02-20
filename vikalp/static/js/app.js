@@ -197,14 +197,33 @@ var LanguageSelection = (function(){
             $("#languageHiddenElement").closest("form").submit();
         });
     }
-
     return {
         init: function(){
-            console.log("hi");
             submitForm();
         }
     }
+})();
 
+var CollapseDescription = (function(){
+    var wrapper = $(".category-description");
+
+    function showHideBinding(){
+        $(".category-description p.short a").click(function(){
+            $(".category-description p.short").hide();
+            $(".category-description p.long").show();
+        });
+
+        $(".category-description p.long a").click(function(){
+            $(".category-description p.long").hide();
+            $(".category-description p.short").show();
+        });
+    }
+
+    return {
+        init : function(){
+            showHideBinding();
+        }
+    }
 })();
 
 $(document).ready(function () {
@@ -215,6 +234,7 @@ $(document).ready(function () {
     PageEventsList.init();
     LoadMoreCallback.init();
     LanguageSelection.init();
+    CollapseDescription.init();
 });
 
 $(window).load(function () {
