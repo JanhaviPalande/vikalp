@@ -16,4 +16,5 @@ def post_to_twitter(tweet_message='www.vikalpsangam.org'):
     try:
         api_stream.update_status(tweet_message)
     except:
-        pass
+        print tweet_message
+        print "Tweepy Raised Exception!!"
