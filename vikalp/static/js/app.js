@@ -188,6 +188,25 @@ var CommentsUI = (function(){
     }
 })();
 
+
+var LanguageSelection = (function(){
+
+    function submitForm(){
+        $("#langaugeSelection label").click(function(){
+            $("#languageHiddenElement").val($(this).find("input").val());
+            $("#languageHiddenElement").closest("form").submit();
+        });
+    }
+
+    return {
+        init: function(){
+            console.log("hi");
+            submitForm();
+        }
+    }
+
+})();
+
 $(document).ready(function () {
     $('a#feature-article').hover(function () {
         $(this).find('p').toggle();
@@ -195,6 +214,7 @@ $(document).ready(function () {
 
     PageEventsList.init();
     LoadMoreCallback.init();
+    LanguageSelection.init();
 });
 
 $(window).load(function () {

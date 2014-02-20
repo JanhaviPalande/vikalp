@@ -5110,6 +5110,14 @@ header a.navbar-brand {
   margin-top: 8px; }
 header .container {
   width: 90%; }
+header .language-wrapper {
+  background-color: #fc9d1c;
+  text-align: right; }
+  header .language-wrapper label {
+    background-color: #fc9d1c;
+    font-size: 10px; }
+  header .language-wrapper .mchecked {
+    background-color: #9e332e; }
 
 .navbar-default .navbar-nav > .active > a {
   background-color: #9e332e;

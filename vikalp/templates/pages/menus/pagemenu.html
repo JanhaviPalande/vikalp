@@ -2,6 +2,24 @@
 
 
 <header class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="language-wrapper">
+        <form action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="language" id="languageHiddenElement" value=""/>
+            <input name="next" type="hidden" value="/"/>
+            {% get_language_info_list for LANGUAGES as languages %}
+            <div class="btn-group" data-toggle="buttons" id="langaugeSelection">
+                {% for language in languages %}
+
+                    <label class="btn btn-primary {% if language.code == LANGUAGE_CODE %}mchecked{% endif %}" >
+                        <input type="radio" name="options" value="{{ language.code }}"
+                               {% if language.code == LANGUAGE_CODE %}checked{% endif %}> {% ifequal language.code 'hi' %}हिंदी {% else %}{{ language.name_local }}{% endifequal %}
+                    </label>
+                {% endfor %}
+            </div>
+        </form>
+    </div>
+
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -20,13 +38,17 @@
                         {% ifequal in_menu '1' %}
                             {% ifnotequal page.title "Home" %}
                                 <li {% if page.is_current_or_ascendant %}class="active"{% endif %}><a
-                                        href="{{ page.get_absolute_url }}">{% with page.title|upper as page_title %}{% trans page_title %}{% endwith %}</a></li>
+                                        href="{{ page.get_absolute_url }}">
+                                    {% with page.title|upper as page_title %}{% trans page_title %}{% endwith %}</a>
+                                </li>
                             {% endifnotequal %}
                         {% endifequal %}
                     {% endfor %}
                 {% endfor %}
                 <li>
                     {% search_form %}
+                </li>
+
                 </li>
             </ul>
         </div>
