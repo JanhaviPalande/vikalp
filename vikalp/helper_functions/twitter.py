@@ -2,7 +2,7 @@ import os
 from tweepy import OAuthHandler, API
 
 
-def post_to_twitter(tweet_message='www.vikalpsangam.org'):
+def post_to_twitter(tweet_message):
     app_key = os.environ.get('TWITTER_APP_KEY')
     app_secret = os.environ.get('TWITTER_APP_SECRET')
     oauth_token = os.environ.get('TWITTER_OAUTH_TOKEN')
