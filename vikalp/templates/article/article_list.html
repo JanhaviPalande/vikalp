@@ -41,9 +41,9 @@
                     </div>
                 {% endif %}
             {% endif %}
-            <div class="category-description">
-                <p class="long" style="display:none">{{ category.category_long_description }}<a href="javascript:void(0);" class="category-desc-collapse-description">Collapse</a></p>
-                <p class="short">{{ category.category_description|truncatechars:150|safe }}<a href="javascript:void(0);" class="read-more-description">Read More</a></p>
+            <div class="category-description">                
+                <p class="long" style="display:none">{{ category.category_long_description }}<a href="javascript:void(0);" class="category-desc-collapse-description"><span class="glyphicon glyphicon-circle-arrow-up"></span>&nbsp;Collapse</a></p>
+                <p class="short">{{ category.category_description|truncatechars:150|safe }}<a href="javascript:void(0);" class="read-more-description"><span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;Read More</a></p>
             </div>
         </div>
 

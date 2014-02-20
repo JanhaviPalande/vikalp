@@ -5779,6 +5779,15 @@ a.carousel-control.right {
   background-color: #e6e7e8;
   font-family: Roboto-Light;
   font-size: .75em; }
+  .category-description p {
+    position: relative; }
+    .category-description p a {
+      position: absolute;
+      right: 10px; }
+      .category-description p a.read-more-description {
+        top: -5px; }
+      .category-description p a.category-desc-collapse-description {
+        bottom: -20px; }
 
 .category-title-link {
   border-right: 10px solid white;
