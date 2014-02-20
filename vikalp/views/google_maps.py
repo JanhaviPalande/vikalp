@@ -1,4 +1,3 @@
-import re
 from django.forms import forms
 from django.shortcuts import render
 from gmapi import maps
