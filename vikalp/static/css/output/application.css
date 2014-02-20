@@ -5780,14 +5780,15 @@ a.carousel-control.right {
   font-family: Roboto-Light;
   font-size: .75em; }
   .category-description p {
-    position: relative; }
+    position: relative;
+    padding: 5px 0px 5px 0px; }
     .category-description p a {
       position: absolute;
       right: 10px; }
       .category-description p a.read-more-description {
-        top: -5px; }
+        bottom: -18px; }
       .category-description p a.category-desc-collapse-description {
-        bottom: -20px; }
+        bottom: -18px; }
 
 .category-title-link {
   border-right: 10px solid white;
@@ -5864,6 +5865,9 @@ a.carousel-control.right {
     border-right: 0px none; }
 
   .border-bottom-only-wrapper {
+    border-right: 0px none; }
+
+  .category-description {
     border-right: 0px none; } }
 @media (min-width: 400px) and (max-width: 767px) {
   .category-topping-wrapper .category {

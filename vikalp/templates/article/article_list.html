@@ -42,8 +42,12 @@
                 {% endif %}
             {% endif %}
             <div class="category-description">                
+                {% if category.category_long_description %}
                 <p class="long" style="display:none">{{ category.category_long_description }}<a href="javascript:void(0);" class="category-desc-collapse-description"><span class="glyphicon glyphicon-circle-arrow-up"></span>&nbsp;Collapse</a></p>
+                {% endif %}
+                {% if category.category_description %}
                 <p class="short">{{ category.category_description|truncatechars:150|safe }}<a href="javascript:void(0);" class="read-more-description"><span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;Read More</a></p>
+                {% endif %}
             </div>
         </div>
 

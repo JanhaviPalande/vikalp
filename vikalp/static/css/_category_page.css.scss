@@ -51,18 +51,18 @@
   font-size: .75em;
   p{
     position: relative;
+    padding: 5px 0px 5px 0px;
     a{
       position: absolute;
       right: 10px;
       &.read-more-description{
-        top:-5px;
+        bottom:-18px;
       }
       &.category-desc-collapse-description{
-        bottom:-20px;
+        bottom:-18px;
       }
     }
   }
-
 }
 
 .category-title-link {
