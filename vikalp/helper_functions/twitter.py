@@ -4,9 +4,9 @@ from tweepy import OAuthHandler, API
 
 def post_to_twitter(tweet_message="Visit www.vikalpsangam.org"):
     app_key = os.environ.get('TWITTER_APP_KEY')
-    print app_key
+    print os.environ.get('TWITTER_APP_KEY')
     app_secret = os.environ.get('TWITTER_APP_SECRET')
-    print app_secret
+    print os.environ.get('TWITTER_APP_SECRET')
     oauth_token = os.environ.get('TWITTER_OAUTH_TOKEN')
     oauth_token_secret = os.environ.get('TWITTER_OAUTH_TOKEN_SECRET')
 
