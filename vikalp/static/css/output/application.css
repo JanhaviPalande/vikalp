@@ -5565,6 +5565,9 @@ a.carousel-control.right {
 
 .featured-list {
   color: #9e332e; }
+  .featured-list ul {
+    position: relative;
+    bottom: -10px; }
   .featured-list li.row {
     padding: 15px 0px;
     background-color: #f1f1f2;
