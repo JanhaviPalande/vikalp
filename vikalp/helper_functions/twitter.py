@@ -16,5 +16,9 @@ def post_to_twitter(tweet_message="Visit www.vikalpsangam.org"):
     try:
         api_stream.update_status(tweet_message)
     except Exception as e:
+        print app_key
+        print app_secret
+        print oauth_token
+        print oauth_token_secret
         print tweet_message
         print "Exception log: " + str(e)
