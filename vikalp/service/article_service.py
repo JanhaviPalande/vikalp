@@ -10,7 +10,7 @@ NUMBER_OF_PROMOTED_ARTICLES_TO_BE_FETECHED = settings.NUMBER_OF_FEATURED_ITEMS
 
 class ArticleService():
     def get_promoted_articles(self):
-        return Article.objects.filter(promoted='t')[:NUMBER_OF_PROMOTED_ARTICLES_TO_BE_FETECHED]
+        return Article.objects.filter(promoted='t').exclude(status=1)[:NUMBER_OF_PROMOTED_ARTICLES_TO_BE_FETECHED]
 
     def get_all_articles(self):
         articles = Article.objects.all()
@@ -18,7 +18,7 @@ class ArticleService():
 
     def get_all_published_articles_without_carousel_items_and_policy_edits(self, request):
         articles = Article.objects.published(for_user=request.user).filter(add_to_carousel=False).exclude(
-            article_categories=self.get_policy_edit_category())
+            article_categories=self.get_policy_edit_category()).exclude(status=1)
         return articles
 
     def rendered_query_to_fetch_all_articles_under_tag(self, content_type, tag):
@@ -31,7 +31,7 @@ class ArticleService():
         return remove_policy_edits_from_categories(ArticleCategory.objects.all())
 
     def get_all_articles_in_category(self, category, limit=None):
-        return Article.objects.filter(article_categories=category)[:limit]
+        return Article.objects.published().filter(article_categories=category)[:limit]
 
     def make_dict(self, articleCategory):
         articles = self.get_all_articles_in_category(articleCategory, limit=3)
@@ -42,7 +42,7 @@ class ArticleService():
         return articleCategories
 
     def get_carousel_content(self):
-        return Article.objects.filter(add_to_carousel='t')[:NUMBER_OF_CAROUSEL_ARTICLES]
+        return Article.objects.filter(add_to_carousel='t').exclude(status=1)[:NUMBER_OF_CAROUSEL_ARTICLES]
 
     def get_policy_edit_category(self):
         return ArticleCategory.objects.filter(title__icontains="policy")
