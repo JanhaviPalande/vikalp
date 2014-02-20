@@ -1,4 +1,4 @@
-{% load mezzanine_tags extra_tags %}
+{% load mezzanine_tags extra_tags i18n %}
 
 
 {% if form_for_fields.non_field_errors %}
@@ -13,6 +13,10 @@
     <input type="hidden" name="referrer" value="{{ request.META.HTTP_REFERER }}">
     {% csrf_token %}
 {% endnevercache %}
+
+<div class="help-block">
+    <span>{% trans "Fields marked with" %} <span class="color-red">*</span> {% trans "are mandatory" %}</span>
+</div>
 
 {% for field in form_for_fields %}
     {% if field.is_hidden %}
