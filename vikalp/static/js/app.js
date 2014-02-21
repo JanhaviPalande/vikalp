@@ -93,25 +93,6 @@ var LoadMoreCallback = (function(jq){
     };
 })($);
 
-var CategoryHeightFix = (function(){
-    function setHeight(){
-        var maxLIHeight = 0;
-        $("#category-list li").each(function () {
-            if (maxLIHeight < $(this).innerHeight()) {
-                maxLIHeight = $(this).innerHeight();
-            }
-        });
-        $("#category-list li").each(function () {
-            $(this).css("height", maxLIHeight + "px");
-        });
-    }
-    return{
-        init : function(){
-            setHeight();
-        }
-    }
-})();
-
 var SetPageSeparatorBar  = (function(){
     function setIt(){
         if($(".right-section").length > 0 && $(".right-section").offset().top > 200 )
@@ -250,7 +231,6 @@ $(document).ready(function () {
 $(window).load(function () {
     FixCategoryHeight.init();
     FixCarousalHeight.init();
-    CategoryHeightFix.init();
     SetPageSeparatorBar.init();
     CommentsUI.init();
 });
