@@ -28,7 +28,7 @@ var FixCategoryHeight = (function () {
                 $(this).css("height", maxHHeight + "px");
             });
             ele.find('p').each(function () {
-                $(this).css("height", maxAHeight + "px");
+                $(this).css("height", maxPHeight + "px");
             });
             ele.find('.category-title-wrapper').each(function () {
                 $(this).css("height", maxAHeight + "px");
