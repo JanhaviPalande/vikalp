@@ -26,12 +26,17 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: templates/base.html:79
-msgid "Navigator"
-msgstr ""
-
 #: templates/map.html:9
 msgid "Explore Stories by Location"
+msgstr "स्थान के आधार पर कहानियाँ"
+
+msgid "EXPLORE STORIES BY LOCATION"
+msgstr "स्थान के आधार पर कहानियाँ"
+
+msgid "Explore Stories By Location"
+msgstr "स्थान के आधार पर कहानियाँ"
+
+msgid "explore stories by location"
 msgstr "स्थान के आधार पर कहानियाँ"
 
 #: templates/map.html:11
@@ -42,7 +47,14 @@ msgstr ""
 
 #: templates/search_results.html:6 templates/search_results.html.py:7
 #: templates/search_results.html:14
+
 msgid "Search Results"
+msgstr "खोज का परिणाम"
+
+msgid "search results"
+msgstr "खोज का परिणाम"
+
+msgid "SEARCH RESULTS"
 msgstr "खोज का परिणाम"
 
 #: templates/search_results.html:11 templates/pages/menus/breadcrumb.html:7
@@ -62,6 +74,12 @@ msgstr ""
 #: templates/pages/categories_page.html:62
 #: templates/pages/section/about.html:30
 msgid "Read More"
+msgstr "और पढ़ें"
+
+msgid "read more"
+msgstr "और पढ़ें"
+
+msgid "READ MORE"
 msgstr "और पढ़ें"
 
 #: templates/article/article_detail.html:24
@@ -84,14 +102,12 @@ msgstr ""
 msgid "Story Tags:"
 msgstr ""
 
-#: templates/article/article_list.html:23
-msgid "Stories"
-msgstr "कहानियाँ"
 
-#: templates/article/article_list_by_date.html:26
-msgid "Latest Stories"
+msgid "latest stories"
 msgstr "ताज़ा कहानियाँ"
 
+msgid "LATEST STORIES"
+msgstr "ताज़ा कहानियाँ"
 
 #: templates/blog/blog_post_list.html:23
 msgid "Blog"
@@ -110,12 +126,24 @@ msgstr ""
 msgid "Categories"
 msgstr "विषय"
 
+msgid "categories"
+msgstr "विषय"
+
+msgid "CATEGORIES"
+msgstr "विषय"
+
 #: templates/blog/includes/filter_panel.html:51
 msgid "Tags"
 msgstr ""
 
 #: templates/blog/includes/filter_panel.html:67
 msgid "Authors"
+msgstr "लेखक"
+
+msgid "authors"
+msgstr "लेखक"
+
+msgid "AUTHORS"
 msgstr "लेखक"
 
 #: templates/blog/includes/filter_panel.html:80
@@ -167,6 +195,12 @@ msgstr ""
 #: templates/generic/includes/comment.html:29
 #: templates/generic/includes/comment.html:39
 msgid "Reply"
+msgstr "जवाब भेजें"
+
+msgid "reply"
+msgstr "जवाब भेजें"
+
+msgid "REPLY"
 msgstr "जवाब भेजें"
 
 #: templates/generic/includes/comment.html:58
@@ -260,23 +294,58 @@ msgstr ""
 
 #: templates/includes/sidebar/category_list.html:5
 msgid "Story Categories"
-msgstr "कहानियो ं के विषय"
+msgstr "कहनियों के विषय"
 
+msgid "story categories"
+msgstr "कहनियों के विषय"
+
+msgid "STORIES CATEGORIES"
+msgstr "कहनियों के विषय"
 
 #: templates/includes/sidebar/related_posts.html:8
 msgid "Related Content"
+msgstr "संबंधित कहानियाँ"
+
+msgid "related content"
+msgstr "संबंधित कहानियाँ"
+
+msgid "RELATED CONTENT"
 msgstr "संबंधित कहानियाँ"
 
 #: templates/includes/sidebar/tag_cloud.html:7
 msgid "Explore Stories"
 msgstr "कहानियाँ देखें"
 
+msgid "explore stories"
+msgstr "कहानियाँ देखें"
+
+msgid "EXPLORE STORIES"
+msgstr "कहानियाँ देखें"
+
 #: templates/pages/categories_page.html:16
 msgid "Show all latest stories"
 msgstr "सारी ताज़ा कहानियाँ देखें"
 
+msgid "show all latest stories"
+msgstr "सारी ताज़ा कहानियाँ देखें"
+
+msgid "Show All Latest Stories"
+msgstr "सारी ताज़ा कहानियाँ देखें"
+
+msgid "SHOW ALL LATEST STORIES"
+msgstr "सारी ताज़ा कहानियाँ देखें"
+
 #: templates/pages/categories_page.html:74
 msgid "See all stories"
+msgstr "सभी कहानियाँ देखें"
+
+msgid "see all stories"
+msgstr "सभी कहानियाँ देखें"
+
+msgid "See All Stories"
+msgstr "सभी कहानियाँ देखें"
+
+msgid "SEE ALL STORIES"
 msgstr "सभी कहानियाँ देखें"
 
 #: templates/pages/menus/admin.html:32
@@ -288,6 +357,15 @@ msgstr ""
 msgid "Stories by category"
 msgstr "विषय के आधार पर कहानियाँ"
 
+msgid "Stories By Category"
+msgstr "विषय के आधार पर कहानियाँ"
+
+msgid "Stories by Category"
+msgstr "विषय के आधार पर कहानियाँ"
+
+msgid "stories by category"
+msgstr "विषय के आधार पर कहानियाँ"
+
 msgid "STORIES BY CATEGORY"
 msgstr "विषय के आधार पर कहानियाँ"
 
@@ -295,12 +373,14 @@ msgstr "विषय के आधार पर कहानियाँ"
 msgid "ABOUT VIKALP SANGAM"
 msgstr "विकल्प संगम के बारे में पढ़ें"
 
-
-msgid "SEE ALL STORIES"
-msgstr "शेष कहानियाँ"
-
 #: templates/pages/section/featured.html:8
 msgid "Featured Stories"
+msgstr "खास कहानियाँ"
+
+msgid "featured stories"
+msgstr "खास कहानियाँ"
+
+msgid "FEATURED STORIES"
 msgstr "खास कहानियाँ"
 
 #: templates/twitter/tweets.html:7
@@ -315,51 +395,143 @@ msgstr ""
 msgid "CONTRIBUTE"
 msgstr "योगदान"
 
+msgid "Contribute"
+msgstr "योगदान"
+
+msgid "contribute"
+msgstr "योगदान"
 
 msgid "POLICY EDITORIALS"
+msgstr "संपादकीय"
+
+msgid "Policy Editorials"
 msgstr "संपादकीय"
 
 msgid "EDITORIALS"
 msgstr "संपादकीय"
 
+msgid "editorials"
+msgstr "संपादकीय"
+
+msgid "Editorials"
+msgstr "संपादकीय"
+
 msgid "STORIES"
+msgstr "कहानियाँ"
+
+msgid "Stories"
+msgstr "कहानियाँ"
+
+msgid "stories"
 msgstr "कहानियाँ"
 
 msgid "Highlights"
 msgstr "मुख्य बातें"
 
+msgid "highlights"
+msgstr "मुख्य बातें"
+
+msgid "HIGHLIGHTS"
+msgstr "मुख्य बातें"
+
 msgid "ABOUT"
+msgstr "हमारा परिचय"
+
+msgid "About"
+msgstr "हमारा परिचय"
+
+msgid "about"
 msgstr "हमारा परिचय"
 
 #: templates/article/article_list_by_date.html:31
 msgid "Show stories by category"
 msgstr "विषय के आधार पर कहानियाँ"
 
+msgid "Show Stories by Category"
+msgstr "विषय के आधार पर कहानियाँ"
+
+msgid "SHOW STORIES BY CATEGORY"
+msgstr "विषय के आधार पर कहानियाँ"
+
 msgid "Health & Hygiene"
+msgstr "स्वास्थ्य"
+
+msgid "health & hygiene"
+msgstr "स्वास्थ्य"
+
+msgid "HEALTH & HYGIENE"
 msgstr "स्वास्थ्य"
 
 msgid "Society & Culture"
 msgstr "समाज और संस्कृति"
 
+msgid "society & culture"
+msgstr "समाज और संस्कृति"
+
+msgid "SOCIETY & CULTURE"
+msgstr "समाज और संस्कृति"
+
 msgid "Learning & Education"
+msgstr "सीखना और शिक्षा"
+
+msgid "learning & education"
+msgstr "सीखना और शिक्षा"
+
+msgid "LEARNING & EDUCATION"
 msgstr "सीखना और शिक्षा"
 
 msgid "Environment & Ecology"
 msgstr "पर्यावरण"
 
+msgid "environment & ecology"
+msgstr "पर्यावरण"
+
+msgid "ENVIRONMENT & ECOLOGY"
+msgstr "पर्यावरण"
+
 msgid "Livelihoods"
+msgstr "जीविका"
+
+msgid "livelihoods"
+msgstr "जीविका"
+
+msgid "LIVELIHOODS"
 msgstr "जीविका"
 
 msgid "Transportation"
 msgstr "परिवहन"
 
+msgid "transportation"
+msgstr "परिवहन"
+
+msgid "TRANSPORTATION"
+msgstr "परिवहन"
+
 msgid "Knowledge & Media"
+msgstr "जानकारी और मीडिया"
+
+msgid "knowledge & media"
+msgstr "जानकारी और मीडिया"
+
+msgid "KNOWLEDGE & MEDIA"
 msgstr "जानकारी और मीडिया"
 
 msgid "Alternative Politics"
 msgstr "वैकल्पिक राजनीति"
 
+msgid "ALTERNATIVE POLITICS"
+msgstr "वैकल्पिक राजनीति"
+
+msgid "alternative politics"
+msgstr "वैकल्पिक राजनीति"
+
 msgid "Energy"
+msgstr "ऊर्जा"
+
+msgid "energy"
+msgstr "ऊर्जा"
+
+msgid "ENERGY"
 msgstr "ऊर्जा"
 
 msgid "Policy Edits"
@@ -371,5 +543,83 @@ msgstr "संपादकीय"
 msgid "Alternative Economies"
 msgstr "वैकल्पिक अर्थव्यवस्थाएं"
 
+msgid "ALTERNATIVE ECONOMIES"
+msgstr "वैकल्पिक अर्थव्यवस्थाएं"
+
+msgid "alternative economies"
+msgstr "वैकल्पिक अर्थव्यवस्थाएं"
+
+msgid "Settlements And Transport"
+msgstr "बस्तियां और परिवहन"
+
+msgid "settlements and transport"
+msgstr "बस्तियां और परिवहन"
+
+msgid "SETTLEMENTS AND TRANSPORT"
+msgstr "बस्तियां और परिवहन"
+
 msgid "Settlements"
 msgstr "बस्तियां"
+
+msgid "settlements"
+msgstr "बस्तियां"
+
+msgid "SETTLEMENTS"
+msgstr "बस्तियां"
+
+msgid "Resources"
+msgstr "संसाधन"
+
+msgid "resources"
+msgstr "संसाधन"
+
+msgid "RESOURCES"
+msgstr "संसाधन"
+
+msgid "Food and Water"
+msgstr "खाना और पानी"
+
+msgid "food and water"
+msgstr "खाना और पानी"
+
+msgid "Food And Water"
+msgstr "खाना और पानी"
+
+msgid "FOOD AND WATER"
+msgstr "खाना और पानी"
+
+msgid "Stories on Map"
+msgstr "नक्शा"
+
+msgid "stories on map"
+msgstr "नक्शा"
+
+msgid "STORIES ON MAP"
+msgstr "नक्शा"
+
+msgid "Stories by Location"
+msgstr "स्थान के आधार पर कहानियां"
+
+msgid "Stories By Location"
+msgstr "स्थान के आधार पर कहानियां"
+
+msgid "stories by location"
+msgstr "स्थान के आधार पर कहानियां"
+
+msgid "STORIES BY LOCATION"
+msgstr "स्थान के आधार पर कहानियां"
+
+msgid "Events"
+msgstr "कार्यक्रम"
+
+msgid "EVENTS"
+msgstr "कार्यक्रम"
+
+msgid "Navigator"
+msgstr "कहानियाँ ढूंढे"
+
+msgid "navigator"
+msgstr "कहानियाँ ढूंढे"
+
+msgid "NAVIGATOR"
+msgstr "कहानियाँ ढूंढे"
