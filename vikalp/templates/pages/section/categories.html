@@ -14,11 +14,12 @@
         <div class="col-xs-6 col-sm-3 category">
             <div class="row top-sub-section">
                 <div class="col-xs-3">
-                    {% if category.category_image %}
-                        <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail category.category_image 70 70 %}"/>
-                    {% else %}
-                        <img class="img-responsive" src="{{ STATIC_URL }}{% thumbnail 'img/default.png' 70 70 %}"/>
-                    {% endif %}
+                    {% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{% thumbnail category.category_image 70 70 %}
+{#                    {% if category.category_image %}#}
+{#                        <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail category.category_image 70 70 %}"/>#}
+{#                    {% else %}#}
+{#                        <img class="img-responsive" src="{{ STATIC_URL }}{% thumbnail 'img/default.png' 70 70 %}"/>#}
+{#                    {% endif %}#}
                 </div>
                 <div class="col-xs-9">
                     <h4><a class="see-all-stories" href="{{ category.get_absolute_url }}">{% with category.title|upper as category_title %}{% trans category_title %}{% endwith %}</a></h4>
