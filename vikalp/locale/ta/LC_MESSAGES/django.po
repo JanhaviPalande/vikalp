@@ -291,16 +291,6 @@ msgstr "தேடுதல்"
 msgid "Everything"
 msgstr ""
 
-#: templates/includes/sidebar/category_list.html:5
-msgid "Story Categories"
-msgstr "कहनियों के विषय"
-
-msgid "story categories"
-msgstr "कहनियों के विषय"
-
-msgid "STORIES CATEGORIES"
-msgstr "कहनियों के विषय"
-
 #: templates/includes/sidebar/related_posts.html:8
 msgid "Related Content"
 msgstr "தொடர்பான செய்திகள்"
@@ -497,15 +487,6 @@ msgstr "வாழ்வாதாரங்கள்"
 msgid "LIVELIHOODS"
 msgstr "வாழ்வாதாரங்கள்"
 
-msgid "Transportation"
-msgstr "परिवहन"
-
-msgid "transportation"
-msgstr "परिवहन"
-
-msgid "TRANSPORTATION"
-msgstr "परिवहन"
-
 msgid "Knowledge & Media"
 msgstr "அறிவு & மீடியா"
 
@@ -575,27 +556,6 @@ msgstr "வளன்கள்"
 msgid "RESOURCES"
 msgstr "வளன்கள்"
 
-msgid "Food and Water"
-msgstr "खाना और पानी"
-
-msgid "food and water"
-msgstr "खाना और पानी"
-
-msgid "Food And Water"
-msgstr "खाना और पानी"
-
-msgid "FOOD AND WATER"
-msgstr "खाना और पानी"
-
-msgid "Stories on Map"
-msgstr "नक्शा"
-
-msgid "stories on map"
-msgstr "नक्शा"
-
-msgid "STORIES ON MAP"
-msgstr "नक्शा"
-
 msgid "Stories by Location"
 msgstr "இருப்பிடம் சார்ந்த செய்திகள்"
 
@@ -613,12 +573,3 @@ msgstr "நிகழ்வுகள்"
 
 msgid "EVENTS"
 msgstr "நிகழ்வுகள்"
-
-msgid "Navigator"
-msgstr "कहानियाँ ढूंढे"
-
-msgid "navigator"
-msgstr "कहानियाँ ढूंढे"
-
-msgid "NAVIGATOR"
-msgstr "कहानियाँ ढूंढे"

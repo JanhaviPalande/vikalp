@@ -8,9 +8,9 @@ USE_I18N = True
 LOCALE_PATH = "locale"
 
 LANGUAGES = (
-    ('ta', ugettext('Tamil')),
     ('en', ugettext('English')),
     ('hi', ugettext('Hindi')),
+    ('ta', ugettext('Tamil')),
 )
 
 ALLOWED_HOSTS = ['*']
@@ -101,7 +101,7 @@ USE_SOUTH = True
 # In the format (('Full Name', 'email@example.com'),
 #                ('Full Name', 'anotheremail@example.com'))
 ADMINS = (
-# ('Your Name', 'your_email@domain.com'),
+    # ('Your Name', 'your_email@domain.com'),
 )
 MANAGERS = ADMINS
 
@@ -358,7 +358,8 @@ COMPRESS_PRECOMPILERS = (
 
 )
 COMPRESS_ENABLED = True
-COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter', 'vikalp.compressor.filters.YUglifyCSSFilter']
+COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter',
+                        'vikalp.compressor.filters.YUglifyCSSFilter']
 COMPRESS_YUGLIFY_BINARY = "yuglify"
 COMPRESS_YUGLIFY_CSS_ARGUMENTS = '--terminal'
 COMPRESS_YUGLIFY_JS_ARGUMENTS = '--terminal'
