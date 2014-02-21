@@ -391,19 +391,19 @@ msgid "contribute"
 msgstr "பங்களிக்க"
 
 msgid "POLICY EDITORIALS"
-msgstr "கொள்கை தலையங்கங்கள்"
+msgstr "தலையங்கங்கள் "
 
 msgid "Policy Editorials"
-msgstr "கொள்கை தலையங்கங்கள்"
+msgstr "தலையங்கங்கள் "
 
 msgid "EDITORIALS"
-msgstr "கொள்கை தலையங்கங்கள்"
+msgstr "தலையங்கங்கள் "
 
 msgid "editorials"
-msgstr "கொள்கை தலையங்கங்கள்"
+msgstr "தலையங்கங்கள் "
 
 msgid "Editorials"
-msgstr "கொள்கை தலையங்கங்கள்"
+msgstr "தலையங்கங்கள் "
 
 msgid "STORIES"
 msgstr "செய்திகள்"

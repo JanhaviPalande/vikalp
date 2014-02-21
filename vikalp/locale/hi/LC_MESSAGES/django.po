@@ -294,13 +294,13 @@ msgstr ""
 
 #: templates/includes/sidebar/category_list.html:5
 msgid "Story Categories"
-msgstr "कहनियों के विषय"
+msgstr "कहानियों के विषय "
 
 msgid "story categories"
-msgstr "कहनियों के विषय"
+msgstr "कहानियों के विषय"
 
 msgid "STORIES CATEGORIES"
-msgstr "कहनियों के विषय"
+msgstr "कहानियों के विषय"
 
 #: templates/includes/sidebar/related_posts.html:8
 msgid "Related Content"
