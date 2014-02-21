@@ -29,8 +29,8 @@ class ArticleAdmin(BlogPostAdmin, DisplayableAdmin):
     def save_model(self, request, obj, form, change):
         last_updated = obj.updated
         obj.save()
-        if not last_updated or (last_updated and ((obj.updated - last_updated) > timedelta(hours=24))):
-            if str(obj.get_status_display()) == 'Published':
+        if str(obj.get_status_display()) == 'Published':
+            if not last_updated or (last_updated and ((obj.updated - last_updated) > timedelta(hours=24))):
                 post_to_twitter(tweet_message="'" + obj.title + "' " + request.get_host() + obj.get_absolute_url())
 
     def save_form(self, request, form, change):
