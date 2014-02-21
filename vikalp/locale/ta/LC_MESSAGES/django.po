@@ -414,15 +414,6 @@ msgstr "செய்திகள்"
 msgid "stories"
 msgstr "செய்திகள்"
 
-msgid "Highlights"
-msgstr "मुख्य बातें"
-
-msgid "highlights"
-msgstr "मुख्य बातें"
-
-msgid "HIGHLIGHTS"
-msgstr "मुख्य बातें"
-
 msgid "ABOUT"
 msgstr "பற்றி"
 
