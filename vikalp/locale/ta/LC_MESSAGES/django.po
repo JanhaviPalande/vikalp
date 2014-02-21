@@ -1,0 +1,624 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-21 06:46+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: settings.py:11
+msgid "Tamil"
+msgstr ""
+
+#: settings.py:12
+msgid "English"
+msgstr ""
+
+#: templates/map.html:9
+msgid "Explore Stories by Location"
+msgstr "இருப்பிடம் சார்ந்த செய்திகள்"
+
+msgid "EXPLORE STORIES BY LOCATION"
+msgstr "இருப்பிடம் சார்ந்த செய்திகள்"
+
+msgid "Explore Stories By Location"
+msgstr "இருப்பிடம் சார்ந்த செய்திகள்"
+
+msgid "explore stories by location"
+msgstr "இருப்பிடம் சார்ந்த செய்திகள்"
+
+#: templates/map.html:11
+msgid ""
+"Click on a marker to read a story around that location. Zoom in to get a "
+"more specific location or to see if there are more stories in one area."
+msgstr ""
+
+#: templates/search_results.html:6 templates/search_results.html.py:7
+#: templates/search_results.html:14
+
+msgid "Search Results"
+msgstr "தேடல் முடிவுகள்"
+
+msgid "search results"
+msgstr "தேடல் முடிவுகள்"
+
+msgid "SEARCH RESULTS"
+msgstr "தேடல் முடிவுகள்"
+
+#: templates/search_results.html:11 templates/pages/menus/breadcrumb.html:7
+#: templates/pages/menus/dropdown.html:10
+#: templates/pages/menus/footer_tree.html:11
+#: templates/pages/menus/mobile.html:10 templates/pages/menus/primary.html:8
+#: templates/pages/menus/tree.html:10
+msgid "Home"
+msgstr ""
+
+#: templates/search_results.html:18
+#, python-format
+msgid "Found %(results|length)s results for your query: %(query)s"
+msgstr ""
+
+#: templates/search_results_page.html:11
+#: templates/pages/categories_page.html:62
+#: templates/pages/section/about.html:30
+msgid "Read More"
+msgstr "மேலும் படிக்கவும்"
+
+msgid "read more"
+msgstr "மேலும் படிக்கவும்"
+
+msgid "READ MORE"
+msgstr "மேலும் படிக்கவும்"
+
+#: templates/article/article_detail.html:24
+msgid "By"
+msgstr ""
+
+#: templates/article/article_detail.html:25
+msgid "Posted"
+msgstr ""
+
+#: templates/article/article_detail.html:26
+msgid "on"
+msgstr ""
+
+#: templates/article/article_detail.html:26
+msgid "in"
+msgstr ""
+
+#: templates/article/article_detail.html:43
+msgid "Story Tags:"
+msgstr ""
+
+
+msgid "latest stories"
+msgstr "சமீபத்திய செய்திகள்"
+
+msgid "LATEST STORIES"
+msgstr "சமீபத்திய செய்திகள்"
+
+#: templates/blog/blog_post_list.html:23
+msgid "Blog"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:6
+msgid "Recent Posts"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:19
+msgid "Archive"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:37
+#: templates/pages/section/featured.html:40
+msgid "Categories"
+msgstr "வகைகள்"
+
+msgid "categories"
+msgstr "வகைகள்"
+
+msgid "CATEGORIES"
+msgstr "வகைகள்"
+
+#: templates/blog/includes/filter_panel.html:51
+msgid "Tags"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:67
+msgid "Authors"
+msgstr "ஆசிரியர்"
+
+msgid "authors"
+msgstr "ஆசிரியர்"
+
+msgid "AUTHORS"
+msgstr "ஆசிரியர்"
+
+#: templates/blog/includes/filter_panel.html:80
+msgid "Feeds"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:82
+#: templates/blog/includes/filter_panel.html:86
+#: templates/blog/includes/filter_panel.html:90
+#: templates/blog/includes/filter_panel.html:94
+msgid "RSS"
+msgstr ""
+
+
+#: templates/blog/includes/filter_panel.html:83
+#: templates/blog/includes/filter_panel.html:87
+#: templates/blog/includes/filter_panel.html:91
+#: templates/blog/includes/filter_panel.html:95
+msgid "Atom"
+msgstr ""
+
+#: templates/email/comment_notification.html:6
+msgid "A new comment has been posted on"
+msgstr "ஒரு புதிய கருத்து பதிவாகியுள்ளது"
+
+#: templates/email/comment_notification.html:10
+#, python-format
+msgid ""
+"\n"
+"    At %(submit_date)s %(user_name)s wrote:\n"
+"    "
+msgstr ""
+
+#: templates/errors/404.html:6
+msgid "Page not found"
+msgstr ""
+
+#: templates/errors/500.html:6
+msgid "Error"
+msgstr ""
+
+#: templates/generic/includes/comment.html:24
+#, python-format
+msgid ""
+"%(sometime)s\n"
+"                            ago"
+msgstr ""
+
+#: templates/generic/includes/comment.html:29
+#: templates/generic/includes/comment.html:39
+msgid "Reply"
+msgstr "பதில்ं"
+
+msgid "reply"
+msgstr "பதில்"
+
+msgid "REPLY"
+msgstr "பதில்"
+
+#: templates/generic/includes/comment.html:58
+#: templates/generic/includes/comment.html:70
+#, python-format
+msgid ""
+"\n"
+"                            %(sometime)s ago"
+msgstr ""
+
+#: templates/generic/includes/comment.html:66
+msgid "Comment deleted"
+msgstr ""
+
+#: templates/generic/includes/comment.html:68
+msgid "Comment awaiting approval"
+msgstr ""
+
+#: templates/generic/includes/comment.html:85
+msgid "There are no comments yet on this Story."
+msgstr "இந்த செய்தி குரித்த கருத்து ஏதும் இல்லை"
+
+#: templates/generic/includes/comments.html:6
+msgid "Comments"
+msgstr "கருத்துக்கள்"
+
+#: templates/generic/includes/comments.html:19
+msgid "Add New Comment"
+msgstr "புதிய கருத்து "
+
+#: templates/generic/includes/comments.html:24
+msgid "Fields marked with"
+msgstr ""
+
+#: templates/generic/includes/comments.html:24
+msgid "are mandatory"
+msgstr ""
+
+#: templates/generic/includes/comments.html:36
+msgid "Post"
+msgstr ""
+
+#: templates/generic/includes/rating.html:7
+msgid "Current rating"
+msgstr ""
+
+#: templates/generic/includes/rating.html:9
+msgid "Currently unrated"
+msgstr ""
+
+#: templates/generic/includes/rating.html:19
+msgid "Rate"
+msgstr ""
+
+#: templates/includes/editable_form.html:17
+msgid "Save"
+msgstr "சேமிக்கவும்"
+
+#: templates/includes/editable_form.html:18
+msgid "Cancel"
+msgstr "ரத்து"
+
+#: templates/includes/editable_form.html:26
+msgid "Edit"
+msgstr ""
+
+#: templates/includes/editable_toolbar.html:7
+#: templates/includes/editable_toolbar.html:9
+msgid "Admin"
+msgstr ""
+
+#: templates/includes/editable_toolbar.html:11
+msgid "Log out"
+msgstr ""
+
+#: templates/includes/pagination.html:8
+msgid "Page"
+msgstr ""
+
+#: templates/includes/pagination.html:8
+msgid "of"
+msgstr ""
+
+#: templates/includes/search_form.html:5
+msgid "Search"
+msgstr "தேடுதல்"
+
+#: templates/includes/search_form.html:13 views/views.py:68
+msgid "Everything"
+msgstr ""
+
+#: templates/includes/sidebar/category_list.html:5
+msgid "Story Categories"
+msgstr "कहनियों के विषय"
+
+msgid "story categories"
+msgstr "कहनियों के विषय"
+
+msgid "STORIES CATEGORIES"
+msgstr "कहनियों के विषय"
+
+#: templates/includes/sidebar/related_posts.html:8
+msgid "Related Content"
+msgstr "தொடர்பான செய்திகள்"
+
+msgid "related content"
+msgstr "தொடர்பான செய்திகள்"
+
+msgid "RELATED CONTENT"
+msgstr "தொடர்பான செய்திகள்"
+
+#: templates/includes/sidebar/tag_cloud.html:7
+msgid "Explore Stories"
+msgstr "செய்திகள்"
+
+msgid "explore stories"
+msgstr "செய்திகள்"
+
+msgid "EXPLORE STORIES"
+msgstr "செய்திகள்"
+
+#: templates/pages/categories_page.html:16
+msgid "Show all latest stories"
+msgstr "சமீபத்திய அனைத்து செய்திகள் "
+
+msgid "show all latest stories"
+msgstr "சமீபத்திய அனைத்து செய்திகள் "
+
+msgid "Show All Latest Stories"
+msgstr "சமீபத்திய அனைத்து செய்திகள் "
+
+msgid "SHOW ALL LATEST STORIES"
+msgstr "சமீபத்திய அனைத்து செய்திகள் "
+
+#: templates/pages/categories_page.html:74
+msgid "See all stories"
+msgstr "அனைத்து செய்திகளையும் காண"
+
+msgid "see all stories"
+msgstr "அனைத்து செய்திகளையும் காண"
+
+msgid "See All Stories"
+msgstr "அனைத்து செய்திகளையும் காண"
+
+msgid "SEE ALL STORIES"
+msgstr "அனைத்து செய்திகளையும் காண"
+
+#: templates/pages/menus/admin.html:32
+msgid "Add"
+msgstr ""
+
+#: templates/pages/menus/carousel.html:56
+
+msgid "Stories by category"
+msgstr "செய்தி வகைகள்"
+
+msgid "Stories By Category"
+msgstr "செய்தி வகைகள்"
+
+msgid "Stories by Category"
+msgstr "செய்தி வகைகள்"
+
+msgid "stories by category"
+msgstr "செய்தி வகைகள்"
+
+msgid "STORIES BY CATEGORY"
+msgstr "செய்தி வகைகள்"
+
+#: templates/pages/section/about.html:7
+msgid "ABOUT VIKALP SANGAM"
+msgstr "விகல்ப் சங்கம் ப்ற்றி"
+
+#: templates/pages/section/featured.html:8
+msgid "Featured Stories"
+msgstr "சிறப்பு செய்திகள்"
+
+msgid "featured stories"
+msgstr "சிறப்பு செய்திகள்"
+
+msgid "FEATURED STORIES"
+msgstr "சிறப்பு செய்திகள்"
+
+#: templates/twitter/tweets.html:7
+msgid "Recent Tweets"
+msgstr ""
+
+#: templates/twitter/tweets.html:20
+#, python-format
+msgid "%(sometime)s ago"
+msgstr ""
+
+msgid "CONTRIBUTE"
+msgstr "பங்களிக்க"
+
+msgid "Contribute"
+msgstr "பங்களிக்க"
+
+msgid "contribute"
+msgstr "பங்களிக்க"
+
+msgid "POLICY EDITORIALS"
+msgstr "கொள்கை தலையங்கங்கள்"
+
+msgid "Policy Editorials"
+msgstr "கொள்கை தலையங்கங்கள்"
+
+msgid "EDITORIALS"
+msgstr "கொள்கை தலையங்கங்கள்"
+
+msgid "editorials"
+msgstr "கொள்கை தலையங்கங்கள்"
+
+msgid "Editorials"
+msgstr "கொள்கை தலையங்கங்கள்"
+
+msgid "STORIES"
+msgstr "செய்திகள்"
+
+msgid "Stories"
+msgstr "செய்திகள்"
+
+msgid "stories"
+msgstr "செய்திகள்"
+
+msgid "Highlights"
+msgstr "मुख्य बातें"
+
+msgid "highlights"
+msgstr "मुख्य बातें"
+
+msgid "HIGHLIGHTS"
+msgstr "मुख्य बातें"
+
+msgid "ABOUT"
+msgstr "பற்றி"
+
+msgid "About"
+msgstr "பற்றி"
+
+msgid "about"
+msgstr "பற்றி"
+
+#: templates/article/article_list_by_date.html:31
+msgid "Show stories by category"
+msgstr "குரிப்பிட்ட வகை செய்திகளை காண "
+
+msgid "Show Stories by Category"
+msgstr "குரிப்பிட்ட வகை செய்திகளை காண "
+
+msgid "SHOW STORIES BY CATEGORY"
+msgstr "குரிப்பிட்ட வகை செய்திகளை காண "
+
+msgid "Health & Hygiene"
+msgstr "உடல்நலம் மற்றும் சுகாதாரம்"
+
+msgid "health & hygiene"
+msgstr "உடல்நலம் மற்றும் சுகாதாரம்"
+
+msgid "HEALTH & HYGIENE"
+msgstr "உடல்நலம் மற்றும் சுகாதாரம்"
+
+msgid "Society & Culture"
+msgstr "சமூகம் & கலாச்சாரம்"
+
+msgid "society & culture"
+msgstr "சமூகம் & கலாச்சாரம்"
+
+msgid "SOCIETY & CULTURE"
+msgstr "சமூகம் & கலாச்சாரம்"
+
+msgid "Learning & Education"
+msgstr "கற்றல் மற்றும் கல்வி "
+
+msgid "learning & education"
+msgstr "கற்றல் மற்றும் கல்வி "
+
+msgid "LEARNING & EDUCATION"
+msgstr "கற்றல் மற்றும் கல்வி "
+
+msgid "Environment & Ecology"
+msgstr "சுற்றுச்சூழல் மற்றும் உயிரின வாழ்க்கை ஆய்வு"
+
+msgid "environment & ecology"
+msgstr "சுற்றுச்சூழல் மற்றும் உயிரின வாழ்க்கை ஆய்வு"
+
+msgid "ENVIRONMENT & ECOLOGY"
+msgstr "சுற்றுச்சூழல் மற்றும் உயிரின வாழ்க்கை ஆய்வு"
+
+msgid "Livelihoods"
+msgstr "வாழ்வாதாரங்கள்"
+
+msgid "livelihoods"
+msgstr "வாழ்வாதாரங்கள்"
+
+msgid "LIVELIHOODS"
+msgstr "வாழ்வாதாரங்கள்"
+
+msgid "Transportation"
+msgstr "परिवहन"
+
+msgid "transportation"
+msgstr "परिवहन"
+
+msgid "TRANSPORTATION"
+msgstr "परिवहन"
+
+msgid "Knowledge & Media"
+msgstr "அறிவு & மீடியா"
+
+msgid "knowledge & media"
+msgstr "அறிவு & மீடியா"
+
+msgid "KNOWLEDGE & MEDIA"
+msgstr "அறிவு & மீடியா"
+
+msgid "Alternative Politics"
+msgstr "மாற்று அரசியல்"
+
+msgid "ALTERNATIVE POLITICS"
+msgstr "மாற்று அரசியல்"
+
+msgid "alternative politics"
+msgstr "மாற்று அரசியல்"
+
+msgid "Energy"
+msgstr "சக்தி"
+
+msgid "energy"
+msgstr "சக்தி"
+
+msgid "ENERGY"
+msgstr "சக்தி"
+
+msgid "Policy Edits"
+msgstr "கொள்கை தலையங்கங்கள்"
+
+msgid "Policy Edit"
+msgstr "கொள்கை தலையங்கங்கள்"
+
+msgid "Alternative Economies"
+msgstr "மாற்று பொருளாதாரம்"
+
+msgid "ALTERNATIVE ECONOMIES"
+msgstr "மாற்று பொருளாதாரம்"
+
+msgid "alternative economies"
+msgstr "மாற்று பொருளாதாரம்"
+
+msgid "Settlements And Transport"
+msgstr "குடியேற்றங்கள் மற்றும் போக்குவரத்து "
+
+msgid "settlements and transport"
+msgstr "குடியேற்றங்கள் மற்றும் போக்குவரத்து "
+
+msgid "SETTLEMENTS AND TRANSPORT"
+msgstr "குடியேற்றங்கள் மற்றும் போக்குவரத்து "
+
+msgid "Settlements"
+msgstr "குடியேற்றங்கள்"
+
+msgid "settlements"
+msgstr "குடியேற்றங்கள்"
+
+msgid "SETTLEMENTS"
+msgstr "குடியேற்றங்கள்"
+
+msgid "Resources"
+msgstr "வளன்கள்"
+
+msgid "resources"
+msgstr "வளன்கள்"
+
+msgid "RESOURCES"
+msgstr "வளன்கள்"
+
+msgid "Food and Water"
+msgstr "खाना और पानी"
+
+msgid "food and water"
+msgstr "खाना और पानी"
+
+msgid "Food And Water"
+msgstr "खाना और पानी"
+
+msgid "FOOD AND WATER"
+msgstr "खाना और पानी"
+
+msgid "Stories on Map"
+msgstr "नक्शा"
+
+msgid "stories on map"
+msgstr "नक्शा"
+
+msgid "STORIES ON MAP"
+msgstr "नक्शा"
+
+msgid "Stories by Location"
+msgstr "இருப்பிடம் சார்ந்த செய்திகள்"
+
+msgid "Stories By Location"
+msgstr "இருப்பிடம் சார்ந்த செய்திகள்"
+
+msgid "stories by location"
+msgstr "இருப்பிடம் சார்ந்த செய்திகள்"
+
+msgid "STORIES BY LOCATION"
+msgstr "இருப்பிடம் சார்ந்த செய்திகள்"
+
+msgid "Events"
+msgstr "நிகழ்வுகள்"
+
+msgid "EVENTS"
+msgstr "நிகழ்வுகள்"
+
+msgid "Navigator"
+msgstr "कहानियाँ ढूंढे"
+
+msgid "navigator"
+msgstr "कहानियाँ ढूंढे"
+
+msgid "NAVIGATOR"
+msgstr "कहानियाँ ढूंढे"
