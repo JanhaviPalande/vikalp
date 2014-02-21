@@ -3,7 +3,8 @@ var FixCategoryHeight = (function () {
         $(".category-page-category-list-wrapper").each(function () {
             var ele = $(this),
                 maxHHeight = 0,
-                maxPHeight = 0;
+                maxPHeight = 0,
+                maxAHeight = 0;
 
             ele.find('h4').each(function () {
                 if (maxHHeight < $(this).innerHeight()) {
@@ -17,11 +18,20 @@ var FixCategoryHeight = (function () {
                 }
             });
 
+            ele.find('.category-title-wrapper').each(function () {
+                if (maxAHeight < $(this).innerHeight()) {
+                    maxAHeight = $(this).innerHeight();
+                }
+            });
+
             ele.find('h4').each(function () {
                 $(this).css("height", maxHHeight + "px");
             });
             ele.find('p').each(function () {
-                $(this).css("height", maxPHeight + "px");
+                $(this).css("height", maxAHeight + "px");
+            });
+            ele.find('.category-title-wrapper').each(function () {
+                $(this).css("height", maxAHeight + "px");
             });
         });
     }
