@@ -626,3 +626,6 @@ msgstr "कहानियाँ ढूंढे"
 
 msgid "Collapse"
 msgstr "संक्षिप्त करें"
+
+msgid "POLICY EDITS"
+msgstr "संपादकीय"

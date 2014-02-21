@@ -564,3 +564,6 @@ msgstr "நிகழ்வுகள்"
 
 msgid "EVENTS"
 msgstr "நிகழ்வுகள்"
+
+msgid "POLICY EDITS"
+msgstr "தலையங்கங்கள் "
