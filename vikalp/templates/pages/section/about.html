@@ -9,10 +9,10 @@
 
 {% block section_content %}
 
-    {{ about_page_description|linebreaks }}
-
+    {{ about_page_description|linebreaksbr }}..
+    <a class="read-more" style="text-transform: none;" href="/about">{% trans "Read More" %}</a>
     <div class="read-more-wrapper">
-        <a class="read-more" style="text-transform: none;" href="/about">{% trans "Read More" %}</a>
+
     </div>
 
 {% endblock %}
