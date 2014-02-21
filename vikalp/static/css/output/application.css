@@ -5560,7 +5560,7 @@ a.carousel-control.right {
 .carousel-caption p, .carousel-caption-bottom p {
   color: #9e332e;
   text-align: justify;
-  font-family: Roboto-Light;
+  font-family: Roboto;
   font-size: 0.75em; }
 
 .featured-list {
@@ -5597,7 +5597,7 @@ a.carousel-control.right {
     font-size: 0.875em; }
   .featured-list p {
     color: black;
-    font-family: Roboto-Light;
+    font-family: Roboto;
     font-size: 0.75em; }
   .featured-list .horizontal-border {
     border-top: 1px solid #e6e7e8;
@@ -5780,7 +5780,7 @@ a.carousel-control.right {
   padding: 5px 10px 10px 15px;
   text-indent: 20px;
   background-color: #e6e7e8;
-  font-family: Roboto-Light;
+  font-family: Roboto;
   font-size: .75em; }
   .category-description p {
     position: relative;
@@ -5838,14 +5838,14 @@ a.carousel-control.right {
   .category-topping-wrapper .top-sub-section h4 {
     background-color: #f1f1f2;
     color: black;
-    font-family: Roboto-Light;
+    font-family: Roboto;
     padding: 10px 10px 20px 10px;
     text-transform: none;
     margin: 0;
     font-size: 1em; }
   .category-topping-wrapper .plain-text-sub-section p {
     color: black;
-    font-family: Roboto-Light;
+    font-family: Roboto;
     font-size: 0.75em;
     background-color: #f1f1f2;
     padding: 10px 10px; }
