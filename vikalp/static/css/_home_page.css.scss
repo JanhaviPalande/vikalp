@@ -41,6 +41,10 @@
 }
 
 .featured-list {
+  ul{
+    position: relative;
+    bottom: -10px;
+  }
   li.row{
     padding:15px 0px;
     background-color: $lighter-gray-col;
