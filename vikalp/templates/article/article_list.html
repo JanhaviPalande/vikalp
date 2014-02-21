@@ -27,8 +27,8 @@
     {% block title %}
         <div class="category-page-heading">
             {% if category %}
-                <div class="category-title-link" style="background-image: url('
-                        {% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{% thumbnail category.category_image 50 50 %}')">
+                <div class="category-title-link" style="background-image:
+                        url('{% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{% thumbnail category.category_image 50 50 %}')">
                     {% with category.title|upper as category_title %}{% trans category_title %}{% endwith %}
                 </div>
             {% else %}
@@ -46,11 +46,11 @@
                 <div class="category-description">
                     <p class="long" style="display:none">{{ category.category_long_description }}
                         <a href="javascript:void(0);" class="category-desc-collapse-description"><span
-                            class="glyphicon glyphicon-circle-arrow-up"></span>&nbsp;Collapse</a></p>
+                                class="glyphicon glyphicon-circle-arrow-up"></span>&nbsp;Collapse</a></p>
 
                     <p class="short">{{ category.category_description|truncatechars:150|safe }}
                         <a href="javascript:void(0);" class="read-more-description"><span
-                            class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;Read More</a></p>
+                                class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;Read More</a></p>
                 </div>
             {% endif %}
         </div>
