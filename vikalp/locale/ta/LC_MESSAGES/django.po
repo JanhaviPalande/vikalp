@@ -521,13 +521,13 @@ msgid "alternative economies"
 msgstr "மாற்று பொருளாதாரம்"
 
 msgid "Settlements And Transport"
-msgstr "குடியேற்றங்கள் மற்றும் போக்குவரத்து "
+msgstr "குடியிருப்புக்களும் போக்குவரத்தும்"
 
 msgid "settlements and transport"
-msgstr "குடியேற்றங்கள் மற்றும் போக்குவரத்து "
+msgstr "குடியிருப்புக்களும் போக்குவரத்தும்"
 
 msgid "SETTLEMENTS AND TRANSPORT"
-msgstr "குடியேற்றங்கள் மற்றும் போக்குவரத்து "
+msgstr "குடியிருப்புக்களும் போக்குவரத்தும்"
 
 msgid "Settlements"
 msgstr "குடியேற்றங்கள்"
@@ -567,3 +567,75 @@ msgstr "நிகழ்வுகள்"
 
 msgid "POLICY EDITS"
 msgstr "தலையங்கங்கள் "
+
+#: templates/includes/sidebar/category_list.html:5
+msgid "Story Categories"
+msgstr "கதை பிரிவுகள்"
+
+msgid "story categories"
+msgstr "கதை பிரிவுகள்"
+
+msgid "STORIES CATEGORIES"
+msgstr "கதை பிரிவுகள்"
+
+msgid "Highlights"
+msgstr "சிறப்பம்சங்கள்"
+
+msgid "highlights"
+msgstr "சிறப்பம்சங்கள்"
+
+msgid "HIGHLIGHTS"
+msgstr "சிறப்பம்சங்கள்"
+
+msgid "Settlements & Transportation"
+msgstr "குடியிருப்புக்களும் போக்குவரத்தும்"
+
+msgid "SETTLEMENTS & TRANSPORTATION"
+msgstr "குடியிருப்புக்களும் போக்குவரத்தும்"
+
+msgid "SETTLEMENTS AND TRANSPORTATION"
+msgstr "குடியிருப்புக்களும் போக்குவரத்தும்"
+
+msgid "Food and Water"
+msgstr "உணவு மற்றும் தண்ணீர்"
+
+msgid "food and water"
+msgstr "உணவு மற்றும் தண்ணீர்"
+
+msgid "Food And Water"
+msgstr "உணவு மற்றும் தண்ணீர்"
+
+msgid "FOOD AND WATER"
+msgstr "உணவு மற்றும் தண்ணீர்"
+
+msgid "food & water"
+msgstr "உணவு மற்றும் தண்ணீர்"
+
+msgid "Food & Water"
+msgstr "உணவு மற்றும் தண்ணீர்"
+
+msgid "FOOD & WATER"
+msgstr "உணவு மற்றும் தண்ணீர்"
+
+msgid "Stories on Map"
+msgstr "வரைபடத்தில் செய்திகள்"
+
+msgid "stories on map"
+msgstr "வரைபடத்தில் செய்திகள்"
+
+msgid "STORIES ON MAP"
+msgstr "வரைபடத்தில் செய்திகள்"
+
+msgid "Navigator"
+msgstr "வழிகாட்டி"
+
+msgid "navigator"
+msgstr "வழிகாட்டி"
+
+msgid "NAVIGATOR"
+msgstr "வழிகாட்டி"
+
+msgid "Collapse"
+msgstr "சுருக்கு"
+
+

@@ -629,3 +629,13 @@ msgstr "संक्षिप्त करें"
 
 msgid "POLICY EDITS"
 msgstr "संपादकीय"
+
+msgid "Settlements & Transportation"
+msgstr "बस्तियां और परिवहन"
+
+msgid "SETTLEMENTS & TRANSPORTATION"
+msgstr "बस्तियां और परिवहन"
+
+msgid "SETTLEMENTS AND TRANSPORTATION"
+msgstr "बस्तियां और परिवहन"
+
