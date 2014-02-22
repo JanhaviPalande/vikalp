@@ -1,5 +1,5 @@
 {% extends "pages/section/section_base.html" %}
-{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags extra_tags static %}
+{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags extra_tags static staticfiles %}
 
 
 {% block section_class %}category-section{% endblock %}
@@ -9,22 +9,29 @@
 {% endblock %}
 
 {% block section_content %}
+
     <div class="category-page-category-list-wrapper">
     {% for article, category in latest_articles.items %}
+
         <div class="col-xs-6 col-sm-3 category">
+
             <div class="row top-sub-section">
+
                 <div class="col-xs-3">
-{#                    {% ifequal category.category_image default_image %}{{ STATIC_URL }}{% else %}{{ MEDIA_URL }}{% endifequal %}{% thumbnail category.category_image 70 70 %}#}
-                    {% ifequal category.category_image default_image %}
+                    {% ifequal category.category_image "img/default.png" %}
                         <img class="img-responsive" src="{{ STATIC_URL }}{% thumbnail 'img/default.png' 70 70 %}"/>
                     {% else %}
                         <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail category.category_image 70 70 %}"/>
                     {% endifequal %}
                 </div>
+
                 <div class="col-xs-9">
-                    <h4><a class="see-all-stories" href="{{ category.get_absolute_url }}">{% with category.title|upper as category_title %}{% trans category_title %}{% endwith %}</a></h4>
+                    <h4><a class="see-all-stories" href="{{ category.get_absolute_url }}">
+                        {% with category.title|upper as category_title %}{% trans category_title %}{% endwith %}</a></h4>
                 </div>
+
             </div>
+
             <div class="row image-sub-section">
                 <div class="col-xs-12">
                     {% if article.featured_image %}
@@ -36,16 +43,20 @@
                     {% endif %}
                 </div>
             </div>
+
             <div class="row plain-text-sub-section">
                 <p class="col-xs-12">
                     <a class="see-all-stories" href="{{ article.get_absolute_url }}">{{ article.title }}</a></h4>
                 </p>
             </div>
+
         </div>
+
     {% endfor %}
     </div>
 
     <div class="col-xs-12 see-all-stories-wrapper">
         <a class="see-all-stories" href="/article">{% trans "SEE ALL STORIES" %}</a>
     </div>
+
 {% endblock %}

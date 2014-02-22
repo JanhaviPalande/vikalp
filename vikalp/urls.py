@@ -72,7 +72,7 @@ urlpatterns += patterns("",
                         url("^$", homePage.promoted_article_on_homepage, name="home"),
                         (r'^i18n/', include('django.conf.urls.i18n')),
                         (r"^article/$", categoryPage.category_list_with_two_articles),
-                        (r"^stories/$", articleListByDate.article_list_by_date ),
+                        (r"^stories/$", articleListByDate.article_list_by_date),
                         url("^article/tag/(?P<tag>.*)$", articleList.article_list, name="article_list_tag"),
                         url("^article/category/(?P<category>.*)$", articleList.article_list,
                             name="article_list_category"),
@@ -81,7 +81,7 @@ urlpatterns += patterns("",
                         url("^article/download/(?P<slug>.*)$", articleDetail.article_download, name="article_detail"),
                         url("^article/(?P<slug>.*)$", articleDetail.article_detail, name="article_detail"),
                         url("^search/$", "vikalp.views.views.search", name="search"),
-                        url("^map/$","vikalp.views.google_maps.google_map", name="map"),
+                        url("^map/$", "vikalp.views.google_maps.google_map", name="map"),
 
 
                         # HOMEPAGE FOR A BLOG-ONLY SITE
@@ -122,6 +122,6 @@ urlpatterns += patterns("",
                         # need to use the ``SITE_PREFIX`` setting as well.
 
                         # ("^%s/" % settings.SITE_PREFIX, include("mezzanine.urls"))
+                        )
 
-)
 handler500 = "mezzanine.core.views.server_error"
