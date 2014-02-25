@@ -47,9 +47,9 @@ class SettingsTest(TestCase):
 
 class PromotedArticleViewTest(TestCase):
     def create_article(self, title="Test Title", content="Test Content", promoted="t", user_id=randint(1, 100),
-                       description="Test Description"):
+                       description="Test Description", status=2):
         return Article.objects.create(title=title, content=content, promoted=promoted, user_id=user_id,
-                                      description=description)
+                                      description=description, status=status)
 
     def setUp(self):
         self.article1 = self.create_article("Title1")
@@ -78,9 +78,9 @@ class PromotedArticleViewTest(TestCase):
 
 class ArticleServiceTest(TestCase):
     def create_article(self, title="Test Title", content="Test Content", promoted="t", user_id=randint(1, 100),
-                       description="Test Description"):
+                       description="Test Description", status=2):
         return Article.objects.create(title=title, content=content, promoted=promoted, user_id=user_id,
-                                      description=description)
+                                      description=description, status=status)
 
     def create_categories(self, title="category1"):
         return ArticleCategory.objects.create(title=title)
@@ -125,15 +125,15 @@ class ArticleCategoryViewTest(TestCase):
 
 class ArticleCategoryServiceTest(TestCase):
     def create_article(self, title="Test Title", content="Test Content", promoted="t", user_id=randint(1, 100),
-                       description="Test Description"):
+                       description="Test Description", status=2):
         return Article.objects.create(title=title, content=content, promoted=promoted, user_id=user_id,
-                                      description=description)
+                                      description=description, status=status)
 
     def create_categories(self, title="category1"):
         return ArticleCategory.objects.create(title=title)
 
     def add_categories(self, article):
-        for article_category in self.article_categories:                               #REMOVE THIS
+        for article_category in self.article_categories:                               # REMOVE THIS
             article.article_categories.add(article_category)
         return article
 

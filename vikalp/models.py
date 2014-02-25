@@ -1,5 +1,6 @@
 from django.db import models
 from mezzanine.blog.models import BlogPost, BlogCategory
+from mezzanine.core.models import CONTENT_STATUS_DRAFT
 from vikalp.settings import DEFAULT_CATEGORY_IMAGE
 
 
@@ -24,6 +25,7 @@ class Article(BlogPost):
         return url_name, (), kwargs
 
 Article._meta.get_field('gen_description').default = False
+Article._meta.get_field('status').default = CONTENT_STATUS_DRAFT
 
 
 class ArticleCategory(BlogCategory):
