@@ -29,7 +29,7 @@
 }
 
 body {
-  font-family: Roboto;
+  font-family: $roboto;
   font-size: 16px;
 }
 
@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $dark-brick-col;
   text-shadow: none;
   opacity: 1;
-  font-family: Roboto-Black;
+  font-family: $roboto-black;
 }
 
 a{
@@ -83,7 +83,7 @@ a{
   color: $dark-brick-col;
   text-decoration: none;
   font-weight: bold;
-  font-family: Roboto-Black;
+  font-family:$roboto-black;
   font-size: 1.125em;
   &:hover, &:focus {
     color: $dark-brick-col;
@@ -384,7 +384,7 @@ a.carousel-control {
   }
   h3, h4, h5{
     text-transform: inherit;
-    font-family: Roboto;
+    font-family: $roboto;
   }
   ul {
     padding:15px;

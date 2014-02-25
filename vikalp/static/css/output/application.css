@@ -5047,7 +5047,7 @@ td.visible-print {
   src: local("Roboto Black"), local("Roboto-Black"), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/mnpfi9pxYH-Go5UiibESIrO3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
 
 body {
-  font-family: Roboto;
+  font-family: "Roboto";
   font-size: 16px; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -5055,7 +5055,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #9e332e;
   text-shadow: none;
   opacity: 1;
-  font-family: Roboto-Black; }
+  font-family: "Roboto-Black"; }
 
 a {
   text-decoration: none;
@@ -5093,7 +5093,7 @@ a {
   color: #9e332e;
   text-decoration: none;
   font-weight: bold;
-  font-family: Roboto-Black;
+  font-family: "Roboto-Black";
   font-size: 1.125em; }
   .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color: #9e332e;
@@ -5306,7 +5306,7 @@ a.carousel-control.right {
   padding-left: 70px; }
 .comments-section h3, .comments-section h4, .comments-section h5 {
   text-transform: inherit;
-  font-family: Roboto; }
+  font-family: "Roboto"; }
 .comments-section ul {
   padding: 15px;
   background-color: rgba(188, 190, 192, 0.3);
@@ -5515,7 +5515,7 @@ a.carousel-control.right {
         color: white;
         text-decoration: none;
         font-size: 14px;
-        font-family: 'Open Sans', sans-serif;
+        font-family: "Open Sans", "sans-serif";
         font-weight: 300;
         padding: 6px 12px;
         white-space: nowrap;
@@ -5560,7 +5560,6 @@ a.carousel-control.right {
 .carousel-caption p, .carousel-caption-bottom p {
   color: #9e332e;
   text-align: justify;
-  font-family: Roboto;
   font-size: 0.75em; }
 
 .featured-list {
@@ -5593,11 +5592,10 @@ a.carousel-control.right {
     font-weight: bold;
     font-size: 1.125em; }
   .featured-list h4 {
-    font-family: Roboto;
+    font-family: "Roboto";
     font-size: 0.875em; }
   .featured-list p {
     color: black;
-    font-family: Roboto;
     font-size: 0.75em; }
   .featured-list .horizontal-border {
     border-top: 1px solid #e6e7e8;
@@ -5779,7 +5777,7 @@ a.carousel-control.right {
   border-right: 10px solid white;
   padding: 5px 10px 10px 15px;
   background-color: #e6e7e8;
-  font-family: Roboto;
+  font-family: "Roboto";
   font-size: .75em; }
   .category-description p {
     position: relative;
@@ -5844,7 +5842,6 @@ a.carousel-control.right {
     font-size: 1em; }
   .category-topping-wrapper .plain-text-sub-section p {
     color: black;
-    font-family: Roboto;
     font-size: 0.75em;
     background-color: #f1f1f2;
     padding: 10px 10px; }

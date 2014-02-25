@@ -36,7 +36,7 @@
 .carousel-caption p, .carousel-caption-bottom p {
   color: $dark-brick-col;
   text-align: justify;
-  font-family: Roboto;
+  // font-family: $roboto;
   font-size: 0.75em;
 }
 
@@ -82,12 +82,12 @@
     font-size: 1.125em;
   }
   h4 {
-    font-family: Roboto;
+    font-family: $roboto;
     font-size: 0.875em;
   }
   p {
     color: $black;
-    font-family: Roboto;
+    // font-family: $roboto;
     font-size: 0.75em;
   }
   .horizontal-border {

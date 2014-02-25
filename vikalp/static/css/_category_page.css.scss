@@ -46,7 +46,7 @@
   border-right: 10px solid white;
   padding: 5px 10px 10px 15px;
   background-color: $light-gray-col;
-  font-family: Roboto;
+  font-family: $roboto;
   font-size: .75em;
   p{
     position: relative;
@@ -131,7 +131,7 @@
   .plain-text-sub-section {
     p {
       color: $black;
-      font-family: Roboto;
+      // font-family: $roboto;
       font-size: 0.75em;
       background-color: $lighter-gray-col;
       padding: 10px 10px;
