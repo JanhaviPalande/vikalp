@@ -52,7 +52,11 @@
                     {% endif %}
                     <div class="row category-page-category-list-wrapper">
                         {% for article in articles %}
-                            <div class="col-xs-6 col-sm-4 category">
+                            {% ifequal forloop.counter 3 %}
+                                <div class="col-xs-6 col-sm-4 category hidden-xs">
+                            {% else %}
+                                <div class="col-xs-6 col-sm-4 category">
+                            {% endifequal %}
                                 <a href="{{ article.slug }}" class="category-link-wrapper"> <div class="top-sub-section">
                                     <h4>{{ article.title }}</h4>
                                 </div>

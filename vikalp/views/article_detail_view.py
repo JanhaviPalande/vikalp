@@ -9,7 +9,7 @@ from vikalp.views.google_maps import get_article_map, MapFormForSideBar
 
 
 def article_category_is_policy_edits(category):
-    if('policy' in category.title.lower()):
+    if 'policy' in category.title.lower():
         return True
 
 
@@ -28,17 +28,15 @@ class ArticleDetail:
         article = process_tag_or_categories_or_article(slug, articles)
         page = get_page(request)
         article_map = get_article_map(True)
-        if(article_is_a_policy_edit(article)):
+        if article_is_a_policy_edit(article):
             request.path_info = '/policy-edits/'
             page = get_page(request)
         return render(request, template, {"article": article, "page": page, 'form': MapFormForSideBar(initial={'map': article_map})})
-
 
     def build_response(self, article_title):
         response = HttpResponse(content_type=PDF_CONTENT_TYPE)
         response['Content-Disposition'] = self.pdf_generator.generate_pdf_filename(article_title)
         return response
-
 
     def build_pdf_content(self, article):
         return self.style_article_pdf.sytle_pdf_content(article)
