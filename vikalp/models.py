@@ -1,6 +1,7 @@
 from django.db import models
 from mezzanine.blog.models import BlogPost, BlogCategory
 from mezzanine.core.models import CONTENT_STATUS_DRAFT
+from mezzanine.pages.models import RichTextPage, Link
 from vikalp.settings import DEFAULT_CATEGORY_IMAGE
 
 
@@ -26,7 +27,8 @@ class Article(BlogPost):
 
 Article._meta.get_field('gen_description').default = False
 Article._meta.get_field('status').default = CONTENT_STATUS_DRAFT
-
+RichTextPage._meta.get_field('status').default = CONTENT_STATUS_DRAFT
+Link._meta.get_field('status').default = CONTENT_STATUS_DRAFT
 
 class ArticleCategory(BlogCategory):
     category_image = models.ImageField(verbose_name="Category Symbol", upload_to="uploads/",
