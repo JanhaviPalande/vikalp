@@ -92,6 +92,23 @@ a{
 }
 
 header {
+  position: relative;
+  .hide-language-bar{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 5px;
+  }
+  .show-language-bar{
+    position: absolute;
+    top: 0px;
+    right: 1px;
+    padding: 0px 5px;
+    z-index: 1;
+    background-color: $yellow-col;
+    font-size:0.8em;
+    border: 1px solid #9e332e;
+  }
   &.navbar-fixed-top{
     border:0px;
   }
@@ -107,8 +124,17 @@ header {
     width: 95%;
   }
   .language-wrapper{
+    display: none;
+    position: relative;
+    overflow: hidden;
+    // height: 0px;
     background-color:$yellow-col;
     text-align: right;
+    #langaugeSelection{
+      padding-right: 30px;
+    }
+    &:hover{
+    }
     label{
       background-color: $yellow-col;
       font-size: 10px;
@@ -131,7 +157,7 @@ header {
 }
 
 #content {
-  margin-top: 78px;
+  margin-top: 50px;
 }
 
 .no-right-margin {
@@ -531,5 +557,12 @@ a.carousel-control {
   .shikshantar{
   }
   .dds{
+  }
+}
+
+.link-but-not-a-link{
+  cursor: default;
+  &:hover{
+    cursor: default;
   }
 }

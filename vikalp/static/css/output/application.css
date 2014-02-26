@@ -5099,25 +5099,46 @@ a {
     color: #9e332e;
     text-decoration: none; }
 
-header.navbar-fixed-top {
-  border: 0px; }
-header a.navbar-brand {
-  background: url(/static/img/header_big_logo.png) no-repeat left center;
-  display: block;
-  width: 309px;
-  height: 35px;
-  overflow: hidden;
-  margin-top: 8px; }
-header .container {
-  width: 95%; }
-header .language-wrapper {
-  background-color: #fc9d1c;
-  text-align: right; }
-  header .language-wrapper label {
+header {
+  position: relative; }
+  header .hide-language-bar {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 5px; }
+  header .show-language-bar {
+    position: absolute;
+    top: 0px;
+    right: 1px;
+    padding: 0px 5px;
+    z-index: 1;
     background-color: #fc9d1c;
-    font-size: 10px; }
-  header .language-wrapper .mchecked {
-    background-color: #9e332e; }
+    font-size: 0.8em;
+    border: 1px solid #9e332e; }
+  header.navbar-fixed-top {
+    border: 0px; }
+  header a.navbar-brand {
+    background: url(/static/img/header_big_logo.png) no-repeat left center;
+    display: block;
+    width: 309px;
+    height: 35px;
+    overflow: hidden;
+    margin-top: 8px; }
+  header .container {
+    width: 95%; }
+  header .language-wrapper {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    background-color: #fc9d1c;
+    text-align: right; }
+    header .language-wrapper #langaugeSelection {
+      padding-right: 30px; }
+    header .language-wrapper label {
+      background-color: #fc9d1c;
+      font-size: 10px; }
+    header .language-wrapper .mchecked {
+      background-color: #9e332e; }
 
 .navbar-default .navbar-nav > .active > a {
   background-color: #9e332e;
@@ -5129,7 +5150,7 @@ header .language-wrapper {
     font-weight: bold; }
 
 #content {
-  margin-top: 78px; }
+  margin-top: 50px; }
 
 .no-right-margin {
   margin-right: 0; }
@@ -5402,6 +5423,11 @@ a.carousel-control.right {
     display: block;
     margin: 0 auto; }
 
+.link-but-not-a-link {
+  cursor: default; }
+  .link-but-not-a-link:hover {
+    cursor: default; }
+
 @media (max-width: 399px) {
   .error-wrapper {
     text-align: center; }
@@ -5434,8 +5460,22 @@ a.carousel-control.right {
   .logos-collection .kalpawriksha {
     float: right; }
   .logos-collection .dds {
-    float: left; } }
+    float: left; }
+
+  header .show-language-bar {
+    top: 10px;
+    right: 80px;
+    padding: 0 5px;
+    border-radius: 2px;
+    border: 1px solid #9e332e; } }
 @media (min-width: 400px) and (max-width: 767px) {
+  header .show-language-bar {
+    top: 10px;
+    right: 80px;
+    padding: 0 5px;
+    border-radius: 2px;
+    border: 1px solid #9e332e; }
+
   .error-wrapper {
     text-align: center; }
     .error-wrapper .top-section h1 {
@@ -5492,7 +5532,7 @@ a.carousel-control.right {
     padding-right: 15px; } }
 @media (min-width: 992px) and (max-width: 1199px) {
   .navbar-default .navbar-nav > li > a {
-    font-size: 0.8em; } }
+    font-size: 0.7em; } }
 .footer {
   position: fixed;
   background-color: black;

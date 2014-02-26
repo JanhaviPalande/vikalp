@@ -47,9 +47,23 @@
       float: left;
     }
   }
+  header .show-language-bar{
+    top: 10px;
+    right: 80px;
+    padding: 0 5px;
+    border-radius: 2px;
+    border: 1px solid #9e332e;
+  }
 }
 
 @media (min-width: 400px) and (max-width: 767px) {
+  header .show-language-bar{
+    top: 10px;
+    right: 80px;
+    padding: 0 5px;
+    border-radius: 2px;
+    border: 1px solid #9e332e;
+  }
   .error-wrapper{
     text-align: center;
     .top-section{
@@ -128,7 +142,7 @@
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .navbar-default .navbar-nav > li > a {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
 }
 

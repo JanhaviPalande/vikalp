@@ -188,8 +188,26 @@ var LanguageSelection = (function(){
             $("#languageHiddenElement").closest("form").submit();
         });
     }
+
+    function bindExplandCollapse(){
+        $(".show-language-bar").click(function(e){
+            $(this).hide();
+            $('.language-wrapper').slideDown("slow", function(){
+                $("#content").css("margin-top", "78px")
+            });
+        });
+
+        $(".hide-language-bar").click(function(){
+            $(".language-wrapper").slideUp("slow", function(){
+                $('.show-language-bar').slideDown("slow");
+                $("#content").css("margin-top", "50px")
+            });
+        });
+    }
+
     return {
         init: function(){
+            bindExplandCollapse();
             submitForm();
         }
     }
