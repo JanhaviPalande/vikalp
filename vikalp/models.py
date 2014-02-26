@@ -25,15 +25,17 @@ class Article(BlogPost):
         kwargs = {"slug": self.slug}
         return url_name, (), kwargs
 
-Article._meta.get_field('gen_description').default = False
-Article._meta.get_field('status').default = CONTENT_STATUS_DRAFT
-Page._meta.get_field('gen_description').default = False
-Page._meta.get_field('status').default = CONTENT_STATUS_DRAFT
-Page._meta.get_field('in_menus').default = ""
-
 
 class ArticleCategory(BlogCategory):
     category_image = models.ImageField(verbose_name="Category Symbol", upload_to="uploads/",
                                        default=get_default_category_image_location())
     category_description = models.TextField(verbose_name="Category One Liner (100 Chars)", max_length=100)
     category_long_description = models.TextField(verbose_name="Category Long Description", default="")
+
+
+Article._meta.get_field('gen_description').default = False
+Article._meta.get_field('status').default = CONTENT_STATUS_DRAFT
+
+Page._meta.get_field('gen_description').default = False
+Page._meta.get_field('status').default = CONTENT_STATUS_DRAFT
+Page._meta.get_field('in_menus').default = ""
