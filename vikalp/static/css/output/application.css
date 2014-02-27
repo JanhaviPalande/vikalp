@@ -5428,7 +5428,16 @@ a.carousel-control.right {
   .link-but-not-a-link:hover {
     cursor: default; }
 
+.footer-social-links-top .col-xs-12, .footer-social-links-bottom .col-xs-12 {
+  text-align: center; }
+.footer-social-links-top a, .footer-social-links-bottom a {
+  display: inline-block;
+  margin-right: 10px; }
+
 @media (max-width: 399px) {
+  .footer-social-links-top {
+    display: none; }
+
   .error-wrapper {
     text-align: center; }
     .error-wrapper .top-section h1 {
@@ -5469,6 +5478,9 @@ a.carousel-control.right {
     border-radius: 2px;
     border: 1px solid #9e332e; } }
 @media (min-width: 400px) and (max-width: 767px) {
+  .footer-social-links-top {
+    display: none; }
+
   header .show-language-bar {
     top: 10px;
     right: 80px;
@@ -5512,6 +5524,9 @@ a.carousel-control.right {
   .logos-collection .dds {
     float: left; } }
 @media (min-width: 768px) and (max-width: 991px) {
+  .footer-social-links-top {
+    display: none; }
+
   .search-box-wrapper {
     width: 100px;
     margin-right: 30px; }
@@ -5538,6 +5553,9 @@ a.carousel-control.right {
     border-right: 0px none;
     padding-right: 15px; } }
 @media (min-width: 992px) and (max-width: 1199px) {
+  .footer-social-links-bottom {
+    display: none; }
+
   .search-box-wrapper {
     width: 130px;
     margin-right: 30px; }
@@ -5547,6 +5565,9 @@ a.carousel-control.right {
 
   .navbar-default .navbar-nav > li > a {
     font-size: 0.7em; } }
+@media (min-width: 1200px) {
+  .footer-social-links-bottom {
+    display: none; } }
 .footer {
   position: fixed;
   background-color: black;
