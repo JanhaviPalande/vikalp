@@ -25,3 +25,4 @@ blogpost.csv
 *.iml
 META-INF/
 .sass-cache/
+CACHE/
