@@ -6,18 +6,24 @@
     {% paginate articles %}
 
     {% for article in articles %}
-        <div class="col-xs-6 col-sm-4 category">
+        <div class="col-xs-6 col-sm-4 category" xmlns="http://www.w3.org/1999/html">
 
-                {% for category in article.article_categories.all %}
-                    {% ifequal forloop.counter 1 %}
-                        <a class="category-title-wrapper" href="{{ category.get_absolute_url }}">
-                            <img src="{{ MEDIA_URL }}{% thumbnail category.category_image 30 30 %}"/>
-                            {% with category.title|upper as category_title %}{% trans category_title %}{% endwith %}
-                        </a>
-                    {% endifequal %}
-                {% endfor %}
+            {% ifequal article.article_categories.count 0 %}
+                        <span class="category-title-wrapper link-but-not-a-link">
+                            &nbsp;
+                        </span>
+            {% endifequal %}
 
-                {% editable article.title %}
+            {% for category in article.article_categories.all %}
+                {% ifequal forloop.counter 1 %}
+                    <a class="category-title-wrapper" href="{{ category.get_absolute_url }}">
+                        <img src="{{ MEDIA_URL }}{% thumbnail category.category_image 30 30 %}"/>
+                        {% with category.title|upper as category_title %}{% trans category_title %}{% endwith %}
+                    </a>
+                {% endifequal %}
+            {% endfor %}
+
+            {% editable article.title %}
 
                 <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
 
@@ -36,19 +42,19 @@
                     </div>
                 </a>
 
-                    <div class="plain-text-sub-section">
-                        <p class="col-xs-12">{{ article.description|truncatechars:150|safe }}</p>
+                <div class="plain-text-sub-section">
+                    <p class="col-xs-12">{{ article.description|truncatechars:150|safe }}</p>
 
-                        <div class="read-more-wrapper">
-                            <a class="read-more" href="{{ article.get_absolute_url }}">
-                                {% trans "Read More" %}
-                            </a>
-                        </div>
+                    <div class="read-more-wrapper">
+                        <a class="read-more" href="{{ article.get_absolute_url }}">
+                            {% trans "Read More" %}
+                        </a>
                     </div>
-                {% endeditable %}
+                </div>
+            {% endeditable %}
         </div>
     {% endfor %}
 
-        {% include "includes/loadmore.html" %}
+    {% include "includes/loadmore.html" %}
 
 {% endif %}
