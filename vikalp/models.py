@@ -18,6 +18,7 @@ class Article(BlogPost):
     add_to_carousel = models.BooleanField(verbose_name="Add this article to carousel", default=False)
     latitude = models.DecimalField(verbose_name="Story Location Latitude", null=True, blank=True, decimal_places=7, max_digits=10)
     longitude = models.DecimalField(verbose_name="Story Location Longitude", null=True, blank=True, decimal_places=7, max_digits=10)
+    show_download_link = models.BooleanField(verbose_name="Show download link for the article", default=False)
 
     @models.permalink
     def get_absolute_url(self):
