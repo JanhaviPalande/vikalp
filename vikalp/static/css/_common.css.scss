@@ -183,6 +183,14 @@ header {
     text-decoration: none;
     color: $dark-brick-col;
   }
+  &.top{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: right;
+    margin-right: 10px;
+    float: right;
+  }
 }
 
 .read-more-wrapper {
