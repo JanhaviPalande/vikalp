@@ -426,13 +426,13 @@ msgid "stories"
 msgstr "कहानियाँ"
 
 msgid "Highlights"
-msgstr "मुख्य बातें"
+msgstr "ख़ास"
 
 msgid "highlights"
-msgstr "मुख्य बातें"
+msgstr "ख़ास"
 
 msgid "HIGHLIGHTS"
-msgstr "मुख्य बातें"
+msgstr "ख़ास"
 
 msgid "ABOUT"
 msgstr "हमारा परिचय"
