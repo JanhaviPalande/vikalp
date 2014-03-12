@@ -404,14 +404,14 @@ msgstr ""
 msgid "%(sometime)s ago"
 msgstr ""
 
-msgid "CONTRIBUTE"
-msgstr "योगदान"
+msgid "ADD STORY"
+msgstr "कहानी जोडे"
 
-msgid "Contribute"
-msgstr "योगदान"
+msgid "Add Story"
+msgstr "कहानी जोडे"
 
-msgid "contribute"
-msgstr "योगदान"
+msgid "add story"
+msgstr "कहानी जोडे"
 
 msgid "PERSPECTIVES"
 msgstr "दृष्टिकोण"
