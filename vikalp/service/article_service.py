@@ -16,9 +16,9 @@ class ArticleService():
         articles = Article.objects.all()
         return articles
 
-    def get_all_published_articles_without_carousel_items_and_policy_edits(self, request):
-        articles = Article.objects.published(for_user=request.user).filter(add_to_carousel=False).exclude(
-            article_categories=self.get_policy_edit_category()).exclude(status=1)
+    def get_all_published_and_category_assigned_articles_without_carousel_items_and_policy_edits(self, request):
+        articles = Article.objects.published(for_user=request.user).filter(add_to_carousel=False).exclude(article_categories=
+                self.get_policy_edit_category()).exclude(status=1).exclude(article_categories=None)
         return articles
 
     def rendered_query_to_fetch_all_articles_under_tag(self, content_type, tag):
