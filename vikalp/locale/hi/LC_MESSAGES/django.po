@@ -401,20 +401,26 @@ msgstr "योगदान"
 msgid "contribute"
 msgstr "योगदान"
 
-msgid "POLICY EDITORIALS"
-msgstr "संपादकीय"
+msgid "PERSPECTIVES"
+msgstr "दृष्टिकोण"
 
-msgid "Policy Editorials"
-msgstr "संपादकीय"
+msgid "Perspectives"
+msgstr "दृष्टिकोण"
 
-msgid "EDITORIALS"
-msgstr "संपादकीय"
+msgid "perspectives"
+msgstr "दृष्टिकोण"
 
-msgid "editorials"
-msgstr "संपादकीय"
+msgid "policy perspectives"
+msgstr "दृष्टिकोण"
 
-msgid "Editorials"
-msgstr "संपादकीय"
+msgid "policy perspective"
+msgstr "दृष्टिकोण"
+
+msgid "POLICY PERSPECTIVES"
+msgstr "दृष्टिकोण"
+
+msgid "POLICY PERSPECTIVE"
+msgstr "दृष्टिकोण"
 
 msgid "STORIES"
 msgstr "कहानियाँ"
@@ -462,14 +468,29 @@ msgstr "स्वास्थ्य"
 msgid "HEALTH & HYGIENE"
 msgstr "स्वास्थ्य"
 
-msgid "Society & Culture"
-msgstr "समाज और संस्कृति"
+msgid "Health And Hygiene"
+msgstr "स्वास्थ्य"
 
-msgid "society & culture"
-msgstr "समाज और संस्कृति"
+msgid "HEALTH AND HYGIENE"
+msgstr "स्वास्थ्य"
 
-msgid "SOCIETY & CULTURE"
-msgstr "समाज और संस्कृति"
+msgid "Society, Culture And Peace"
+msgstr "समाज, संस्कृति और शांति"
+
+msgid "Society, Culture and Peace"
+msgstr "समाज, संस्कृति और शांति"
+
+msgid "SOCIETY, CULTURE AND PEACE"
+msgstr "समाज, संस्कृति और शांति"
+
+msgid "Society, Culture & Peace"
+msgstr "समाज, संस्कृति और शांति"
+
+msgid "LEARNING AND EDUCATION"
+msgstr "सीखना और शिक्षा"
+
+msgid "Learning And Education"
+msgstr "सीखना और शिक्षा"
 
 msgid "Learning & Education"
 msgstr "सीखना और शिक्षा"
@@ -479,6 +500,12 @@ msgstr "सीखना और शिक्षा"
 
 msgid "LEARNING & EDUCATION"
 msgstr "सीखना और शिक्षा"
+
+msgid "Environment And Ecology"
+msgstr "पर्यावरण"
+
+msgid "ENVIRONMENT AND ECOLOGY"
+msgstr "पर्यावरण"
 
 msgid "Environment & Ecology"
 msgstr "पर्यावरण"
@@ -507,6 +534,12 @@ msgstr "परिवहन"
 msgid "TRANSPORTATION"
 msgstr "परिवहन"
 
+msgid "KNOWLEDGE AND MEDIA"
+msgstr "जानकारी और मीडिया"
+
+msgid "Knowledge And Media"
+msgstr "जानकारी और मीडिया"
+
 msgid "Knowledge & Media"
 msgstr "जानकारी और मीडिया"
 
@@ -516,14 +549,14 @@ msgstr "जानकारी और मीडिया"
 msgid "KNOWLEDGE & MEDIA"
 msgstr "जानकारी और मीडिया"
 
-msgid "Alternative Politics"
-msgstr "वैकल्पिक राजनीति"
+msgid "Politics"
+msgstr "राजनीति"
 
-msgid "ALTERNATIVE POLITICS"
-msgstr "वैकल्पिक राजनीति"
+msgid "POLITICS"
+msgstr "राजनीति"
 
-msgid "alternative politics"
-msgstr "वैकल्पिक राजनीति"
+msgid "politics"
+msgstr "राजनीति"
 
 msgid "Energy"
 msgstr "ऊर्जा"
@@ -540,14 +573,20 @@ msgstr "संपादकीय"
 msgid "Policy Edit"
 msgstr "संपादकीय"
 
-msgid "Alternative Economies"
-msgstr "वैकल्पिक अर्थव्यवस्थाएं"
+msgid "Economics and Technologies"
+msgstr "अर्थव्यवस्था और तकनीकी"
 
-msgid "ALTERNATIVE ECONOMIES"
-msgstr "वैकल्पिक अर्थव्यवस्थाएं"
+msgid "ECONOMICS AND TECHNOLOGIES"
+msgstr "अर्थव्यवस्था और तकनीकी"
 
-msgid "alternative economies"
-msgstr "वैकल्पिक अर्थव्यवस्थाएं"
+msgid "Economics And Technologies"
+msgstr "अर्थव्यवस्था और तकनीकी"
+
+msgid "Economics & Technologies"
+msgstr "अर्थव्यवस्था और तकनीकी"
+
+msgid "ECONOMICS & TECHNOLOGIES"
+msgstr "अर्थव्यवस्था और तकनीकी"
 
 msgid "Settlements And Transport"
 msgstr "बस्तियां और परिवहन"
