@@ -347,6 +347,18 @@ msgstr "सभी कहानियाँ देखें"
 
 msgid "SEE ALL STORIES"
 msgstr "सभी कहानियाँ देखें"
+##
+msgid "See all categories"
+msgstr "सभी विषय देखें"
+
+msgid "see all categories"
+msgstr "सभी विषय देखें"
+
+msgid "See All Categories"
+msgstr "सभी विषय देखें"
+
+msgid "SEE ALL CATEGORIES"
+msgstr "सभी विषय देखें"
 
 #: templates/pages/menus/admin.html:32
 msgid "Add"
