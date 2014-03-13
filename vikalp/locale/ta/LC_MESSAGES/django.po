@@ -337,6 +337,19 @@ msgstr "அனைத்து செய்திகளையும் காண"
 msgid "SEE ALL STORIES"
 msgstr "அனைத்து செய்திகளையும் காண"
 
+
+msgid "See all categories"
+msgstr "அனைத்து பகுதிகளையும் காண"
+
+msgid "see all categories"
+msgstr "அனைத்து பகுதிகளையும் காண"
+
+msgid "See All Categories"
+msgstr "அனைத்து பகுதிகளையும் காண"
+
+msgid "SEE ALL CATEGORIES"
+msgstr "அனைத்து பகுதிகளையும் காண"
+
 #: templates/pages/menus/admin.html:32
 msgid "Add"
 msgstr ""
@@ -381,29 +394,32 @@ msgstr ""
 msgid "%(sometime)s ago"
 msgstr ""
 
-msgid "CONTRIBUTE"
-msgstr "பங்களிக்க"
+msgid "ADD STORY"
+msgstr "பங்களியுங்கள்"
 
-msgid "Contribute"
-msgstr "பங்களிக்க"
+msgid "Add Story"
+msgstr "பங்களியுங்கள்"
 
-msgid "contribute"
-msgstr "பங்களிக்க"
+msgid "add story"
+msgstr "பங்களியுங்கள்"
 
-msgid "POLICY EDITORIALS"
-msgstr "தலையங்கங்கள் "
+msgid "PERSPECTIVES"
+msgstr "கருத்து"
 
-msgid "Policy Editorials"
-msgstr "தலையங்கங்கள் "
+msgid "Perspectives"
+msgstr "கருத்து"
 
-msgid "EDITORIALS"
-msgstr "தலையங்கங்கள் "
+msgid "perspectives"
+msgstr "கருத்து"
 
-msgid "editorials"
-msgstr "தலையங்கங்கள் "
+msgid "POLICY PERSPECTIVES"
+msgstr "கருத்து"
 
-msgid "Editorials"
-msgstr "தலையங்கங்கள் "
+msgid "policy perspectives"
+msgstr "கருத்து"
+
+msgid "Policy Perspectives"
+msgstr "கருத்து"
 
 msgid "STORIES"
 msgstr "செய்திகள்"
@@ -433,40 +449,40 @@ msgstr "குரிப்பிட்ட வகை செய்திகளை 
 msgid "SHOW STORIES BY CATEGORY"
 msgstr "குரிப்பிட்ட வகை செய்திகளை காண "
 
-msgid "Health & Hygiene"
+msgid "Health And Hygiene"
 msgstr "உடல்நலம் மற்றும் சுகாதாரம்"
 
-msgid "health & hygiene"
+msgid "health and hygiene"
 msgstr "உடல்நலம் மற்றும் சுகாதாரம்"
 
-msgid "HEALTH & HYGIENE"
+msgid "HEALTH AND HYGIENE"
 msgstr "உடல்நலம் மற்றும் சுகாதாரம்"
 
-msgid "Society & Culture"
-msgstr "சமூகம் & கலாச்சாரம்"
+msgid "Society, Culture And Peace"
+msgstr "சமூகம், கலாச்சாரம், சமாதானம்"
 
-msgid "society & culture"
-msgstr "சமூகம் & கலாச்சாரம்"
+msgid "society, culture and peace"
+msgstr "சமூகம், கலாச்சாரம், சமாதானம்"
 
-msgid "SOCIETY & CULTURE"
-msgstr "சமூகம் & கலாச்சாரம்"
+msgid "SOCIETY, CULTURE AND PEACE"
+msgstr "சமூகம், கலாச்சாரம், சமாதானம்"
 
-msgid "Learning & Education"
+msgid "Learning And Education"
 msgstr "கற்றல் மற்றும் கல்வி "
 
-msgid "learning & education"
+msgid "learning and education"
 msgstr "கற்றல் மற்றும் கல்வி "
 
-msgid "LEARNING & EDUCATION"
+msgid "LEARNING AND EDUCATION"
 msgstr "கற்றல் மற்றும் கல்வி "
 
-msgid "Environment & Ecology"
+msgid "Environment And Ecology"
 msgstr "சுற்றுச்சூழல் மற்றும் உயிரின வாழ்க்கை ஆய்வு"
 
-msgid "environment & ecology"
+msgid "environment and ecology"
 msgstr "சுற்றுச்சூழல் மற்றும் உயிரின வாழ்க்கை ஆய்வு"
 
-msgid "ENVIRONMENT & ECOLOGY"
+msgid "ENVIRONMENT AND ECOLOGY"
 msgstr "சுற்றுச்சூழல் மற்றும் உயிரின வாழ்க்கை ஆய்வு"
 
 msgid "Livelihoods"
@@ -478,23 +494,23 @@ msgstr "வாழ்வாதாரங்கள்"
 msgid "LIVELIHOODS"
 msgstr "வாழ்வாதாரங்கள்"
 
-msgid "Knowledge & Media"
+msgid "Knowledge And Media"
 msgstr "அறிவு & மீடியா"
 
-msgid "knowledge & media"
+msgid "knowledge and media"
 msgstr "அறிவு & மீடியா"
 
-msgid "KNOWLEDGE & MEDIA"
+msgid "KNOWLEDGE AND MEDIA"
 msgstr "அறிவு & மீடியா"
 
-msgid "Alternative Politics"
-msgstr "மாற்று அரசியல்"
+msgid "Politics"
+msgstr "அரசியல்"
 
-msgid "ALTERNATIVE POLITICS"
-msgstr "மாற்று அரசியல்"
+msgid "POLITICS"
+msgstr "அரசியல்"
 
-msgid "alternative politics"
-msgstr "மாற்று அரசியல்"
+msgid "politics"
+msgstr "அரசியல்"
 
 msgid "Energy"
 msgstr "சக்தி"
@@ -587,10 +603,10 @@ msgstr "சிறப்பம்சங்கள்"
 msgid "HIGHLIGHTS"
 msgstr "சிறப்பம்சங்கள்"
 
-msgid "Settlements & Transportation"
+msgid "Settlements And Transportation"
 msgstr "குடியிருப்புக்களும் போக்குவரத்தும்"
 
-msgid "SETTLEMENTS & TRANSPORTATION"
+msgid "settlements and transportation"
 msgstr "குடியிருப்புக்களும் போக்குவரத்தும்"
 
 msgid "SETTLEMENTS AND TRANSPORTATION"
@@ -608,13 +624,13 @@ msgstr "உணவு மற்றும் தண்ணீர்"
 msgid "FOOD AND WATER"
 msgstr "உணவு மற்றும் தண்ணீர்"
 
-msgid "food & water"
+msgid "food and water"
 msgstr "உணவு மற்றும் தண்ணீர்"
 
-msgid "Food & Water"
+msgid "Food And Water"
 msgstr "உணவு மற்றும் தண்ணீர்"
 
-msgid "FOOD & WATER"
+msgid "FOOD AND WATER"
 msgstr "உணவு மற்றும் தண்ணீர்"
 
 msgid "Stories on Map"
