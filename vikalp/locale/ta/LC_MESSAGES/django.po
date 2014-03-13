@@ -527,13 +527,13 @@ msgstr "கொள்கை தலையங்கங்கள்"
 msgid "Policy Edit"
 msgstr "கொள்கை தலையங்கங்கள்"
 
-msgid "Alternative Economies"
+msgid "Economics And Technologies"
 msgstr "மாற்று பொருளாதாரம்"
 
-msgid "ALTERNATIVE ECONOMIES"
+msgid "ECONOMICS AND TECHNOLOGIES"
 msgstr "மாற்று பொருளாதாரம்"
 
-msgid "alternative economies"
+msgid "economics and technologies"
 msgstr "மாற்று பொருளாதாரம்"
 
 msgid "Settlements And Transport"
