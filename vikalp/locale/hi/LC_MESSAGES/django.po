@@ -82,6 +82,15 @@ msgstr "और पढ़ें"
 msgid "READ MORE"
 msgstr "और पढ़ें"
 
+msgid "LOAD MORE"
+msgstr "और देखें"
+
+msgid "Load More"
+msgstr "और देखें"
+
+msgid "load more"
+msgstr "और देखें"
+
 #: templates/article/article_detail.html:24
 msgid "By"
 msgstr ""
@@ -385,6 +394,15 @@ msgstr "विषय के आधार पर कहानियाँ"
 msgid "ABOUT VIKALP SANGAM"
 msgstr "विकल्प संगम के बारे में पढ़ें"
 
+msgid "ABOUT THE WEBSITE"
+msgstr "वेबसाइट का परिचय"
+
+msgid "About The Website"
+msgstr "वेबसाइट का परिचय"
+
+msgid "about the website"
+msgstr "वेबसाइट का परिचय"
+
 #: templates/pages/section/featured.html:8
 msgid "Featured Stories"
 msgstr "खास कहानियाँ"
@@ -461,6 +479,60 @@ msgstr "हमारा परिचय"
 msgid "about"
 msgstr "हमारा परिचय"
 
+msgid "ABOUT US"
+msgstr "हमारा परिचय"
+
+msgid "About Us"
+msgstr "हमारा परिचय"
+
+msgid "about us"
+msgstr "हमारा परिचय"
+
+msgid "CONTACT US"
+msgstr "हमसे संपर्क करें"
+
+msgid "Contact Us"
+msgstr "हमसे संपर्क करें"
+
+msgid "contact us"
+msgstr "हमसे संपर्क करें"
+
+msgid "CREDITS"
+msgstr "आभार सूची"
+
+msgid "credits"
+msgstr "आभार सूची"
+
+msgid "Credits"
+msgstr "आभार सूची"
+
+msgid "Terms Of Service"
+msgstr "सेवा की शर्तें"
+
+msgid "TERMS OF SERVICE"
+msgstr "सेवा की शर्तें"
+
+msgid "terms of service"
+msgstr "सेवा की शर्तें"
+
+msgid "GUIDELINES TO CONTRIBUTE"
+msgstr "योगदान के लिए दिशा निर्देश"
+
+msgid "Guidelines To Contribute"
+msgstr "योगदान के लिए दिशा निर्देश"
+
+msgid "guidelines to contribute"
+msgstr "योगदान के लिए दिशा निर्देश"
+
+msgid "CONTRIBUTE A STORY"
+msgstr "कहानी जोडे"
+
+msgid "Contribute a Story"
+msgstr "कहानी जोडे"
+
+msgid "contribute a story"
+msgstr "कहानी जोडे"
+
 #: templates/article/article_list_by_date.html:31
 msgid "Show stories by category"
 msgstr "विषय के आधार पर कहानियाँ"
@@ -529,13 +601,13 @@ msgid "ENVIRONMENT & ECOLOGY"
 msgstr "पर्यावरण"
 
 msgid "Livelihoods"
-msgstr "जीविका"
+msgstr "जीविकाएँ"
 
 msgid "livelihoods"
-msgstr "जीविका"
+msgstr "जीविकाएँ"
 
 msgid "LIVELIHOODS"
-msgstr "जीविका"
+msgstr "जीविकाएँ"
 
 msgid "Transportation"
 msgstr "परिवहन"
@@ -628,16 +700,16 @@ msgid "RESOURCES"
 msgstr "संसाधन"
 
 msgid "Food and Water"
-msgstr "खाना और पानी"
+msgstr "अन्न और पानी"
 
 msgid "food and water"
-msgstr "खाना और पानी"
+msgstr "अन्न और पानी"
 
 msgid "Food And Water"
-msgstr "खाना और पानी"
+msgstr "अन्न और पानी"
 
 msgid "FOOD AND WATER"
-msgstr "खाना और पानी"
+msgstr "अन्न और पानी"
 
 msgid "Stories on Map"
 msgstr "नक्शा"

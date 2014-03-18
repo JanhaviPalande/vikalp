@@ -37,7 +37,7 @@
 
                                     <ul class="list-group"> {% if '3' in child_page.in_menus %}
                                         <li class="list-group-item"><a class="list-group-item-heading"
-                                                                       href="{{ child_page.get_absolute_url }}">{{ child_page.title }}</a>
+                                                                       href="{{ child_page.get_absolute_url }}">{% trans child_page.title %}</a>
                                         </li> {% endif %}
 
                                         {% with menu_pages|get:child_page.id as child_child_pages %}
@@ -45,7 +45,7 @@
                                                 {% if '3' in child_child_page.in_menus %}
                                                     <li class="list-group-item">
                                                         <a class="list-group-item-text"
-                                                           href="{{ child_child_page.get_absolute_url }}">{{ child_child_page.title }}</a>
+                                                           href="{{ child_child_page.get_absolute_url }}">{% trans child_child_page.title %}</a>
                                                     </li> {% endif %}
                                             {% endfor %}
                                         {% endwith %}
