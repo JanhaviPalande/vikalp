@@ -486,13 +486,13 @@ msgid "HIGHLIGHTS"
 msgstr "ख़ास"
 
 msgid "ABOUT"
-msgstr "हमारा परिचय"
+msgstr "परिचय"
 
 msgid "About"
-msgstr "हमारा परिचय"
+msgstr "परिचय"
 
 msgid "about"
-msgstr "हमारा परिचय"
+msgstr "परिचय"
 
 msgid "ABOUT US"
 msgstr "हमारा परिचय"
