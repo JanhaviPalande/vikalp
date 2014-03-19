@@ -49,7 +49,8 @@
                     {% for in_menu in page.in_menus %}
                         {% ifequal in_menu '1' %}
                             {% ifnotequal page.title "Home" %}
-                                <li {% if page.is_current_or_ascendant %}class="active"{% endif %}><a
+                                <li {% if page.is_current_or_ascendant %}class="active"{% endif %}>
+                                    <a {% if page.description|wordcount < 5 %} title="{% trans page.description %}" {% endif %}
                                         href="{{ page.get_absolute_url }}">
                                     {% with page.title|upper as page_title %}{% trans page_title %}{% endwith %}</a>
                                 </li>

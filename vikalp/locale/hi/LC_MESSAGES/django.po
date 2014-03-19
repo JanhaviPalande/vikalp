@@ -369,9 +369,6 @@ msgstr "सभी विषय देखें"
 msgid "SEE ALL CATEGORIES"
 msgstr "सभी विषय देखें"
 
-#: templates/pages/menus/admin.html:32
-msgid "Add"
-msgstr ""
 
 #: templates/pages/menus/carousel.html:56
 
@@ -421,6 +418,24 @@ msgstr ""
 #, python-format
 msgid "%(sometime)s ago"
 msgstr ""
+
+msgid "ADD"
+msgstr "जोडे"
+
+msgid "add"
+msgstr "जोडे"
+
+msgid "Add"
+msgstr "जोडे"
+
+msgid "Story, Perspective, or Resources!"
+msgstr "कहानी, दृष्टिकोण या संसाधन"
+
+msgid "STORY, PERSPECTIVE, OR RESOURCES!"
+msgstr "कहानी, दृष्टिकोण या संसाधन"
+
+msgid "story, perspective, or resources!"
+msgstr "कहानी, दृष्टिकोण या संसाधन"
 
 msgid "ADD STORY"
 msgstr "कहानी जोडे"
