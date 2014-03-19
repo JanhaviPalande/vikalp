@@ -420,13 +420,13 @@ msgid "%(sometime)s ago"
 msgstr ""
 
 msgid "ADD"
-msgstr "जोडे"
+msgstr "जोड़ें"
 
 msgid "add"
-msgstr "जोडे"
+msgstr "जोड़ें"
 
 msgid "Add"
-msgstr "जोडे"
+msgstr "जोड़ें"
 
 msgid "Story, Perspective, or Resources!"
 msgstr "कहानी, दृष्टिकोण या संसाधन"
@@ -438,13 +438,13 @@ msgid "story, perspective, or resources!"
 msgstr "कहानी, दृष्टिकोण या संसाधन"
 
 msgid "ADD STORY"
-msgstr "कहानी जोडे"
+msgstr "कहानी जोड़ें"
 
 msgid "Add Story"
-msgstr "कहानी जोडे"
+msgstr "कहानी जोड़ें"
 
 msgid "add story"
-msgstr "कहानी जोडे"
+msgstr "कहानी जोड़ें"
 
 msgid "PERSPECTIVES"
 msgstr "दृष्टिकोण"
@@ -540,13 +540,13 @@ msgid "guidelines to contribute"
 msgstr "योगदान के लिए दिशा निर्देश"
 
 msgid "CONTRIBUTE A STORY"
-msgstr "कहानी जोडे"
+msgstr "कहानी जोड़ें"
 
 msgid "Contribute a Story"
-msgstr "कहानी जोडे"
+msgstr "कहानी जोड़ें"
 
 msgid "contribute a story"
-msgstr "कहानी जोडे"
+msgstr "कहानी जोड़ें"
 
 #: templates/article/article_list_by_date.html:31
 msgid "Show stories by category"
