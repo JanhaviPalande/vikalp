@@ -542,7 +542,7 @@ msgstr "योगदान के लिए दिशा निर्देश"
 msgid "CONTRIBUTE A STORY"
 msgstr "कहानी जोड़ें"
 
-msgid "Contribute a Story"
+msgid "Contribute A Story"
 msgstr "कहानी जोड़ें"
 
 msgid "contribute a story"
