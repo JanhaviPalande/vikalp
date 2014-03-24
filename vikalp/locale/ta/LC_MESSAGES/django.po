@@ -311,6 +311,15 @@ msgstr "செய்திகள்"
 msgid "EXPLORE STORIES"
 msgstr "செய்திகள்"
 
+msgid "Story, Perspective, or Resources!"
+msgstr "கதை, கருத்து அல்லது வளன்கள்"
+
+msgid "STORY, PERSPECTIVE, OR RESOURCES!"
+msgstr "கதை, கருத்து அல்லது வளன்கள்"
+
+msgid "story, perspective, or resources!"
+msgstr "கதை, கருத்து அல்லது வளன்கள்"
+
 #: templates/pages/categories_page.html:16
 msgid "Show all latest stories"
 msgstr "சமீபத்திய அனைத்து செய்திகள் "
@@ -323,6 +332,33 @@ msgstr "சமீபத்திய அனைத்து செய்திக�
 
 msgid "SHOW ALL LATEST STORIES"
 msgstr "சமீபத்திய அனைத்து செய்திகள் "
+
+msgid "CONTRIBUTE A STORY"
+msgstr "பங்களியுங்கள்"
+
+msgid "contribute a story"
+msgstr "பங்களியுங்கள்"
+
+msgid "Contribute A Story"
+msgstr "பங்களியுங்கள்"
+
+msgid "Guidelines To Contribute"
+msgstr "பங்களிப்பு வழிமுறைகள்"
+
+msgid "guidelines to contribute"
+msgstr "பங்களிப்பு வழிமுறைகள்"
+
+msgid "GUIDELINES TO CONTRIBUTE"
+msgstr "பங்களிப்பு வழிமுறைகள்"
+
+msgid "Terms Of Service"
+msgstr "சேவை விதிமுறைகள்"
+
+msgid "TERMS OF SERVICE"
+msgstr "சேவை விதிமுறைகள்"
+
+msgid "terms of service"
+msgstr "சேவை விதிமுறைகள்"
 
 #: templates/pages/categories_page.html:74
 msgid "See all stories"
@@ -352,7 +388,13 @@ msgstr "அனைத்து பகுதிகளையும் காண"
 
 #: templates/pages/menus/admin.html:32
 msgid "Add"
-msgstr ""
+msgstr "பங்களியுங்கள்"
+
+msgid "ADD"
+msgstr "பங்களியுங்கள்"
+
+msgid "add"
+msgstr "பங்களியுங்கள்"
 
 #: templates/pages/menus/carousel.html:56
 
@@ -374,6 +416,39 @@ msgstr "செய்தி வகைகள்"
 #: templates/pages/section/about.html:7
 msgid "ABOUT VIKALP SANGAM"
 msgstr "விகல்ப் சங்கம் ப்ற்றி"
+
+msgid "about vikalp sangam"
+msgstr "விகல்ப் சங்கம் ப்ற்றி"
+
+msgid "About Vikalp Sangam"
+msgstr "விகல்ப் சங்கம் ப்ற்றி"
+
+msgid "ABOUT US"
+msgstr "எங்களை ப்ற்றி"
+
+msgid "about us"
+msgstr "எங்களை ப்ற்றி"
+
+msgid "About Us"
+msgstr "எங்களை ப்ற்றி"
+
+msgid "CONTACT US"
+msgstr "தொடர்பு கொள்"
+
+msgid "Contact Us"
+msgstr "தொடர்பு கொள்"
+
+msgid "contact us"
+msgstr "தொடர்பு கொள்"
+
+msgid "CREDITS"
+msgstr "உபயம்"
+
+msgid "Credits"
+msgstr "உபயம்"
+
+msgid "credits"
+msgstr "உபயம்"
 
 #: templates/pages/section/featured.html:8
 msgid "Featured Stories"
