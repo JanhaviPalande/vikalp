@@ -122,7 +122,7 @@ urlpatterns += patterns("",
                         # need to use the ``SITE_PREFIX`` setting as well.
 
                         # ("^%s/" % settings.SITE_PREFIX, include("mezzanine.urls"))
-)
+                        )
 
 handler404 = "mezzanine.core.views.page_not_found"
 handler500 = "mezzanine.core.views.server_error"
