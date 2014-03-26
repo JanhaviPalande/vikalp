@@ -28,14 +28,14 @@ _slashes = (
 # You can also change the ``home`` view to add your own functionality
 # to the project's homepage.
 urlpatterns = patterns('',
-                       (r'^static/(?P<path>.*)$',
-                        'django.views.static.serve',
-                        {'document_root': settings.STATIC_ROOT}), )
+                       (r"^static/(?P<path>.*)$",
+                        "django.views.static.serve",
+                        {"document_root": settings.STATIC_ROOT}), )
 
 
 # Adds ``STATIC_URL`` to the context of error pages, so that error
 # pages can use JS, CSS and images.
-handler404 = "mezzanine.core.views.page_not_found"
+
 urlpatterns += patterns("",
 
                         # Change the admin prefix here to use an alternate URL for the
@@ -70,7 +70,7 @@ urlpatterns += patterns("",
 
                         # url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
                         url("^$", homePage.promoted_article_on_homepage, name="home"),
-                        (r'^i18n/', include('django.conf.urls.i18n')),
+                        (r"^i18n/", include("django.conf.urls.i18n")),
                         (r"^article/$", categoryPage.category_list_with_two_articles),
                         (r"^stories/$", articleListByDate.article_list_by_date),
                         url("^article/tag/(?P<tag>.*)$", articleList.article_list, name="article_list_tag"),
@@ -122,6 +122,7 @@ urlpatterns += patterns("",
                         # need to use the ``SITE_PREFIX`` setting as well.
 
                         # ("^%s/" % settings.SITE_PREFIX, include("mezzanine.urls"))
-                        )
+)
 
+handler404 = "mezzanine.core.views.page_not_found"
 handler500 = "mezzanine.core.views.server_error"
