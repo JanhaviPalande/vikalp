@@ -14,10 +14,7 @@ def post_to_twitter(tweet_message="Visit www.vikalpsangam.org"):
         auth.set_access_token(oauth_token, oauth_token_secret)
 
         api_stream = API(auth)
-    except:
-        pass
-
-    try:
         api_stream.update_status(tweet_message)
+
     except Exception as e:
         print "Exception log: " + str(e)

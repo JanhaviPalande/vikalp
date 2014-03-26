@@ -5,10 +5,6 @@ from mezzanine.pages.models import Page
 from vikalp.settings import DEFAULT_CATEGORY_IMAGE
 
 
-def get_default_category_image_location():
-    return DEFAULT_CATEGORY_IMAGE
-
-
 class Article(BlogPost):
     promoted = models.BooleanField(verbose_name="Promote Article to HomePage", default=False)
     article_categories = models.ManyToManyField("ArticleCategory",
@@ -28,7 +24,7 @@ class Article(BlogPost):
 
 class ArticleCategory(BlogCategory):
     category_image = models.ImageField(verbose_name="Category Symbol", upload_to="uploads/",
-                                       default=get_default_category_image_location())
+                                       default=DEFAULT_CATEGORY_IMAGE)
     category_description = models.TextField(verbose_name="Category One Liner (100 Chars)", max_length=100)
     category_long_description = models.TextField(verbose_name="Category Long Description", default="")
 
