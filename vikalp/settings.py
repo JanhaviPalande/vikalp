@@ -13,7 +13,7 @@ LANGUAGES = (
     ('ta', ugettext('Tamil')),
 )
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vikalpsangam.org', '.twhosted.com', '172.18.36.2']
 
 # The following settings are already defined with default values in
 # the ``defaults.py`` module within each of Mezzanine's apps, but are
