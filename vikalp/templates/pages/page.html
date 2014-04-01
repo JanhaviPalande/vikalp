@@ -22,7 +22,5 @@
 {% block side_bar %}
     {% include "includes/sidebar/category_list.html" %}
     {% include "includes/sidebar/tag_cloud.html" %}
-    {% if not "Events" in page.meta_title %}
-        {% include "includes/sidebar/events.html" %}
-    {% endif %}
+    {% include "includes/sidebar/events.html" %}
 {% endblock %}
