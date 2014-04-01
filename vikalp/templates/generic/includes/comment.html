@@ -2,7 +2,7 @@
 
 {% if comments_for_thread %}
 <ul class="list-unstyled">
-    {% for comment in comments_for_thread %}
+    {% for comment in comments_for_thread reversed %}
 
         <li id="comment-{{ comment.id }}"
             {% if comment.by_author %}class="comment-author"{% endif %}>
