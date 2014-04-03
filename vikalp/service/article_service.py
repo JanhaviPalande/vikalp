@@ -1,6 +1,6 @@
 from vikalp.models import Article, ArticleCategory
 from vikalp.service.raw_queries import raw_query_to_get_all_articles_assigned_to_a_tag_id
-from vikalp.helper_functions.service_filter import remove_policy_edits_from_categories
+from vikalp.helper_functions.service_filter import remove_perspectives_from_categories
 from mezzanine.conf import settings
 
 
@@ -16,9 +16,9 @@ class ArticleService():
         articles = Article.objects.all()
         return articles
 
-    def get_all_published_and_category_assigned_articles_without_carousel_items_and_policy_edits(self, request):
+    def get_all_published_and_category_assigned_articles_without_carousel_items_and_perspectives(self, request):
         articles = Article.objects.published(for_user=request.user).filter(add_to_carousel=False).exclude(article_categories=
-                self.get_policy_edit_category()).exclude(status=1).exclude(article_categories=None)
+                self.get_perspectives_category()).exclude(status=1).exclude(article_categories=None)
         return articles
 
     def rendered_query_to_fetch_all_articles_under_tag(self, content_type, tag):
@@ -28,7 +28,7 @@ class ArticleService():
         return Article.objects.raw(self.rendered_query_to_fetch_all_articles_under_tag(content_type, tag))
 
     def get_all_article_categories(self):
-        return remove_policy_edits_from_categories(ArticleCategory.objects.all())
+        return remove_perspectives_from_categories(ArticleCategory.objects.all())
 
     def get_all_articles_in_category(self, category, limit=None):
         return Article.objects.published().filter(article_categories=category)[:limit]
@@ -38,14 +38,14 @@ class ArticleService():
         return {articleCategory: articles}
 
     def get_all_article_categories_with_their_articles(self):
-        articleCategories = map(self.make_dict, remove_policy_edits_from_categories(ArticleCategory.objects.all()))
+        articleCategories = map(self.make_dict, remove_perspectives_from_categories(ArticleCategory.objects.all()))
         return articleCategories
 
     def get_carousel_content(self):
         return Article.objects.filter(add_to_carousel='t').exclude(status=1)[:NUMBER_OF_CAROUSEL_ARTICLES]
 
-    def get_policy_edit_category(self):
-        return ArticleCategory.objects.filter(title__icontains="policy")
+    def get_perspectives_category(self):
+        return ArticleCategory.objects.filter(title__icontains="perspectives")
 
     def get_published_articles_with_related_articles(self, request):
         return Article.objects.published(
@@ -68,7 +68,7 @@ class ArticleService():
         latest_articles = {}
         redundant_articles = []
         articles = self.get_published_articles_ordered_by_date().exclude(
-            article_categories=self.get_policy_edit_category())
+            article_categories=self.get_perspectives_category())
         for article in articles:
             unused_article_categories = self.article_categories_not_in_categories_covered(article, categories_covered)
             if unused_article_categories and len(latest_articles) < 4:

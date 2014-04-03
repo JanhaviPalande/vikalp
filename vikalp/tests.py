@@ -107,9 +107,9 @@ class ArticleServiceTest(TestCase):
         self.assertEquals(self.promoted_article_list.__len__(), 3)
 
     def test_get_policy_edits_category(self):
-        self.create_categories(title="Policy Edits")
-        category = self.articleService.get_policy_edit_category()
-        self.assertIn("policy", reduce(get_title, category).title.lower())
+        self.create_categories(title="Perspectives")
+        category = self.articleService.get_perspectives_category()
+        self.assertIn("perspectives", reduce(get_title, category).title.lower())
 
 
 class ArticleCategoryViewTest(TestCase):
@@ -133,7 +133,7 @@ class ArticleCategoryServiceTest(TestCase):
         return ArticleCategory.objects.create(title=title)
 
     def add_categories(self, article):
-        for article_category in self.article_categories:                               # REMOVE THIS
+        for article_category in self.article_categories:
             article.article_categories.add(article_category)
         return article
 

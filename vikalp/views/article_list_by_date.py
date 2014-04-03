@@ -16,7 +16,7 @@ class ArticleListByDate:
     def article_list_by_date(self, request, tag=None, category=None, template="article/article_list_by_date.html"):
         settings.use_editable()
         page_template = "article/article_list_by_date_page.html"
-        articles = articleService.get_all_published_and_category_assigned_articles_without_carousel_items_and_policy_edits(request)
+        articles = articleService.get_all_published_and_category_assigned_articles_without_carousel_items_and_perspectives(request)
         request.path_info = '/article/'
         if request.is_ajax():
             template = page_template
