@@ -1,3 +1,4 @@
+from django.contrib.comments import Comment
 from vikalp.models import Article, ArticleCategory
 from vikalp.service.raw_queries import raw_query_to_get_all_articles_assigned_to_a_tag_id
 from vikalp.helper_functions.service_filter import remove_perspectives_from_categories
@@ -17,8 +18,8 @@ class ArticleService():
         return articles
 
     def get_all_published_and_category_assigned_articles_without_carousel_items_and_perspectives(self, request):
-        articles = Article.objects.published(for_user=request.user).filter(add_to_carousel=False).exclude(article_categories=
-                self.get_perspectives_category()).exclude(status=1).exclude(article_categories=None)
+        articles = Article.objects.published(for_user=request.user).filter(add_to_carousel=False).exclude(
+            article_categories=self.get_perspectives_category()).exclude(status=1).exclude(article_categories=None)
         return articles
 
     def rendered_query_to_fetch_all_articles_under_tag(self, content_type, tag):
@@ -80,3 +81,18 @@ class ArticleService():
             article = redundant_articles.pop()
             latest_articles[article] = article.article_categories.all[0]
         return latest_articles
+
+    def get_latest_comments(self):
+        return Comment.objects.order_by('-submit_date')
+
+    def article_which_has_this(self, comment):
+        article, = Article.objects.filter(blogpost_ptr_id=comment.object_pk)
+        return article
+
+    def get_latest_unique_commented_on_articles(self):
+        latest_unique_articles = []
+        latest_comments = self.get_latest_comments()
+        for comment in latest_comments:
+            if len(latest_unique_articles) < 5 and self.article_which_has_this(comment) not in latest_unique_articles:
+                latest_unique_articles.append(self.article_which_has_this(comment))
+        return latest_unique_articles

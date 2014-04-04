@@ -2,7 +2,7 @@ from copy import copy
 from django.shortcuts import render
 from mezzanine.conf import settings
 from vikalp.helper_functions.functional import get_page
-from vikalp.views.views import articleService
+from vikalp.views.views import article_service
 
 
 class HomePage:
@@ -25,9 +25,9 @@ class HomePage:
             about_page_description = about_page.description
         else:
             about_page_description = None
-        return render(request, template, self.get_context_for_promoted_articles(articleService.get_promoted_articles(),
-                                                                                articleService.get_carousel_content(),
-                                                                                articleService.get_all_article_categories(),
-                                                                                articleService.get_latest_articles(),
+        return render(request, template, self.get_context_for_promoted_articles(article_service.get_promoted_articles(),
+                                                                                article_service.get_carousel_content(),
+                                                                                article_service.get_all_article_categories(),
+                                                                                article_service.get_latest_articles(),
                                                                                 get_page(request),
                                                                                 about_page_description))

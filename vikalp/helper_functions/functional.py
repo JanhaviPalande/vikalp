@@ -4,7 +4,7 @@ from mezzanine.conf import settings
 from django.shortcuts import get_object_or_404
 from mezzanine.utils.urls import path_to_slug
 from mezzanine.utils.views import paginate
-from vikalp.views.views import pageService
+from vikalp.views.views import page_service
 
 
 def default_or_value(default, value):
@@ -38,7 +38,7 @@ def field_check(x):
 def get_page(request):
     check_if_middleware_exists("mezzanine.pages")
     slug = path_to_slug(request.path_info)
-    pages = pageService.get_page_ascendants(request, slug)
+    pages = page_service.get_page_ascendants(request, slug)
     return reduce(default_or_value, pages, "")
 
 

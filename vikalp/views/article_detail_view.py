@@ -31,7 +31,8 @@ class ArticleDetail:
         if article_is_a_perspective(article):
             request.path_info = '/policy-edits/'
             page = get_page(request)
-        return render(request, template, {"article": article, "page": page, 'form': MapFormForSideBar(initial={'map': article_map})})
+        return render(request, template, {"article": article, "page": page, 'form': MapFormForSideBar(initial={'map': article_map}),
+                                          "latest_commented_articles": self.article_service.get_latest_unique_commented_on_articles()})
 
     def build_response(self, article_title):
         response = HttpResponse(content_type=PDF_CONTENT_TYPE)

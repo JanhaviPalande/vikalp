@@ -17,8 +17,8 @@ from vikalp.views.google_maps import get_article_map, MapFormForSideBar
 MODEL_NAME = "article"
 APP_NAME = "vikalp"
 
-articleService = ArticleService()
-pageService = PageService()
+article_service = ArticleService()
+page_service = PageService()
 
 
 @staff_member_required
@@ -73,5 +73,7 @@ def search(request, template="search_results.html"):
         template = page_template
     article_map = get_article_map(True)
     context = {"query": query, "results": results,
-               "search_type": search_type, "page_template": page_template, 'form': MapFormForSideBar(initial={'map': article_map})}
+               "search_type": search_type, "page_template": page_template,
+               'form': MapFormForSideBar(initial={'map': article_map}),
+               "latest_commented_articles": article_service.get_latest_unique_commented_on_articles()}
     return render(request, template, context, context_instance=RequestContext(request))
