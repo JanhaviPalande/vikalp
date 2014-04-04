@@ -33,13 +33,13 @@ class ArticleService():
     def get_all_articles_in_category(self, category, limit=None):
         return Article.objects.published().filter(article_categories=category)[:limit]
 
-    def make_dict(self, articleCategory):
-        articles = self.get_all_articles_in_category(articleCategory, limit=3)
-        return {articleCategory: articles}
+    def make_dict(self, article_category):
+        articles = self.get_all_articles_in_category(article_category, limit=3)
+        return {article_category: articles}
 
     def get_all_article_categories_with_their_articles(self):
-        articleCategories = map(self.make_dict, remove_perspectives_from_categories(ArticleCategory.objects.all()))
-        return articleCategories
+        article_categories = map(self.make_dict, remove_perspectives_from_categories(ArticleCategory.objects.all()))
+        return article_categories
 
     def get_carousel_content(self):
         return Article.objects.filter(add_to_carousel='t').exclude(status=1)[:NUMBER_OF_CAROUSEL_ARTICLES]
@@ -76,7 +76,7 @@ class ArticleService():
                 categories_covered.append(unused_article_categories[0])
             else:
                 redundant_articles.append(article)
-        while len(latest_articles) < 4 and len(articles) > 4:
+        while len(latest_articles) < 4 < len(articles):
             article = redundant_articles.pop()
             latest_articles[article] = article.article_categories.all[0]
         return latest_articles

@@ -29,30 +29,31 @@ class ArticleMap:
                 'style': maps.MapTypeControlStyle.DEFAULT
             },
         })
-        if (infos):
+
+        if infos:
             self.infos = map(self.get_info, infos)
 
-    def get_marker(self, articleMarker):
-        return articleMarker.marker
+    def get_marker(self, article_marker):
+        return article_marker.marker
 
-    def get_info(self, ArticleInfo):
-        return ArticleInfo.info
+    def get_info(self, article_info):
+        return article_info.info
 
     def open_window(self, info, marker):
         info.open(self.gmap, marker)
 
-    def assign_markers(self, articleMarkers):
-        self.markers = map(self.get_marker, articleMarkers)
+    def assign_markers(self, article_markers):
+        self.markers = map(self.get_marker, article_markers)
 
     def add_window_to_markers(self):
         map(self.open_window, self.infos, self.markers)
 
 
 class ArticleMarker:
-    def __init__(self, latLong, map):
+    def __init__(self, lat_long, map):
         self.marker = maps.Marker(opts={
             'map': map,
-            'position': latLong,
+            'position': lat_long,
         })
         maps.event.addListener(self.marker, 'click', 'myobj.markerOver')
 
@@ -69,8 +70,8 @@ def create_article_info(content):
     return ArticleInfo(content)
 
 
-def create_article_marker(latLong, gmap):
-    return ArticleMarker(latLong, gmap)
+def create_article_marker(lat_long, gmap):
+    return ArticleMarker(lat_long, gmap)
 
 
 def get_article_link(article):
@@ -82,18 +83,18 @@ def get_article_lat_long(article):
 
 
 def get_article_map(in_side_bar=False):
-    center_lag_lng = maps.LatLng(21.1610858, 79.0725102)
+    center_lat_long = maps.LatLng(21.1610858, 79.0725102)
     articles = articleService.get_articles_with_lat_long()
-    if (articles):
-        contentList = map(get_article_link, articles)
-        articleInfos = map(create_article_info, contentList)
-        latLongList = map(get_article_lat_long, articles)
-        article_map = ArticleMap(center_lag_lng, infos=articleInfos, in_side_bar=in_side_bar)
-        articleMarkers = map(create_article_marker, latLongList, [article_map.gmap])
-        article_map.assign_markers(articleMarkers)
+    if articles:
+        content_list = map(get_article_link, articles)
+        articles_info = map(create_article_info, content_list)
+        lat_long_list = map(get_article_lat_long, articles)
+        article_map = ArticleMap(center_lat_long, infos=articles_info, in_side_bar=in_side_bar)
+        article_markers = map(create_article_marker, lat_long_list, [article_map.gmap])
+        article_map.assign_markers(article_markers)
         article_map.add_window_to_markers()
     else:
-        article_map = ArticleMap(center_lag_lng, in_side_bar=in_side_bar)
+        article_map = ArticleMap(center_lat_long, in_side_bar=in_side_bar)
     return article_map.gmap
 
 
