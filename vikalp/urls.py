@@ -77,11 +77,12 @@ urlpatterns += patterns("",
                         url("^article/category/(?P<category>.*)$", articleList.article_list,
                             name="article_list_category"),
                         url("^asset_proxy/$", "vikalp.views.views.static_proxy", name="static_proxy"),
-                        url("^policy.*/$", policyEdits.policy_edit_list, name="policy-edits"),
+                        url("^policy.*/$", policyEdits.perspectives_list, name="policy-edits"),
                         url("^article/download/(?P<slug>.*)$", articleDetail.article_download, name="article_detail"),
                         url("^article/(?P<slug>.*)$", articleDetail.article_detail, name="article_detail"),
                         url("^search/$", "vikalp.views.views.search", name="search"),
                         url("^map/$", "vikalp.views.google_maps.google_map", name="map"),
+                        url(r"^newsletter/", include("newsletter.urls")),
 
 
                         # HOMEPAGE FOR A BLOG-ONLY SITE
