@@ -82,8 +82,8 @@ urlpatterns += patterns("",
                         url("^article/(?P<slug>.*)$", articleDetail.article_detail, name="article_detail"),
                         url("^search/$", "vikalp.views.views.search", name="search"),
                         url("^map/$", "vikalp.views.google_maps.google_map", name="map"),
-                        url(r"^newsletter/", include("newsletter.urls")),
-
+                        # url(r"^newsletter/", include("newsletter.urls")),
+                        
 
                         # HOMEPAGE FOR A BLOG-ONLY SITE
                         # -----------------------------
