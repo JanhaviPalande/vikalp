@@ -455,16 +455,13 @@ msgstr "दृष्टिकोण"
 msgid "perspectives"
 msgstr "दृष्टिकोण"
 
-msgid "policy perspectives"
+msgid "Perspective"
 msgstr "दृष्टिकोण"
 
-msgid "policy perspective"
+msgid "perspective"
 msgstr "दृष्टिकोण"
 
-msgid "POLICY PERSPECTIVES"
-msgstr "दृष्टिकोण"
-
-msgid "POLICY PERSPECTIVE"
+msgid "PERSPECTIVE"
 msgstr "दृष्टिकोण"
 
 msgid "STORIES"
@@ -666,12 +663,6 @@ msgstr "ऊर्जा"
 msgid "ENERGY"
 msgstr "ऊर्जा"
 
-msgid "Policy Edits"
-msgstr "संपादकीय"
-
-msgid "Policy Edit"
-msgstr "संपादकीय"
-
 msgid "Economics and Technologies"
 msgstr "अर्थव्यवस्था और तकनीकी"
 
@@ -764,9 +755,6 @@ msgstr "कहानियाँ ढूंढे"
 
 msgid "Collapse"
 msgstr "संक्षिप्त करें"
-
-msgid "POLICY EDITS"
-msgstr "संपादकीय"
 
 msgid "Settlements & Transportation"
 msgstr "बस्तियां और परिवहन"

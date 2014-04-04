@@ -12,7 +12,7 @@ def get_title(category):
 
 
 class PolicyEdits:
-    def policy_edit_list(self, request, template="article/article_list.html"):
+    def perspectives_list(self, request, template="article/article_list.html"):
         category = articleService.get_perspectives_category()
         page_template = "article/article_list_page.html"
         if category:

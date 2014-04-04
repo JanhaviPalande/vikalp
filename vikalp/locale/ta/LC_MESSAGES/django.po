@@ -478,22 +478,10 @@ msgstr "பங்களியுங்கள்"
 msgid "add story"
 msgstr "பங்களியுங்கள்"
 
-msgid "PERSPECTIVES"
-msgstr "கருத்து"
-
 msgid "Perspectives"
 msgstr "கருத்து"
 
 msgid "perspectives"
-msgstr "கருத்து"
-
-msgid "POLICY PERSPECTIVES"
-msgstr "கருத்து"
-
-msgid "policy perspectives"
-msgstr "கருத்து"
-
-msgid "Policy Perspectives"
 msgstr "கருத்து"
 
 msgid "STORIES"

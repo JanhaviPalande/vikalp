@@ -183,7 +183,7 @@ class PolicyEditsViewTest(TestCase):
         self.factory = RequestFactory()
         self.request = self.factory.get('policy-edits')
         self.request.user = User.objects.create_user(username='jacob', email='jacob', password='top_secret')
-        self.response = policyEdits.policy_edit_list(self.request)
+        self.response = policyEdits.perspectives_list(self.request)
 
     def test_response_code(self):
         self.assertEquals(200, self.response.status_code)
