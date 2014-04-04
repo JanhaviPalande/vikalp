@@ -8,13 +8,13 @@ from vikalp.helper_functions.pdf_generator import PDF_CONTENT_TYPE
 from vikalp.views.google_maps import get_article_map, MapFormForSideBar
 
 
-def article_category_is_policy_edits(category):
-    if 'policy' in category.title.lower():
+def article_category_is_perspectives(category):
+    if 'perspectives' in category.title.lower():
         return True
 
 
-def article_is_a_policy_edit(article):
-    return filter(article_category_is_policy_edits, article.article_categories.all())
+def article_is_a_perspective(article):
+    return filter(article_category_is_perspectives, article.article_categories.all())
 
 
 class ArticleDetail:
@@ -28,7 +28,7 @@ class ArticleDetail:
         article = process_tag_or_categories_or_article(slug, articles)
         page = get_page(request)
         article_map = get_article_map(True)
-        if article_is_a_policy_edit(article):
+        if article_is_a_perspective(article):
             request.path_info = '/policy-edits/'
             page = get_page(request)
         return render(request, template, {"article": article, "page": page, 'form': MapFormForSideBar(initial={'map': article_map})})
