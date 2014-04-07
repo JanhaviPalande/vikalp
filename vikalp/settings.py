@@ -268,8 +268,6 @@ INSTALLED_APPS = (
     "coverage",
     "django_mandrill",
     "endless_pagination",
-    "sorl.thumbnail",
-    "newsletter",
     # "mezzanine.mobile",
 )
 
