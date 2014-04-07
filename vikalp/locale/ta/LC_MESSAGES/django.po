@@ -481,6 +481,9 @@ msgstr "பங்களியுங்கள்"
 msgid "Perspectives"
 msgstr "கருத்து"
 
+msgid "PERSPECTIVES"
+msgstr "கருத்து"
+
 msgid "perspectives"
 msgstr "கருத்து"
 
