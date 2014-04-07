@@ -268,12 +268,12 @@ INSTALLED_APPS = (
     "coverage",
     "django_mandrill",
     "endless_pagination",
-    # "sorl.thumbnail",
-    # "newsletter",
+    "sorl.thumbnail",
+    "newsletter",
     # "mezzanine.mobile",
 )
 
-# NEWSLETTER_CONFIRM_EMAIL = False
+NEWSLETTER_CONFIRM_EMAIL = False
 
 # List of processors used by RequestContext to populate the context.
 # Each one should be a callable that takes the request object as its

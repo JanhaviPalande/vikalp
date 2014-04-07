@@ -12,6 +12,7 @@ django-extensions==1.2.5
 django-gmapi==1.0.1
 django-less==0.7.2
 django-mandrill==0.1.0
+django-newsletter==0.5.1
 django-redis-sessions==0.4.0
 django-rosetta==0.7.2
 django-toolbelt==0.0.1

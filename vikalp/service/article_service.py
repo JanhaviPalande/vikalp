@@ -90,9 +90,9 @@ class ArticleService():
         return article
 
     def get_latest_unique_commented_on_articles(self):
-        latest_unique_articles = []
+        latest_unique_commented_articles = []
         latest_comments = self.get_latest_comments()
         for comment in latest_comments:
-            if len(latest_unique_articles) < 5 and self.article_which_has_this(comment) not in latest_unique_articles:
-                latest_unique_articles.append(self.article_which_has_this(comment))
-        return latest_unique_articles
+            if len(latest_unique_commented_articles) < 5 and self.article_which_has_this(comment) not in latest_unique_commented_articles:
+                latest_unique_commented_articles.append(self.article_which_has_this(comment))
+        return latest_unique_commented_articles
