@@ -1,22 +1,22 @@
-{#{% load i18n future mezzanine_tags blog_tags keyword_tags %}#}
-{##}
-{##}
-{#<div class="in-sidebar">#}
-{##}
-{#    <h5>{% trans "Recent Activity On" %}</h5>#}
-{##}
-{#    <div class="well">#}
-{#        <ul class="list-unstyled">#}
-{##}
-{#            {% for article in latest_commented_articles %}#}
-{#                <li class="row">#}
-{#                    <a href="{{ article.get_absolute_url }}"><h5 id="featured-article"#}
-{#                                                                 class="media-heading">{{ article.title }}</h5>#}
-{#                    </a>#}
-{#                </li>#}
-{##}
-{#            {% endfor %}#}
-{#        </ul>#}
-{#    </div>#}
-{##}
-{#</div>#}
+{% load i18n future mezzanine_tags blog_tags keyword_tags %}
+
+
+<div class="in-sidebar">
+
+    <h5>{% trans "Recent Activity On" %}</h5>
+
+    <div class="well">
+        <ul class="list-unstyled">
+
+            {% for article in latest_commented_articles %}
+                <li class="row">
+                    <a href="{{ article.get_absolute_url }}"><h5 id="featured-article"
+                                                                 class="media-heading">{{ article.title }}</h5>
+                    </a>
+                </li>
+
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>
