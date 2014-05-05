@@ -7,13 +7,13 @@
         {% for language in languages %}
             {% if language.code == LANGUAGE_CODE and language.code == 'en' %}
 {#                <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;{{ language.name_local }}#}
-                <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;Change<br>Language
+                <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;<div style="float: right">Change<br>Language</div>
             {% elif language.code == LANGUAGE_CODE and language.code == 'hi' %}
 {#                <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;हिंदी#}
-                <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;भाषा<br>बदलें
+                <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;<div style="float: right">भाषा<br>बदलें</div>
             {% elif language.code == LANGUAGE_CODE and language.code == 'ta' %}
 {#                <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;{{ language.name_local }}#}
-                <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;மொழி <br>மாற்ற
+                <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;<div style="float: right">மொழி <br>மாற்ற</div>
             {% endif %}
         {% endfor %}
         <!-- <span class="glyphicon glyphicon-chevron-down"></span> -->

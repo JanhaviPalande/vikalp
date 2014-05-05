@@ -1,30 +1,30 @@
-{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags %}
-
-
-<div class="featured-list in-sidebar">
-
-    <h5>{% trans "Recent Activity On" %}</h5>
-
-    <ul class="list-unstyled">
-
-        {% for article in latest_commented_articles %}
-            <li class="row">
-                <div class="col-xs-4">
-                    {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}
-                        <img class="img-responsive"
-                             src="{{ MEDIA_URL }}{% thumbnail article.featured_image 300 230 %}">
-                    {% else %}
-                        <img class="img-responsive" src="{{ STATIC_URL }}{% thumbnail 'img/default.png' 300 230 %}">
-                    {% endif %}
-                </div>
-                <div class="col-xs-8">
-                    <a href="{{ article.get_absolute_url }}"><h4 id="featured-article"
-                                                                 class="media-heading">{{ article.title }}</h4>
-                    </a>
-                </div>
-            </li>
-
-        {% endfor %}
-    </ul>
-
-</div>
+{#{% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags %}#}
+{##}
+{##}
+{#<div class="featured-list in-sidebar">#}
+{##}
+{#    <h5>{% trans "Recent Activity On" %}</h5>#}
+{##}
+{#    <ul class="list-unstyled">#}
+{##}
+{#        {% for article in latest_commented_articles %}#}
+{#            <li class="row">#}
+{#                <div class="col-xs-4">#}
+{#                    {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}#}
+{#                        <img class="img-responsive"#}
+{#                             src="{{ MEDIA_URL }}{% thumbnail article.featured_image 300 230 %}">#}
+{#                    {% else %}#}
+{#                        <img class="img-responsive" src="{{ STATIC_URL }}{% thumbnail 'img/default.png' 300 230 %}">#}
+{#                    {% endif %}#}
+{#                </div>#}
+{#                <div class="col-xs-8">#}
+{#                    <a href="{{ article.get_absolute_url }}"><h4 id="featured-article"#}
+{#                                                                 class="media-heading">{{ article.title }}</h4>#}
+{#                    </a>#}
+{#                </div>#}
+{#            </li>#}
+{##}
+{#        {% endfor %}#}
+{#    </ul>#}
+{##}
+{#</div>#}
