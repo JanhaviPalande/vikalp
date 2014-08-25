@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from mezzanine.conf import settings
 
+from vikalp.feeds import latest_rss_feed
 from vikalp.views.article_list_view import ArticleList
 from vikalp.views.category_page_view import CategoryPage
 from vikalp.views.home_page_view import HomePage
@@ -42,7 +43,6 @@ urlpatterns += patterns("",
                         # admin interface, which would be marginally more secure.
 
                         ("^admin/", include(admin.site.urls)),
-
                         # We don't want to presume how your homepage works, so here are a
                         # few patterns you can use to set it up.
 
@@ -82,6 +82,7 @@ urlpatterns += patterns("",
                         url("^article/(?P<slug>.*)$", articleDetail.article_detail, name="article_detail"),
                         url("^search/$", "vikalp.views.views.search", name="search"),
                         url("^map/$", "vikalp.views.google_maps.google_map", name="map"),
+                        url("^feeds/", latest_rss_feed.LatestFeeds()),
 
 
                         # HOMEPAGE FOR A BLOG-ONLY SITE
