@@ -61,7 +61,6 @@ class PromotedArticleViewTest(TestCase):
         self.request.user = User.objects.create_user(username='jacob', email='jacob', password='top_secret')
         self.response = homePage.promoted_article_on_homepage(self.request)
 
-
     def test_article_view_title(self):
         self.assertIn("Home", self.response.content)
 
@@ -191,3 +190,19 @@ class PolicyEditsViewTest(TestCase):
 
 class GetLatestArticles(TestCase):
     pass
+
+
+class TestFeed(TestCase):
+
+    def setUp(self):
+        Article.objects.create(title="Test RSS Feed Article", content="Testing RSS Feed Content", promoted="t",
+                                              user_id=randint(1, 100), description="Test Description", status=2)
+
+    def is_article_equals(self, inserted_article, most_recent_article):
+        return most_recent_article.values('title')[0].get('title') == inserted_article.values('title')[0].get('title')
+
+    def test_recent_article_in_feed(self):
+        inserted_article = Article.objects.filter(title='Test RSS Feed Article')
+        recent_articles = Article.objects.filter()
+        most_recent_article = recent_articles.order_by('-publish_date')[:1]
+        self.assertTrue(self.is_article_equals(most_recent_article, inserted_article), msg='The recent article should be the last inserted article')
