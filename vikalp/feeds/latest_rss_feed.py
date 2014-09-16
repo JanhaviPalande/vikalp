@@ -17,8 +17,8 @@ class LatestFeeds(Feed):
 
     def items(self):
         articles_to_fetch = 15
-        recent_articles = Article.objects
-        return recent_articles.order_by('-publish_date')[:articles_to_fetch]
+        feed_articles = Article.objects.filter(add_to_carousel=False)
+        return feed_articles.order_by('-publish_date')[:articles_to_fetch]
 
     def item_title(self, item):
         return item.title
