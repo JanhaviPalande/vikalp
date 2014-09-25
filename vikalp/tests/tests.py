@@ -1,6 +1,6 @@
 from django.test import TestCase
 from mezzanine.blog.views import User
-from models import Article, ArticleCategory
+from vikalp.models import Article, ArticleCategory
 from vikalp.views.article_list_view import ArticleList
 from vikalp.views.category_page_view import CategoryPage
 from vikalp.views.home_page_view import HomePage
@@ -8,7 +8,7 @@ from random import randint
 from vikalp.local_settings import BLOG_SLUG, DEBUG, STATIC_URL, MEDIA_URL, TEMPLATE_DIRS, STATIC_ROOT, JQUERY_FILENAME, SITE_TAGLINE
 from django.test import RequestFactory
 from vikalp.service.article_service import ArticleService
-from settings import SITE_TITLE
+from vikalp.settings import SITE_TITLE
 from vikalp.views.policy_edits_view import PolicyEdits, get_title
 
 

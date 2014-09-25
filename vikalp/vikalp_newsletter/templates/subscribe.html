@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block article_main %}
+
+    <link href="{% static "css/subscribe.css" %}" rel="stylesheet" type="text/css"/>
+
+    <div id="mc_embed_signup">
+        <form role="form" class="validate"
+              action="//vikalpsangam.us9.list-manage.com/subscribe/post?u=16f6762000d0db3e3e5190bf6&amp;id=4bd0241c3a"
+              method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+              target="_blank" novalidate>
+            <div class="form-group" id="mc_embed_signup_scroll">
+                <h3>Subscribe to our mailing list</h3>
+
+                <div class="form-group mc-field-group">
+                    <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
+                    </label>
+                    <input type="email" value="" name="EMAIL" class="required email form-control"
+                           id="mce-EMAIL" placeholder="Email Id">
+                </div>
+                <div class="mc-field-group form-group">
+                    <label for="mce-FNAME">First Name </label>
+                    <input type="text" value="" name="FNAME" id="mce-FNAME" class="form-control"
+                           placeholder="First Name">
+                </div>
+                <div class="mc-field-group form-group">
+                    <label for="mce-LNAME">Last Name </label>
+                    <input type="text" value="" name="LNAME" class="form-control" id="mce-LNAME"
+                           placeholder="Last Name">
+                </div>
+                <div id="mce-responsess" class="clear" role="alert">
+                    <div class="response alert alert-danger" id="mce-error-response" style="display:none"></div>
+                    <div class="response alert alert-success" id="mce-success-response" style="display:none"></div>
+                </div>
+                <button id="newsletter-subscribe" type="submit" value="Subscribe"
+                        class="btn btn-primary">Subscribe
+                </button>
+            </div>
+        </form>
+    </div>
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+    <script type='text/javascript' src="{% static "js/subscribe.js" %}"></script>
+
+{% endblock %}
+
+{% block side_bar %}
+    {% include "includes/sidebar/category_list.html" %}
+    {% include "includes/sidebar/tag_cloud.html" %}
+{% endblock %}

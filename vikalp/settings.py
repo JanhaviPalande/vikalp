@@ -216,6 +216,9 @@ STATIC_URL = "/static/"
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
 
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, "vikalp_newsletter" , "static"),
+)
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
@@ -232,7 +235,7 @@ ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
 # or "C:/www/django/templates".
 # Always use forward slashes, even on Windows.
 # Don't forget to use absolute paths, not relative paths.
-TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
+TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"), os.path.join(PROJECT_ROOT, "vikalp_newsletter", "templates"))
 PACKAGE_NAME_FILEBROWSER = "filebrowser_safe"
 PACKAGE_NAME_GRAPPELLI = "grappelli_safe"
 
@@ -268,6 +271,7 @@ INSTALLED_APPS = (
     "coverage",
     "django_mandrill",
     "endless_pagination",
+    "vikalp.vikalp_newsletter"
     # "mezzanine.mobile",
 )
 
@@ -350,7 +354,7 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 #     "SECRET_KEY": SECRET_KEY,
 #     "NEVERCACHE_KEY": NEVERCACHE_KEY,
 # }
-# COMPRESS_ROOT = STATIC_ROOT
+COMPRESS_ROOT = STATIC_ROOT
 
 COMPRESS_PRECOMPILERS = (
 

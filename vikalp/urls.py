@@ -3,6 +3,7 @@ from django.contrib import admin
 from mezzanine.conf import settings
 
 from vikalp.feeds import latest_rss_feed
+from vikalp.vikalp_newsletter.views import Newsletters
 from vikalp.views.article_list_view import ArticleList
 from vikalp.views.category_page_view import CategoryPage
 from vikalp.views.home_page_view import HomePage
@@ -83,7 +84,7 @@ urlpatterns += patterns("",
                         url("^search/$", "vikalp.views.views.search", name="search"),
                         url("^map/$", "vikalp.views.google_maps.google_map", name="map"),
                         url("^feeds/", latest_rss_feed.LatestFeeds()),
-
+                        url("^newsletter/subscribe", Newsletters().get_subscribe_page),
 
                         # HOMEPAGE FOR A BLOG-ONLY SITE
                         # -----------------------------
@@ -95,7 +96,6 @@ urlpatterns += patterns("",
 
                         # url("^$", "mezzanine.blog.views.blog_post_list", name="home"),
 
-                        # MEZZANINE'S URLS
                         # ----------------
                         # ADD YOUR OWN URLPATTERNS *ABOVE* THE LINE BELOW.
                         # ``mezzanine.urls`` INCLUDES A *CATCH ALL* PATTERN
