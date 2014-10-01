@@ -1,17 +1,25 @@
 from django.contrib.syndication.views import Feed
 from django.utils.feedgenerator import Rss201rev2Feed
 from mezzanine.core.models import CONTENT_STATUS_PUBLISHED
-import pytz
+from django.contrib.sites.models import Site
+import pytz, datetime
 from vikalp.models import Article
-import datetime
 
 
 class ExtendedRssFeed(Rss201rev2Feed):
     mime_type = 'application/xml'
 
+    def root_attributes(self):
+        attrs = super(ExtendedRssFeed, self).root_attributes()
+        attrs['xmlns:article'] = "http://" + Site.objects.get_current() + "/article"
+        return attrs
+
+    def add_item_elements(self, handler, item):
+        super(ExtendedRssFeed, self).add_item_elements(handler, item)
+        handler.addQuickElement('article:category', item['category'])
+
 
 class LatestFeeds(Feed):
-
     feed_type = ExtendedRssFeed
     title = "Vikalp Sangam Recent Articles"
     link = "/feeds"
@@ -29,3 +37,11 @@ class LatestFeeds(Feed):
 
     def item_description(self, item):
         return item.description
+
+    def item_extra_kwargs(self, item):
+        article_category = item.article_categories.filter()[:1]
+        if article_category:
+            category = article_category.get().title
+        else:
+            category = "Uncategorised"
+        return {'category': category}
