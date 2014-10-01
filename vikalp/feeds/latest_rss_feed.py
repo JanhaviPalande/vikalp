@@ -2,7 +2,8 @@ from django.contrib.syndication.views import Feed
 from django.utils.feedgenerator import Rss201rev2Feed
 from mezzanine.core.models import CONTENT_STATUS_PUBLISHED
 from django.contrib.sites.models import Site
-import pytz, datetime
+import pytz
+import datetime
 from vikalp.models import Article
 
 
@@ -11,7 +12,7 @@ class ExtendedRssFeed(Rss201rev2Feed):
 
     def root_attributes(self):
         attrs = super(ExtendedRssFeed, self).root_attributes()
-        attrs['xmlns:article'] = "http://" + Site.objects.get_current() + "/article"
+        attrs['xmlns:article'] = "http://" + Site.objects.get_current().domain + "/article"
         return attrs
 
     def add_item_elements(self, handler, item):
