@@ -33,7 +33,7 @@ class LatestFeeds(Feed):
         published_articles = all_articles.filter(publish_date__lt=datetime.datetime.utcnow().replace(tzinfo=pytz.utc))
         article_with_categories = published_articles.exclude(article_categories=None)
         articles_for_feeds = article_with_categories.order_by('-publish_date')[:settings.NUMBER_OF_FEED_ITEMS]
-        return [article for article in articles_for_feeds if not article.article_categories.filter(title='Perspectives').exists()]
+        return articles_for_feeds
 
     def item_title(self, item):
         return item.title
