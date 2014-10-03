@@ -217,7 +217,7 @@ STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
 
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, "vikalp_newsletter" , "static"),
+    os.path.join(PROJECT_ROOT, "vikalp_newsletter", "static"),
 )
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -375,7 +375,7 @@ COMPRESS_PARSER = 'compressor.parser.HtmlParser'
 DEFAULT_CATEGORY_IMAGE = 'img/default.png'
 NUMBER_OF_CAROUSEL_ITEMS = 3
 NUMBER_OF_FEATURED_ITEMS = 3
-
+NUMBER_OF_FEED_ITEMS = 15
 ##################
 # LOCAL SETTINGS #
 ##################

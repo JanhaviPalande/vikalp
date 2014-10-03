@@ -4,6 +4,7 @@ from mezzanine.core.models import CONTENT_STATUS_PUBLISHED
 from django.contrib.sites.models import Site
 import pytz
 import datetime
+from vikalp import settings
 from vikalp.models import Article
 
 
@@ -28,10 +29,11 @@ class LatestFeeds(Feed):
     author = 'Vikalp Sangam'
 
     def items(self):
-        articles_to_fetch = 15
         all_articles = Article.objects.filter(add_to_carousel=False, status=CONTENT_STATUS_PUBLISHED)
         published_articles = all_articles.filter(publish_date__lt=datetime.datetime.utcnow().replace(tzinfo=pytz.utc))
-        return published_articles.order_by('-publish_date')[:articles_to_fetch]
+        article_with_categories = published_articles.exclude(article_categories=None)
+        articles_for_feeds = article_with_categories.order_by('-publish_date')[:settings.NUMBER_OF_FEED_ITEMS]
+        return [article for article in articles_for_feeds if not article.article_categories.filter(title='Perspectives').exists()]
 
     def item_title(self, item):
         return item.title
@@ -40,9 +42,5 @@ class LatestFeeds(Feed):
         return item.description
 
     def item_extra_kwargs(self, item):
-        article_category = item.article_categories.filter()[:1]
-        if article_category:
-            category = article_category.get().title
-        else:
-            category = "Uncategorised"
-        return {'category': category}
+        article_category = item.article_categories.filter()[0].title
+        return {'category': article_category}
