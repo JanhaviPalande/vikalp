@@ -271,7 +271,6 @@ INSTALLED_APPS = (
     "coverage",
     "django_mandrill",
     "endless_pagination",
-    "vikalp.vikalp_newsletter"
     # "mezzanine.mobile",
 )
 
