@@ -374,7 +374,7 @@ COMPRESS_PARSER = 'compressor.parser.HtmlParser'
 DEFAULT_CATEGORY_IMAGE = 'img/default.png'
 NUMBER_OF_CAROUSEL_ITEMS = 3
 NUMBER_OF_FEATURED_ITEMS = 3
-NUMBER_OF_FEED_ITEMS = 15
+NUMBER_OF_FEED_ITEMS = 20
 ##################
 # LOCAL SETTINGS #
 ##################

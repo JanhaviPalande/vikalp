@@ -36,6 +36,8 @@ class LatestFeeds(Feed):
         return articles_for_feeds
 
     def item_title(self, item):
+        if item.article_categories.filter(title='Perspectives').exists():
+            return "Perspectives: "+item.title
         return item.title
 
     def item_description(self, item):
