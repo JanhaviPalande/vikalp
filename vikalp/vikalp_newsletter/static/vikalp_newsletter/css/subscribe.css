@@ -1,4 +1,27 @@
-.spacer {
-    margin-top: 20px;
+.visible-lg .spacer {
+    margin-top: 30px;
     margin-bottom: 20px;
+}
+
+.visible-lg .top-spacer {
+    margin-top: 30px;
+}
+
+
+.list-items {
+    margin: 0px;
+    white-space: nowrap;
+}
+
+.footer-social-links-bottom {
+    margin-bottom: 10px;
+}
+
+.small-screens  .spacer {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.list-items {
+    text-align: center;
 }
