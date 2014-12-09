@@ -9,10 +9,11 @@ Download the vagrant box chef and Setup the vagrant
 vagrant init chef/debian-7.4
 vagrant up
 ```
-ssh to the vagrantup
+ssh to the vagrant
 ```shell
 vagrant ssh
 ```
+All the following setup is done in the vagrant box.
 
 ### Vagrant Setup and Installing Pip Requirements
 Go to /vagrant [synced folder](https://docs.vagrantup.com/v2/synced-folders/) , and Clone the Repository
