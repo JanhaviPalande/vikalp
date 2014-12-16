@@ -64,12 +64,6 @@ class PromotedArticleViewTest(TestCase):
     def test_article_view_title(self):
         self.assertIn("Home", self.response.content)
 
-    def test_only_2_articles_displayed_on_homepage(self):
-        self.assertNotIn(self.article1.title, self.response.content)
-        self.assertIn(self.article2.title, self.response.content)
-        self.assertIn(self.article3.title, self.response.content)
-        self.assertIn(self.article4.title, self.response.content)
-
     def test_for_context_creation(self):
         self.context = homePage.get_context_for_promoted_articles([self.article1, self.article2], None, None, None, None, None)
         self.assertEquals(self.context['promoted_articles'], [self.article1, self.article2])

@@ -1,82 +1,22 @@
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags extra_tags %}
 
+{% for article in carousel_content|slice:":2"%}
 <section class="top-carousel-wrapper">
-    <div class="row no-right-margin">
-        <div class="col-md-8 col-xs-12">
-            <div class="verticle-border"></div>
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    {% for article in carousel_content %}
-                        <li data-target="#carousel-example-generic" data-slide-to="{{ forloop.counter0 }}"
-                            class="{% ifequal forloop.counter0 0 %} active {% endifequal %}"></li>
-                    {% endfor %}
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-
-                    {% for article in carousel_content %}
-
-                        <div class="item {% ifequal forloop.counter0 0 %} active {% endifequal %}">
-                            <div class="fill-image" style="background-image: url(
-                                    {{ MEDIA_URL }}{% thumbnail article.featured_image 0 0 %});">
-                            </div>
-                            <div class="carousel-caption hidden-xs">
-                                <h2>{{ article.title }}</h2>
-
-                                <p>
-                                    {{ article.description|truncatechars:256 }}
-                                </p>
-                            </div>
-                            <div class="carousel-caption-bottom visible-xs">
-                                <h2>{{ article.title }}</h2>
-
-                                <p>
-                                    {{ article.description|truncatechars:256 }}
-                                </p>
-                            </div>
-                        </div>
-
-                    {% endfor %}
-                </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
+    <div class="col-md-6 col-xs-12">
+        <!-- Wrapper for slides -->
+        <div class="item {% ifequal forloop.counter0 0 %} active {% endifequal %}">
+            <div class="fill-image" style="background-image: url(
+                                                {{ MEDIA_URL }}{% thumbnail article.featured_image 0 0 %});">
             </div>
-
-
-        </div>
-        <div class="col-md-4 col-xs-12 featured-list">
-            <h2>{% trans "Highlights" %}</h2>
-
-            <ul class="list-unstyled">
-                {% for article in promoted_articles %}
-
-                    <li class="row">
-                        <div class="col-xs-4">
-                            {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image %}
-                                <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail article.featured_image 140 110 %}">
-                            {% else %}
-                                <img class="img-responsive" src="{{ STATIC_URL }}{% thumbnail 'img/default.png' 140 110 %}">
-                            {% endif %}
-
-                        </div>
-                        <div class="col-xs-8">
-                            <a href="{{ article.get_absolute_url }}"><h4 id="featured-article" class="media-heading">{{ article.title }}</h4>
-                            </a>
-
-                            <p>{{ article.description|truncatechars:130 }}</p>
-
-                        </div>
-                    </li>
-                {% endfor %}
-            </ul>
+            <div class="carousel-caption hidden-xs">
+                <div class="carousel-date">{{article.publish_date|date:"d/M/Y" }}</div>
+                <h2>{{ article.title }}</h2>
+            </div>
+            <div class="carousel-caption-bottom visible-xs">
+                <div class="carousel-date">{{article.publish_date|date:"d/M/Y" }}</div>
+                <h2>{{ article.title }}</h2>
+            </div>
         </div>
     </div>
 </section>
+{% endfor %}
