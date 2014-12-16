@@ -67,19 +67,12 @@ class ArticleService():
     def get_latest_articles(self):
         categories_covered = []
         latest_articles = {}
-        redundant_articles = []
         articles = self.get_published_articles_ordered_by_date().exclude(
             article_categories=self.get_perspectives_category())
         for article in articles:
             unused_article_categories = self.article_categories_not_in_categories_covered(article, categories_covered)
-            if unused_article_categories and len(latest_articles) < 4:
+            if unused_article_categories and len(latest_articles) < len(articles):
                 latest_articles[article] = unused_article_categories[0]
-                categories_covered.append(unused_article_categories[0])
-            else:
-                redundant_articles.append(article)
-        while len(latest_articles) < 4 < len(articles):
-            article = redundant_articles.pop()
-            latest_articles[article] = article.article_categories.all[0]
         return latest_articles
 
     def get_latest_comments(self):
