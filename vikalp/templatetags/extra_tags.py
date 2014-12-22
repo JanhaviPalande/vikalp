@@ -1,3 +1,4 @@
+from django.core.files.storage import default_storage
 from mezzanine import template
 from vikalp.service.article_service import ArticleService
 
@@ -59,3 +60,7 @@ def lensort(categories):
 @register.filter
 def get_first_slug(arg):
     return get_slug(check_if_exists(arg.all()))
+
+@register.filter
+def file_exists(filepath):
+    return default_storage.exists(filepath)
