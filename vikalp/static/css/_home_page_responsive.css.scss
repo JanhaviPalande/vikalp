@@ -45,7 +45,7 @@
   }
 }
 
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 400px) and (max-width: 439px) {
   .top-carousel-wrapper {
     .carousel-indicators {
       bottom: -5px;
@@ -85,7 +85,8 @@
   .category-section {
     .category {
       border-right: 10px solid $light-gray-col;
-      margin-bottom: 10px;
+      padding: 3% 8% 0% 10%;
+      margin-top: 3%;
     }
     .container {
       padding: 0px 5px;
@@ -95,6 +96,74 @@
     }
     .plain-text-sub-section p {
       font-size: 0.8em;
+    }
+    .container .col-xs-6 {
+      width: 100%;
+    }
+    .fill-image {
+      height: 180px;
+    }
+  }
+}
+
+@media (min-width: 440px) and (max-width: 767px) {
+  .top-carousel-wrapper {
+    .carousel-indicators {
+      bottom: -5px;
+    }
+
+    .no-right-margin {
+      margin-right: 0px;
+    }
+    .fill-image {
+      height: 340px;
+    }
+    .verticle-border {
+      display: none;
+    }
+    .col-xs-12 {
+      padding: 0px;
+    }
+    .carousel-caption-bottom {
+      background: $light-gray-col;
+      padding: 10px 10px 30px 40px;
+    }
+    .featured-list {
+      padding: 10px 5px 10px 30px;
+      .row {
+        margin: 0;
+      }
+    }
+  }
+  .featured-list {
+    h4 {
+      font-size: 0.725em;
+    }
+    p {
+      font-size: 0.7em;
+    }
+  }
+
+  .category-section {
+    .category {
+      border-right: 10px solid $light-gray-col;
+      padding: 3% 2% 0% 4%;
+      margin-top: 1%;
+    }
+    .container {
+      padding: 0px 5px;
+    }
+    .top-sub-section h4 {
+      font-size: 1em;
+    }
+    .plain-text-sub-section p {
+      font-size: 0.8em;
+    }
+    .container .col-xs-6 {
+      width: 50%;
+    }
+    .fill-image {
+      height: 180px;
     }
   }
 }
@@ -133,6 +202,13 @@
     .plain-text-sub-section p {
       font-size: 0.8em;
     }
+    .container {
+      width: 99%;
+    }
+    .category {
+      border-right: 10px solid $light-gray-col;
+      margin-top: 3%;
+    }
   }
 }
 
@@ -146,10 +222,21 @@
 
     }
   }
+  .container {
+    width: 95%;
+  }
+  .category {
+    border-right: 10px solid $light-gray-col;
+    margin-top: 1%;
+  }
 }
 
 @media (min-width: 1200px) {
   .category-section .container, .about_section .container {
     width: 95%;
+  }
+  .category {
+    border-right: 10px solid $light-gray-col;
+    margin-top: 1%;
   }
 }

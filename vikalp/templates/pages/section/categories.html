@@ -8,18 +8,18 @@
     {% for article, category in latest_articles.items reversed %}
     <div class="col-xs-6 col-sm-4 category">
         <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
-            <div class="row image-sub-section" style="margin-top: 3%">
+            <div class="row image-sub-section">
                 {%if article.featured_image %}
-                    {% if article.featured_image|file_exists %}
-                        <img class="img-responsive col-xs-12"
-                         src="{{ MEDIA_URL }}{% thumbnail article.featured_image 327 218 %}"/>
-                    {% else %}
-                        <img class="img-responsive col-xs-12"
-                        src="{{ STATIC_URL }}{% thumbnail 'img/default.png' 327 218 %}"/>
-                    {% endif %}
+                {% if article.featured_image|file_exists %}
+                <img class="fill-image col-xs-12"
+                     src="{{ MEDIA_URL }}{% thumbnail article.featured_image 327 218 %}"/>
                 {% else %}
-                    <img class="img-responsive col-xs-12"
-                         src="{{ STATIC_URL }}{% thumbnail 'img/default.png' 327 218 %}"/>
+                <img class="fill-image col-xs-12"
+                     src="{{ STATIC_URL }}{% thumbnail 'img/default.png' 327 218 %}"/>
+                {% endif %}
+                {% else %}
+                <img class="fill-image col-xs-12"
+                     src="{{ STATIC_URL }}{% thumbnail 'img/default.png' 327 218 %}"/>
                 {% endif %}
             </div>
         </a>
