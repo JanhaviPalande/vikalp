@@ -6,9 +6,8 @@
         <!-- Wrapper for slides -->
         <div class="item {% ifequal forloop.counter0 0 %} active {% endifequal %}">
             <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
-            <div class="fill-image" style="background-image: url(
-                                                {{ MEDIA_URL }}{% thumbnail article.featured_image 0 0 %});">
-            </div>
+            <img class="fill-image"
+                     src="{{ MEDIA_URL }}{% thumbnail article.featured_image 327 218 %}"/>
             <div class="carousel-caption hidden-xs">
                 <div class="carousel-date">{{article.publish_date|date:"d/M/Y" }}</div>
                 <h2>{{ article.title }}</h2>

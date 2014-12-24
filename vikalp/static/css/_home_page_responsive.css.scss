@@ -55,7 +55,7 @@
       margin-right: 0px;
     }
     .fill-image {
-      height: 340px;
+      height: 180px;
     }
     .verticle-border {
       display: none;
@@ -116,7 +116,7 @@
       margin-right: 0px;
     }
     .fill-image {
-      height: 340px;
+      height: 250px;
     }
     .verticle-border {
       display: none;
@@ -170,11 +170,10 @@
 
 @media (min-width: 768px) and (max-width: 991px) {
   .top-carousel-wrapper {
-    .no-right-margin {
-      margin-right: 0px;
-    }
     .fill-image {
-      height: 420px;
+      width: 69%;
+      height: 300px;
+      margin-left: 0px;
     }
     .verticle-border {
       display: none;
@@ -182,18 +181,24 @@
     .col-xs-12 {
       padding: 0px;
     }
-    .carousel-caption-bottom {
-      padding: 10px 10px 10px 40px;
-    }
+
     .featured-list {
       padding: 10px 5px 10px 30px;
       .row {
         margin: 0;
       }
     }
-    .carousel-caption {
-      width: 70%;
+    .carousel-caption, .carousel-caption-bottom {
+      left: 69%;
+      text-align: left;
+      padding: 85px 0px 67px 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      width: 31%;
+      text-shadow: none;
+      bottom: 10px;
+      top: 0px;
     }
+
   }
   .category-section {
     .top-sub-section h4 {
@@ -215,7 +220,7 @@
 @media (min-width: 992px) and (max-width: 1199px) {
   .top-carousel-wrapper {
     .fill-image {
-       height: 500px;
+       height: 400px;
     }
     .verticle-border {
       height: 480px;
