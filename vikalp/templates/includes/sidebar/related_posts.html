@@ -12,11 +12,9 @@
             {% for post in article.related_posts.all %}
                 <li class="row">
                     <div class="col-xs-4">
-                        {% if settings.BLOG_USE_FEATURED_IMAGE and post.featured_image %}
+                        {% if settings.BLOG_USE_FEATURED_IMAGE %}
                             <img class="img-responsive"
-                                 src="{{ MEDIA_URL }}{% thumbnail post.featured_image 300 230 %}">
-                        {% else %}
-                            <img class="img-responsive" src="{{ STATIC_URL }}{% thumbnail 'img/default.png' 300 230 %}">
+                                 src="{{ MEDIA_URL }}{% thumbnail post.featured_image 300 230 %}" onerror="imgError(this, 300, 230)"/>
                         {% endif %}
                     </div>
                     <div class="col-xs-8">

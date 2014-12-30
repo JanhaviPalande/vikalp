@@ -45,6 +45,11 @@
 
 
 <body id="{% block body_id %}body{% endblock %}">
+<script>function imgError(image, width, height) {
+   image.onerror = "";
+   image.src = "{{ STATIC_URL }}{% thumbnail 'img/default.png' width height %}";
+   return true;
+}</script>
 {% page_menu "pages/menus/pagemenu.html" %}
 <div id="content">
     {% if on_home %}
