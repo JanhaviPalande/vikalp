@@ -25,6 +25,8 @@ class HomePage:
             about_page_description = about_page.description
         else:
             about_page_description = None
+        if request.is_ajax():
+            template = "includes/articles.html"
         return render(request, template, self.get_context_for_promoted_articles(article_service.get_promoted_articles(),
                                                                                 article_service.get_carousel_content(),
                                                                                 article_service.get_all_article_categories(),
