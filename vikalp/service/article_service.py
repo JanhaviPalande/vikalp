@@ -44,14 +44,12 @@ class ArticleService():
 
     def get_carousel_content(self):
         promoted_articles = list(Article.objects.filter(add_to_carousel='t').exclude(status=1)[:NUMBER_OF_CAROUSEL_ARTICLES])
+        stories = list(self.get_published_articles_ordered_by_date())
         if len(promoted_articles) < 2:
-            stories = list(self.get_latest_articles())
-            if len(promoted_articles) == 1:
-                promoted_articles.append(stories[0])
-            else:
+            if len(promoted_articles) == 1: promoted_articles.append(stories[0])
+            if len(promoted_articles) == 0:
                 promoted_articles.append(stories[0])
                 promoted_articles.append(stories[1])
-
         return promoted_articles
 
     def get_perspectives_category(self):

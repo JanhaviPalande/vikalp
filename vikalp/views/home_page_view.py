@@ -6,10 +6,10 @@ from vikalp.views.views import article_service
 
 
 class HomePage:
-    def get_context_for_promoted_articles(self, article_promoted_list, carousel_content, categories, latest_articles,
+    def get_context_for_promoted_articles(self, article_promoted_list, carousel_content, latest_articles,
                                           page, about_page_description):
         return {"promoted_articles": article_promoted_list, "carousel_content": carousel_content,
-                "categories": categories, "latest_articles": latest_articles, "page": page,
+                "latest_articles": latest_articles, "page": page,
                 "about_page_description": about_page_description}
 
     def about_us_page(self, request):
@@ -29,7 +29,6 @@ class HomePage:
             template = "includes/articles.html"
         return render(request, template, self.get_context_for_promoted_articles(article_service.get_promoted_articles(),
                                                                                 article_service.get_carousel_content(),
-                                                                                article_service.get_all_article_categories(),
                                                                                 article_service.get_latest_articles(),
                                                                                 get_page(request),
                                                                                 about_page_description))
