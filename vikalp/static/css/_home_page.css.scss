@@ -23,7 +23,7 @@
   left: 5%;
   text-align: left;
   padding: 5px 5px;
-  background-color: $light-gray-col;
+  background-color: rgba(255, 255, 255, 0.8);
   width: 90%;
   text-shadow: none;
 }
@@ -34,22 +34,20 @@
   top: 0%;
   left: 0%;
 }
-
 .carousel-caption h2, .carousel-caption-bottom h2 {
   text-transform: uppercase;
-  color: $black;
+  color: $dark-brick-col;
   text-shadow: none;
   opacity: 1;
   font-weight: bold;
-  margin-top: 0px;
+  font-size: 1.125em;
 }
 
 .carousel-caption p, .carousel-caption-bottom p {
-  color: $black;
-  text-align: left;
+  color: $dark-brick-col;
+  text-align: center;
   // font-family: $roboto;
-  font-size: 1em;
-  margin-bottom: 0px;
+  font-size: 0.75em;
 }
 
 .featured-list {
@@ -79,10 +77,10 @@
       }
     }
   }
-  color: $black;
+  color: $dark-brick-col;
   a {
     /*font-size: 1em;*/
-    color: $black;
+    color: $dark-brick-col;
     text-transform: uppercase;
     text-decoration: none;
     &:hover {
@@ -135,9 +133,9 @@
     font-size: 1.125em;
   }
   .top-sub-section {
-    background-color: $light-gray-col;
+    background-color: $white;
     h4 {
-      color: $black;
+      color: $dark-brick-col;
       padding-left: 0;
       font-family: $roboto-light;
       font-size: 1.125em;
@@ -155,20 +153,13 @@
     border-right: 10px solid $light-gray-col;
   }
   .plain-text-sub-section {
-    background-color: $light-gray-col;
+    background-color: $white;
+    color: $dark-brick-col;
     p {
       font-weight: normal;
       text-transform: uppercase;
       font-size: .875em;
       padding: 5px;
-    }
-    a {
-      color: #363434;
-      font-family: "Roboto";
-    }
-    h5 {
-      font-family: "Roboto";
-      color: #5C5B5B;
     }
   }
   background-color: $light-gray-col;
