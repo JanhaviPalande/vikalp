@@ -372,7 +372,7 @@ COMPRESS_PARSER = 'compressor.parser.HtmlParser'
 #   DEFAULTS    #
 ########################
 DEFAULT_CATEGORY_IMAGE = 'img/default.png'
-NUMBER_OF_CAROUSEL_ITEMS = 3
+NUMBER_OF_CAROUSEL_ITEMS = 2
 NUMBER_OF_FEATURED_ITEMS = 3
 NUMBER_OF_FEED_ITEMS = 20
 ##################

@@ -1,6 +1,6 @@
 {% load mezzanine_tags extra_tags endless %}
-{% paginate latest_articles.items as articles %}
-{% for article, category in articles reversed %}
+{% paginate latest_articles as articles %}
+{% for article in articles %}
     <div class="col-xs-6 col-sm-4 category">
         <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
             <div class="row image-sub-section">

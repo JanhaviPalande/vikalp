@@ -13,6 +13,9 @@ class ArticleService():
     def get_promoted_articles(self):
         return Article.objects.filter(promoted='t').exclude(status=1)[:NUMBER_OF_PROMOTED_ARTICLES_TO_BE_FETECHED]
 
+    def get_add_to_carousel_articles(self):
+        return Article.objects.filter(add_to_carousel='t').exclude(status=1)[:NUMBER_OF_CAROUSEL_ARTICLES]
+
     def get_all_articles(self):
         articles = Article.objects.all()
         return articles
@@ -72,14 +75,14 @@ class ArticleService():
         return Article.objects.published().exclude(latitude__isnull=True).exclude(longitude__isnull=True)
 
     def get_latest_articles(self):
-        categories_covered = []
-        latest_articles = {}
-        articles = self.get_published_articles_ordered_by_date().exclude(
-            article_categories=self.get_perspectives_category())
-        for article in articles:
-            unused_article_categories = self.article_categories_not_in_categories_covered(article, categories_covered)
-            if unused_article_categories and len(latest_articles) < len(articles):
-                latest_articles[article] = unused_article_categories[0]
+        add_to_carousel_articles = self.get_add_to_carousel_articles()
+        articles = self.get_published_articles_ordered_by_date()
+        if len(add_to_carousel_articles) == 1: articles = articles[1:]
+        if len(add_to_carousel_articles) == 0: articles = articles[2:]
+        latest_articles = list(articles)
+        for common_article in add_to_carousel_articles:
+            if common_article in articles:
+                latest_articles.remove(common_article)
         return latest_articles
 
     def get_latest_comments(self):
