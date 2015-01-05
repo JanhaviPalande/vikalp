@@ -74,6 +74,9 @@
       }
     }
   }
+  #content {
+    margin-top: 120px;
+  }
   .featured-list {
     h4 {
       font-size: 0.725em;
@@ -220,7 +223,7 @@
 @media (min-width: 992px) and (max-width: 1199px) {
   .top-carousel-wrapper {
     .fill-image {
-       height: 400px;
+      height: 400px;
     }
     .verticle-border {
       height: 480px;

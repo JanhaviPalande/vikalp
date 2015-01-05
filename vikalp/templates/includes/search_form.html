@@ -2,7 +2,7 @@
 <form action="{% url "search" %}" class="navbar-form navbar-search navbar-right">
     <span class="search-box-wrapper">
         <i class="glyphicon glyphicon-search"></i>
-        <input class="search-query form-control" placeholder="{% trans "Search" %}" type="text" name="q"
+        <input class="form-control search-query" placeholder="{% trans "Search for a story" %}" type="text" name="q"
                value="{{ request.REQUEST.q }}">
 
         {% if search_model_choices %}

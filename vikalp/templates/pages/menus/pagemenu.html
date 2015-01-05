@@ -5,19 +5,23 @@
     <a href="#" class="show-language-bar">
         {% get_language_info_list for LANGUAGES as languages %}
         {% for language in languages %}
-            {% if language.code == LANGUAGE_CODE and language.code == 'en' %}
-{#                <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;{{ language.name_local }}#}
-                <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;<div style="float: right">Change<br>Language</div>
-            {% elif language.code == LANGUAGE_CODE and language.code == 'hi' %}
-{#                <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;हिंदी#}
-                <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;<div style="float: right">भाषा<br>बदलें</div>
-            {% elif language.code == LANGUAGE_CODE and language.code == 'ta' %}
-{#                <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;{{ language.name_local }}#}
-                <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;<div style="float: right">மொழி <br>மாற்ற</div>
-            {% endif %}
+        {% if language.code == LANGUAGE_CODE and language.code == 'en' %}
+        {# <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;{{ language.name_local }}#}
+        <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;
+        <div style="float: right">Change<br>Language</div>
+        {% elif language.code == LANGUAGE_CODE and language.code == 'hi' %}
+        {# <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;हिंदी#}
+        <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;
+        <div style="float: right">भाषा<br>बदलें</div>
+        {% elif language.code == LANGUAGE_CODE and language.code == 'ta' %}
+        {# <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;{{ language.name_local }}#}
+        <span class="glyphicon glyphicon-circle-arrow-down"></span>&nbsp;
+        <div style="float: right">மொழி <br>மாற்ற</div>
+        {% endif %}
         {% endfor %}
         <!-- <span class="glyphicon glyphicon-chevron-down"></span> -->
     </a>
+
     <div class="language-wrapper">
         <form action="{% url 'set_language' %}" method="post">
             {% csrf_token %}
@@ -26,10 +30,11 @@
             <!-- {% get_language_info_list for LANGUAGES as languages %} -->
             <div class="btn-group" data-toggle="buttons" id="langaugeSelection">
                 {% for language in languages %}
-                    <label class="btn btn-primary {% if language.code == LANGUAGE_CODE %}mchecked{% endif %}" >
-                        <input type="radio" name="options" value="{{ language.code }}"
-                               {% if language.code == LANGUAGE_CODE %}checked{% endif %}> {% ifequal language.code 'hi' %}हिंदी {% else %}{{ language.name_local }}{% endifequal %}
-                    </label>
+                <label class="btn btn-primary {% if language.code == LANGUAGE_CODE %}mchecked{% endif %}">
+                    <input type="radio" name="options" value="{{ language.code }}"
+                    {% if language.code == LANGUAGE_CODE %}checked{% endif %}> {% ifequal language.code 'hi' %}हिंदी {%
+                    else %}{{ language.name_local }}{% endifequal %}
+                </label>
                 {% endfor %}
             </div>
         </form>
@@ -50,25 +55,28 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 {% for page in page_branch %}
-                    {% for in_menu in page.in_menus %}
-                        {% ifequal in_menu '1' %}
-                            {% ifnotequal page.title "Home" %}
-                                <li {% if page.is_current_or_ascendant %}class="active"{% endif %}>
-                                    <a {% if page.description|wordcount < 5 %} title="{% trans page.description %}" {% endif %}
-                                        href="{{ page.get_absolute_url }}">
-                                    {% with page.title|upper as page_title %}{% trans page_title %}{% endwith %}</a>
-                                </li>
-                            {% endifnotequal %}
-                        {% endifequal %}
-                    {% endfor %}
-                {% endfor %}
-                <li>
-                    {% search_form %}
+                {% for in_menu in page.in_menus %}
+                {% ifequal in_menu '1' %}
+                {% ifnotequal page.title "Home" %}
+                <li
+                {% if page.is_current_or_ascendant %}class="active"{% endif %}>
+                <a {% if page.description|wordcount < 5 %} title="{% trans page.description %}" {% endif %}
+                href="{{ page.get_absolute_url }}">
+                {% with page.title|upper as page_title %}{% trans page_title %}{% endwith %}</a>
                 </li>
+                {% endifnotequal %}
+                {% endifequal %}
+                {% endfor %}
+                {% endfor %}
                 <li>
                     <a class="link-but-not-a-link" href="javascript:void(0)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                 </li>
             </ul>
+        </div>
+        <div>
+
+            {% search_form %}
+
         </div>
     </div>
 </header>
