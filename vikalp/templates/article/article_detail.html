@@ -46,30 +46,13 @@
                 {% endfor %}
         </div>
     {% endif %}
-
-    {% block article_comments %}
-        {% if article.allow_comments %}
-            <div class="space-xs"></div>
-            <div class="row border-bottom-only-wrapper default-margin-right-margin">
-                <div class="col-xs-12">
-                    <div class="border-bottom-only"></div>
-                </div>
-            </div>
-            <div id="article-comments" class="comments-section">
-                {% comments_for article %}
-            </div>
-        {% endif %}
-    {% endblock %}
-
+    <div class="col-xs-12">
+    {%include "includes/related_stories.html" %}
+     </div>
 {% endblock %}
 
 {% block side_bar %}
 
-    {% include "includes/sidebar/category_list.html" %}
     {% include "includes/sidebar/related_posts.html" %}
-    {% include "includes/sidebar/tag_cloud.html" %}
-    {% include "map_for_sidebar.html" %}
-    {% include "includes/sidebar/recent_activity.html" %}
-    {% include "includes/sidebar/events.html" %}
 
 {% endblock %}
