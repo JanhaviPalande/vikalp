@@ -2,13 +2,13 @@
 
 {% if article.related_posts.all %}
     <div class="row category-page-category-list-wrapper featured-list">
-
+        <h3>{% trans "Related Stories" %}</h3>
         {% for article in article.related_posts.all %}
         {% if settings.BLOG_USE_FEATURED_IMAGE %}
         <div class="col-xs-6 col-sm-4 category">
                 <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
                     <div class="row image-sub-section">
-                                <img class="fill-image col-xs-12"
+                                <img class="col-xs-12"
                                      src="{{ MEDIA_URL }}{% thumbnail article.featured_image 327 218 %}" onerror="imgError(this, 327, 218)"/>
                     </div>
                     <h4 id="featured-article" class="media-heading">{{ article.title }}</h4>

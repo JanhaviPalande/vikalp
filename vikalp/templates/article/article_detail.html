@@ -16,6 +16,10 @@
 {% block article_main %}
 
     {% block title %}
+        {% if settings.BLOG_USE_FEATURED_IMAGE  %}
+            <img class="fill-image"
+                 src="{{ MEDIA_URL }}{% thumbnail article.featured_image 327 218 %}" onerror="imgError(this, 327, 218)" />
+            {% endif %}
         <h2>{{ article.title }}</h2>
     {% endblock %}
 
@@ -46,6 +50,20 @@
                 {% endfor %}
         </div>
     {% endif %}
+        {% block article_comments %}
+        {% if article.allow_comments %}
+            <div class="space-xs"></div>
+            <div class="row border-bottom-only-wrapper default-margin-right-margin">
+                <div class="col-xs-12">
+                    <div class="border-bottom-only"></div>
+                </div>
+            </div>
+            <div id="article-comments" class="comments-section">
+                {% comments_for article %}
+            </div>
+        {% endif %}
+    {% endblock %}
+
     <div class="col-xs-12">
     {%include "includes/related_stories.html" %}
      </div>
