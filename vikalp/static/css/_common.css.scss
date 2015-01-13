@@ -46,7 +46,7 @@ a{
   color:$dark-brick-col;
   &:hover{
     text-decoration: none;
-    color:$dark-brick-col;
+    color:#ffffff;
   }
 }
 
@@ -594,4 +594,38 @@ a.carousel-control {
     display: inline-block;
     margin-right: 10px;
   }
+}
+.share-media-tag {
+  background-color: #000000;
+  height: 60px;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.media-button{
+  width: 32%;
+  height: 40px;
+  float: left;
+  background-color: #0480be;
+  margin-left: 1%;
+  margin-top: 10px;
+  padding-top: 10px;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+}
+.media-button:hover {
+    background-color: #a47e3c;
+}
+.related-stories-tag{
+  margin-top: 15px;
+  width: 50%;
+  margin-left: 25%;
+}
+.popover{
+  max-width: 325px;
+  left: 50px !important;
+  margin-top: 15px !important;
+
+
 }

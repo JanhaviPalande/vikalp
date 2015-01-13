@@ -135,6 +135,10 @@
   .right-section{
     display: none;
   }
+  .media-button{
+    padding-top: 2px;
+    font-size: 0.9em;
+  }
 
 }
 
@@ -218,6 +222,10 @@
   .right-section{
     display: none;
   }
+  .media-button{
+    padding-top: 2px;
+    font-size: 0.9em;
+  }
 
 }
 
@@ -269,6 +277,10 @@
   .right-section{
     display: none;
   }
+  .media-button{
+    padding-top: 2px;
+    font-size: 1.2em;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -299,6 +311,10 @@
       height: 400px;
     }
   }
+  .media-button{
+    padding-top: 2px;
+    font-size: 1.2em;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -316,5 +332,9 @@
     .fill-image {
       height: 500px;
     }
+  }
+  .media-button{
+    padding-top: 2px;
+    font-size: 1.5em;
   }
 }
