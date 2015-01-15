@@ -23,8 +23,8 @@
 .carousel-caption {
   left: 5%;
   text-align: left;
-  padding: 5px 5px;
-  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 5px 10px 10px;
+  background-color: rgba(255, 255, 255, 255);
   width: 90%;
   text-shadow: none;
 }
@@ -118,7 +118,7 @@
   width: 1px;
   right: 0;
   // border-left: 1px solid $light-gray-col;
-  top:-10px;
+
 }
 
 .about_section {

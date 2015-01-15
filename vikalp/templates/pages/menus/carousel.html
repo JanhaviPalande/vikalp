@@ -10,12 +10,13 @@
                          src="{{ MEDIA_URL }}{% thumbnail article.featured_image 327 218 %}" onerror="imgError(this,327, 218)"/>
 
                     <div class="carousel-caption hidden-xs">
-                        <div class="carousel-date">{{ article.publish_date|date:"d/M/Y" }}</div>
-                        <h2>{{ article.title }}</h2>
+                        <div class="carousel-date">{{ article.publish_date|date:"d/M/Y" }}
+                        <h2>{{ article.title }}</h2></div>
                     </div>
-                    <div class="carousel-caption-bottom visible-xs">
-                        <div class="carousel-date">{{ article.publish_date|date:"d/M/Y" }}</div>
+                    <div class="carousel-caption carousel-caption-bottom visible-xs">
+                        <div class="carousel-date">
                         <h2>{{ article.title }}</h2>
+                        {{ article.publish_date|date:"d/M/Y" }}</div>
                     </div>
                 </a>
             </div>
