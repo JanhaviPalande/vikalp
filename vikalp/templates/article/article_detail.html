@@ -18,7 +18,7 @@
     {% block title %}
         {% if settings.BLOG_USE_FEATURED_IMAGE  %}
             <img class="fill-image"
-                 src="{{ MEDIA_URL }}{% thumbnail article.featured_image 327 218 %}" onerror="imgError(this, 327, 218)" />
+                 src="{{ MEDIA_URL }}{% thumbnail article.featured_image 300 175 %}" onerror="imgError(this, 300, 175)" />
             {% endif %}
         <h2>{{ article.title }}</h2>
     {% endblock %}

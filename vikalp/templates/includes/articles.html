@@ -1,23 +1,24 @@
 {% load mezzanine_tags extra_tags endless %}
-{% paginate latest_articles as articles %}
+{% paginate latest_articles as articles  %}
 {% for article in articles %}
-<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-    <div class="article">
+<div class="col-md-4 col-lg-4">
         <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
-            <div class="image-sub-section">
-                <img class="fill-image"
-                     src="{{ MEDIA_URL }}{% thumbnail article.featured_image 327 218 %}"
-                     onerror="imgError(this, 327, 218)"/>
-            </div>
-
+            {%if article.featured_image %}
+            {% if article.featured_image|file_exists %}
+                <img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 330 190 %}"/>
+            {% else %}
+                <img src="static/img/default.png" width="330" height="190"/>
+            {% endif %}
+            {% else %}
+                <img src="static/img/default.png" width="330" height="190"/>
+            {% endif %}
             <div class="plain-text-sub-section">
                 <div class="article-date">
-                    <h2>{{ article.title }}</h2>
                     {{ article.publish_date|date:"d/M/Y" }}
+                    <h4>{{ article.title }}</h4>
                 </div>
             </div>
         </a>
-    </div>
 
 </div>
 {% endfor %}

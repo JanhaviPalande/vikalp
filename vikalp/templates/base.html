@@ -44,10 +44,10 @@
 </head>
 
 
-<body id="{% block body_id %}body{% endblock %}">
+<body id="{% block body_id %}body{% endblock %}">   
 <script>function imgError(image, width, height) {
    image.onerror = "";
-   image.src = "{{ STATIC_URL }}{% thumbnail 'img/default.png' width height %}";
+   image.src = "/static/img/default.png";
    return true;
 }</script>
 {% page_menu "pages/menus/pagemenu.html" %}
@@ -65,10 +65,6 @@
                 <div class="row">
 
                     <div class="col-md-9 right-border-separator left-section">
-                        <div class="space-xs"></div>
-                        <div class="space-xs"></div>
-                        <div class="space-xs"></div>
-
                         {% block article_main %}{% endblock %}
                     </div>
 
@@ -77,10 +73,6 @@
 
 
                     <div class="col-sm-12 col-md-3 right-section">
-
-                        <div class="space-xs"></div>
-                        <div class="space-xs"></div>
-                        <div class="space-xs"></div>
 
                         {% block side_bar %} {% endblock %}
 

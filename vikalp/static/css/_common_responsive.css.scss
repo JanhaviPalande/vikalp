@@ -297,7 +297,7 @@
   }
   .navbar-form.navbar-right:last-child {
     margin-right: 5%;
-    margin-top: -40px;
+    margin-top: -35px;
   }
   .navbar-nav.navbar-right:last-child {
     margin-right: 20%;
@@ -319,8 +319,8 @@
 
 @media (min-width: 1200px) {
   .navbar-form.navbar-right:last-child {
-    margin-right: 3%;
-    margin-top: -40px;
+    margin-right: 8%;
+    margin-top: 8px;
   }
   .navbar-nav.navbar-right:last-child {
     margin-right: 200px;
@@ -335,6 +335,39 @@
   }
   .media-button{
     padding-top: 2px;
-    font-size: 1.5em;
+    font-size: 1.2em;
+  }
+  .navbar-header .navbar-toggle {
+    display: block;
+  }
+  header ul.navbar-nav.nav {
+    float: none !important;
+    form {
+      padding: 10px 15px;
+      margin: 0;
+      border: 0px;
+    }
+  }
+  .navbar-default {
+    .navbar-collapse, .navbar-form {
+      border: 0px none;
+    }
+  }
+  .navbar-nav {
+    clear: both;
+    > li {
+      float: none;
+    }
+  }
+
+  #yeda-suraj {
+  margin-top: 30px;
+  float: none;
+}
+  .collapsing {
+    left: 0px;
   }
 }
+
+
+
