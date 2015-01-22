@@ -1,25 +1,26 @@
 {% load mezzanine_tags extra_tags endless %}
 {% paginate latest_articles as articles  %}
 {% for article in articles %}
-<div class="col-md-4 col-lg-4">
-        <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
+<div class="article col-md-4 col-lg-4">
+    <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
+        <div class="thumbnail">
             {%if article.featured_image %}
             {% if article.featured_image|file_exists %}
-                <img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 330 190 %}"/>
+            <img src="{{ MEDIA_URL }}{{article.featured_image}}"/>
             {% else %}
-                <img src="static/img/default.png" width="330" height="190"/>
+            <img src="static/img/default.png"/>
             {% endif %}
             {% else %}
-                <img src="static/img/default.png" width="330" height="190"/>
+            <img src="static/img/default.png"/>
             {% endif %}
-            <div class="plain-text-sub-section">
-                <div class="article-date">
-                    {{ article.publish_date|date:"d/M/Y" }}
-                    <h4>{{ article.title }}</h4>
-                </div>
+        </div>
+        <div class="plain-text-sub-section">
+            <div class="article-date">
+                {{ article.publish_date|date:"d/M/Y" }}
+                <h4>{{ article.title }}</h4>
             </div>
-        </a>
-
+        </div>
+    </a>
 </div>
 {% endfor %}
 {% include "includes/loadmore.html"%}

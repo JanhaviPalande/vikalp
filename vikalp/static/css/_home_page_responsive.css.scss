@@ -337,7 +337,7 @@
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1023px) {
   .category-section .container, .about_section .container {
     width: 95.8%;
   }
@@ -414,16 +414,24 @@
   }
 }
 
-@media (min-width: 1200px) {
-  .category-section .container, .about_section .container, .carousel-container, .navbar .navbar-default .navbar-fixed-top, .navbar-default, .container {
+@media (min-width: 1024px) {
+  .navbar .navbar-default .navbar-fixed-top, .navbar-default, #body, .container, .promoted-article-container {
     width: 1024px;
-    background-color: $white;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: none;
   }
-  .container {
-    padding-left: 0px;
-    padding-right: 3px;
+  .promoted-article-container {
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 350px;
+  }
+  .promoted-article {
+    padding-left: 5px;
+    padding-right: 5px;
+    .thumbnail>img, .thumbnail a>img {
+      height: 260px;
+      width: 100%;
+      margin-bottom: 0px;
+    }
   }
 }

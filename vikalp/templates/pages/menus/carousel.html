@@ -1,26 +1,25 @@
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags extra_tags static %}
-<div class="carousel-container">
+<div class="promoted-article-container col-lg-12 col-md-12">
     {% for article in carousel_content|slice:":2" %}
-    <section class="top-carousel-wrapper">
-        <div class="col-md-6 col-md-4">
-            <!-- Wrapper for slides -->
-            <div class="item {% ifequal forloop.counter0 0 %} active {% endifequal %}">
-                <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
-                    <img class="fill-image"
-                         src="{{ MEDIA_URL }}{% thumbnail article.featured_image 327 218 %}" onerror="imgError(this,327, 218)"/>
-
-                    <div class="carousel-caption hidden-xs">
-                        <div class="carousel-date">{{ article.publish_date|date:"d/M/Y" }}
+    <div class="promoted-article col-lg-6 col-md-6">
+        <!-- Wrapper for slides -->
+        <div class="item {% ifequal forloop.counter0 0 %} active {% endifequal %}">
+            <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
+                <div class="thumbnail">
+                    <img src="{{ MEDIA_URL }}{{article.featured_image}}">
+                </div>
+                <div class="promoted-article-caption hidden-xs">
+                    <div class="promoted-article-date">{{ article.publish_date|date:"d/M/Y" }}
                         <h2>{{ article.title }}</h2></div>
-                    </div>
-                    <div class="carousel-caption carousel-caption-bottom visible-xs">
-                        <div class="carousel-date">
+                </div>
+                <div class="promoted-article-caption promoted-article-caption-bottom visible-xs">
+                    <div class="promoted-article-date">
                         <h2>{{ article.title }}</h2>
-                        {{ article.publish_date|date:"d/M/Y" }}</div>
+                        {{ article.publish_date|date:"d/M/Y" }}
                     </div>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
-    </section>
+    </div>
     {% endfor %}
 </div>
