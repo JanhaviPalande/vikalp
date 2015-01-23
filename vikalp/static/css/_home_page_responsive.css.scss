@@ -1,12 +1,12 @@
 @media (max-width: 480px) {
   #content {
-    margin-top: 130px;
+    margin-top: 105px;
   }
   .promoted-article-container {
     height: 331px;
     .promoted-article {
       .thumbnail>img, .thumbnail a>img {
-        height: 141px;
+        height: 110px;
         width: 100%;
         margin-bottom: 0px;
       }
@@ -37,13 +37,14 @@
 
 @media (min-width: 481px) and (max-width: 767px) {
 }
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .promoted-article-container {
-    padding-left: 5px;
-    padding-right: 5px;
     height: 350px;
   }
   .promoted-article {
+    padding-left: 5px;
+    padding-right: 5px;
     .thumbnail>img, .thumbnail a>img {
       height: 260px;
       width: 100%;
@@ -59,14 +60,10 @@
     margin-right: auto;
   }
   .promoted-article-container {
-    -webkit-box-shadow: 0px 2px 1px 0px rgba(50, 50, 50, 0.30);
-    -moz-box-shadow: 0px 2px 1px 0px rgba(50, 50, 50, 0.30);
-    box-shadow: 0px 2px 1px 0px rgba(50,50,50,0.30);
-    height: 350px;
+    height: 340px;
   }
   .promoted-article {
-    padding-left: 5px;
-    padding-right: 5px;
+
     .thumbnail>img, .thumbnail a>img {
       height: 260px;
       width: 100%;

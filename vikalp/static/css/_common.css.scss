@@ -75,10 +75,6 @@ a{
   }
 }
 
-.navbar {
-  box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.3);
-}
-
 .navbar-default .navbar-nav > li > a {
   color: $dark-brick-col;
   text-decoration: none;
@@ -89,6 +85,9 @@ a{
     color: $dark-brick-col;
     text-decoration: none;
   }
+}
+.navbar-default {
+  background-color: #ffffff;
 }
 
 header {

@@ -57,12 +57,18 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-
-}
-
-@media (min-width: 992px) and (max-width: 1023px) {
-
+@media (min-width: 768px) and (max-width: 1023px) {
+  .article {
+    height: 302px;
+  }
+  .thumbnail > img, .thumbnail a > img {
+    height: 190px;
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  .category-page-category-list-wrapper {
+    margin-top: 15px;
+  }
 }
 
 @media (min-width: 1024px) {
