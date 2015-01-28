@@ -5848,10 +5848,12 @@ a.carousel-control.right {
     padding: 7px;
     top: 230px; }
   .promoted-article-container .promoted-article-date {
+    font-family: Roboto-Regular;
+    font-size: 10px;
+    color: #979797;
+    line-height: 15px;
     text-align: left;
-    color: #939191;
-    text-transform: uppercase;
-    font-family: "Roboto-Medium"; }
+    text-transform: uppercase; }
   .promoted-article-container .promoted-article-caption .promoted-article-title, .promoted-article-container .promoted-article-caption-bottom .promoted-article-title {
     text-transform: uppercase;
     color: #000;
@@ -6047,7 +6049,10 @@ a.carousel-control.right {
     height: auto;
     text-transform: uppercase; }
   .article .article-date {
-    color: #939191;
+    font-family: Roboto-Regular;
+    font-size: 10px;
+    color: #979797;
+    line-height: 15px;
     text-transform: uppercase;
     margin-top: -15px;
     padding-right: 10px; }
@@ -6131,8 +6136,7 @@ a.carousel-control.right {
         font-size: 1.1em;
         text-transform: capitalize; }
       .article .plain-text-sub-section .article-date {
-        margin-top: 0px;
-        font-size: 1em; }
+        margin-top: 0px; }
 
   .thumbnail > img, .thumbnail a > img {
     width: 100% !important;

@@ -23,10 +23,13 @@
     top: 230px;
   }
   .promoted-article-date {
+    font-family: Roboto-Regular;
+    font-size: 10px;
+    color: #979797;
+    line-height: 15px;
+
     text-align: left;
-    color: #939191;
     text-transform: uppercase;
-    font-family: "Roboto-Medium";
   }
   .promoted-article-caption .promoted-article-title, .promoted-article-caption-bottom .promoted-article-title {
     text-transform: uppercase;
