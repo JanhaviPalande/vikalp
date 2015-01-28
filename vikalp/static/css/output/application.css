@@ -5836,6 +5836,8 @@ a.carousel-control.right {
   .promoted-article-container .promoted-article {
     padding-left: 5px;
     padding-right: 5px; }
+  .promoted-article-container .thumbnail {
+    border: none; }
   .promoted-article-container .promoted-article-caption {
     position: absolute;
     text-align: left;
@@ -5898,8 +5900,7 @@ a.carousel-control.right {
     height: auto !important; }
   .promoted-article-container .promoted-article .thumbnail {
     margin-bottom: 15px;
-    padding: 0px;
-    border: none; }
+    padding: 0px; }
   .promoted-article-container .promoted-article-caption, .promoted-article-container .promoted-article-caption-bottom {
     position: relative;
     text-align: left;
@@ -6028,6 +6029,8 @@ a.carousel-control.right {
     text-transform: uppercase;
     margin-top: -15px;
     padding-right: 10px; }
+  .article .thumbnail {
+    border: none; }
 
 .category-topping-wrapper {
   padding: 0; }
@@ -6114,8 +6117,7 @@ a.carousel-control.right {
 
   .thumbnail {
     margin-bottom: 15px;
-    padding: 0px;
-    border: none; } }
+    padding: 0px; } }
 @media (min-width: 768px) and (max-width: 1023px) {
   .article {
     height: 302px; }
@@ -6140,7 +6142,12 @@ a.carousel-control.right {
       height: 500px !important; }
 
   .article {
-    height: 302px; }
+    height: 302px;
+    padding-left: 5px;
+    padding-right: 5px; }
+
+  .thumbnail {
+    padding: 0px; }
 
   .thumbnail > img, .thumbnail a > img {
     height: 190px;
