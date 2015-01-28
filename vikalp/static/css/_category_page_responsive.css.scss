@@ -1,4 +1,4 @@
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .category-topping-wrapper {
     .category {
       width: 100%;
@@ -40,20 +40,16 @@
   }
 
   .thumbnail > img, .thumbnail a > img {
-    height: 141px;
-    width: 100%;
+    width: 100% !important;
+    height: auto !important;
     margin-bottom: 0px;
+
   }
   .thumbnail {
-    margin-bottom: 10px;
-  }
-}
+    margin-bottom: 15px;
+        padding: 0px;
 
-@media (min-width: 481px) and (max-width: 767px) {
-  .category-topping-wrapper {
-    .category {
-      width: 47%;
-    }
+        border: none;
   }
 }
 
