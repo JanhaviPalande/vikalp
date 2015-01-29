@@ -5934,6 +5934,12 @@ a.carousel-control.right {
       height: 260px;
       width: 100%;
       margin-bottom: 0px; }
+    .promoted-article .promoted-article-title {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis; }
 
   .container {
     padding-right: 0px !important;
@@ -5955,6 +5961,12 @@ a.carousel-control.right {
     height: 260px;
     width: 100%;
     margin-bottom: 0px; }
+  .promoted-article .promoted-article-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; }
 
   .container {
     padding-right: 0px !important;
@@ -6154,6 +6166,12 @@ a.carousel-control.right {
     height: 302px;
     padding-left: 5px;
     padding-right: 5px; }
+    .article .article-title {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis; }
 
   .thumbnail > img, .thumbnail a > img {
     height: 190px;
@@ -6181,6 +6199,12 @@ a.carousel-control.right {
     height: 302px;
     padding-left: 5px;
     padding-right: 5px; }
+    .article .article-title {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis; }
 
   .thumbnail {
     padding: 0px; }
