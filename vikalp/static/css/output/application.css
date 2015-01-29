@@ -5447,23 +5447,60 @@ a.carousel-control.right {
   margin-right: 10px; }
 
 .share-media-tag {
-  background-color: #000000;
-  height: 60px;
-  border-radius: 3px;
-  margin-top: 10px;
-  margin-bottom: 10px; }
+  /* Rectangle 26: */
+  background: #4A4A4A;
+  border-radius: 5px;
+  height: 78px;
+  width: 100%; }
+  .share-media-tag a {
+    padding-top: 10px;
+    color: white;
+    border-radius: 3px;
+    width: 100%; }
 
 .media-button {
   width: 32%;
-  height: 40px;
+  height: 45px;
   float: left;
-  background-color: #0480be;
   margin-left: 1%;
-  margin-top: 10px;
-  padding-top: 10px;
-  color: white;
-  text-align: center;
-  border-radius: 3px; }
+  margin-top: 16px;
+  text-align: center; }
+
+#facebook {
+  /* Button Background: */
+  background-image: linear-gradient(-180deg, #53A0FD 0%, #2368AE 100%);
+  border: 1px solid #979797;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2), inset 0px 2px 0px 0px #FFFFFF;
+  border-radius: 6px;
+  /* share on Facebook: */
+  font-family: AvenirNext-Bold;
+  font-size: 13.68px;
+  color: #FFFFFF;
+  line-height: 19px;
+  text-shadow: 0px 1px 0px #4A4A4A; }
+
+#twitter {
+  /* Button Background: */
+  background-image: linear-gradient(-180deg, #53B4FD 0%, #0491E8 100%);
+  border: 1px solid #979797;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2), inset 0px 2px 0px 0px #FFFFFF;
+  border-radius: 6px;
+  font-family: AvenirNext-Bold;
+  font-size: 13.68px;
+  color: #FFFFFF;
+  line-height: 19px;
+  text-shadow: 0px 1px 0px #4A4A4A; }
+
+#subscribe {
+  background-image: linear-gradient(-180deg, #FAD961 0%, #F75B1C 100%);
+  border: 1px solid #979797;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2), inset 0px 2px 0px 0px #FFFFFF;
+  border-radius: 6px;
+  font-family: AvenirNext-Bold;
+  font-size: 13.68px;
+  color: #FFFFFF;
+  line-height: 19px;
+  text-shadow: 0px 1px 0px #4A4A4A; }
 
 .media-button:hover {
   background-color: #a47e3c; }
@@ -5476,7 +5513,7 @@ a.carousel-control.right {
 .popover {
   max-width: 325px;
   left: 50px !important;
-  margin-top: 15px !important; }
+  margin-top: 70px !important; }
 
 @media (max-width: 559px) {
   #content {
@@ -5555,7 +5592,17 @@ a.carousel-control.right {
       top: 63%; }
 
   .right-section {
-    display: none; } }
+    display: none; }
+
+  .share-media-tag {
+    /* Rectangle 26: */
+    background: none;
+    border-radius: 5px;
+    height: 78px;
+    width: 100%; }
+
+  .media-button {
+    width: 100%; } }
 @media (min-width: 560px) and (max-width: 767px) {
   #content {
     margin-top: 60px; }
@@ -5696,7 +5743,43 @@ a.carousel-control.right {
     border-color: white; }
 
   .navbar-default .navbar-toggle .icon-bar {
-    background-color: #000000; } }
+    background-color: #000000; }
+
+  #facebook {
+    /* Button Background: */
+    background-image: linear-gradient(-180deg, #53A0FD 0%, #2368AE 100%);
+    border: 1px solid #979797;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2), inset 0px 2px 0px 0px #FFFFFF;
+    border-radius: 6px;
+    /* share on Facebook: */
+    font-family: AvenirNext-Bold;
+    font-size: 13.68px;
+    color: #FFFFFF;
+    line-height: 19px;
+    text-shadow: 0px 1px 0px #4A4A4A; }
+
+  #twitter {
+    /* Button Background: */
+    background-image: linear-gradient(-180deg, #53B4FD 0%, #0491E8 100%);
+    border: 1px solid #979797;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2), inset 0px 2px 0px 0px #FFFFFF;
+    border-radius: 6px;
+    font-family: AvenirNext-Bold;
+    font-size: 13.68px;
+    color: #FFFFFF;
+    line-height: 19px;
+    text-shadow: 0px 1px 0px #4A4A4A; }
+
+  #subscribe {
+    background-image: linear-gradient(-180deg, #FAD961 0%, #F75B1C 100%);
+    border: 1px solid #979797;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2), inset 0px 2px 0px 0px #FFFFFF;
+    border-radius: 6px;
+    font-family: AvenirNext-Bold;
+    font-size: 13.68px;
+    color: #FFFFFF;
+    line-height: 19px;
+    text-shadow: 0px 1px 0px #4A4A4A; } }
 @media (min-width: 992px) and (max-width: 1023px) {
   .footer-social-links-bottom {
     display: none; }
@@ -5753,10 +5836,6 @@ a.carousel-control.right {
 
   .right-border-separator .fill-image {
     height: 500px; }
-
-  .media-button {
-    padding-top: 2px;
-    font-size: 1.2em; }
 
   header ul.navbar-nav.nav {
     float: none !important; }
@@ -6215,6 +6294,10 @@ a.carousel-control.right {
     margin-bottom: 0px; }
 
   .category-page-category-list-wrapper {
-    margin-top: 15px; } }
+    margin-top: 15px; }
+
+  .popover {
+    left: 181px !important;
+    margin-top: 70px !important; } }
 
 /*# sourceMappingURL=application.css.map */

@@ -96,6 +96,17 @@
   .right-section {
     display: none;
   }
+  .share-media-tag {
+    /* Rectangle 26: */
+    background: none;
+    border-radius: 5px;
+    height: 78px;
+    width: 100%;
+  }
+  .media-button {
+    width: 100%;
+  }
+
 }
 
 @media (min-width: 560px) and (max-width: 767px) {
@@ -268,6 +279,42 @@
   .navbar-default .navbar-toggle .icon-bar {
     background-color: #000000;
   }
+  #facebook {
+    /* Button Background: */
+    background-image: linear-gradient(-180deg, #53A0FD 0%, #2368AE 100%);
+    border: 1px solid #979797;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.20), inset 0px 2px 0px 0px #FFFFFF;
+    border-radius: 6px;
+    /* share on Facebook: */
+    font-family: AvenirNext-Bold;
+    font-size: 13.68px;
+    color: #FFFFFF;
+    line-height: 19px;
+    text-shadow: 0px 1px 0px #4A4A4A;
+  }
+  #twitter {
+    /* Button Background: */
+    background-image: linear-gradient(-180deg, #53B4FD 0%, #0491E8 100%);
+    border: 1px solid #979797;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.20), inset 0px 2px 0px 0px #FFFFFF;
+    border-radius: 6px;
+    font-family: AvenirNext-Bold;
+    font-size: 13.68px;
+    color: #FFFFFF;
+    line-height: 19px;
+    text-shadow: 0px 1px 0px #4A4A4A;
+  }
+  #subscribe {
+    background-image: linear-gradient(-180deg, #FAD961 0%, #F75B1C 100%);
+    border: 1px solid #979797;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.20), inset 0px 2px 0px 0px #FFFFFF;
+    border-radius: 6px;
+    font-family: AvenirNext-Bold;
+    font-size: 13.68px;
+    color: #FFFFFF;
+    line-height: 19px;
+    text-shadow: 0px 1px 0px #4A4A4A;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1023px) {
@@ -318,6 +365,7 @@
   .navbar-default .navbar-toggle .icon-bar {
     background-color: #000000;
   }
+
 }
 
 @media (min-width: 1024px) {
@@ -335,10 +383,6 @@
     .fill-image {
       height: 500px;
     }
-  }
-  .media-button {
-    padding-top: 2px;
-    font-size: 1.2em;
   }
 
   header ul.navbar-nav.nav {
