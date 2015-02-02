@@ -11,7 +11,7 @@
 <div class="row featured-list">
     {% for article in article.related_posts.all %}
     {% if settings.BLOG_USE_FEATURED_IMAGE %}
-    <div class="col-xs-6 col-lg-12 category">
+    <div class="col-md-12 col-lg-12 category">
         <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
             <div class="row image-sub-section">
                 <img class="col-xs-12"

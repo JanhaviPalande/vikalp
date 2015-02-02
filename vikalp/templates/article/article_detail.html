@@ -14,15 +14,17 @@
 {% endmetablock %}{% endblock %}
 
 {% block article_main %}
-
+    <div class="row col-md-12">
     {% block title %}
         {% if settings.BLOG_USE_FEATURED_IMAGE  %}
-            <img class="fill-image"
+            <img class="fill-image col-md-12"
                  src="{{ MEDIA_URL }}{% thumbnail article.featured_image 300 175 %}" onerror="imgError(this, 300, 175)" />
             {% endif %}
         <h2>{{ article.title }}</h2>
     {% endblock %}
-
+    </div>
+    <div class="row col-md-12">
+        <div class="col-md-9  right-border-separator left-section">
     {% block article_author %}
         <div id="author-date-category">
             {% if article.article_author %}<span class="author">{% trans "By" %} {{ article.article_author }} </span> {% else %}
@@ -63,16 +65,20 @@
             </div>
         {% endif %}
     {% endblock %}
+
     <div class="border-bottom-only"></div>
     {%include "includes/share_media_tag.html" %}
     <div class="border-bottom-only"></div>
     <div class="col-xs-12">
     {%include "includes/related_stories.html" %}
      </div>
+    </div>
 {% endblock %}
 
-{% block side_bar %}
+        {% block side_bar %}
+        <div class="col-md-3 hidden-xs hidden-sm right-section">
+            {% include "includes/sidebar/related_posts.html" %}
+        </div>
+        {% endblock %}
 
-    {% include "includes/sidebar/related_posts.html" %}
-
-{% endblock %}
+</div>

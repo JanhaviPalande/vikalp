@@ -44,7 +44,7 @@
 </head>
 
 
-<body id="{% block body_id %}body{% endblock %}">   
+<body id="{% block body_id %}body{% endblock %}">
 <script>function imgError(image, width, height) {
    image.onerror = "";
    image.src = "/static/img/default.png";
@@ -58,26 +58,16 @@
     {% endif %}
 
     {% if not on_home %}
-        <div class="section generic_section">
+    <div class="section generic_section">
 
-            <div class="container main-body-container">
+        <div class="container main-body-container">
 
-                <div class="row">
+            <div class="row">
+                {% block article_main %}{% endblock %}
 
-                    <div class="col-md-9 right-border-separator left-section">
-                        {% block article_main %}{% endblock %}
-                    </div>
+                {% block main %}{% endblock %}
 
-
-                    {% block main %}{% endblock %}
-
-
-                    <div class="col-sm-12 col-md-3 right-section">
-
-                        {% block side_bar %} {% endblock %}
-
-                    </div>
-                </div>
+                {% block side_bar %} {% endblock %}
 
             </div>
 
