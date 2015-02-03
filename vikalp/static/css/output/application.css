@@ -5088,20 +5088,6 @@ a {
 
 header {
   position: relative; }
-  header .hide-language-bar {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    padding: 5px; }
-  header .show-language-bar {
-    position: absolute;
-    top: 0px;
-    right: 1px;
-    padding: 0px 5px;
-    z-index: 1;
-    background-color: #FC9D1C;
-    font-size: 0.8em;
-    border: 1px solid #9e332e; }
   header.navbar-fixed-top {
     border: 0px; }
   header a.navbar-brand {
@@ -5115,19 +5101,6 @@ header {
     width: 95%;
     padding-left: 15px;
     padding-right: 15px; }
-  header .language-wrapper {
-    display: none;
-    position: relative;
-    overflow: hidden;
-    background-color: #FC9D1C;
-    text-align: right; }
-    header .language-wrapper #langaugeSelection {
-      padding-right: 30px; }
-    header .language-wrapper label {
-      background-color: #FC9D1C;
-      font-size: 10px; }
-    header .language-wrapper .mchecked {
-      background-color: #9E332E; }
 
 .navbar-default .navbar-nav > .active > a {
   background-color: #9E332E;
@@ -5535,7 +5508,7 @@ a.carousel-control.right {
 .overlay .overlay-close {
   float: right;
   color: #ffffff;
-  background-color: #ff9049;
+  background-color: #fc9d1c;
   background-size: 100%;
   background-position: 0 0;
   text-shadow: 0 -1px 0 #ff7a26;
@@ -5544,7 +5517,7 @@ a.carousel-control.right {
   border-radius: 4px; }
 
 .overlay .overlay-menu {
-  background: #ff6a0c;
+  background: #fc9d1c;
   padding: 15px;
   position: relative;
   z-index: 2;
@@ -5695,9 +5668,6 @@ a.carousel-control.right {
   .logos-collection .dds {
     float: left; }
 
-  header .show-language-bar {
-    display: none; }
-
   .search-box-wrapper {
     width: 420px;
     position: static;
@@ -5727,9 +5697,6 @@ a.carousel-control.right {
     margin-top: 60px; }
 
   .footer-social-links-top {
-    display: none; }
-
-  header .show-language-bar {
     display: none; }
 
   .search-box-wrapper {
