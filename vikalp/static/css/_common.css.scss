@@ -683,3 +683,134 @@ a.carousel-control {
   left: 50px !important;
   margin-top: 70px !important;
 }
+
+/* Overlay style */
+.overlay {
+    z-index: 100;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+	position: fixed;
+	width: 100%;
+	height: 100%!important;
+	top: 0;
+	left: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+	background: rgba(255,255,255,0.97);
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+  float: right;
+  color: #ffffff;
+  background-color: #fc9d1c;
+  background-size: 100%;
+  background-position: 0 0;
+  text-shadow: 0 -1px 0 #ff7a26;
+  position: relative;
+  z-index: 1;
+  border-radius: 4px;
+}
+.overlay .overlay-menu{
+  background: #fc9d1c;
+  padding: 15px;
+  position: relative;
+  z-index: 2;
+    width: 100%;
+  overflow-x: hidden;
+}
+
+.overlay .overlay-content{
+  position: relative;
+  z-index: 1;
+  padding: 30px;
+  width: 100%;
+  overflow-x: hidden;
+}
+/* Menu style */
+.overlay nav {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	height: 60%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+
+.overlay ul li {
+	display: block;
+	height: 20%;
+	height: calc(100% / 5);
+	min-height: 54px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.overlay .menu-item {
+	font-size: 24px;
+	font-weight: 300;
+	display: block;
+	color: #fff;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+    background: none;
+    display: block;
+    font-size: 1.6em;
+    line-height: 1.125em;
+}
+.overlay .category{
+    font-size: 24px;
+	font-weight: 300;
+	display: block;
+	color: #444444;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+    background: none;
+    display: block;
+    font-size: 1.6em;
+    line-height: 1.125em;
+    margin-bottom: 15px;
+}
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+	color: lightslategray;
+}
+
+
+/* Effects */
+.overlay-slidedown {
+	visibility: hidden;
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+	-webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+	transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+}
+
+.overlay-slidedown.open {
+	visibility: visible;
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
+	-webkit-transition: -webkit-transform 0.4s ease-in-out;
+	transition: transform 0.4s ease-in-out;
+}
+
+@media screen and (max-height: 30.5em) {
+	.overlay nav {
+		height: 70%;
+		font-size: 34px;
+	}
+	.overlay ul li {
+		min-height: 34px;
+	}
+}

@@ -28,8 +28,5 @@ META-INF/
 CACHE/
 vikalp/twitter_keys.txt
 
-!vikalp/
-vikalp/*
-!vikalp/static/
 vikalp/static/*
 !vikalp/static/img/

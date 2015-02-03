@@ -43,7 +43,8 @@
 
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=#navbar-menu>
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -55,26 +56,37 @@
         <div>
             {% search_form %}
         </div>
-        <div id="navbar-menu" class="collapse">
-            <ul class="nav navbar-nav navbar-right">
-                {% for page in page_branch %}
-                {% for in_menu in page.in_menus %}
-                {% ifequal in_menu '1' %}
-                {% ifnotequal page.title "Home" %}
-                <li
-                {% if page.is_current_or_ascendant %}class="active"{% endif %}>
-                <a {% if page.description|wordcount < 5 %} title="{% trans page.description %}" {% endif %}
-                href="{{ page.get_absolute_url }}">
-                {% with page.title|upper as page_title %}{% trans page_title %}{% endwith %}</a>
-                </li>
-                {% endifnotequal %}
-                {% endifequal %}
-                {% endfor %}
-                {% endfor %}
-                <li>
+        <div id="menu" class="collapse overlay">
+
+            <div class="overlay-menu">
+                <div>
+                    <a class="overlay-close menu-item" href="#">
+                        <span id="close-overlay" class="glyphicon glyphicon-remove-circle" data-toggle="collapse" data-target="#menu"></span>
+                    </a>
+
+                </div>
+
+                <div class="menu-items">
+                    {% for page in page_branch %}
+                    {% for in_menu in page.in_menus %}
+                    {% ifequal in_menu '1' %}
+                    {% ifnotequal page.title "Home" %}
+                    <a class="menu-item" {% if page.is_current_or_ascendant %} class="active" {% endif %}{% if page.description|wordcount < 5 %} title="{% trans page.description %}" {% endif %}
+                    href="{{ page.get_absolute_url }}">
+                    {% with page.title|upper as page_title %}{% trans page_title %}{% endwith %}</a>
+                    {% endifnotequal %}
+                    {% endifequal %}
+                    {% endfor %}
+                    {% endfor %}
+
                     <a class="link-but-not-a-link" href="javascript:void(0)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                </li>
-            </ul>
+
+                </div>
+            </div>
+            <div class="overlay-content">
+                {% include "pages/categories_list.html" %}
+            </div>
+
         </div>
     </div>
 
