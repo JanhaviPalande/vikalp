@@ -52,6 +52,8 @@
                 {% endfor %}
         </div>
     {% endif %}
+        <div class="border-bottom-only"></div>
+        {%include "includes/share_media_tag.html" %}
         {% block article_comments %}
         {% if article.allow_comments %}
             <div class="space-xs"></div>
@@ -66,8 +68,7 @@
         {% endif %}
     {% endblock %}
 
-    <div class="border-bottom-only"></div>
-    {%include "includes/share_media_tag.html" %}
+
     <div class="border-bottom-only"></div>
     <div class="col-xs-12">
     {%include "includes/related_stories.html" %}
