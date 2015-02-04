@@ -18,9 +18,27 @@
     bottom: -32px;
   }
 }
-.article-image{
-  width: 100%;
-  height: auto;
+.article-header{
+  position: relative;
+  .article-image{
+    width: 100%;
+    height: auto;
+  }
+  .article-caption{
+    text-transform: uppercase;
+    font-family: AvenirNext-Bold;
+    font-size: 36px;
+    color: #FFFFFF;
+    line-height: 49px;
+    position: absolute;
+    background-color: rgba(6, 6, 6, 0.30);
+    text-align: left;
+    width: 90%;
+    height: auto;
+    bottom: 0;
+    left: 5%;
+    padding: 7px;
+  }
 }
 .menu-item {
   font-family: Roboto-Regular;

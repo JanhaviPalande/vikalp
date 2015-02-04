@@ -14,15 +14,15 @@
 {% endmetablock %}{% endblock %}
 
 {% block article_main %}
-
+    <div class="article-header">
     {% block title %}
         {% if settings.BLOG_USE_FEATURED_IMAGE  %}
             <img class="article-image"
                  src="{{ MEDIA_URL }}{{ article.featured_image }}" onerror="imgError(this, 300, 175)" />
             {% endif %}
-        <h2>{{ article.title }}</h2>
+        <div class="article-caption">{{ article.title }}</div>
     {% endblock %}
-
+    </div>
     <div class="row col-md-12">
         <div class="col-md-9  right-border-separator left-section">
     {% block article_author %}

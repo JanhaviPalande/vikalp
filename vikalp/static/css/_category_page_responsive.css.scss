@@ -36,7 +36,12 @@
     padding-left: 10px;
     padding-right: 10px;
   }
-
+  .article-header{
+   .article-caption{
+      font-size: 25px;
+      line-height: 35px;
+   }
+  }
   .thumbnail > img, .thumbnail a > img {
     width: 100% !important;
     height: auto !important;

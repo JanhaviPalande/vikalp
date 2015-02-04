@@ -5476,9 +5476,7 @@ a.carousel-control.right {
   background-color: #a47e3c; }
 
 .related-stories-tag {
-  margin-top: 15px;
-  width: 50%;
-  margin-left: 25%; }
+  width: 100%; }
 
 .popover {
   max-width: 325px;
@@ -6151,9 +6149,25 @@ a.carousel-control.right {
     position: relative;
     bottom: -32px; }
 
-.article-image {
-  width: 100%;
-  height: auto; }
+.article-header {
+  position: relative; }
+  .article-header .article-image {
+    width: 100%;
+    height: auto; }
+  .article-header .article-caption {
+    text-transform: uppercase;
+    font-family: AvenirNext-Bold;
+    font-size: 36px;
+    color: #FFFFFF;
+    line-height: 49px;
+    position: absolute;
+    background-color: rgba(6, 6, 6, 0.3);
+    text-align: left;
+    width: 90%;
+    height: auto;
+    bottom: 0;
+    left: 5%;
+    padding: 7px; }
 
 .menu-item {
   font-family: Roboto-Regular;
@@ -6346,6 +6360,10 @@ a.carousel-control.right {
         text-transform: capitalize; }
       .article .plain-text-sub-section .article-date {
         margin-top: 0px; }
+
+  .article-header .article-caption {
+    font-size: 25px;
+    line-height: 35px; }
 
   .thumbnail > img, .thumbnail a > img {
     width: 100% !important;
