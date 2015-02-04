@@ -48,6 +48,8 @@
 <script>function imgError(image, width, height) {
    image.onerror = "";
    image.src = "/static/img/default.png";
+    image.height = height;
+    image.width = width;
    return true;
 }</script>
 {% page_menu "pages/menus/pagemenu.html" %}

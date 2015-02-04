@@ -8,11 +8,9 @@
         <div class="col-xs-6 col-sm-4 category">
                 <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
                     <div class="row image-sub-section">
-                                <img class="col-xs-12"
-                                     src="{{ MEDIA_URL }}{% thumbnail article.featured_image 300 175 %}" onerror="imgError(this, 300, 175)" style="
-    height: 119px;"/>
+                                <img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 219 175 %}" onerror="imgError(this, 219, 175)"/>
                     </div>
-                    <h4 id="featured-article" class="media-heading">{{ article.title }}</h4>
+                    <div id="related-article">{{ article.title }}</div>
                 </a>
             </div>
         {%endif %}

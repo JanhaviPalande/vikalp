@@ -5179,19 +5179,16 @@ footer .list-group-item {
       color: #F1F1F2;
       text-decoration: none; }
 
-.right-border-separator {
-  border-right: 2px solid #E6E7E8;
-  padding-right: 30px; }
-  .right-border-separator .fill-image {
-    padding: 8px 0px 10px 0px;
-    background-size: cover;
-    background-repeat: none;
-    background-position: center center;
-    width: 100%;
-    height: 500px; }
-  .right-border-separator h2 {
-    font-family: "Roboto-Black";
-    color: #000; }
+.right-border-separator .fill-image {
+  padding: 8px 0px 10px 0px;
+  background-size: cover;
+  background-repeat: none;
+  background-position: center center;
+  width: 100%;
+  height: 500px; }
+.right-border-separator h2 {
+  font-family: "Roboto-Black";
+  color: #000; }
 
 .left-border-separator {
   border-left: 2px solid #E6E7E8;
@@ -6223,12 +6220,25 @@ a.carousel-control.right {
     text-decoration: none;
     color: #9E332E; }
 
-#related-stories-header {
-  padding-left: 35px; }
+.related-stories-header {
+  font-family: AvenirNext-Bold;
+  font-size: 20px;
+  color: #F5A623;
+  line-height: 27px;
+  border-bottom: 1px solid #F5A623; }
 
-#featured-article {
-  font-family: "Roboto-Medium";
-  color: #000; }
+#related-article {
+  font-family: Roboto-Regular;
+  font-size: 14px;
+  color: #4A4A4A;
+  line-height: 20px; }
+
+#related-article:hover {
+  text-decoration: none;
+  color: #F5A623 !important; }
+
+.featured-list {
+  border-bottom: 1px solid #F5A623; }
 
 .article {
   display: inline-table;
@@ -6254,7 +6264,7 @@ a.carousel-control.right {
   .article .thumbnail {
     border: none; }
   .article .article-title:hover {
-    color: orange !important; }
+    color: #F5A623 !important; }
 
 .category-topping-wrapper {
   padding: 0; }
@@ -6367,16 +6377,13 @@ a.carousel-control.right {
   .thumbnail {
     padding: 0px; } }
 @media (min-width: 1024px) {
-  .right-border-separator {
-    border-right: 2px solid #E6E7E8;
-    padding-right: 30px; }
-    .right-border-separator .fill-image {
-      padding: 8px 0px 10px 0px;
-      background-size: cover;
-      background-repeat: none;
-      background-position: center center;
-      width: 100%;
-      height: 500px !important; }
+  .right-border-separator .fill-image {
+    padding: 8px 0px 10px 0px;
+    background-size: cover;
+    background-repeat: none;
+    background-position: center center;
+    width: 100%;
+    height: 500px !important; }
 
   .article {
     height: 302px;

@@ -2,25 +2,24 @@
 
 
 {% if article.related_posts.all %}
-        <div id="related-stories-header">
-    <h4>{%trans "Related stories" %}</h4>
-
-            </div>
-<div class="border-bottom-only"></div>
+        <div class="related-stories-header">
+             Related stories
+        </div>
 <div class="space-xs"></div>
-<div class="row featured-list">
+<div class="featured-list">
     {% for article in article.related_posts.all %}
     {% if settings.BLOG_USE_FEATURED_IMAGE %}
-    <div class="col-md-12 col-lg-12 category">
+    <div class="category-topping-wrapper">
         <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
-            <div class="row image-sub-section">
-                <img class="col-xs-12"
-                     src="{{ MEDIA_URL }}{% thumbnail article.featured_image 300 175 %}" onerror="imgError(this, 300, 175)"/>
-            </div>
-            <h4 id="featured-article" class="media-heading">{{ article.title }}</h4>
+            <img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 219 175 %}" onerror="imgError(this, 219, 175)"/>
+            <div class="space-xs"></div>
+            <div id="related-article">{{ article.title }}</div>
         </a>
-        <div class="border-bottom-only"></div>
     </div>
+    <div class="space-xs"></div>
+    <div class="space-xs"></div>
+
+
     {%endif %}
     {% endfor %}
 </div>

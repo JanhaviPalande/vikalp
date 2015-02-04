@@ -102,15 +102,26 @@
   }
 }
 
-#related-stories-header {
-  padding-left: 35px;
+.related-stories-header {
+  font-family: AvenirNext-Bold;
+  font-size: 20px;
+  color: #F5A623;
+  line-height: 27px;
+  border-bottom: 1px solid #F5A623;
 }
-
-#featured-article {
-  font-family: $roboto-medium;
-  color: $black;
+#related-article {
+font-family: Roboto-Regular;
+font-size: 14px;
+color: #4A4A4A;
+line-height: 20px;
 }
-
+#related-article:hover{
+    text-decoration: none;
+    color: #F5A623 !important;
+}
+.featured-list{
+  border-bottom: 1px solid #F5A623;
+}
 .article {
   display: inline-table;
   padding-left: 10px;
@@ -139,7 +150,7 @@
     border: none;
   }
   .article-title:hover {
-    color: orange !important;
+    color: #F5A623 !important;
   }
 }
 
