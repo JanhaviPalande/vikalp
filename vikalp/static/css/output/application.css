@@ -6151,6 +6151,10 @@ a.carousel-control.right {
     position: relative;
     bottom: -32px; }
 
+.article-image {
+  width: 100%;
+  height: auto; }
+
 .menu-item {
   font-family: Roboto-Regular;
   font-size: 14px;
