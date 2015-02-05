@@ -1,8 +1,11 @@
 {% load i18n future mezzanine_tags blog_tags keyword_tags extra_tags endless disqus_tags %}
 
 {% if article.related_posts.all %}
-<img class="related-stories-tag" src="/static/img/related_stories_tag.png" />
-<div class="row category-page-category-list-wrapper featured-list">
+<div class="related-stories-tag">
+    <div class="read-more-stories">Read more related stories</div>
+</div>
+
+<div class="row category-page-category-list-wrapper">
         {% for article in article.related_posts.all %}
         {% if settings.BLOG_USE_FEATURED_IMAGE %}
         <div class="col-xs-6 col-sm-4 related-article">

@@ -207,6 +207,13 @@
   .navbar-default .navbar-toggle .icon-bar {
     background-color: #000000;
   }
+  .related-stories-tag {
+    height: 80px;
+    .read-more-stories{
+      font-size: 14px;
+      padding-top: 10px;
+    }
+  }
 
 }
 
@@ -308,6 +315,9 @@
     color: #FFFFFF;
     line-height: 19px;
     text-shadow: 0px 1px 0px #4A4A4A;
+  }
+  .related-stories-tag {
+    height: 90px;
   }
 }
 
