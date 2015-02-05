@@ -89,6 +89,21 @@ a {
     top: 30%;
   }
 }
+.social-media-bar{
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  .social-media{
+    float: left;
+    padding: 5px;
+  }
+}.search-and-social-bar{
+  border-radius: 18px;
+  font-family: AvenirNext-Regular;
+  font-size: 14px;
+  color: #9B9B9B;
+  line-height: 19px;
+ }
 
 .navbar-default .navbar-nav > li > a {
   color: $dark-brick-col;

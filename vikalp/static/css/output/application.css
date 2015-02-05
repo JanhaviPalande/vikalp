@@ -5091,6 +5091,21 @@ a {
     right: 7px;
     top: 30%; }
 
+.social-media-bar {
+  position: absolute;
+  top: 20px;
+  right: 15px; }
+  .social-media-bar .social-media {
+    float: left;
+    padding: 5px; }
+
+.search-and-social-bar {
+  border-radius: 18px;
+  font-family: AvenirNext-Regular;
+  font-size: 14px;
+  color: #9B9B9B;
+  line-height: 19px; }
+
 .navbar-default .navbar-nav > li > a {
   color: #9E332E;
   text-decoration: none;
@@ -5808,7 +5823,7 @@ a.carousel-control.right {
 
   .search-box-wrapper {
     width: 160px;
-    margin-right: 40px; }
+    margin-right: 60px; }
     .search-box-wrapper .form-control {
       width: inherit;
       padding-right: 25px; }
