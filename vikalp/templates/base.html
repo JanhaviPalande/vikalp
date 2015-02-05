@@ -52,7 +52,9 @@
     image.width = width;
    return true;
 }</script>
+<div id="wrapper">
 {% page_menu "pages/menus/pagemenu.html" %}
+
 <div id="content">
     {% if on_home %}
         {% block home_page %}
@@ -75,13 +77,13 @@
 
 
         </div>
-
+    </div>
     {% endif %}
 </div>
 
 {% include "pages/menus/footer.html" %}
 {% include "google-analytics/google-analytics.html" %}
-
+</div>
 </body>
 
 </html>

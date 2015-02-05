@@ -28,6 +28,22 @@
   src: local("Roboto Black"), local("Roboto-Black"), url(//themes.googleusercontent.com/static/fonts/roboto/v10/mnpfi9pxYH-Go5UiibESIrO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");
 }
 
+html,body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+#footer {
+	width:100%;
+	position:absolute;
+	top:100%;
+	left:0;
+}
+
 body {
   font-family: $roboto;
   font-size: 16px;
