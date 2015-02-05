@@ -43,7 +43,9 @@ html,body {
 	top:100%;
 	left:0;
 }
-
+blockquote{
+  border-left: none;
+}
 body {
   font-family: $roboto;
   font-size: 16px;

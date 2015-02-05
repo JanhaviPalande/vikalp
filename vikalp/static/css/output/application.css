@@ -5051,6 +5051,9 @@ html, body {
   top: 100%;
   left: 0; }
 
+blockquote {
+  border-left: none; }
+
 body {
   font-family: "Roboto";
   font-size: 16px; }
@@ -6261,6 +6264,7 @@ a.carousel-control.right {
   border-bottom: 1px solid #F5A623; }
 
 #related-article {
+  text-transform: uppercase;
   font-family: Roboto-Regular;
   font-size: 14px;
   color: #4A4A4A;

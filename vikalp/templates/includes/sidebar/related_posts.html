@@ -11,7 +11,7 @@
     {% if settings.BLOG_USE_FEATURED_IMAGE %}
     <div class="category-topping-wrapper">
         <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
-            <img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 219 175 %}" onerror="imgError(this, 219, 175)"/>
+            <img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 230 128 %}" onerror="imgError(this, 230, 128)"/>
             <div class="space-xs"></div>
             <div id="related-article">{{ article.title }}</div>
         </a>

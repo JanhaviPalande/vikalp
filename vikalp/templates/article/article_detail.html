@@ -24,6 +24,8 @@
     {% endblock %}
     </div>
     <div class="row col-md-12">
+        <div class="space-xs"></div>
+        <div class="space-xs"></div>
         <div class="col-md-9  right-border-separator left-section">
     {% block article_author %}
         <div id="author-date-category">
@@ -36,10 +38,7 @@
         </div>
     {% endblock %}
 
-    <div class="download-social-bar btn-toolbar" role="toolbar" id="social-media-sharing">
-        {% include "includes/sidebar/download_article.html" %}
-        {% include "includes/sidebar/social_media.html" %}
-    </div>
+
 
     {{ article.content|richtext_filters|safe }}
     <br><br>
