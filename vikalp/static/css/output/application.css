@@ -6202,7 +6202,9 @@ a.carousel-control.right {
     bottom: -32px; }
 
 .article-header {
-  position: relative; }
+  position: relative;
+  height: 500px;
+  overflow: hidden; }
   .article-header .article-image {
     width: 100%;
     height: auto; }
@@ -6215,11 +6217,22 @@ a.carousel-control.right {
     position: absolute;
     background-color: rgba(6, 6, 6, 0.3);
     text-align: left;
-    width: 90%;
     height: auto;
-    bottom: 0;
-    left: 5%;
-    padding: 7px; }
+    bottom: 30px;
+    left: 38px;
+    right: 117px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+.story-title {
+  text-transform: uppercase;
+  font-family: AvenirNext-Bold;
+  font-size: 30px;
+  color: #9e332e;
+  line-height: 40px; }
 
 .menu-item {
   font-family: Roboto-Regular;
@@ -6416,9 +6429,12 @@ a.carousel-control.right {
       .article .plain-text-sub-section .article-date {
         margin-top: 0px; }
 
-  .article-header .article-caption {
-    font-size: 25px;
-    line-height: 35px; }
+  .article-header {
+    height: 380px; }
+    .article-header .article-caption {
+      font-size: 25px;
+      line-height: 35px;
+      right: 85px; }
 
   .thumbnail > img, .thumbnail a > img {
     width: 100% !important;
@@ -6428,6 +6444,40 @@ a.carousel-control.right {
   .thumbnail {
     margin-bottom: 15px;
     padding: 0px; } }
+@media (max-width: 600px) {
+  .article-header {
+    height: 320px; }
+    .article-header .article-caption {
+      font-size: 20px;
+      line-height: 30px;
+      left: 30;
+      right: 70px;
+      bottom: 25px; } }
+@media (max-width: 480px) {
+  .article-header {
+    height: 255px; }
+    .article-header .article-caption {
+      font-size: 15px;
+      line-height: 20px;
+      bottom: 15px; } }
+@media (max-width: 400px) {
+  .article-header {
+    height: 210px; }
+    .article-header .article-caption {
+      font-size: 15px;
+      line-height: 20px;
+      left: 25px;
+      right: 60px;
+      bottom: 10px; } }
+@media (max-width: 340px) {
+  .article-header {
+    height: 180px; }
+    .article-header .article-caption {
+      font-size: 15px;
+      line-height: 20px;
+      left: 20px;
+      right: 40px;
+      bottom: 10px; } }
 @media (min-width: 768px) and (max-width: 1023px) {
   .container {
     width: 100%; }
