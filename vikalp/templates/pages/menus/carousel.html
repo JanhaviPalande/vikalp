@@ -6,7 +6,7 @@
         <!-- Wrapper for slides -->
         <div class="item {% ifequal forloop.counter0 0 %} active {% endifequal %}">
             <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
-                <div class="thumbnail col-sm-12 col-xs-6 col-md-12 col-lg-12">
+                <div class="promoted-article-image col-sm-12 col-xs-6 col-md-12 col-lg-12">
                     <img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 300 175 %}">
                 </div>
                 <div class="promoted-article-caption hidden-xs col-sm-12 col-xs-6">
