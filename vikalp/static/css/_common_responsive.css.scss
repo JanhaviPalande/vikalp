@@ -87,7 +87,7 @@
       position: absolute;
       color: #9e332e;
       right: 20px;
-      top: 63%;
+      top: 69%;
     }
   }
   .right-section {
@@ -114,18 +114,25 @@
     display: none;
   }
   .search-box-wrapper {
-    width: 85%;
-    position: static;
+    margin-top: 5px;
+    width: 100%;
+    position: absolute;
     display: inline;
     float: right;
-    .form-control {
-      text-align: center;
+    margin-left: 60px;
+
+    i{
+      position: relative;
+      float: right;
+      right: 20px;
+      top: 10px;
     }
   }
   .search-query {
     border-radius: 20px;
     float: right;
     width: 85%;
+    text-align: center;
   }
   .navbar-form {
     padding: 0px;
