@@ -1,29 +1,16 @@
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags extra_tags static %}
+
+<!-- on mobile we use article style (template) , carousel template was not rendering proper on the mobile-->
 <div class="section">
-<div class="promoted-article-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    {% for article in carousel_content|slice:":2" %}
-    <div class="promoted-article col-lg-6 col-md-6 col-sm-6 col-xs-12" >
-        <!-- Wrapper for slides -->
-        <div class="item {% ifequal forloop.counter0 0 %} active {% endifequal %}">
-            <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
-                <div class="promoted-article-image col-sm-12 col-xs-6 col-md-12 col-lg-12">
-                    <img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 300 175 %}">
-                </div>
-                <div class="promoted-article-caption hidden-xs col-sm-12 col-xs-6">
-                    <div class="promoted-article-date">
-                        {{ article.publish_date|date:"d/M/Y" }}
-                    </div>
-                    <div class="promoted-article-title">{{ article.title }}</div>
-                </div>
-                <div class="promoted-article-caption promoted-article-caption-bottom visible-xs col-sm-6 col-xs-6">
-                    <div class="promoted-article-title">{{ article.title }}</div>
-                    <div class="promoted-article-date">
-                        {{ article.publish_date|date:"d/M/Y" }}
-                    </div>
-                </div>
-            </a>
+        <div class="promoted-article-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            {% for article in carousel_content|slice:":2" %}
+                {% if is_mobile %}
+                    {% include "includes/article.html"%}
+                {% else %}
+                    {% include "pages/menus/carousel_article.html"%}
+                {% endif %}
+            {% endfor %}
+
         </div>
-    </div>
-    {% endfor %}
-</div>
+    
 </div>

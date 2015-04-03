@@ -6,11 +6,13 @@ from vikalp.views.views import article_service
 
 
 class HomePage:
+
+    
     def get_context_for_promoted_articles(self, article_promoted_list, carousel_content, latest_articles,
                                           page, about_page_description):
         return {"promoted_articles": article_promoted_list, "carousel_content": carousel_content,
                 "latest_articles": latest_articles, "page": page,
-                "about_page_description": about_page_description}
+                "about_page_description": about_page_description,}
 
     def about_us_page(self, request):
         dummy_request = copy(request)
@@ -32,3 +34,4 @@ class HomePage:
                                                                                 article_service.get_latest_articles(),
                                                                                 get_page(request),
                                                                                 about_page_description))
+    

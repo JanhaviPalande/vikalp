@@ -48,6 +48,20 @@ server {
  ```
 * Include /etc/nginx/conf.d/vikalp.conf;  to take the our config file 
 
+### Setting up the dependencies
+
+replace static folder in vikalp/static
+sudo pip install -r requirements.txt
+python manage.py syncdb
+python manage.py migrate
+psql -U postgres vikalp < dump.sql
+sudo yum install rubygems
+sudo gem install sass
+sudo npm install -g yuglify
+cd /vagrant
+bash compilescss.sh
+./runserver.sh
+
 ### Running Vikalp
 
 To Run The application:

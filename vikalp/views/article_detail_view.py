@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from mezzanine.conf import settings
 from vikalp.helper_functions.functional import process_tag_or_categories_or_article, get_page
 from vikalp.helper_functions.pdf_generator import PDFGenerator
 from vikalp.service.article_service import ArticleService

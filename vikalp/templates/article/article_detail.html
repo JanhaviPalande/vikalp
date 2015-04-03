@@ -17,12 +17,14 @@
     {% if settings.BLOG_USE_FEATURED_IMAGE and article.featured_image and article.featured_image|file_exists %}
         <div class="article-header">
             {% block title %}
+             
             <img class="article-image"
-                 src="{{ MEDIA_URL }}{{ article.featured_image }}"/>
+                 src="{{ MEDIA_URL }}{% thumbnail article.featured_image article_detail_img_width article_detail_img_height %}"/>
             <div class="article-caption">{{ article.title }}</div>
             {% endblock %}
         </div>
     {% endif %}
+ 
     <div class="row col-md-12">
         <div class="space-xs"></div>
         <div class="space-xs hidden-xs"></div>
@@ -77,15 +79,15 @@
 
     <div class="border-bottom-only"></div>
     <div>
-    {%include "includes/related_stories.html" %}
+        {%include "includes/related_stories.html" %}
      </div>
     </div>
 {% endblock %}
-
+        
         {% block side_bar %}
-        <div class="col-md-3 hidden-xs hidden-sm right-section">
-            {% include "includes/sidebar/related_posts.html" %}
-        </div>
+            <div class="col-md-3 hidden-xs hidden-sm right-section">
+                {% include "includes/sidebar/related_posts.html" %}
+            </div>
         {% endblock %}
 
 </div>

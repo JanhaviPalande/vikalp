@@ -4,20 +4,18 @@
 <div class="related-stories-tag">
     <div class="read-more-stories">Read more related stories</div>
 </div>
-
-<div class="row category-page-category-list-wrapper">
+    <div class="row category-page-category-list-wrapper">
         {% for article in article.related_posts.all %}
         {% if settings.BLOG_USE_FEATURED_IMAGE %}
-        <div class="col-xs-6 col-sm-4 related-article">
-                <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
-                    <div class="row image-sub-section">
-                                <img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 219 175 %}" onerror="imgError(this, 219, 175)"/>
-                    </div>
-                    <div id="related-article">{{ article.title }}</div>
-                </a>
+            <div class="col-xs-6 col-sm-4 related-article">
+                    <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
+                        <div class="row image-sub-section">
+                                    <img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 175 135 %}" onerror="imgError(this, 175 , 135)"/>
+                        </div>
+                        <div id="related-article">{{ article.title }}</div>
+                    </a>
             </div>
         {%endif %}
         {% endfor %}
     </div>
-
 {% endif %}

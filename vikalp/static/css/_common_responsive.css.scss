@@ -1,4 +1,7 @@
-@media (max-width: 559px) {
+
+
+@media (max-width: 559px) 
+{
   #content {
     margin-top: 105px;
   }
@@ -21,7 +24,7 @@
       border: 0px;
     }
     a.navbar-brand {
-      background-size: 230px 38px;
+      background-size: 230px 29px;
       width: 230px;
     }
   }
@@ -33,6 +36,10 @@
       height: 4px;
       background-color: #000000;
     }
+    
+  }
+  .navbar-toggle:hover {
+    background-color: none;
   }
   .navbar-default .navbar-toggle {
     border-color: white;
@@ -77,8 +84,10 @@
   }
 
   .search-box-wrapper {
-    width: 420px;
-    position: static;
+    width: 100%;
+    position: absolute;
+    padding-left: inherit;
+    padding-right: inherit;
     display: inline;
     .form-control {
       text-align: center;
@@ -86,8 +95,8 @@
     i {
       position: absolute;
       color: #9e332e;
-      right: 20px;
-      top: 69%;
+      right: 28px;
+      top: 30%;
     }
   }
   .right-section {
@@ -103,7 +112,36 @@
   .media-button {
     width: 100%;
   }
+  .related-stories-tag {
+    height: 80px;
+    .read-more-stories
+    {
+      font-size: 12px;
+      padding-top: 10px;
+    }
+  }
+}
 
+@media (max-width: 400px) {
+  #content
+    {
+      margin-top:86px;
+    }
+  .search-box-wrapper 
+    {
+      width: 100%;
+      padding-left: inherit;
+      padding-right: inherit;
+    }
+  .related-stories-tag {
+    height: 80px;
+    .read-more-stories
+    {
+      font-size: 8px;
+      padding-top: 3px;
+    }
+  }
+  
 }
 
 @media (min-width: 560px) and (max-width: 767px) {
@@ -207,6 +245,10 @@
       height: 4px;
       background-color: #000000;
     }
+    
+  }
+  .navbar-toggle:hover {
+    background-color: none;
   }
   .navbar-default .navbar-toggle {
     border-color: white;
@@ -218,7 +260,7 @@
     height: 80px;
     .read-more-stories{
       font-size: 14px;
-      padding-top: 10px;
+      padding-top:10px;
     }
   }
 
@@ -280,6 +322,10 @@
       height: 4px;
       background-color: #000000;
     }
+    
+  }
+  .navbar-toggle:hover {
+    background-color: none;
   }
   .navbar-default .navbar-toggle {
     border-color: white;
@@ -325,6 +371,10 @@
   }
   .related-stories-tag {
     height: 90px;
+    .read-more-stories{
+      font-size: 16px;
+      padding-top: 20px;
+    }
   }
 }
 
@@ -369,12 +419,23 @@
       height: 4px;
       background-color: #000000;
     }
+    
+  }
+  .navbar-toggle:hover {
+    background-color: none;
   }
   .navbar-default .navbar-toggle {
     border-color: white;
   }
   .navbar-default .navbar-toggle .icon-bar {
     background-color: #000000;
+  }
+  .related-stories-tag {
+    height: 90px;
+    .read-more-stories{
+      font-size: 15px;
+     vertical-align:middle;
+    }
   }
 
 }
@@ -432,6 +493,10 @@
       height: 4px;
       background-color: #000000;
     }
+    
+  }
+  .navbar-toggle:hover {
+    background-color: none;
   }
   .navbar-default .navbar-toggle {
     border-color: white;

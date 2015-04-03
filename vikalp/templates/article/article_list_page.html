@@ -3,7 +3,9 @@
 {% if articles %}
 {% paginate articles %}
 {% for article in articles %}
-<div class="col-xs-6 col-sm-4 category">
+   {% include 'includes/article.html' %} 
+   
+<!--<div class="col-xs-6 col-sm-4 category">
     {% editable article.title %}
     <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
         <div class="top-sub-section">
@@ -16,7 +18,8 @@
             {% endif %}
         </div>
     </a>
-
+ 
+    
     <div class="plain-text-sub-section">
         <p class="col-xs-12">{{ article.description|truncatechars:150|safe }}</p>
 
@@ -25,9 +28,9 @@
                 {% trans "Read More" %}
             </a>
         </div>
-    </div>
+    </div> 
     {% endeditable %}
-</div>
+</div>-->
 {% endfor %}
 {% include "includes/loadmore.html" %}
 {% endif %}
