@@ -47,31 +47,20 @@
   }
 }
 .story-title{
-    text-transform: uppercase;
-    font-family: AvenirNext-Bold;
-    font-size: 30px;
-    color: #9e332e;
-    line-height: 40px;
- }
+  text-transform: uppercase;
+  font-family: AvenirNext-Bold;
+  font-size: 30px;
+  color: #9e332e;
+  line-height: 40px;
+}
+ 
 .menu-item {
-  font-family: Roboto-Regular;
-  font-size: 14px;
+  font-family: Roboto-Medium;
   color: #4A4A4A;
   line-height: 20px;
   background: #D8D8D8;
 }
-.menu-items{
-  -webkit-column-count: 6;
-  -moz-column-count: 6;
-  columns-count: 6;
-  min-height: 30px;
 
-}
-.category-list{
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  columns-count: 3;
-}
 .border-bottom-only-wrapper {
   border-right: 10px solid $white;
   .col-xs-12 {

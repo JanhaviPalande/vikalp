@@ -31,7 +31,7 @@
             </div>
         </div>
 
-        <div id="menu" class="collapse overlay">
+        <div id="menu" class="collapse overlay" style="align:center">
 
             <div class="overlay-menu">
                 <div>
@@ -42,20 +42,20 @@
                 </div>
 
                 <div class="menu-items">
+                
                     {% for page in page_branch %}
                     {% for in_menu in page.in_menus %}
                     {% ifequal in_menu '1' %}
                     {% ifnotequal page.title "Home" %}
-                    <a class="menu-item" {% if page.is_current_or_ascendant %} class="active" {% endif %}{% if page.description|wordcount < 5 %} title="{% trans page.description %}" {% endif %}
-                    href="{{ page.get_absolute_url }}">
+                    
+                        <a class="menu-item" {% if page.is_current_or_ascendant %} class="active" {% endif %}{% if page.description|wordcount < 5 %} title="{% trans page.description %}" {% endif %} href="{{ page.get_absolute_url }}">
                     {% with page.title|upper as page_title %}{% trans page_title %}{% endwith %}</a>
                     {% endifnotequal %}
                     {% endifequal %}
                     {% endfor %}
                     {% endfor %}
-
-                    <a class="link-but-not-a-link" href="javascript:void(0)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-
+               
+               
                 </div>
             </div>
             <div class="overlay-content">

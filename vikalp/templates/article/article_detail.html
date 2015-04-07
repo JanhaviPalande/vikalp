@@ -18,8 +18,10 @@
         <div class="article-header">
             {% block title %}
              
+            <!-- <img class="article-image"
+                 src="{{ MEDIA_URL }}{% thumbnail article.featured_image article_detail_img_width article_detail_img_height %}"/> -->
             <img class="article-image"
-                 src="{{ MEDIA_URL }}{% thumbnail article.featured_image article_detail_img_width article_detail_img_height %}"/>
+                 src="{{ MEDIA_URL }}{{article.featured_image}}"/>
             <div class="article-caption">{{ article.title }}</div>
             {% endblock %}
         </div>
