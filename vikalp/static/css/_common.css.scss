@@ -753,13 +753,6 @@ a.carousel-control {
 	height: 100%;
 	position: relative;
 }
-
-.overlay ul li {
-	display: block;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
 .overlay ul li a:hover,
 .overlay ul li a:focus {
 	color: lightslategray;

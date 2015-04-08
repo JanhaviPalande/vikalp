@@ -30,13 +30,13 @@
   .menu-items{
     -webkit-column-count: 2;
     -moz-column-count: 2;
-    columns-count: 2;
+    column-count: 2;
   }
 
   .category-list{
     -webkit-column-count: 2;
     -moz-column-count: 2;
-    columns-count: 2;
+    column-count: 2;
   }
 
   #content {
@@ -171,6 +171,17 @@
     font-size: 0.8em;
     margin-bottom: 15px;
   }
+  .menu-items{
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+
+  .category-list{
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
   #content
     {
       margin-top:86px;
@@ -188,6 +199,7 @@
       font-size: 8px;
       padding-top: 3px;
     }
+
   }
 
   .overlay .menu-item {
