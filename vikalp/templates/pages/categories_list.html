@@ -1,16 +1,16 @@
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags extra_tags %}
 
-    <div class="row">
-          <h4>categories</h4>
-    </div>
-            {% article_categories vikalp.article as categories %}
-   <div>
-            <ul class="category-list">
-                {% for category in categories %}
-                <li>
-                 <a class="category" href="{% url "article_list_category" category.slug %}">{% with category.title|upper as category_title %}{% trans category_title %}
-                    	{% endwith %}</a>
-                </li>
-                {% endfor %}
-            </ul>
-   </div>
+<div class="row">
+  <h4>categories</h4>
+</div>
+        {% article_categories vikalp.article as categories %}
+<div>
+  <ul class="category-list">
+    {% for category in categories %}
+    <li>
+      <a class="category" href="{% url "article_list_category" category.slug %}">{% with category.title|upper as category_title %}{% trans category_title %}
+    	 {% endwith %}</a>
+    </li>
+    {% endfor %}                
+  </ul>
+</div>

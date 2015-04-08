@@ -1,7 +1,7 @@
 {% load mezzanine_tags i18n future %}
-<form action="{% url "search" %}" class="navbar-form navbar-search navbar-right">
+<form id="search_form" action="{% url "search" %}" class="navbar-form navbar-search navbar-right">
     <span class="search-box-wrapper">
-        <i class="glyphicon glyphicon-search"></i>
+       <a href="javascript:{}" onclick="document.getElementById('search_form').submit();"><i class="glyphicon glyphicon-search" type="submit"></i></a>
         <input class="form-control search-query" placeholder="{% trans "Search for a story" %}" type="text" name="q"
                value="{{ request.REQUEST.q }}">
 

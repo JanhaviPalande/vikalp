@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="menu-items">
-                
+
                     {% for page in page_branch %}
                     {% for in_menu in page.in_menus %}
                     {% ifequal in_menu '1' %}
@@ -55,10 +55,19 @@
                     {% endfor %}
                     {% endfor %}
                
-               
                 </div>
             </div>
             <div class="overlay-content">
+                <div class="social-media-bar-menu pull-right">
+                  <a  href="https://www.facebook.com/pages/Vikalp-Sangam/483165198462325" class="social-media">
+                    <img src="/static/img/top_facebook_logo.png"></a>
+
+                  <a href="https://twitter.com/VikalpSangam"  class="social-media">
+                    <img src="/static/img/top_twitter_logo.png"></a>
+
+                  <a href="/feeds" class="social-media">
+                    <img src="/static/img/top_rss_logo.png"></a>
+                </div>
                 {% include "pages/categories_list.html" %}
             </div>
 

@@ -6552,7 +6552,7 @@ a.carousel-control.right {
 
 .category-page-heading {
   background-color: #BCBEC0;
-  margin: 0; }
+  margin-bottom: 10px; }
 
 .category-description {
   border-right: 10px solid white;
@@ -6573,13 +6573,12 @@ a.carousel-control.right {
 
 .category-title-link {
   border-right: 10px solid #fff;
-  padding-left: 65px;
+  padding-left: 15px;
   background-repeat: no-repeat;
   color: #9E332E;
   line-height: 3.2;
   text-transform: uppercase;
-  display: block;
-  height: 50px; }
+  display: block; }
   .category-title-link.no-icon {
     padding-left: 10px; }
   .category-title-link:hover {

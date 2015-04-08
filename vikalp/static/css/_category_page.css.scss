@@ -82,7 +82,7 @@
 
 .category-page-heading {
   background-color: $dark-gray-col;
-  margin: 0;
+  margin-bottom: 10px;
 }
 
 .category-description {
@@ -112,13 +112,13 @@
   &.no-icon {
     padding-left: 10px;
   }
-  padding-left: 65px;
+  padding-left: 15px;
   background-repeat: no-repeat;
   color: $dark-brick-col;
   line-height: 3.2;
   text-transform: uppercase;
   display: block;
-  height: 50px;
+  
   &:hover {
     text-decoration: none;
     color: $dark-brick-col;
