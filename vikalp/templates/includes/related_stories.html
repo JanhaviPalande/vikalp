@@ -11,8 +11,8 @@
                     <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
                         <div class="row image-sub-section">
                                     <img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 175 135 %}" onerror="imgError(this, 175 , 135)"/>
-                        </div>
-                        <div id="related-article">{{ article.title }}</div>
+                        </div>                      
+                        <div id="related-article" class="titlefont">{{ article.title }}</div>
                     </a>
             </div>
         {%endif %}

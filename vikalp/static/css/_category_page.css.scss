@@ -81,7 +81,7 @@
 }
 
 .category-page-heading {
-  background-color: $dark-gray-col;
+  background-color: #F5A623;
   margin-bottom: 10px;
 }
 
@@ -108,7 +108,7 @@
 }
 
 .category-title-link {
-  border-right: 10px solid $white;
+  border-right: 5px solid $white;
   &.no-icon {
     padding-left: 10px;
   }
@@ -134,7 +134,7 @@
 }
 #related-article {
   text-transform: uppercase;
-  font-family: Roboto-Regular;
+  font-family: Roboto-Medium;
   font-size: 14px;
   color: #4A4A4A;
   line-height: 20px;
@@ -208,6 +208,10 @@
       text-decoration: none;
       color: $dark-brick-col;
     }
+  }
+  .titlefont
+  {
+     font-family: 'Roboto-Medium';
   }
 
   .image-sub-section {

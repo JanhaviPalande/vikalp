@@ -5531,7 +5531,7 @@ a.carousel-control.right {
 /* Overlay style */
 .overlay {
   z-index: 100;
-  opacity: 1;
+  opacity: 0.96;
   filter: alpha(opacity=100);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -5564,6 +5564,9 @@ a.carousel-control.right {
   width: 100%;
   overflow-x: hidden; }
 
+#close-overlay {
+  font-size: 1.3em; }
+
 .overlay .overlay-content {
   position: relative;
   z-index: 1;
@@ -5579,6 +5582,10 @@ a.carousel-control.right {
   height: 60%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%); }
+
+.orangebutton {
+  background-color: #F5A623;
+  border-color: #F5A623; }
 
 .overlay ul {
   list-style: none;
@@ -5615,6 +5622,9 @@ a.carousel-control.right {
   .overlay ul li {
     min-height: 34px; } }
 @media (max-width: 559px) {
+  .article-content img {
+    width: 100%; }
+
   .overlay .category {
     text-align: left;
     font-weight: bold;
@@ -5718,7 +5728,7 @@ a.carousel-control.right {
     padding-right: inherit;
     display: inline; }
     .search-box-wrapper .form-control {
-      text-align: center; }
+      text-align: left; }
     .search-box-wrapper i {
       position: absolute;
       color: #9e332e;
@@ -5744,6 +5754,9 @@ a.carousel-control.right {
       font-size: 12px;
       padding-top: 10px; } }
 @media (max-width: 400px) {
+  .article-content img {
+    width: 100%; }
+
   .overlay .category {
     text-align: left;
     font-weight: bold;
@@ -5801,6 +5814,9 @@ a.carousel-control.right {
     -moz-column-count: 2;
     columns-count: 2; } }
 @media (min-width: 560px) and (max-width: 767px) {
+  .article-content img {
+    width: 100%; }
+
   .overlay .category {
     text-align: left;
     font-weight: bold;
@@ -6556,7 +6572,7 @@ a.carousel-control.right {
   margin-left: 0px; }
 
 .category-page-heading {
-  background-color: #BCBEC0;
+  background-color: #F5A623;
   margin-bottom: 10px; }
 
 .category-description {
@@ -6577,7 +6593,7 @@ a.carousel-control.right {
         bottom: -18px; }
 
 .category-title-link {
-  border-right: 10px solid #fff;
+  border-right: 5px solid #fff;
   padding-left: 15px;
   background-repeat: no-repeat;
   color: #9E332E;
@@ -6599,7 +6615,7 @@ a.carousel-control.right {
 
 #related-article {
   text-transform: uppercase;
-  font-family: Roboto-Regular;
+  font-family: Roboto-Medium;
   font-size: 14px;
   color: #4A4A4A;
   line-height: 20px;
@@ -6661,6 +6677,8 @@ a.carousel-control.right {
     .category-topping-wrapper .category-title-wrapper:hover {
       text-decoration: none;
       color: #9E332E; }
+  .category-topping-wrapper .titlefont {
+    font-family: 'Roboto-Medium'; }
   .category-topping-wrapper .image-sub-section {
     padding: 0px; }
   .category-topping-wrapper .top-sub-section h4 {

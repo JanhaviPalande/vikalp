@@ -2,6 +2,10 @@
 
 @media (max-width: 559px) 
 {
+  .article-content img
+    {
+      width:100%;
+    }
   .overlay .category{
     text-align: left;
     font-weight: bold;
@@ -127,7 +131,7 @@
     padding-right: inherit;
     display: inline;
     .form-control {
-      text-align: center;
+      text-align: left;
     }
     i {
       position: absolute;
@@ -160,6 +164,10 @@
 }
 
 @media (max-width: 400px) {
+  .article-content img
+    {
+      width:100%;
+    }
   .overlay .category{
     text-align: left;
     font-weight: bold;
@@ -229,6 +237,10 @@
 }
 
 @media (min-width: 560px) and (max-width: 767px) {
+  .article-content img
+    {
+      width:100%;
+    }
   .overlay .category{
     text-align: left;
     font-weight: bold;

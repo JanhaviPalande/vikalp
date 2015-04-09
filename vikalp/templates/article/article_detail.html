@@ -30,7 +30,8 @@
     <div class="row col-md-12">
         <div class="space-xs"></div>
         <div class="space-xs hidden-xs"></div>
-        <div class="col-md-9  right-border-separator left-section">
+      
+         <div class="col-md-9  right-border-separator left-section" >
             {% if not article.featured_image|file_exists %}
                 <div class="story-title border-bottom-only">
                     {{ article.title }}
@@ -55,7 +56,7 @@
                 <span class="text">{% trans "in" %}</span>
 
                 {% for category in article.article_categories.all %}
-                    <button class="btn btn-default btn-xs">
+                    <button class="btn btn-default btn-xs orangebutton" >
                         <a href="{% url 'article_list_category' category|get_slug %}">{{category}}</a>
                     </button>
                 {% endfor %}
@@ -63,9 +64,11 @@
         </div>
     {% endblock %}
 
+    
+     <div class="article-content">
+        <p>{{ article.content|richtext_filters|safe }}</p>
+    </div>
 
-
-    {{ article.content|richtext_filters|safe }}
     <br><br>
     {% keywords_for article as tags %}
     {% if tags %}
@@ -98,6 +101,7 @@
         {%include "includes/related_stories.html" %}
      </div>
     </div>
+
 {% endblock %}
         
         {% block side_bar %}
