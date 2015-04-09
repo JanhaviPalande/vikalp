@@ -31,7 +31,7 @@ def insert_placeholder(arg):
     string = ' '.join(string)
     return string
 
-
+@register.filter
 def get_slug(arg):
     if arg:
         return arg.slug

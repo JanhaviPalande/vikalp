@@ -40,12 +40,26 @@
             {% endif %}
     {% block article_author %}
         <div id="author-date-category">
-            {% if article.article_author %}<span class="author">{% trans "By" %} {{ article.article_author }} </span> {% else %}
-                {% trans "Posted" %}{% endif %}
-            <span class="text">{% trans "on" %}</span> <span class="date">{{ article.publish_date.date }}</span> {% if article.article_categories|get_first %}<span class="text">{% trans "in" %}</span> <a
-                    href="{% url "article_list_category" article.article_categories|get_first_slug %}">{{ article.article_categories|get_first }}</a>
-                {% endif %}
-            </h5>
+            {% if article.article_author %}
+                <span class="author">
+                    {% trans "By" %} {{ article.article_author }}
+                </span>
+            {% else %}
+                {% trans "Posted" %}
+            {% endif %}
+
+            <span class="text">{% trans "on" %}</span>
+            <span class="date">{{ article.publish_date.date }}</span>
+
+            {% if article.article_categories|get_first %}
+                <span class="text">{% trans "in" %}</span>
+
+                {% for category in article.article_categories.all %}
+                    <button class="btn btn-default btn-xs">
+                        <a href="{% url 'article_list_category' category|get_slug %}">{{category}}</a>
+                    </button>
+                {% endfor %}
+            {% endif %}
         </div>
     {% endblock %}
 
