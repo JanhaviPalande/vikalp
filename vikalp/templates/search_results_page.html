@@ -8,14 +8,14 @@
 			{%if result.featured_image %}
                 {% if result.featured_image|file_exists %}
                     <!-- <span style="width:100%;  height: 0; padding: 56.25% 0 0 0; background-image: url({{ MEDIA_URL }}{% thumbnail article.featured_image article_img_width article_img_height %}); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; display: inline-block;"></span> -->
-                    <span style="width: 100px;  height: 0; padding: 56.25% 0 0 0; background-image: url('{{ MEDIA_URL }}{{result.featured_image}}'); background-size: contain; background-repeat: no-repeat; background-position: 50% 50%; display: inline-block;" class="media-object"></span>
+                    <span style="width: 100px;  height: 0; padding: 56.25% 0 0 0; background-image: url('{{ MEDIA_URL }}{{result.featured_image}}'); background-size: contain; background-repeat: no-repeat; background-position: center bottom; display: inline-block;" class="media-object"></span>
                 {% else %}
-                    <span style="width: 100px;  height: 0; padding: 56.25% 0 0 0; background-image: url('{{ STATIC_URL }}{% thumbnail 'img/default.png' article_img_width article_img_height %}'); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; display: inline-block;">
+                    <span style="width: 100px;  height: 0; padding: 56.25% 0 0 0; background-image: url('{{ STATIC_URL }}{% thumbnail 'img/default.png' article_img_width article_img_height %}'); background-size: cover; background-repeat: no-repeat; background-position: center bottom; display: inline-block;">
                     </span>
 
                 {% endif %}
             {% else %}
-                     <span style="width: 100px;  height: 0; padding: 56.25% 0 0 0; background-image: url('{{ STATIC_URL }}{% thumbnail 'img/default.png' article_img_width article_img_height %}'); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; display: inline-block;">
+                     <span style="width: 100px;  height: 0; padding: 56.25% 0 0 0; background-image: url('{{ STATIC_URL }}{% thumbnail 'img/default.png' article_img_width article_img_height %}'); background-size: cover; background-repeat: no-repeat; background-position: center bottom; display: inline-block;">
                      </span>
             {% endif %}
 			
