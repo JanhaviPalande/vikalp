@@ -23,7 +23,7 @@
     top: 230px;
   }
   .promoted-article-date {
-    font-family: Roboto-Regular;
+    font-family: Roboto-Regular,Calibri,Arial;
     font-size: 10px;
     color: #979797;
     line-height: 15px;
@@ -40,7 +40,7 @@
     font-size: 1.40em;
     margin-top: 0px;
     line-height: 1.3;
-    font-family: "Roboto-Medium";
+    font-family: "Roboto-Medium",Calibri,Arial;
 
   }
   .promoted-article-title:hover {
@@ -57,7 +57,7 @@
     h4 {
       color: $dark-brick-col;
       padding-left: 0;
-      font-family: $roboto-light;
+      font-family: $roboto-light,Calibri,Arial;
       font-size: 1.125em;
     }
     .col-xs-3 {

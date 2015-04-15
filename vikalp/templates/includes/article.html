@@ -1,4 +1,6 @@
-{% load mezzanine_tags extra_tags endless %}
+{% load mezzanine_tags comment_tags keyword_tags  endless rating_tags i18n future disqus_tags staticfiles extra_tags %}
+
+
 
 <div class="article col-md-4 col-lg-4 col-xs-12 col-sm-4 ">
 
@@ -19,13 +21,29 @@
                 {% endif %}
         </div>
            <div class="plain-text-sub-section hidden-xs col-xs-6 col-sm-12 col-lg-12 col-md-12">
-            <div class="article-date">{{ article.publish_date|date:"d/M/Y" }}</div>
+            <div  class="article-date">
+                {{ article.publish_date|date:"d/M/Y" }} 
+                   {% if article.article_categories|get_first %}
+                        <button class="btn btn-default btn-xs orangebutton pull-right" >
+                            <span href="{% url 'article_list_category' article.article_categories|get_first|get_slug %}">
+                                {{article.article_categories|get_first|get_first_word}}
+                             </span>
+                            </button>
+                    {% endif %} 
+            </div>
             <div class="article-title">{{ article.title }}</div>
         </div>
         <div class="plain-text-sub-section visible-xs col-xs-6 col-sm-12 col-lg-12 col-md-12">
             <div class="article-title">{{ article.title }}</div>
             <div class="article-date">
                 {{ article.publish_date|date:"d/M/Y" }}
+                {% if article.article_categories|get_first %}
+                        <button class="btn btn-default btn-xs orangebutton pull-right" >
+                            <span href="{% url 'article_list_category' article.article_categories|get_first|get_slug %}">
+                                {{article.article_categories|get_first|get_first_word}}
+                             </span>
+                            </button>
+                {% endif %} 
             </div>
         </div>
     </a>

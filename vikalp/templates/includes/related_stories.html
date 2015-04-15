@@ -7,10 +7,21 @@
     <div class="row category-page-category-list-wrapper">
         {% for article in article.related_posts.all %}
         {% if settings.BLOG_USE_FEATURED_IMAGE %}
-            <div class="col-xs-6 col-sm-4 related-article">
+            <div class="col-xs-6 col-md-4 col-sm-4 related-article">
                     <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
-                        <div class="row image-sub-section">
-                                    <img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 175 135 %}" onerror="imgError(this, 175 , 135)"/>
+                        <div class="row ">
+                                   {%if article.featured_image %}
+                                        {% if article.featured_image|file_exists %}
+                                            <span style="width:99%;  height: 0; padding: 56.25% 0 0 0; background-image: url('{{ MEDIA_URL }}{{article.featured_image}}'); background-size: contain; background-repeat: no-repeat; background-position: center bottom; display: inline-block;"></span>
+                                        {% else %}
+                                            <span style="width:97%;  height: 0; padding: 56.25% 0 0 0; background-image: url('{{ STATIC_URL }}{% thumbnail 'img/default.png' article_img_width article_img_height %}'); background-size: cover; background-repeat: no-repeat; background-position: center bottom; display: inline-block;">
+                                            </span>
+
+                                        {% endif %}
+                                    {% else %}
+                                         <span style="width:97%;  height: 0; padding: 56.25% 0 0 0; background-image: url('{{ STATIC_URL }}{% thumbnail 'img/default.png' article_img_width article_img_height %}'); background-size: cover; background-repeat: no-repeat; background-position: center bottom; display: inline-block;">
+                                         </span>
+                                    {% endif %}
                         </div>                      
                         <div id="related-article" class="titlefont">{{ article.title }}</div>
                     </a>

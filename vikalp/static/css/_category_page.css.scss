@@ -28,7 +28,7 @@
   }
   .article-caption{
     text-transform: uppercase;
-    font-family: AvenirNext-Bold;
+    font-family: AvenirNext-Bold,Calibri,Arial;
     font-size: 36px;
     color: #FFFFFF;
     line-height: 49px;
@@ -48,14 +48,14 @@
 }
 .story-title{
   text-transform: uppercase;
-  font-family: AvenirNext-Bold;
+  font-family: AvenirNext-Bold,Calibri,Arial;
   font-size: 30px;
   color: #9e332e;
   line-height: 40px;
 }
  
 .menu-item {
-  font-family: Roboto-Medium;
+  font-family: Roboto-Medium,Calibri,Arial;
   color: #4A4A4A;
   line-height: 20px;
   background: #D8D8D8;
@@ -89,7 +89,7 @@
   border-right: 10px solid white;
   padding: 5px 10px 10px 15px;
   background-color: $light-gray-col;
-  font-family: $roboto;
+  font-family: $roboto,Calibri,Arial;
   font-size: .75em;
   p {
     position: relative;
@@ -126,7 +126,7 @@
 }
 
 .related-stories-header {
-  font-family: AvenirNext-Bold;
+  font-family: AvenirNext-Bold,Calibri,Arial;
   font-size: 20px;
   color: #F5A623;
   line-height: 27px;
@@ -134,7 +134,7 @@
 }
 #related-article {
   text-transform: uppercase;
-  font-family: Roboto-Medium;
+  font-family: Roboto-Medium,Calibri,Arial;
   font-size: 14px;
   color: #4A4A4A;
   line-height: 20px;
@@ -159,14 +159,14 @@
   .article-title {
     margin-bottom: 0px;
     margin-top: 0px;
-    font-family: $roboto-medium;
+    font-family: $roboto-medium,Calibri,Arial;
     color: $black;
     font-size: 1.1em;
     height: auto;
     text-transform: uppercase;
   }
   .article-date {
-    font-family: Roboto-Regular;
+    font-family: Roboto-Regular,Calibri,Arial;
     font-size: 10px;
     color: #979797;
     line-height: 15px;
@@ -211,7 +211,7 @@
   }
   .titlefont
   {
-     font-family: 'Roboto-Medium';
+     font-family: 'Roboto-Medium',Calibri,Arial;
   }
 
   .image-sub-section {
@@ -220,7 +220,7 @@
   .top-sub-section h4 {
     background-color: $lighter-gray-col;
     color: $black;
-    font-family: $roboto-light;
+    font-family: $roboto-light,Calibri,Arial;
     padding: 10px 10px 20px 10px;
     text-transform: none;
     margin: 0;
@@ -229,7 +229,7 @@
   .plain-text-sub-section {
     p {
       color: $black;
-      // font-family: $roboto;
+      // font-family: $roboto,Calibri,Arial;
       font-size: 0.75em;
       background-color: $lighter-gray-col;
       padding: 10px 10px;

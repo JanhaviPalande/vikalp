@@ -1,28 +1,28 @@
 @import "variables.css.scss";
 
 @font-face {
-  font-family: 'Roboto-Light';
+  font-family: 'Roboto-Light',Calibri,Arial;
   font-style: normal;
   font-weight: 300;
   src: local("Roboto Light"), local("Roboto-Light"), url(//themes.googleusercontent.com/static/fonts/roboto/v10/Hgo13k-tfSpn0qi1SFdUfbO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Roboto',Calibri,Arial;
   font-style: normal;
   font-weight: 400;
   src: local("Roboto Regular"), local("Roboto-Regular"), url(//themes.googleusercontent.com/static/fonts/roboto/v10/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff) format("woff");
 }
 
 @font-face {
-  font-family: 'Roboto-Medium';
+  font-family: 'Roboto-Medium',Calibri,Arial;
   font-style: normal;
   font-weight: 500;
   src: local("Roboto Medium"), local("Roboto-Medium"), url(//themes.googleusercontent.com/static/fonts/roboto/v10/RxZJdnzeo3R5zSexge8UUbO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");
 }
 
 @font-face {
-  font-family: 'Roboto-Black';
+  font-family: 'Roboto-Black',Calibri,Arial;
   font-style: normal;
   font-weight: 900;
   src: local("Roboto Black"), local("Roboto-Black"), url(//themes.googleusercontent.com/static/fonts/roboto/v10/mnpfi9pxYH-Go5UiibESIrO3LdcAZYWl9Si6vvxL-qU.woff) format("woff");
@@ -33,6 +33,7 @@ html,body {
 	padding:0;
 	height:100%;
 }
+
 
 #wrapper {
 	min-height:100%;
@@ -48,7 +49,7 @@ blockquote{
   border-left: none;
 }
 body {
-  font-family: $roboto;
+  font-family: $roboto,Calibri,Arial;
   font-size: 16px;
   padding-top: 25px;
 }
@@ -58,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $dark-brick-col;
   text-shadow: none;
   opacity: 1;
-  font-family: $roboto-black;
+  font-family: $roboto-black,Calibri,Arial;
 }
 
 a {
@@ -101,7 +102,7 @@ a {
   }
 }.search-and-social-bar{
   border-radius: 18px;
-  font-family: AvenirNext-Regular;
+  font-family: AvenirNext-Regular,Calibri,Arial;
   font-size: 14px;
   color: #9B9B9B;
   line-height: 19px;
@@ -111,7 +112,7 @@ a {
   color: $dark-brick-col;
   text-decoration: none;
   font-weight: bold;
-  font-family: $roboto-black;
+  font-family: $roboto-black,Calibri,Arial;
   font-size: 1.125em;
   &:hover, &:focus {
     color: $dark-brick-col;
@@ -252,7 +253,7 @@ footer {
     height: 500px;
   }
   h2 {
-    font-family: $roboto-black;
+    font-family: $roboto-black,Calibri,Arial;
     color: $black;
   }
 }
@@ -385,7 +386,7 @@ a.carousel-control {
 .right-section {
   h4 {
     padding-top: 10px;
-    font-family: $roboto-black;
+    font-family: $roboto-black,Calibri,Arial;
     color: $black;
   }
 }
@@ -431,7 +432,7 @@ a.carousel-control {
   }
   h3, h4, h5 {
     text-transform: inherit;
-    font-family: $roboto;
+    font-family: $roboto,Calibri,Arial;
   }
   ul {
     padding: 15px;
@@ -634,7 +635,7 @@ a.carousel-control {
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.20), inset 0px 2px 0px 0px #FFFFFF;
   border-radius: 6px;
   /* share on Facebook: */
-  font-family: AvenirNext-Bold;
+  font-family: AvenirNext-Bold,Calibri,Arial;
   font-size: 13.68px;
   color: #FFFFFF;
   line-height: 19px;
@@ -647,7 +648,7 @@ a.carousel-control {
   border: 1px solid #979797;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.20), inset 0px 2px 0px 0px #FFFFFF;
   border-radius: 6px;
-  font-family: AvenirNext-Bold;
+  font-family: AvenirNext-Bold,Calibri,Arial;
   font-size: 13.68px;
   color: #FFFFFF;
   line-height: 19px;
@@ -659,7 +660,7 @@ a.carousel-control {
   border: 1px solid #979797;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.20), inset 0px 2px 0px 0px #FFFFFF;
   border-radius: 6px;
-  font-family: AvenirNext-Bold;
+  font-family: AvenirNext-Bold,Calibri,Arial;
   font-size: 13.68px;
   color: #FFFFFF;
   line-height: 19px;
@@ -674,7 +675,7 @@ a.carousel-control {
     height: 70px;
     text-align: center;
     .read-more-stories{
-      font-family: AvenirNext-Bold;
+      font-family: Roboto,Calibri,Arial;
       font-size: 20px;
       color: #F5A623;
       line-height: 27px;
@@ -783,6 +784,35 @@ a.carousel-control {
 	transform: translateY(0%);
 	-webkit-transition: -webkit-transform 0.4s ease-in-out;
 	transition: transform 0.4s ease-in-out;
+}
+
+
+.select-style {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    width: 120px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+
+    background: #fff url("/static/img/arrowdown.gif") no-repeat 90% 50%;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
 }
 
 @media screen and (max-height: 30.5em) {

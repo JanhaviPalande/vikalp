@@ -38,6 +38,13 @@ def get_slug(arg):
     else:
         return False
 
+@register.filter
+def get_first_word(arg):
+    if arg:
+        return str(arg).partition(' ')[0]
+    else:
+        return False
+
 
 def check_if_exists(arg):
     if(arg):

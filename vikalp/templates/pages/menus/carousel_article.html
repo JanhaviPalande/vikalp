@@ -1,25 +1,29 @@
 
 
 {% load i18n future mezzanine_tags blog_tags keyword_tags disqus_tags staticfiles pages_tags extra_tags static %}
-<div class="promoted-article col-lg-6 col-md-6 col-sm-6 col-xs-12" >
+<div class="promoted-article col-lg-6 col-md-6 hidden-xs col-sm-6 col-xs-12" >
     <!-- Wrapper for slides -->
     <div class="item {% ifequal forloop.counter0 0 %} active {% endifequal %}">
         <a class="category-link-wrapper" href="{{ article.get_absolute_url }}">
             <div class="promoted-article-image col-sm-12 col-xs-6 col-md-12 col-lg-12">
                 <img src="{{ MEDIA_URL }}{% thumbnail article.featured_image 300 175 %}">
             </div>
-            <div class="promoted-article-caption hidden-xs col-sm-12 col-xs-6">
+
+            <div class="promoted-article-caption  col-sm-12 col-xs-6">
                 <div class="promoted-article-date">
                     {{ article.publish_date|date:"d/M/Y" }}
+                    {% if article.article_categories|get_first %}
+                        <button class="btn btn-default btn-xs orangebutton pull-right" >
+                        <span href="{% url 'article_list_category' article.article_categories|get_first|get_slug %}">{{article.article_categories|get_first|get_first_word}}</span>
+                        </button>
+                    {% endif %} 
                 </div>
                 <div class="promoted-article-title">{{ article.title }}</div>
-            </div>
-            <div class="promoted-article-caption promoted-article-caption-bottom visible-xs col-sm-6 col-xs-6">
-                <div class="promoted-article-title">{{ article.title }}</div>
-                <div class="promoted-article-date">
-                    {{ article.publish_date|date:"d/M/Y" }}
-                </div>
             </div>
         </a>
     </div>
+</div>
+
+<div class="visible-xs">
+    {% include "includes/article.html"%}
 </div>

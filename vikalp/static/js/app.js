@@ -182,8 +182,9 @@ var CommentsUI = (function(){
 
 var LanguageSelection = (function(){
 
-    function submitForm(){
-        $("#langaugeSelection label").click(function(){
+    function submitForm()
+    {
+        $("#langaugeSelection select").click(function(){
             $("#languageHiddenElement").val($(this).find("input").val());
             $("#languageHiddenElement").closest("form").submit();
         });
