@@ -1,0 +1,28 @@
+{% load i18n future pages_tags mezzanine_tags compress staticfiles %}
+<form  action="/i18n/setlang/" method="post" >
+            {% csrf_token %}
+            <input name="next" type="hidden" value="/">
+            <div class="dropdown btn-sm pull-right hidden-xs" style="padding:10px;">
+                <div id="langaugeSelection" class="select-style">
+                    {% get_current_language as LANGUAGE_CODE %}
+                      <select data-selected="{{ LANGUAGE_CODE }}" id="languageSelectBox">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="ta">தமிழ்</option>
+                      </select>
+                      <input type="hidden" name="language" id="languageHiddenElement" value="">
+                </div>
+            </div>
+            <div class="btn-sm pull-right" style="padding:10px;">
+              <div id="langaugeSelection" class="select-style">
+                    {% get_current_language as LANGUAGE_CODE %}
+                      <select data-selected="{{ LANGUAGE_CODE }}" id="languageSelectBox">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="ta">தமிழ்</option>
+                      </select>
+                      <input type="hidden" name="language" id="languageHiddenElement" value="">
+                </div>
+            </div>
+</form> 
+        

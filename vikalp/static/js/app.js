@@ -181,11 +181,11 @@ var CommentsUI = (function(){
 
 
 var LanguageSelection = (function(){
-
     function submitForm()
     {
-        $("#langaugeSelection select").click(function(){
-            $("#languageHiddenElement").val($(this).find("input").val());
+        $("#langaugeSelection select").on('change',function(e)
+        {
+            $("#langaugeSelection").find('input').val(e.target.value);
             $("#languageHiddenElement").closest("form").submit();
         });
     }
@@ -240,6 +240,10 @@ $(document).ready(function () {
     $('a#feature-article').hover(function () {
         $(this).find('p').toggle();
     });
+
+    var languageCode = $("#languageSelectBox").attr("data-selected");
+    $("#languageSelectBox").val(languageCode);
+    $("#languageSelectBox1").val(languageCode);
 
     PageEventsList.init();
     LoadMoreCallback.init();

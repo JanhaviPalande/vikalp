@@ -34,27 +34,44 @@
             </div>
         </div>
 
-        <!--  <form action="/i18n/setlang/" method="post">
-            <input type="hidden" name="csrfmiddlewaretoken" value="ECnK57diitCtFcdGCo55dnxsjOCSStfU">
-            <input type="hidden" name="language" id="languageHiddenElement" value="">
+        <form  action="/i18n/setlang/" method="post" >
+            {% csrf_token %}
             <input name="next" type="hidden" value="/">
-            
-            <div class="dropdown pull-right hidden-xs" style="padding:10px;">
+            <div class="dropdown btn-sm pull-right hidden-xs" style="padding:10px;">
                 <div id="langaugeSelection" class="select-style">
-                      <select>
+                    {% get_current_language as LANGUAGE_CODE %}
+                      <select data-selected="{{ LANGUAGE_CODE }}" id="languageSelectBox">
                         <option value="en">English</option>
                         <option value="hi">हिंदी</option>
                         <option value="ta">தமிழ்</option>
                       </select>
+                      <input type="hidden" name="language" id="languageHiddenElement" value="">
                 </div>
             </div>
-         </form> -->
-        
+            
+        </form> 
+
         <div id="menu" class="collapse overlay" style="align:center">
            
             <div class="overlay-menu">
+                <form  action="/i18n/setlang/" method="post" class="visible-xs">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="/">
+                        <div class="btn-sm pull-right">
+                          <div id="langaugeSelection" class="select-style">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                  <select data-selected="{{ LANGUAGE_CODE }}" id="languageSelectBox1">
+                                    <option value="en">English</option>
+                                    <option value="hi">हिंदी</option>
+                                    <option value="ta">தமிழ்</option>
+                                  </select>
+                                  <input type="hidden" name="language" id="languageHiddenElement" value="">
+                            </div>
+                        </div>
+                    </form>
                 <div>
                     <a class="overlay-close menu-item" href="#">
+
                         <span id="close-overlay" class="glyphicon glyphicon-remove-circle" data-toggle="collapse" data-target="#menu"></span>
                     </a>
 
@@ -76,8 +93,12 @@
                
                 </div>
             </div>
+
             <div class="overlay-content">
+
+                
                 <div class="social-media-bar-menu pull-right">
+
                   <a  href="https://www.facebook.com/pages/Vikalp-Sangam/483165198462325" class="social-media">
                     <img src="/static/img/top_facebook_logo.png"></a>
 
@@ -87,10 +108,11 @@
                   <a href="/feeds" class="social-media">
                     <img src="/static/img/top_rss_logo.png"></a>
                 </div>
+
                 {% include "pages/categories_list.html" %}
+
             </div>
 
         </div>
     </div>
-
 </header>
