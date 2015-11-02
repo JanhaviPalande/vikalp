@@ -1,3 +1,4 @@
+import urllib
 from django.http import HttpResponse
 from django.shortcuts import render
 from mezzanine.conf import settings
@@ -37,7 +38,7 @@ class ArticleDetail:
 
     def build_response(self, article_title):
         response = HttpResponse(content_type=PDF_CONTENT_TYPE)
-        response['Content-Disposition'] = self.pdf_generator.generate_pdf_filename(article_title)
+        response['Content-Disposition'] = urllib.quote(self.pdf_generator.generate_pdf_filename(article_title))
         return response
 
     def build_pdf_content(self, article):
