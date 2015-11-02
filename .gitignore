@@ -30,3 +30,4 @@ vikalp/twitter_keys.txt
 
 vikalp/static/*
 !vikalp/static/img/
+/.env

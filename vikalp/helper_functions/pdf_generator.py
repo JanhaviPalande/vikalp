@@ -18,7 +18,7 @@ class PDFGenerator:
         return file
 
     def generate_pdf_filename(self, filename):
-        return PDF_FILENAME_FORMAT % str(filename).decode(CHARACTER_ENCODING)
+        return PDF_FILENAME_FORMAT % unicode(filename)
 
 
     def fetch_resources(self, uri, rel):
